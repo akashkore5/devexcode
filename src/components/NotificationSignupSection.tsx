@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { Session } from 'next-auth';
+import { Button } from './ui/button';
 
 type NotificationSignupSectionProps = {
     session: Session | null;
@@ -11,8 +12,8 @@ export const NotificationSignupSection = ({ session, className }: NotificationSi
     if (!session) return null;
 
     return (
-        <section className={`py-16 ${className}`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className={`py-20 ${className}`}>
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -25,7 +26,7 @@ export const NotificationSignupSection = ({ session, className }: NotificationSi
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.5 }}
-                    className="text-lg mb-8 max-w-2xl mx-auto"
+                    className="text-lg mb-8 max-w-2xl mx-auto text-muted-foreground"
                 >
                     Subscribe to receive a new technical term each day directly via push notifications.
                 </motion.p>
@@ -34,13 +35,13 @@ export const NotificationSignupSection = ({ session, className }: NotificationSi
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                 >
-                    <motion.button
-                        className="px-8 py-4 bg-primary text-white rounded-lg text-lg font-semibold hover:bg-indigo-700 dark:hover:bg-indigo-500 transition shadow-lg"
+                    <Button size="lg"
+                        className="text-lg font-semibold shadow-lg"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
                         Subscribe Now
-                    </motion.button>
+                    </Button>
                 </motion.div>
             </div>
         </section>
