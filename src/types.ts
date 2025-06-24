@@ -1,3 +1,4 @@
+// This file can be used for custom types
 export type PostData = {
   slug: string;
   title: string;

@@ -1,20 +1,27 @@
-import { PostList } from "@/components/post-list";
-import { getSortedPostsData } from "@/lib/posts";
+import { HomePage } from "@/components/HomePage";
+import problems from "@/data/problems.json";
+import systemDesignQuestions from "@/data/system_design_questions.json";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
-export default function Home() {
-  const allPostsData = getSortedPostsData();
+export default async function Home() {
+  let session = null;
+  let serverError = false;
 
+  try {
+    session = await getServerSession(authOptions);
+  } catch (error) {
+    console.error("Home Page: Failed to fetch session:", (error as Error).message);
+    serverError = true;
+  }
+  
   return (
-    <div className="space-y-8">
-      <div className="text-center py-8">
-        <h1 className="text-4xl font-headline tracking-tight lg:text-6xl text-primary">
-          ContentHub
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Explore articles on modern development, AI, and more. A space for ideas and innovation, with AI-powered summaries to get you started.
-        </p>
-      </div>
-      <PostList posts={allPostsData} />
-    </div>
+    <HomePage 
+      initialLoggedIn={!!session}
+      initialName={session?.user?.name || ""}
+      totalLeetcodeQuestions={problems.length}
+      totalSystemDesignQuestions={systemDesignQuestions.length}
+      serverError={serverError}
+    />
   );
 }
