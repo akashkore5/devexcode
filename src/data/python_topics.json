@@ -1,0 +1,35 @@
+{
+  "topics": [
+    {
+      "id": "python-basics",
+      "title": "Python Basics",
+      "slug": "python-basics",
+      "description": "Master the foundational concepts of Python including syntax, variables, and control structures.",
+      "difficulty": "Beginner",
+      "tags": [
+        "Python",
+        "Basics",
+        "Programming",
+        "Interview"
+      ],
+      "subtopics": [
+        {
+          "id": "python-syntax",
+          "title": "Syntax and Variables",
+          "slug": "python-syntax",
+          "description": "Understand Python's syntax and how to declare variables.",
+          "difficulty": "Beginner",
+          "tags": [
+            "Syntax",
+            "Variables",
+            "Interview"
+          ],
+          "related_questions": [
+            "What are Python's rules for variable naming?",
+            "How does indentation affect code execution in Python?"
+          ]
+        }
+      ]
+    }
+  ]
+}

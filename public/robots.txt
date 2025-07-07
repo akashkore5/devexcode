@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://devexcode.com
+
+# Sitemaps
+Sitemap: https://devexcode.com/sitemaps.xml

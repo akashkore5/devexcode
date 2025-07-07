@@ -1,0 +1,212 @@
+[
+    {
+      "id": 1,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom context manager with suppress?",
+      "code": "```python\nfrom contextlib import suppress\nclass MyContext:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        return True\nwith suppress(ValueError), MyContext():\n    raise ValueError(\"Error\")\nprint(\"Passed\")\n```",
+      "options": [
+        "Prints 'Passed'",
+        "Raises ValueError",
+        "No output",
+        "Throws a different exception"
+      ],
+      "correctAnswer": "Prints 'Passed'",
+      "explanation": "The MyContext’s __exit__ returns True, suppressing the ValueError, and suppress also handles it, allowing 'Passed' to print."
+    },
+    {
+      "id": 2,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom asyncio event loop policy?",
+      "code": "```python\nimport asyncio\nclass CustomPolicy(asyncio.DefaultEventLoopPolicy):\n    def new_event_loop(self):\n        return asyncio.new_event_loop()\nasyncio.set_event_loop_policy(CustomPolicy())\nasync def main():\n    print(\"Running\")\nasyncio.run(main())\n```",
+      "options": [
+        "Prints 'Running'",
+        "Throws an exception",
+        "Hangs indefinitely",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Running'",
+      "explanation": "The custom policy creates a new event loop, and asyncio.run executes the coroutine, printing 'Running'."
+    },
+    {
+      "id": 3,
+      "category": "Python",
+      "question": "What happens in the following Python code using a custom property descriptor?",
+      "code": "```python\nclass Property:\n    def __init__(self, value):\n        self._value = value\n    def __get__(self, obj, owner):\n        return self._value\n    def __set__(self, obj, value):\n        self._value = value\nclass MyClass:\n    x = Property(42)\nobj = MyClass()\nobj.x = 100\nprint(MyClass.x)\n```",
+      "options": [
+        "Prints '100'",
+        "Prints '42'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '100'",
+      "explanation": "The descriptor stores the value at the class level, so setting obj.x updates MyClass.x to 100."
+    },
+    {
+      "id": 4,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom signal handler?",
+      "code": "```python\nimport signal\nimport time\ndef handler(signum, frame):\n    print(\"Signal caught\")\nsignal.signal(signal.SIGALRM, handler)\nsignal.alarm(1)\ntime.sleep(2)\nprint(\"Done\")\n```",
+      "options": [
+        "Prints 'Signal caught Done'",
+        "Prints 'Done'",
+        "Throws an exception",
+        "Hangs indefinitely"
+      ],
+      "correctAnswer": "Prints 'Signal caught Done'",
+      "explanation": "The SIGALRM signal triggers after 1 second, calling the handler, and the program continues to print 'Done'."
+    },
+    {
+      "id": 5,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom memory-mapped file?",
+      "code": "```python\nimport mmap\nimport os\nwith open(\"test.txt\", \"w\") as f:\n    f.write(\"Hello\")\nwith open(\"test.txt\", \"r+b\") as f:\n    mm = mmap.mmap(f.fileno(), 0)\n    mm[0:5] = b\"World\"\n    print(mm[:5].decode())\n```",
+      "options": [
+        "Prints 'World'",
+        "Prints 'Hello'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'World'",
+      "explanation": "The memory-mapped file is modified to 'World', which is then read and printed."
+    },
+    {
+      "id": 6,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom iterator with itertools?",
+      "code": "```python\nfrom itertools import islice\nclass MyIter:\n    def __init__(self):\n        self.n = 0\n    def __iter__(self):\n        return self\n    def __next__(self):\n        self.n += 1\n        return self.n\nprint(list(islice(MyIter(), 3)))\n```",
+      "options": [
+        "Prints '[1, 2, 3]'",
+        "Prints '[0, 1, 2]'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '[1, 2, 3]'",
+      "explanation": "The iterator yields 1, 2, 3, and islice limits it to three elements."
+    },
+    {
+      "id": 7,
+      "category": "Python",
+      "question": "What happens in the following Python code using a custom thread pool?",
+      "code": "```python\nfrom concurrent.futures import ThreadPoolExecutor\ndef task(x):\n    return x * 2\nwith ThreadPoolExecutor(max_workers=2) as executor:\n    results = list(executor.map(task, [1, 2, 3]))\nprint(results)\n```",
+      "options": [
+        "Prints '[2, 4, 6]'",
+        "Throws an exception",
+        "Prints '[1, 2, 3]'",
+        "Unpredictable order"
+      ],
+      "correctAnswer": "Prints '[2, 4, 6]'",
+      "explanation": "The ThreadPoolExecutor maps the task function, doubling each input, preserving order."
+    },
+    {
+      "id": 8,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom ABC (Abstract Base Class)?",
+      "code": "```python\nfrom abc import ABC, abstractmethod\nclass MyABC(ABC):\n    @abstractmethod\n    def method(self):\n        pass\nclass MyClass(MyABC):\n    def method(self):\n        return 42\nprint(MyClass().method())\n```",
+      "options": [
+        "Prints '42'",
+        "Throws an exception",
+        "No output",
+        "Prints 'None'"
+      ],
+      "correctAnswer": "Prints '42'",
+      "explanation": "MyClass implements the abstract method, returning 42."
+    },
+    {
+      "id": 9,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom weak reference callback?",
+      "code": "```python\nimport weakref\nclass MyClass:\n    pass\nobj = MyClass()\ndef callback(ref):\n    print(\"Deleted\")\nref = weakref.ref(obj, callback)\nobj = None\nimport gc\ngc.collect()\nprint(\"Done\")\n```",
+      "options": [
+        "Prints 'Deleted Done'",
+        "Prints 'Done'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Deleted Done'",
+      "explanation": "The weak reference callback is triggered when obj is garbage collected, printing 'Deleted', followed by 'Done'."
+    },
+    {
+      "id": 10,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom dataclass with frozen=True?",
+      "code": "```python\nfrom dataclasses import dataclass\n@dataclass(frozen=True)\nclass Point:\n    x: int\n    y: int\np = Point(1, 2)\ntry:\n    p.x = 3\nexcept Exception as e:\n    print(\"Error\")\n```",
+      "options": [
+        "Prints 'Error'",
+        "Sets x to 3",
+        "Throws a different exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Error'",
+      "explanation": "The frozen dataclass prevents attribute modification, raising an exception caught as 'Error'."
+    },
+    {
+      "id": 11,
+      "category": "Python",
+      "question": "What happens in the following Python code using a custom asyncio queue?",
+      "code": "```python\nimport asyncio\nasync def producer(queue):\n    await queue.put(42)\nasync def consumer(queue):\n    print(await queue.get())\nasync def main():\n    queue = asyncio.Queue()\n    await asyncio.gather(producer(queue), consumer(queue))\nasyncio.run(main())\n```",
+      "options": [
+        "Prints '42'",
+        "Throws an exception",
+        "Hangs indefinitely",
+        "No output"
+      ],
+      "correctAnswer": "Prints '42'",
+      "explanation": "The producer puts 42 in the queue, and the consumer retrieves and prints it."
+    },
+    {
+      "id": 12,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom struct?",
+      "code": "```python\nimport struct\ns = struct.pack('>i', 42)\nprint(struct.unpack('>i', s)[0])\n```",
+      "options": [
+        "Prints '42'",
+        "Throws an exception",
+        "Prints '0'",
+        "No output"
+      ],
+      "correctAnswer": "Prints '42'",
+      "explanation": "The struct packs 42 as a big-endian integer and unpacks it, returning 42."
+    },
+    {
+      "id": 13,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom enum?",
+      "code": "```python\nfrom enum import Enum\nclass Color(Enum):\n    RED = 1\n    GREEN = 2\nprint(Color.RED.value)\n```",
+      "options": [
+        "Prints '1'",
+        "Prints 'RED'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1'",
+      "explanation": "The enum’s value for RED is 1, which is printed."
+    },
+    {
+      "id": 14,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom generator with yield from?",
+      "code": "```python\ndef subgen():\n    yield 1\n    yield 2\ndef gen():\n    yield from subgen()\n    yield 3\nprint(list(gen()))\n```",
+      "options": [
+        "Prints '[1, 2, 3]'",
+        "Prints '[1, 2]'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '[1, 2, 3]'",
+      "explanation": "yield from delegates to subgen, yielding 1, 2, followed by 3 from gen."
+    },
+    {
+      "id": 15,
+      "category": "Python",
+      "question": "What is the output of the following Python code using a custom typing annotation?",
+      "code": "```python\nfrom typing import Union\ndef func(x: Union[int, str]) -> str:\n    return str(x)\nprint(func(42))\n```",
+      "options": [
+        "Prints '42'",
+        "Throws an exception",
+        "Prints 'None'",
+        "No output"
+      ],
+      "correctAnswer": "Prints '42'",
+      "explanation": "The function converts the integer 42 to a string, printing '42'. The typing annotation doesn’t affect runtime."
+    }
+  ]

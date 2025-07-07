@@ -1,0 +1,12 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="800" height="500" fill="#0F111A"/>
+  <!-- Top Bar -->
+  <rect x="150" y="100" width="500" height="300" rx="10" fill="#161B22"/>
+  <!-- Buttons -->
+  <circle cx="170" cy="120" r="6" fill="#FF5F56"/>
+  <circle cx="190" cy="120" r="6" fill="#FFBD2E"/>
+  <circle cx="210" cy="120" r="6" fill="#27C93F"/>
+  <!-- Code Lines -->
+  <text x="170" y="170" fill="#FFFFFF" font-family="monospace" font-size="20">$ Welcome to DevExCode</text>
+  <text x="170" y="210" fill="#818CF8" font-family="monospace" font-size="20">$ Crack Tech with Clarity</text>
+</svg>

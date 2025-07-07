@@ -1,0 +1,33 @@
+{
+  "topics": [
+    {
+      "id": "ruby-blocks",
+      "title": "Blocks, Procs, and Lambdas",
+      "slug": "ruby-blocks",
+      "description": "Learn about closures in Ruby and when to use each.",
+      "difficulty": "Intermediate",
+      "tags": [
+        "Ruby",
+        "Blocks",
+        "Lambdas"
+      ],
+      "subtopics": [
+        {
+          "id": "ruby-procs",
+          "title": "Procs and Lambdas",
+          "slug": "ruby-procs",
+          "description": "Understand the differences between procs and lambdas.",
+          "difficulty": "Intermediate",
+          "tags": [
+            "Ruby",
+            "Closures"
+          ],
+          "related_questions": [
+            "How does control flow differ between procs and lambdas?",
+            "When would you use a lambda over a proc?"
+          ]
+        }
+      ]
+    }
+  ]
+}

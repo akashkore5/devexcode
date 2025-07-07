@@ -1,0 +1,212 @@
+[
+    {
+      "id": 1,
+      "category": "React",
+      "question": "What is the output of the following React code using useReducer with lazy initialization?",
+      "code": "```jsx\nimport React, { useReducer } from 'react';\nconst init = (initial) => ({ count: initial });\nconst reducer = (state, action) => {\n  if (action.type === 'increment') return { count: state.count + 1 };\n  return state;\n};\nconst App = () => {\n  const [state, dispatch] = useReducer(reducer, 0, init);\n  return <div onClick={() => dispatch({ type: 'increment' })}>{state.count}</div>;\n};\nexport default App;\n```",
+      "options": [
+        "Renders '0', increments to '1' on click",
+        "Throws an error",
+        "Renders '1' initially",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Renders '0', increments to '1' on click",
+      "explanation": "The lazy initializer sets count to 0. Clicking dispatches an increment, updating count to 1."
+    },
+    {
+      "id": 2,
+      "category": "React",
+      "question": "What happens in the following React code using useTransition with a heavy computation?",
+      "code": "```jsx\nimport React, { useState, useTransition } from 'react';\nconst App = () => {\n  const [input, setInput] = useState('');\n  const [isPending, startTransition] = useTransition();\n  const handleChange = (e) => {\n    startTransition(() => {\n      setInput(e.target.value);\n    });\n  };\n  return <input onChange={handleChange} value={input} disabled={isPending} />;\n};\nexport default App;\n```",
+      "options": [
+        "Input updates with possible disabled state during transition",
+        "Throws an error",
+        "Input updates instantly",
+        "Input is always disabled"
+      ],
+      "correctAnswer": "Input updates with possible disabled state during transition",
+      "explanation": "useTransition marks the state update as low-priority, and isPending disables the input during the transition."
+    },
+    {
+      "id": 3,
+      "category": "React",
+      "question": "What is the output of the following React code using useMemo with a complex dependency?",
+      "code": "```jsx\nimport React, { useMemo, useState } from 'react';\nconst App = () => {\n  const [a, setA] = useState(1);\n  const [b, setB] = useState(2);\n  const result = useMemo(() => a + b, [a]);\n  return <div onClick={() => setB(3)}>{result}</div>;\n};\nexport default App;\n```",
+      "options": [
+        "Renders '3', doesn’t update on b change",
+        "Renders '3', updates to '4' on click",
+        "Throws an error",
+        "Renders '5'"
+      ],
+      "correctAnswer": "Renders '3', doesn’t update on b change",
+      "explanation": "useMemo depends only on a, so changing b doesn’t recompute the sum, which stays as 1 + 2 = 3."
+    },
+    {
+      "id": 4,
+      "category": "React",
+      "question": "What happens in the following React code using SuspenseList?",
+      "code": "```jsx\nimport React, { Suspense, lazy } from 'react';\nconst Comp1 = lazy(() => Promise.resolve({ default: () => <div>Comp1</div> }));\nconst Comp2 = lazy(() => Promise.resolve({ default: () => <div>Comp2</div> }));\nconst App = () => (\n  <SuspenseList revealOrder=\"forwards\">\n    <Suspense fallback={<div>Loading1...</div>}>\n      <Comp1 />\n    </Suspense>\n    <Suspense fallback={<div>Loading2...</div>}>\n      <Comp2 />\n    </Suspense>\n  </SuspenseList>\n);\nexport default App;\n```",
+      "options": [
+        "Renders 'Comp1' then 'Comp2' in order",
+        "Renders both instantly",
+        "Throws an error",
+        "Shows fallbacks indefinitely"
+      ],
+      "correctAnswer": "Renders 'Comp1' then 'Comp2' in order",
+      "explanation": "SuspenseList with revealOrder='forwards' ensures components render sequentially."
+    },
+    {
+      "id": 5,
+      "category": "React",
+      "question": "What is the output of the following React code using a class-based error boundary with componentDidCatch?",
+      "code": "```jsx\nimport React from 'react';\nclass ErrorBoundary extends React.Component {\n  state = { error: null };\n  componentDidCatch(error) {\n    this.setState({ error: error.message });\n  }\n  render() {\n    return this.state.error ? <div>{this.state.error}</div> : this.props.children;\n  }\n}\nconst Buggy = () => { throw new Error('Crash'); };\nconst App = () => (\n  <ErrorBoundary>\n    <Buggy />\n  </ErrorBoundary>\n);\nexport default App;\n```",
+      "options": [
+        "Renders 'Crash'",
+        "Throws an error",
+        "Renders nothing",
+        "Renders 'Error'"
+      ],
+      "correctAnswer": "Renders 'Crash'",
+      "explanation": "componentDidCatch captures the error, setting the state to render 'Crash'."
+    },
+    {
+      "id": 6,
+      "category": "React",
+      "question": "What is the output of the following React code using useRef with a DOM element?",
+      "code": "```jsx\nimport React, { useRef, useEffect } from 'react';\nconst App = () => {\n  const inputRef = useRef(null);\n  useEffect(() => {\n    inputRef.current.value = 'Test';\n  }, []);\n  return <input ref={inputRef} />;\n};\nexport default App;\n```",
+      "options": [
+        "Renders input with value 'Test'",
+        "Renders empty input",
+        "Throws an error",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Renders input with value 'Test'",
+      "explanation": "useRef accesses the DOM input, and useEffect sets its value to 'Test'."
+    },
+    {
+      "id": 7,
+      "category": "React",
+      "question": "What happens in the following React code using useImperativeHandle with a parent ref?",
+      "code": "```jsx\nimport React, { useRef, useImperativeHandle, forwardRef } from 'react';\nconst Child = forwardRef((props, ref) => {\n  useImperativeHandle(ref, () => ({ reset: () => console.log('Reset') }));\n  return <div>Child</div>;\n});\nconst App = () => {\n  const ref = useRef();\n  useEffect(() => {\n    ref.current.reset();\n  }, []);\n  return <Child ref={ref} />;\n};\nexport default App;\n```",
+      "options": [
+        "Logs 'Reset'",
+        "Throws an error",
+        "Renders 'Child' without logging",
+        "Crashes"
+      ],
+      "correctAnswer": "Logs 'Reset'",
+      "explanation": "useImperativeHandle exposes a reset method, called in useEffect, logging 'Reset'."
+    },
+    {
+      "id": 8,
+      "category": "React",
+      "question": "What is the output of the following React code using a context with multiple providers?",
+      "code": "```jsx\nimport React, { createContext, useContext } from 'react';\nconst Ctx = createContext('default');\nconst Child = () => <div>{useContext(Ctx)}</div>;\nconst App = () => (\n  <Ctx.Provider value=\"outer\">\n    <Ctx.Provider value=\"inner\">\n      <Child />\n    </Ctx.Provider>\n  </Ctx.Provider>\n);\nexport default App;\n```",
+      "options": [
+        "Renders 'inner'",
+        "Renders 'outer'",
+        "Renders 'default'",
+        "Throws an error"
+      ],
+      "correctAnswer": "Renders 'inner'",
+      "explanation": "The innermost Provider’s value ('inner') is used by useContext."
+    },
+    {
+      "id": 9,
+      "category": "React",
+      "question": "What happens in the following React code using useCallback with an incorrect dependency?",
+      "code": "```jsx\nimport React, { useState, useCallback } from 'react';\nconst App = () => {\n  const [count, setCount] = useState(0);\n  const log = useCallback(() => console.log(count), []);\n  useEffect(() => {\n    log();\n  }, [log]);\n  return <div onClick={() => setCount(count + 1)}>{count}</div>;\n};\nexport default App;\n```",
+      "options": [
+        "Logs '0' always",
+        "Logs updated count",
+        "Throws an error",
+        "Crashes"
+      ],
+      "correctAnswer": "Logs '0' always",
+      "explanation": "useCallback omits count from dependencies, capturing the initial count (0) in the closure."
+    },
+    {
+      "id": 10,
+      "category": "React",
+      "question": "What is the output of the following React code using useLayoutEffect with a ref?",
+      "code": "```jsx\nimport React, { useLayoutEffect, useRef } from 'react';\nconst App = () => {\n  const divRef = useRef(null);\n  useLayoutEffect(() => {\n    divRef.current.textContent = 'Updated';\n  }, []);\n  return <div ref={divRef}>Initial</div>;\n};\nexport default App;\n```",
+      "options": [
+        "Renders 'Updated'",
+        "Renders 'Initial'",
+        "Throws an error",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Renders 'Updated'",
+      "explanation": "useLayoutEffect updates the div’s textContent synchronously before painting."
+    },
+    {
+      "id": 11,
+      "category": "React",
+      "question": "What is the output of the following React code using React.memo with a custom comparison?",
+      "code": "```jsx\nimport React, { memo } from 'react';\nconst Child = memo(({ value }) => <div>{value}</div>, (prev, next) => prev.value === next.value);\nconst App = () => <Child value={42} />;\nconst App2 = () => <Child value={42} />;\nconst Root = () => <><App /><App2 /></>;\nexport default Root;\n```",
+      "options": [
+        "Renders '42' twice without re-rendering Child",
+        "Renders '42' twice with re-rendering",
+        "Throws an error",
+        "Renders once"
+      ],
+      "correctAnswer": "Renders '42' twice without re-rendering Child",
+      "explanation": "The custom comparison prevents re-rendering when value is the same."
+    },
+    {
+      "id": 12,
+      "category": "React",
+      "question": "What happens in the following React code using useDeferredValue with a slow render?",
+      "code": "```jsx\nimport React, { useState, useDeferredValue } from 'react';\nconst SlowComponent = ({ value }) => {\n  let start = Date.now();\n  while (Date.now() - start < 100) {}\n  return <div>{value}</div>;\n};\nconst App = () => {\n  const [value, setValue] = useState('initial');\n  const deferredValue = useDeferredValue(value);\n  return (\n    <>\n      <button onClick={() => setValue('updated')}>Update</button>\n      <SlowComponent value={deferredValue} />\n    </>\n  );\n};\nexport default App;\n```",
+      "options": [
+        "Renders 'initial', updates to 'updated' with delay",
+        "Renders 'updated' instantly",
+        "Throws an error",
+        "Hangs"
+      ],
+      "correctAnswer": "Renders 'initial', updates to 'updated' with delay",
+      "explanation": "useDeferredValue delays the slow render, keeping 'initial' until the update is processed."
+    },
+    {
+      "id": 13,
+      "category": "React",
+      "question": "What is the output of the following React code using createPortal with event bubbling?",
+      "code": "```jsx\nimport React from 'react';\nimport ReactDOM from 'react-dom';\nconst App = () => {\n  const handleClick = () => console.log('Clicked');\n  return (\n    <div onClick={handleClick}>\n      {ReactDOM.createPortal(<button>Click me</button>, document.body)}\n    </div>\n  );\n};\nexport default App;\n```",
+      "options": [
+        "Logs 'Clicked' on button click",
+        "Doesn’t log on click",
+        "Throws an error",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Doesn’t log on click",
+      "explanation": "The portal renders the button in document.body, outside the div’s event bubbling path."
+    },
+    {
+      "id": 14,
+      "category": "React",
+      "question": "What is the output of the following React code using useId with multiple components?",
+      "code": "```jsx\nimport React, { useId } from 'react';\nconst Input = () => {\n  const id = useId();\n  return <input id={id} />;\n};\nconst App = () => (\n  <><Input /><Input /></>\n);\nexport default App;\n```",
+      "options": [
+        "Renders two inputs with unique IDs",
+        "Renders two inputs with same ID",
+        "Throws an error",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Renders two inputs with unique IDs",
+      "explanation": "useId generates unique IDs for each component instance."
+    },
+    {
+      "id": 15,
+      "category": "React",
+      "question": "What happens in the following React code using useSyncExternalStore with a custom store?",
+      "code": "```jsx\nimport React, { useSyncExternalStore } from 'react';\nconst store = {\n  state: 0,\n  listeners: new Set(),\n  setState(value) {\n    this.state = value;\n    this.listeners.forEach(fn => fn());\n  },\n  subscribe(fn) {\n    this.listeners.add(fn);\n    return () => this.listeners.delete(fn);\n  }\n};\nconst App = () => {\n  const value = useSyncExternalStore(store.subscribe.bind(store), () => store.state);\n  return <button onClick={() => store.setState(value + 1)}>{value}</button>;\n};\nexport default App;\n```",
+      "options": [
+        "Renders button with incrementing value",
+        "Throws an error",
+        "Renders '0' always",
+        "Renders nothing"
+      ],
+      "correctAnswer": "Renders button with incrementing value",
+      "explanation": "useSyncExternalStore syncs with the custom store, updating the UI on state changes."
+    }
+  ]
