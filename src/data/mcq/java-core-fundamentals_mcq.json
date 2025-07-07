@@ -1,0 +1,702 @@
+[
+    {
+      "id": 1,
+      "category": "Java",
+      "question": "What is the role of the 'public static void main' method in Java?",
+      "code": null,
+      "options": [
+        "It initializes the JVM",
+        "It is the entry point of a Java application",
+        "It defines a class constructor",
+        "It handles exceptions"
+      ],
+      "correctAnswer": "It is the entry point of a Java application",
+      "explanation": "The 'public static void main' method is the entry point for a Java application, where execution begins. It must be public, static, return void, and accept a String array as arguments."
+    },
+    {
+      "id": 2,
+      "category": "Java",
+      "question": "What is the output of the following code demonstrating method overloading?",
+      "code": "public class Main {\n    int display(int x) { return x; }\n    String display(String x) { return x; }\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.display(\"Hello\"));\n    }\n}",
+      "options": [
+        "Prints 'Hello'",
+        "Prints '5'",
+        "Throws a compilation error",
+        "Throws a runtime exception"
+      ],
+      "correctAnswer": "Prints 'Hello'",
+      "explanation": "Method overloading allows multiple methods with the same name but different parameter types. The display(String) method is called, returning 'Hello'."
+    },
+    {
+      "id": 3,
+      "category": "Java",
+      "question": "Which collection interface allows duplicate elements?",
+      "code": null,
+      "options": [
+        "Set",
+        "Map",
+        "List",
+        "Queue"
+      ],
+      "correctAnswer": "List",
+      "explanation": "The List interface allows duplicate elements, maintaining an ordered collection. Set ensures uniqueness, Map stores key-value pairs, and Queue is for processing order."
+    },
+    {
+      "id": 4,
+      "category": "Java",
+      "question": "What is the output of the following code handling exceptions?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            int x = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Divide by zero\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Divide by zero'",
+        "Throws an exception",
+        "No output",
+        "Compiles but crashes"
+      ],
+      "correctAnswer": "Prints 'Divide by zero'",
+      "explanation": "The division by zero throws an ArithmeticException, which is caught by the catch block, printing 'Divide by zero'."
+    },
+    {
+      "id": 5,
+      "category": "Java",
+      "question": "What is the output of the following string concatenation code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s = \"Java\" + 8 + 2;\n        System.out.println(s);\n    }\n}",
+      "options": [
+        "Prints 'Java10'",
+        "Prints 'Java82'",
+        "Prints 'Java8+2'",
+        "Throws an exception"
+      ],
+      "correctAnswer": "Prints 'Java82'",
+      "explanation": "String concatenation with '+' evaluates left to right. 'Java' + 8 becomes 'Java8', then 'Java8' + 2 becomes 'Java82'."
+    },
+    {
+      "id": 6,
+      "category": "Java",
+      "question": "What is the difference between checked and unchecked exceptions?",
+      "code": null,
+      "options": [
+        "Checked exceptions are runtime errors, unchecked are compile-time",
+        "Checked exceptions must be declared or caught, unchecked are optional",
+        "Checked exceptions are for I/O, unchecked for logic errors",
+        "No difference"
+      ],
+      "correctAnswer": "Checked exceptions must be declared or caught, unchecked are optional",
+      "explanation": "Checked exceptions (e.g., IOException) must be handled or declared in the method signature. Unchecked exceptions (e.g., NullPointerException) are optional and typically indicate programming errors."
+    },
+    {
+      "id": 7,
+      "category": "Java",
+      "question": "What is the output of the following code using ArrayList?",
+      "code": "import java.util.ArrayList;\npublic class Main {\n    public static void main(String[] args) {\n        ArrayList<Integer> list = new ArrayList<>();\n        list.add(1); list.add(2); list.add(1);\n        System.out.println(list.size());\n    }\n}",
+      "options": [
+        "Prints '2'",
+        "Prints '3'",
+        "Throws an exception",
+        "Prints '1'"
+      ],
+      "correctAnswer": "Prints '3'",
+      "explanation": "ArrayList allows duplicates. Adding 1, 2, and 1 results in a list of size 3."
+    },
+    {
+      "id": 8,
+      "category": "Java",
+      "question": "What is the purpose of encapsulation in OOP?",
+      "code": null,
+      "options": [
+        "To allow multiple inheritance",
+        "To hide data and expose methods",
+        "To enable polymorphism",
+        "To simplify exception handling"
+      ],
+      "correctAnswer": "To hide data and expose methods",
+      "explanation": "Encapsulation hides internal data (using private fields) and exposes controlled access via public methods, enhancing security and modularity."
+    },
+    {
+      "id": 9,
+      "category": "Java",
+      "question": "What is the output of the following StringBuilder code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder(\"Java\");\n        sb.append(8).reverse();\n        System.out.println(sb.toString());\n    }\n}",
+      "options": [
+        "Prints 'Java8'",
+        "Prints '8avaJ'",
+        "Throws an exception",
+        "Prints 'avaJ8'"
+      ],
+      "correctAnswer": "Prints '8avaJ'",
+      "explanation": "StringBuilder appends 8 to 'Java', forming 'Java8'. The reverse() method reverses the sequence, resulting in '8avaJ'."
+    },
+    {
+      "id": 10,
+      "category": "Java",
+      "question": "Which keyword is used to create a custom exception in Java?",
+      "code": null,
+      "options": [
+        "extends",
+        "implements",
+        "throws",
+        "catch"
+      ],
+      "correctAnswer": "extends",
+      "explanation": "A custom exception is created by extending the Exception class (for checked exceptions) or RuntimeException (for unchecked exceptions)."
+    },
+    {
+      "id": 11,
+      "category": "Java",
+      "question": "What is the output of the following code using a for loop?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        for (int i = 0; i < 3; i++) {\n            System.out.print(i + \" \");\n        }\n    }\n}",
+      "options": [
+        "Prints '0 1 2 '",
+        "Prints '1 2 3 '",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '0 1 2 '",
+      "explanation": "The for loop iterates from i=0 to i=2, printing each value followed by a space."
+    },
+    {
+      "id": 12,
+      "category": "Java",
+      "question": "What is the difference between method overloading and method overriding?",
+      "code": null,
+      "options": [
+        "Overloading is in the same class, overriding is in subclasses",
+        "Overloading changes return type, overriding does not",
+        "Overloading is runtime, overriding is compile-time",
+        "No difference"
+      ],
+      "correctAnswer": "Overloading is in the same class, overriding is in subclasses",
+      "explanation": "Overloading occurs in the same class with different parameter lists. Overriding occurs when a subclass redefines a superclass method with the same signature."
+    },
+    {
+      "id": 13,
+      "category": "Java",
+      "question": "What is the output of the following code using HashMap?",
+      "code": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"A\", 1);\n        map.put(\"A\", 2);\n        System.out.println(map.size());\n    }\n}",
+      "options": [
+        "Prints '1'",
+        "Prints '2'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1'",
+      "explanation": "HashMap does not allow duplicate keys. The second put overwrites the value for key 'A', resulting in a map of size 1."
+    },
+    {
+      "id": 14,
+      "category": "Java",
+      "question": "What happens if a try block does not have a catch block?",
+      "code": null,
+      "options": [
+        "The exception is ignored",
+        "The program crashes",
+        "A compilation error occurs",
+        "The finally block handles it"
+      ],
+      "correctAnswer": "A compilation error occurs",
+      "explanation": "A try block must be followed by at least one catch or finally block, or a compilation error occurs."
+    },
+    {
+      "id": 15,
+      "category": "Java",
+      "question": "What is the output of the following String comparison code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s1 = \"Java\";\n        String s2 = new String(\"Java\");\n        System.out.println(s1 == s2);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'false'",
+      "explanation": "The '==' operator compares object references. s1 is a string literal in the pool, while s2 is a new object, so they are different references."
+    },
+    {
+      "id": 16,
+      "category": "Java",
+      "question": "What is polymorphism in Java?",
+      "code": null,
+      "options": [
+        "Hiding data",
+        "Inheriting multiple classes",
+        "Using one interface for multiple forms",
+        "Creating static methods"
+      ],
+      "correctAnswer": "Using one interface for multiple forms",
+      "explanation": "Polymorphism allows objects to be treated as instances of their superclass or interface, enabling multiple forms (e.g., method overriding)."
+    },
+    {
+      "id": 17,
+      "category": "Java",
+      "question": "What is the output of the following code using LinkedList?",
+      "code": "import java.util.LinkedList;\npublic class Main {\n    public static void main(String[] args) {\n        LinkedList<String> list = new LinkedList<>();\n        list.add(\"A\"); list.addFirst(\"B\");\n        System.out.println(list.get(0));\n    }\n}",
+      "options": [
+        "Prints 'A'",
+        "Prints 'B'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'B'",
+      "explanation": "addFirst() adds 'B' to the front of the LinkedList, so the element at index 0 is 'B'."
+    },
+    {
+      "id": 18,
+      "category": "Java",
+      "question": "What is the output of the following code using a custom exception?",
+      "code": "class MyException extends Exception {}\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            throw new MyException();\n        } catch (MyException e) {\n            System.out.println(\"Caught\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Caught'",
+        "Throws an exception",
+        "No output",
+        "Compiles but crashes"
+      ],
+      "correctAnswer": "Prints 'Caught'",
+      "explanation": "The custom exception MyException is thrown and caught by the catch block, printing 'Caught'."
+    },
+    {
+      "id": 19,
+      "category": "Java",
+      "question": "What is the output of the following StringBuffer code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        StringBuffer sb = new StringBuffer(\"Test\");\n        sb.insert(1, \"X\");\n        System.out.println(sb.toString());\n    }\n}",
+      "options": [
+        "Prints 'TestX'",
+        "Prints 'TXest'",
+        "Throws an exception",
+        "Prints 'XTest'"
+      ],
+      "correctAnswer": "Prints 'TXest'",
+      "explanation": "StringBuffer.insert(1, 'X') inserts 'X' at index 1, resulting in 'TXest'."
+    },
+    {
+      "id": 20,
+      "category": "Java",
+      "question": "What is the difference between '==' and equals() for Strings?",
+      "code": null,
+      "options": [
+        "'==' compares values, equals() compares references",
+        "'==' compares references, equals() compares content",
+        "Both compare content",
+        "Both compare references"
+      ],
+      "correctAnswer": "'==' compares references, equals() compares content",
+      "explanation": "'==' checks if two String objects have the same memory reference, while equals() checks if their character sequences are identical."
+    },
+    {
+      "id": 21,
+      "category": "Java",
+      "question": "What is the output of the following code using a switch statement?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int x = 2;\n        switch (x) {\n            case 1: System.out.println(\"One\"); break;\n            case 2: System.out.println(\"Two\"); break;\n            default: System.out.println(\"Other\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'One'",
+        "Prints 'Two'",
+        "Prints 'Other'",
+        "Throws an exception"
+      ],
+      "correctAnswer": "Prints 'Two'",
+      "explanation": "The switch statement matches x=2 to case 2, printing 'Two' and exiting due to the break."
+    },
+    {
+      "id": 22,
+      "category": "Java",
+      "question": "What is abstraction in Java?",
+      "code": null,
+      "options": [
+        "Hiding implementation details",
+        "Exposing all data",
+        "Creating multiple instances",
+        "Synchronizing threads"
+      ],
+      "correctAnswer": "Hiding implementation details",
+      "explanation": "Abstraction hides complex implementation details and exposes only necessary features, often via abstract classes or interfaces."
+    },
+    {
+      "id": 23,
+      "category": "Java",
+      "question": "What is the output of the following code using HashSet?",
+      "code": "import java.util.HashSet;\npublic class Main {\n    public static void main(String[] args) {\n        HashSet<Integer> set = new HashSet<>();\n        set.add(1); set.add(1); set.add(2);\n        System.out.println(set.size());\n    }\n}",
+      "options": [
+        "Prints '2'",
+        "Prints '3'",
+        "Throws an exception",
+        "Prints '1'"
+      ],
+      "correctAnswer": "Prints '2'",
+      "explanation": "HashSet does not allow duplicates. Adding 1 twice counts as one element, so the set contains {1, 2}, with size 2."
+    },
+    {
+      "id": 24,
+      "category": "Java",
+      "question": "What is the output of the following code with multiple catch blocks?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            String s = null;\n            s.length();\n        } catch (NullPointerException e) {\n            System.out.println(\"Null\");\n        } catch (Exception e) {\n            System.out.println(\"General\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Null'",
+        "Prints 'General'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Null'",
+      "explanation": "A NullPointerException is thrown when accessing length() on a null String, caught by the specific NullPointerException catch block."
+    },
+    {
+      "id": 25,
+      "category": "Java",
+      "question": "What is the output of the following code using String interning?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s1 = \"Java\";\n        String s2 = new String(\"Java\").intern();\n        System.out.println(s1 == s2);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "intern() returns a reference to the string pool version of 'Java'. Since s1 is a literal in the pool, s1 == s2 is true."
+    },
+    {
+      "id": 26,
+      "category": "Java",
+      "question": "What is inheritance in Java?",
+      "code": null,
+      "options": [
+        "Creating multiple classes",
+        "Allowing a class to inherit properties from another",
+        "Hiding method implementations",
+        "Synchronizing objects"
+      ],
+      "correctAnswer": "Allowing a class to inherit properties from another",
+      "explanation": "Inheritance allows a subclass to inherit fields and methods from a superclass, promoting code reuse."
+    },
+    {
+      "id": 27,
+      "category": "Java",
+      "question": "What is the output of the following code using TreeSet?",
+      "code": "import java.util.TreeSet;\npublic class Main {\n    public static void main(String[] args) {\n        TreeSet<Integer> set = new TreeSet<>();\n        set.add(3); set.add(1); set.add(2);\n        System.out.println(set.first());\n    }\n}",
+      "options": [
+        "Prints '1'",
+        "Prints '3'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1'",
+      "explanation": "TreeSet stores elements in sorted order. The elements {1, 2, 3} are sorted, and first() returns the smallest, 1."
+    },
+    {
+      "id": 28,
+      "category": "Java",
+      "question": "What is the output of the following code with a finally block?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            return;\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Finally'",
+        "No output",
+        "Throws an exception",
+        "Compiles but crashes"
+      ],
+      "correctAnswer": "Prints 'Finally'",
+      "explanation": "The finally block executes even if the try block returns, printing 'Finally' before the method exits."
+    },
+    {
+      "id": 29,
+      "category": "Java",
+      "question": "What is the output of the following String format code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s = String.format(\"%s %d\", \"Java\", 11);\n        System.out.println(s);\n    }\n}",
+      "options": [
+        "Prints 'Java 11'",
+        "Prints 'Java11'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Java 11'",
+      "explanation": "String.format uses %s for strings and %d for integers, producing 'Java 11' with a space."
+    },
+    {
+      "id": 30,
+      "category": "Java",
+      "question": "What is the difference between ArrayList and LinkedList?",
+      "code": null,
+      "options": [
+        "ArrayList is faster for random access, LinkedList for insertions",
+        "LinkedList allows duplicates, ArrayList does not",
+        "ArrayList is thread-safe, LinkedList is not",
+        "No difference"
+      ],
+      "correctAnswer": "ArrayList is faster for random access, LinkedList for insertions",
+      "explanation": "ArrayList uses a dynamic array, making random access fast (O(1)). LinkedList uses a doubly-linked list, making insertions/deletions faster (O(1))."
+    },
+    {
+      "id": 31,
+      "category": "Java",
+      "question": "What is the output of the following code using a do-while loop?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int x = 0;\n        do {\n            System.out.print(x + \" \");\n            x++;\n        } while (x < 2);\n    }\n}",
+      "options": [
+        "Prints '0 1 '",
+        "Prints '1 2 '",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '0 1 '",
+      "explanation": "The do-while loop executes at least once, printing 0, then 1, and stops when x=2."
+    },
+    {
+      "id": 32,
+      "category": "Java",
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "code": null,
+      "options": [
+        "To make a variable constant",
+        "To synchronize threads",
+        "To allow inheritance",
+        "To handle exceptions"
+      ],
+      "correctAnswer": "To make a variable constant",
+      "explanation": "The 'final' keyword makes variables constant, prevents method overriding, and blocks class inheritance."
+    },
+    {
+      "id": 33,
+      "category": "Java",
+      "question": "What is the output of the following code using HashMap iteration?",
+      "code": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> map = new HashMap<>();\n        map.put(\"A\", 1); map.put(\"B\", 2);\n        for (Integer v : map.values()) {\n            System.out.print(v + \" \");\n        }\n    }\n}",
+      "options": [
+        "Prints '1 2 ' or '2 1 '",
+        "Prints 'A B '",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1 2 ' or '2 1 '",
+      "explanation": "map.values() returns a collection of values (1, 2). HashMap order is not guaranteed, so values may print in any order."
+    },
+    {
+      "id": 34,
+      "category": "Java",
+      "question": "What is the output of the following code with a thrown exception?",
+      "code": "public class Main {\n    static void method() throws Exception {\n        throw new Exception(\"Error\");\n    }\n    public static void main(String[] args) {\n        try {\n            method();\n        } catch (Exception e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}",
+      "options": [
+        "Prints 'Error'",
+        "Throws an exception",
+        "No output",
+        "Compiles but crashes"
+      ],
+      "correctAnswer": "Prints 'Error'",
+      "explanation": "The thrown Exception is caught, and its message ('Error') is printed."
+    },
+    {
+      "id": 35,
+      "category": "Java",
+      "question": "What is the output of the following String substring code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s = \"Hello\";\n        System.out.println(s.substring(1, 3));\n    }\n}",
+      "options": [
+        "Prints 'He'",
+        "Prints 'el'",
+        "Throws an exception",
+        "Prints 'Hello'"
+      ],
+      "correctAnswer": "Prints 'el'",
+      "explanation": "substring(1, 3) extracts characters from index 1 to 2 (exclusive), resulting in 'el'."
+    },
+    {
+      "id": 36,
+      "category": "Java",
+      "question": "What is method overriding in Java?",
+      "code": null,
+      "options": [
+        "Defining multiple methods with the same name",
+        "Redefining a superclass method in a subclass",
+        "Hiding a method",
+        "Creating static methods"
+      ],
+      "correctAnswer": "Redefining a superclass method in a subclass",
+      "explanation": "Method overriding allows a subclass to provide a specific implementation of a superclass method with the same signature."
+    },
+    {
+      "id": 37,
+      "category": "Java",
+      "question": "What is the output of the following code using TreeMap?",
+      "code": "import java.util.TreeMap;\npublic class Main {\n    public static void main(String[] args) {\n        TreeMap<String, Integer> map = new TreeMap<>();\n        map.put(\"B\", 2); map.put(\"A\", 1);\n        System.out.println(map.firstKey());\n    }\n}",
+      "options": [
+        "Prints 'A'",
+        "Prints 'B'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'A'",
+      "explanation": "TreeMap stores keys in sorted order. The keys 'A' and 'B' are sorted, and firstKey() returns 'A'."
+    },
+    {
+      "id": 38,
+      "category": "Java",
+      "question": "What is the output of the following code with try-catch-finally?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.print(\"Try \");\n            throw new Exception();\n        } catch (Exception e) {\n            System.out.print(\"Catch \");\n        } finally {\n            System.out.print(\"Finally\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Try Catch Finally'",
+        "Prints 'Try Catch'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Try Catch Finally'",
+      "explanation": "The try block prints 'Try', throws an exception caught by catch ('Catch'), and finally executes ('Finally')."
+    },
+    {
+      "id": 39,
+      "category": "Java",
+      "question": "What is the output of the following StringBuilder delete code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder(\"JavaCode\");\n        sb.delete(4, 8);\n        System.out.println(sb.toString());\n    }\n}",
+      "options": [
+        "Prints 'Java'",
+        "Prints 'Code'",
+        "Throws an exception",
+        "Prints 'JavaCode'"
+      ],
+      "correctAnswer": "Prints 'Java'",
+      "explanation": "delete(4, 8) removes characters from index 4 to 7, leaving 'Java'."
+    },
+    {
+      "id": 40,
+      "category": "Java",
+      "question": "What is the difference between Set and List interfaces?",
+      "code": null,
+      "options": [
+        "Set allows duplicates, List does not",
+        "List maintains order, Set does not",
+        "Set maintains order, List does not",
+        "No difference"
+      ],
+      "correctAnswer": "List maintains order, Set does not",
+      "explanation": "List maintains insertion order and allows duplicates, while Set does not guarantee order (except TreeSet) and ensures uniqueness."
+    },
+    {
+      "id": 41,
+      "category": "Java",
+      "question": "What is the output of the following code using a while loop?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int x = 3;\n        while (x > 0) {\n            System.out.print(x + \" \");\n            x--;\n        }\n    }\n}",
+      "options": [
+        "Prints '3 2 1 '",
+        "Prints '1 2 3 '",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '3 2 1 '",
+      "explanation": "The while loop prints x (3, 2, 1) until x=0."
+    },
+    {
+      "id": 42,
+      "category": "Java",
+      "question": "What is the purpose of the 'this' keyword in Java?",
+      "code": null,
+      "options": [
+        "Refers to the current class instance",
+        "Creates a new object",
+        "Synchronizes threads",
+        "Handles exceptions"
+      ],
+      "correctAnswer": "Refers to the current class instance",
+      "explanation": "'this' refers to the current object, used to access instance variables or methods and disambiguate from parameters."
+    },
+    {
+      "id": 43,
+      "category": "Java",
+      "question": "What is the output of the following code using PriorityQueue?",
+      "code": "import java.util.PriorityQueue;\npublic class Main {\n    public static void main(String[] args) {\n        PriorityQueue<Integer> pq = new PriorityQueue<>();\n        pq.add(2); pq.add(1); pq.add(3);\n        System.out.println(pq.poll());\n    }\n}",
+      "options": [
+        "Prints '1'",
+        "Prints '2'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1'",
+      "explanation": "PriorityQueue orders elements by natural ordering (min-heap). poll() returns and removes the smallest element, 1."
+    },
+    {
+      "id": 44,
+      "category": "Java",
+      "question": "What is the output of the following code with unchecked exception?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            throw new RuntimeException(\"Error\");\n        } catch (RuntimeException e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}",
+      "options": [
+        "Prints 'Error'",
+        "Throws an exception",
+        "No output",
+        "Compiles but crashes"
+      ],
+      "correctAnswer": "Prints 'Error'",
+      "explanation": "The RuntimeException is caught, and its message ('Error') is printed."
+    },
+    {
+      "id": 45,
+      "category": "Java",
+      "question": "What is the output of the following String replace code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        String s = \"Java Code\";\n        System.out.println(s.replace(\"Code\", \"Test\"));\n    }\n}",
+      "options": [
+        "Prints 'Java Test'",
+        "Prints 'Java Code'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Java Test'",
+      "explanation": "replace() substitutes 'Code' with 'Test', producing 'Java Test'."
+    },
+    {
+      "id": 46,
+      "category": "Java",
+      "question": "What is the output of the following code using instanceof?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Object obj = \"Java\";\n        System.out.println(obj instanceof String);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "obj is a String, so instanceof String returns true."
+    },
+    {
+      "id": 47,
+      "category": "Java",
+      "question": "What is the output of the following code using LinkedHashSet?",
+      "code": "import java.util.LinkedHashSet;\npublic class Main {\n    public static void main(String[] args) {\n        LinkedHashSet<String> set = new LinkedHashSet<>();\n        set.add(\"B\"); set.add(\"A\"); set.add(\"B\");\n        System.out.println(set.size());\n    }\n}",
+      "options": [
+        "Prints '1'",
+        "Prints '2'",
+        "Throws an exception",
+        "Prints '3'"
+      ],
+      "correctAnswer": "Prints '2'",
+      "explanation": "LinkedHashSet maintains insertion order and prevents duplicates. Adding 'B', 'A', and 'B' results in {B, A}, with size 2."
+    },
+    {
+      "id": 48,
+      "category": "Java",
+      "question": "What is the output of the following code with nested try blocks?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        try {\n            try {\n                throw new Exception(\"Inner\");\n            } catch (Exception e) {\n                System.out.println(e.getMessage());\n            }\n        } catch (Exception e) {\n            System.out.println(\"Outer\");\n        }\n    }\n}",
+      "options": [
+        "Prints 'Inner'",
+        "Prints 'Outer'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Inner'",
+      "explanation": "The inner try block throws an exception caught by its catch block, printing 'Inner'. The outer catch is not triggered."
+    },
+    {
+      "id": 49,
+      "category": "Java",
+      "question": "What is the output of the following StringBuilder capacity code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        StringBuilder sb = new StringBuilder();\n        System.out.println(sb.capacity());\n    }\n}",
+      "options": [
+        "Prints '0'",
+        "Prints '16'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '16'",
+      "explanation": "The default capacity of a StringBuilder is 16 characters."
+    },
+    {
+      "id": 50,
+      "category": "Java",
+      "question": "What is the output of the following code using polymorphism?",
+      "code": "class Animal { void sound() { System.out.println(\"Generic\"); } }\nclass Dog extends Animal { void sound() { System.out.println(\"Bark\"); } }\npublic class Main {\n    public static void main(String[] args) {\n        Animal a = new Dog();\n        a.sound();\n    }\n}",
+      "options": [
+        "Prints 'Generic'",
+        "Prints 'Bark'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Bark'",
+      "explanation": "Polymorphism invokes the overridden sound() method of the Dog class, printing 'Bark'."
+    }
+  ]

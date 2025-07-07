@@ -1,0 +1,6036 @@
+[
+  {
+    "id": 1,
+    "title": "Inheritance vs Composition",
+    "slug": "inheritance-vs-composition",
+    "difficulty": "Medium",
+    "tags": [
+      "OOP",
+      "Design Patterns",
+      "Java",
+      "Python",
+      "C++"
+    ],
+    "date": "2025-04-01"
+  },
+  {
+    "id": 2,
+    "title": "Callable vs Runnable in Java",
+    "slug": "callable-vs-runnable",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Multithreading",
+      "Concurrency"
+    ],
+    "date": "2025-04-02"
+  },
+  {
+    "id": 3,
+    "title": "Promises vs Async/Await in JavaScript",
+    "slug": "promises-vs-async-await",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "ES6"
+    ],
+    "date": "2025-04-03"
+  },
+  {
+    "id": 4,
+    "title": "REST vs GraphQL",
+    "slug": "rest-vs-graphql",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Backend",
+      "Node.js",
+      "GraphQL"
+    ],
+    "date": "2025-04-04"
+  },
+  {
+    "id": 5,
+    "title": "Class vs Struct in C++",
+    "slug": "class-vs-struct",
+    "difficulty": "Easy",
+    "tags": [
+      "C++",
+      "OOP",
+      "Memory Management"
+    ],
+    "date": "2025-04-05"
+  },
+  {
+    "id": 6,
+    "title": "Functional vs Imperative Programming",
+    "slug": "functional-vs-imperative",
+    "difficulty": "Hard",
+    "tags": [
+      "Programming Paradigms",
+      "JavaScript",
+      "Haskell",
+      "Python"
+    ],
+    "date": "2025-04-06"
+  },
+  {
+    "id": 7,
+    "title": "Singleton vs Dependency Injection",
+    "slug": "singleton-vs-di",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "Spring",
+      "C#"
+    ],
+    "date": "2025-04-07"
+  },
+  {
+    "id": 8,
+    "title": "Lambda Expressions vs Anonymous Classes",
+    "slug": "lambda-vs-anonymous",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Functional Programming",
+      "OOP"
+    ],
+    "date": "2025-04-08"
+  },
+  {
+    "id": 9,
+    "title": "MVC vs MVVM",
+    "slug": "mvc-vs-mvvm",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "React",
+      "Angular",
+      "Swift"
+    ],
+    "date": "2025-04-09"
+  },
+  {
+    "id": 10,
+    "title": "SQL vs NoSQL",
+    "slug": "sql-vs-nosql",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "MySQL",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+    "date": "2025-04-10"
+  },
+  {
+    "id": 11,
+    "title": "Static vs Dynamic Typing",
+    "slug": "static-vs-dynamic",
+    "difficulty": "Easy",
+    "tags": [
+      "Programming",
+      "Python",
+      "TypeScript",
+      "Java"
+    ],
+    "date": "2025-04-11"
+  },
+  {
+    "id": 12,
+    "title": "Monolith vs Microservices",
+    "slug": "monolith-vs-microservices",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Docker",
+      "Kubernetes",
+      "Node.js"
+    ],
+    "date": "2025-04-12"
+  },
+  {
+    "id": 13,
+    "title": "Callback vs Event Loop",
+    "slug": "callback-vs-event-loop",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Node.js",
+      "Asynchronous"
+    ],
+    "date": "2025-04-13"
+  },
+  {
+    "id": 14,
+    "title": "Interface vs Abstract Class",
+    "slug": "interface-vs-abstract",
+    "difficulty": "Medium",
+    "tags": [
+      "OOP",
+      "Java",
+      "C#",
+      "TypeScript"
+    ],
+    "date": "2025-04-14"
+  },
+  {
+    "id": 15,
+    "title": "HTTP vs WebSocket",
+    "slug": "http-vs-websocket",
+    "difficulty": "Medium",
+    "tags": [
+      "Networking",
+      "JavaScript",
+      "Real-time",
+      "API"
+    ],
+    "date": "2025-04-15"
+  },
+  {
+    "id": 16,
+    "title": "Generics vs Templates",
+    "slug": "generics-vs-templates",
+    "difficulty": "Hard",
+    "tags": [
+      "Java",
+      "C++",
+      "Type Safety",
+      "OOP"
+    ],
+    "date": "2025-04-16"
+  },
+  {
+    "id": 17,
+    "title": "React Hooks vs Class Components",
+    "slug": "react-hooks-vs-class",
+    "difficulty": "Easy",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-04-17"
+  },
+  {
+    "id": 18,
+    "title": "Docker vs Podman",
+    "slug": "docker-vs-podman",
+    "difficulty": "Medium",
+    "tags": [
+      "Containerization",
+      "DevOps",
+      "Linux"
+    ],
+    "date": "2025-04-18"
+  },
+  {
+    "id": 19,
+    "title": "Unit Testing vs Integration Testing",
+    "slug": "unit-vs-integration",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "JUnit",
+      "PyTest",
+      "QA"
+    ],
+    "date": "2025-04-19"
+  },
+  {
+    "id": 20,
+    "title": "Git Rebase vs Merge",
+    "slug": "git-rebase-vs-merge",
+    "difficulty": "Easy",
+    "tags": [
+      "Version Control",
+      "Git",
+      "Collaboration"
+    ],
+    "date": "2025-04-20"
+  },
+  {
+    "id": 21,
+    "title": "TypeScript vs Flow",
+    "slug": "typescript-vs-flow",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Type Safety",
+      "Frontend"
+    ],
+    "date": "2025-04-21"
+  },
+  {
+    "id": 22,
+    "title": "Spring Boot vs Django",
+    "slug": "spring-boot-vs-django",
+    "difficulty": "Hard",
+    "tags": [
+      "Backend",
+      "Java",
+      "Python",
+      "Frameworks"
+    ],
+    "date": "2025-04-22"
+  },
+  {
+    "id": 23,
+    "title": "Synchronous vs Asynchronous Programming",
+    "slug": "sync-vs-async",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "JavaScript",
+      "Python",
+      "Java"
+    ],
+    "date": "2025-04-23"
+  },
+  {
+    "id": 24,
+    "title": "JWT vs OAuth",
+    "slug": "jwt-vs-oauth",
+    "difficulty": "Hard",
+    "tags": [
+      "Security",
+      "Authentication",
+      "API"
+    ],
+    "date": "2025-04-24"
+  },
+  {
+    "id": 25,
+    "title": "CSS Grid vs Flexbox",
+    "slug": "css-grid-vs-flexbox",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2025-04-25"
+  },
+  {
+    "id": 26,
+    "title": "Lazy Loading vs Eager Loading",
+    "slug": "lazy-vs-eager",
+    "difficulty": "Medium",
+    "tags": [
+      "ORM",
+      "Hibernate",
+      "Django",
+      "Performance"
+    ],
+    "date": "2025-04-26"
+  },
+  {
+    "id": 27,
+    "title": "WebAssembly vs JavaScript",
+    "slug": "webassembly-vs-js",
+    "difficulty": "Hard",
+    "tags": [
+      "Performance",
+      "Frontend",
+      "Rust",
+      "C"
+    ],
+    "date": "2025-04-27"
+  },
+  {
+    "id": 28,
+    "title": "Polymorphism vs Overloading",
+    "slug": "polymorphism-vs-overloading",
+    "difficulty": "Medium",
+    "tags": [
+      "OOP",
+      "Java",
+      "C++",
+      "C#"
+    ],
+    "date": "2025-04-28"
+  },
+  {
+    "id": 29,
+    "title": "Redux vs Context API",
+    "slug": "redux-vs-context",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2025-04-29"
+  },
+  {
+    "id": 30,
+    "title": "TCP vs UDP",
+    "slug": "tcp-vs-udp",
+    "difficulty": "Medium",
+    "tags": [
+      "Networking",
+      "Sockets",
+      "Performance"
+    ],
+    "date": "2025-04-30"
+  },
+  {
+    "id": 31,
+    "title": "Kotlin vs Scala",
+    "slug": "kotlin-vs-scala",
+    "difficulty": "Hard",
+    "tags": [
+      "JVM",
+      "Android",
+      "Functional Programming"
+    ],
+    "date": "2025-05-01"
+  },
+  {
+    "id": 32,
+    "title": "Virtual DOM vs Real DOM",
+    "slug": "virtual-dom-vs-real-dom",
+    "difficulty": "Easy",
+    "tags": [
+      "React",
+      "Frontend",
+      "Performance"
+    ],
+    "date": "2025-05-02"
+  },
+  {
+    "id": 33,
+    "title": "Map vs FlatMap",
+    "slug": "map-vs-flatmap",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "JavaScript",
+      "Functional Programming"
+    ],
+    "date": "2025-05-03"
+  },
+  {
+    "id": 34,
+    "title": "CI/CD vs DevOps",
+    "slug": "ci-cd-vs-devops",
+    "difficulty": "Hard",
+    "tags": [
+      "DevOps",
+      "Jenkins",
+      "GitHub Actions",
+      "Pipeline"
+    ],
+    "date": "2025-05-04"
+  },
+  {
+    "id": 35,
+    "title": "Heap vs Stack Memory",
+    "slug": "heap-vs-stack",
+    "difficulty": "Medium",
+    "tags": [
+      "Memory Management",
+      "C",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-05-05"
+  },
+  {
+    "id": 36,
+    "title": "Angular vs Vue.js",
+    "slug": "angular-vs-vue",
+    "difficulty": "Medium",
+    "tags": [
+      "Frontend",
+      "JavaScript",
+      "Frameworks"
+    ],
+    "date": "2025-05-06"
+  },
+  {
+    "id": 37,
+    "title": "BFS vs DFS",
+    "slug": "bfs-vs-dfs",
+    "difficulty": "Medium",
+    "tags": [
+      "Algorithms",
+      "Graph",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-05-07"
+  },
+  {
+    "id": 38,
+    "title": "SOAP vs REST",
+    "slug": "soap-vs-rest",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Web Services",
+      "XML",
+      "JSON"
+    ],
+    "date": "2025-05-08"
+  },
+  {
+    "id": 39,
+    "title": "Go Routines vs Threads",
+    "slug": "goroutines-vs-threads",
+    "difficulty": "Hard",
+    "tags": [
+      "Go",
+      "Concurrency",
+      "Multithreading"
+    ],
+    "date": "2025-05-09"
+  },
+  {
+    "id": 40,
+    "title": "CSS-in-JS vs Styled Components",
+    "slug": "css-in-js-vs-styled",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "React",
+      "Frontend"
+    ],
+    "date": "2025-05-10"
+  },
+  {
+    "id": 41,
+    "title": "ORM vs Raw SQL",
+    "slug": "orm-vs-raw-sql",
+    "difficulty": "Medium",
+    "tags": [
+      "Database",
+      "Hibernate",
+      "SQL",
+      "Django"
+    ],
+    "date": "2025-05-11"
+  },
+  {
+    "id": 42,
+    "title": "Event-Driven vs Request-Driven",
+    "slug": "event-driven-vs-request",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Node.js",
+      "Microservices"
+    ],
+    "date": "2025-05-12"
+  },
+  {
+    "id": 43,
+    "title": "Python List vs Tuple",
+    "slug": "python-list-vs-tuple",
+    "difficulty": "Easy",
+    "tags": [
+      "Python",
+      "Data Structures"
+    ],
+    "date": "2025-05-13"
+  },
+  {
+    "id": 44,
+    "title": "Webpack vs Vite",
+    "slug": "webpack-vs-vite",
+    "difficulty": "Medium",
+    "tags": [
+      "Build Tools",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-05-14"
+  },
+  {
+    "id": 45,
+    "title": "Immutable vs Mutable Objects",
+    "slug": "immutable-vs-mutable",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Python",
+      "Data Structures"
+    ],
+    "date": "2025-05-15"
+  },
+  {
+    "id": 46,
+    "title": "Serverless vs FaaS",
+    "slug": "serverless-vs-faas",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud",
+      "AWS Lambda",
+      "Azure Functions"
+    ],
+    "date": "2025-05-16"
+  },
+  {
+    "id": 47,
+    "title": "Tailwind CSS vs Bootstrap",
+    "slug": "tailwind-vs-bootstrap",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Frameworks"
+    ],
+    "date": "2025-05-17"
+  },
+  {
+    "id": 48,
+    "title": "HashMap vs TreeMap",
+    "slug": "hashmap-vs-treemap",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Data Structures",
+      "Collections"
+    ],
+    "date": "2025-05-18"
+  },
+  {
+    "id": 49,
+    "title": "RxJS vs Promises",
+    "slug": "rxjs-vs-promises",
+    "difficulty": "Hard",
+    "tags": [
+      "JavaScript",
+      "Reactive Programming",
+      "Angular"
+    ],
+    "date": "2025-05-19"
+  },
+  {
+    "id": 50,
+    "title": "CORS vs CSRF",
+    "slug": "cors-vs-csrf",
+    "difficulty": "Medium",
+    "tags": [
+      "Security",
+      "Web",
+      "API"
+    ],
+    "date": "2025-05-20"
+  },
+  {
+    "id": 51,
+    "title": "Solid Principles vs DRY",
+    "slug": "solid-vs-dry",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Principles",
+      "OOP",
+      "Code Quality"
+    ],
+    "date": "2025-05-21"
+  },
+  {
+    "id": 52,
+    "title": "GraphQL Subscriptions vs Webhooks",
+    "slug": "graphql-subscriptions-vs-webhooks",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Real-time",
+      "GraphQL"
+    ],
+    "date": "2025-05-22"
+  },
+  {
+    "id": 53,
+    "title": "Python vs Ruby",
+    "slug": "python-vs-ruby",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "Backend",
+      "Frameworks"
+    ],
+    "date": "2025-05-23"
+  },
+  {
+    "id": 54,
+    "title": "Stateful vs Stateless",
+    "slug": "stateful-vs-stateless",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "API",
+      "Microservices"
+    ],
+    "date": "2025-05-24"
+  },
+  {
+    "id": 55,
+    "title": "Sass vs Less",
+    "slug": "sass-vs-less",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Preprocessing",
+      "Frontend"
+    ],
+    "date": "2025-05-25"
+  },
+  {
+    "id": 56,
+    "title": "Mocking vs Stubbing",
+    "slug": "mocking-vs-stubbing",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "JUnit",
+      "Jest",
+      "QA"
+    ],
+    "date": "2025-05-26"
+  },
+  {
+    "id": 57,
+    "title": "Closure vs Scope",
+    "slug": "closure-vs-scope",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Programming",
+      "Concepts"
+    ],
+    "date": "2025-05-27"
+  },
+  {
+    "id": 58,
+    "title": "Kafka vs RabbitMQ",
+    "slug": "kafka-vs-rabbitmq",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "Microservices",
+      "DevOps"
+    ],
+    "date": "2025-05-28"
+  },
+  {
+    "id": 59,
+    "title": "Encapsulation vs Abstraction",
+    "slug": "encapsulation-vs-abstraction",
+    "difficulty": "Medium",
+    "tags": [
+      "OOP",
+      "Java",
+      "C++",
+      "C#"
+    ],
+    "date": "2025-05-29"
+  },
+  {
+    "id": 60,
+    "title": "Next.js vs Nuxt.js",
+    "slug": "nextjs-vs-nuxtjs",
+    "difficulty": "Medium",
+    "tags": [
+      "Frontend",
+      "JavaScript",
+      "Frameworks"
+    ],
+    "date": "2025-05-30"
+  },
+  {
+    "id": 61,
+    "title": "Thread Pool vs Thread Per Request",
+    "slug": "thread-pool-vs-per-request",
+    "difficulty": "Hard",
+    "tags": [
+      "Java",
+      "Concurrency",
+      "Performance"
+    ],
+    "date": "2025-05-31"
+  },
+  {
+    "id": 62,
+    "title": "JSON vs XML",
+    "slug": "json-vs-xml",
+    "difficulty": "Easy",
+    "tags": [
+      "Data Format",
+      "API",
+      "Web"
+    ],
+    "date": "2025-06-01"
+  },
+  {
+    "id": 63,
+    "title": "Dependency Injection vs Service Locator",
+    "slug": "di-vs-service-locator",
+    "difficulty": "Hard",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "Spring",
+      "C#"
+    ],
+    "date": "2025-06-02"
+  },
+  {
+    "id": 64,
+    "title": "PWA vs SPA",
+    "slug": "pwa-vs-spa",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Frontend",
+      "JavaScript"
+    ],
+    "date": "2025-06-03"
+  },
+  {
+    "id": 65,
+    "title": "Iterator vs Generator",
+    "slug": "iterator-vs-generator",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Python",
+      "Programming"
+    ],
+    "date": "2025-06-04"
+  },
+  {
+    "id": 66,
+    "title": "Redis vs Memcached",
+    "slug": "redis-vs-memcached",
+    "difficulty": "Medium",
+    "tags": [
+      "Caching",
+      "Database",
+      "Performance"
+    ],
+    "date": "2025-06-05"
+  },
+  {
+    "id": 67,
+    "title": "Try-Catch vs Throws",
+    "slug": "try-catch-vs-throws",
+    "difficulty": "Easy",
+    "tags": [
+      "Java",
+      "Exception Handling",
+      "Programming"
+    ],
+    "date": "2025-06-06"
+  },
+  {
+    "id": 68,
+    "title": "Flask vs FastAPI",
+    "slug": "flask-vs-fastapi",
+    "difficulty": "Medium",
+    "tags": [
+      "Python",
+      "Backend",
+      "Frameworks"
+    ],
+    "date": "2025-06-07"
+  },
+  {
+    "id": 69,
+    "title": "BEM vs SMACSS",
+    "slug": "bem-vs-smacss",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Methodology"
+    ],
+    "date": "2025-06-08"
+  },
+  {
+    "id": 70,
+    "title": "Load Balancer vs Reverse Proxy",
+    "slug": "load-balancer-vs-reverse-proxy",
+    "difficulty": "Hard",
+    "tags": [
+      "Networking",
+      "DevOps",
+      "Performance"
+    ],
+    "date": "2025-06-09"
+  },
+  {
+    "id": 71,
+    "title": "Array vs Linked List",
+    "slug": "array-vs-linked-list",
+    "difficulty": "Medium",
+    "tags": [
+      "Data Structures",
+      "Java",
+      "Python",
+      "C++"
+    ],
+    "date": "2025-06-10"
+  },
+  {
+    "id": 72,
+    "title": "GraphQL vs REST Performance",
+    "slug": "graphql-vs-rest-performance",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Performance",
+      "Backend"
+    ],
+    "date": "2025-06-11"
+  },
+  {
+    "id": 73,
+    "title": "Closure vs IIFE",
+    "slug": "closure-vs-iife",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Programming",
+      "Concepts"
+    ],
+    "date": "2025-06-12"
+  },
+  {
+    "id": 74,
+    "title": "Spring MVC vs Spring Boot",
+    "slug": "spring-mvc-vs-boot",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Backend",
+      "Frameworks"
+    ],
+    "date": "2025-06-13"
+  },
+  {
+    "id": 75,
+    "title": "WeakMap vs Map",
+    "slug": "weakmap-vs-map",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Data Structures",
+      "Memory"
+    ],
+    "date": "2025-06-14"
+  },
+  {
+    "id": 76,
+    "title": "Docker Compose vs Kubernetes",
+    "slug": "docker-compose-vs-k8s",
+    "difficulty": "Hard",
+    "tags": [
+      "Containerization",
+      "DevOps",
+      "Orchestration"
+    ],
+    "date": "2025-06-15"
+  },
+  {
+    "id": 77,
+    "title": "Set vs List",
+    "slug": "set-vs-list",
+    "difficulty": "Easy",
+    "tags": [
+      "Java",
+      "Python",
+      "Data Structures"
+    ],
+    "date": "2025-06-16"
+  },
+  {
+    "id": 78,
+    "title": "Server-Side Rendering vs Client-Side Rendering",
+    "slug": "ssr-vs-csr",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "React",
+      "SEO"
+    ],
+    "date": "2025-06-17"
+  },
+  {
+    "id": 79,
+    "title": "Pub/Sub vs Point-to-Point",
+    "slug": "pub-sub-vs-point-to-point",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "RabbitMQ",
+      "Kafka"
+    ],
+    "date": "2025-06-18"
+  },
+  {
+    "id": 80,
+    "title": "C vs C++",
+    "slug": "c-vs-cpp",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "Performance",
+      "OOP"
+    ],
+    "date": "2025-06-19"
+  },
+  {
+    "id": 81,
+    "title": "Axios vs Fetch",
+    "slug": "axios-vs-fetch",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "API",
+      "HTTP"
+    ],
+    "date": "2025-06-20"
+  },
+  {
+    "id": 82,
+    "title": "Factory Pattern vs Builder Pattern",
+    "slug": "factory-vs-builder",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-06-21"
+  },
+  {
+    "id": 83,
+    "title": "GraphQL Mutations vs Queries",
+    "slug": "graphql-mutations-vs-queries",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Backend"
+    ],
+    "date": "2025-06-22"
+  },
+  {
+    "id": 84,
+    "title": "Ruby on Rails vs Laravel",
+    "slug": "ror-vs-laravel",
+    "difficulty": "Medium",
+    "tags": [
+      "Backend",
+      "Frameworks",
+      "PHP",
+      "Ruby"
+    ],
+    "date": "2025-06-23"
+  },
+  {
+    "id": 85,
+    "title": "Hot Module Replacement vs Live Reload",
+    "slug": "hmr-vs-live-reload",
+    "difficulty": "Medium",
+    "tags": [
+      "Webpack",
+      "Development",
+      "Frontend"
+    ],
+    "date": "2025-06-24"
+  },
+  {
+    "id": 86,
+    "title": "Decorator Pattern vs Proxy Pattern",
+    "slug": "decorator-vs-proxy",
+    "difficulty": "Hard",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-06-25"
+  },
+  {
+    "id": 87,
+    "title": "PostgreSQL vs MySQL",
+    "slug": "postgresql-vs-mysql",
+    "difficulty": "Medium",
+    "tags": [
+      "Database",
+      "SQL",
+      "Performance"
+    ],
+    "date": "2025-06-26"
+  },
+  {
+    "id": 88,
+    "title": "Closure vs Callback",
+    "slug": "closure-vs-callback",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Programming",
+      "Asynchronous"
+    ],
+    "date": "2025-06-27"
+  },
+  {
+    "id": 89,
+    "title": "Micro Frontends vs Monolithic Frontend",
+    "slug": "micro-frontends-vs-monolith",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "React",
+      "Angular"
+    ],
+    "date": "2025-06-28"
+  },
+  {
+    "id": 90,
+    "title": "SetTimeout vs SetInterval",
+    "slug": "settimeout-vs-setinterval",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "Timing",
+      "Asynchronous"
+    ],
+    "date": "2025-06-29"
+  },
+  {
+    "id": 91,
+    "title": "Lambda vs Stream API",
+    "slug": "lambda-vs-stream",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Functional Programming",
+      "Collections"
+    ],
+    "date": "2025-06-30"
+  },
+  {
+    "id": 92,
+    "title": "Cloudflare vs AWS CloudFront",
+    "slug": "cloudflare-vs-cloudfront",
+    "difficulty": "Hard",
+    "tags": [
+      "CDN",
+      "Cloud",
+      "Performance"
+    ],
+    "date": "2025-07-01"
+  },
+  {
+    "id": 93,
+    "title": "Observer vs Mediator",
+    "slug": "observer-vs-mediator",
+    "difficulty": "Hard",
+    "tags": [
+      "Design Patterns",
+      "JavaScript",
+      "Java"
+    ],
+    "date": "2025-07-02"
+  },
+  {
+    "id": 94,
+    "title": "Svelte vs Solid",
+    "slug": "svelte-vs-solid",
+    "difficulty": "Medium",
+    "tags": [
+      "Frontend",
+      "JavaScript",
+      "Frameworks"
+    ],
+    "date": "2025-07-03"
+  },
+  {
+    "id": 95,
+    "title": "Blocking vs Non-Blocking I/O",
+    "slug": "blocking-vs-non-blocking",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Node.js",
+      "Performance"
+    ],
+    "date": "2025-07-04"
+  },
+  {
+    "id": 96,
+    "title": "YAML vs JSON",
+    "slug": "yaml-vs-json",
+    "difficulty": "Easy",
+    "tags": [
+      "Data Format",
+      "Configuration",
+      "DevOps"
+    ],
+    "date": "2025-07-05"
+  },
+  {
+    "id": 97,
+    "title": "Strategy Pattern vs State Pattern",
+    "slug": "strategy-vs-state",
+    "difficulty": "Hard",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-07-06"
+  },
+  {
+    "id": 98,
+    "title": "Jest vs Mocha",
+    "slug": "jest-vs-mocha",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-07-07"
+  },
+  {
+    "id": 99,
+    "title": "Hashing vs Encryption",
+    "slug": "hashing-vs-encryption",
+    "difficulty": "Medium",
+    "tags": [
+      "Security",
+      "Cryptography",
+      "Java"
+    ],
+    "date": "2025-07-08"
+  },
+  {
+    "id": 100,
+    "title": "Progressive Enhancement vs Graceful Degradation",
+    "slug": "progressive-enhancement-vs-degradation",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Frontend",
+      "Accessibility"
+    ],
+    "date": "2025-07-09"
+  },
+  {
+    "id": 101,
+    "title": "Callback Hell vs Async Patterns",
+    "slug": "callback-hell-vs-async-patterns",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "Node.js"
+    ],
+    "date": "2025-07-10"
+  },
+  {
+    "id": 102,
+    "title": "RESTful API vs gRPC",
+    "slug": "restful-api-vs-grpc",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Performance",
+      "Protobuf"
+    ],
+    "date": "2025-07-11"
+  },
+  {
+    "id": 103,
+    "title": "TDD vs BDD",
+    "slug": "tdd-vs-bdd",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "Agile",
+      "JUnit",
+      "Cucumber"
+    ],
+    "date": "2025-07-12"
+  },
+  {
+    "id": 104,
+    "title": "Static Site Generators vs CMS",
+    "slug": "ssg-vs-cms",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Jekyll",
+      "WordPress"
+    ],
+    "date": "2025-07-13"
+  },
+  {
+    "id": 105,
+    "title": "Monorepo vs Polyrepo",
+    "slug": "monorepo-vs-polyrepo",
+    "difficulty": "Hard",
+    "tags": [
+      "Version Control",
+      "DevOps",
+      "NX",
+      "Git"
+    ],
+    "date": "2025-07-14"
+  },
+  {
+    "id": 106,
+    "title": "Pointer vs Reference in C++",
+    "slug": "pointer-vs-reference",
+    "difficulty": "Medium",
+    "tags": [
+      "C++",
+      "Memory Management",
+      "OOP"
+    ],
+    "date": "2025-07-15"
+  },
+  {
+    "id": 107,
+    "title": "WebGL vs Canvas",
+    "slug": "webgl-vs-canvas",
+    "difficulty": "Hard",
+    "tags": [
+      "Graphics",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-07-16"
+  },
+  {
+    "id": 108,
+    "title": "Closure vs Decorator",
+    "slug": "closure-vs-decorator",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Python",
+      "Design Patterns"
+    ],
+    "date": "2025-07-17"
+  },
+  {
+    "id": 109,
+    "title": "React.memo vs useMemo",
+    "slug": "react-memo-vs-usememo",
+    "difficulty": "Easy",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2025-07-18"
+  },
+  {
+    "id": 110,
+    "title": "S3 vs Glacier",
+    "slug": "s3-vs-glacier",
+    "difficulty": "Medium",
+    "tags": [
+      "AWS",
+      "Cloud Storage",
+      "Data Management"
+    ],
+    "date": "2025-07-19"
+  },
+  {
+    "id": 111,
+    "title": "ArrayBuffer vs Blob",
+    "slug": "arraybuffer-vs-blob",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Binary Data",
+      "Web API"
+    ],
+    "date": "2025-07-20"
+  },
+  {
+    "id": 112,
+    "title": "CQRS vs CRUD",
+    "slug": "cqrs-vs-crud",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Database",
+      "DDD"
+    ],
+    "date": "2025-07-21"
+  },
+  {
+    "id": 113,
+    "title": "Inline CSS vs External CSS",
+    "slug": "inline-css-vs-external",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Performance"
+    ],
+    "date": "2025-07-22"
+  },
+  {
+    "id": 114,
+    "title": "Hibernate vs JPA",
+    "slug": "hibernate-vs-jpa",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "ORM",
+      "Database"
+    ],
+    "date": "2025-07-23"
+  },
+  {
+    "id": 115,
+    "title": "Event Sourcing vs Snapshotting",
+    "slug": "event-sourcing-vs-snapshotting",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Data Modeling"
+    ],
+    "date": "2025-07-24"
+  },
+  {
+    "id": 116,
+    "title": "PostCSS vs Sass",
+    "slug": "postcss-vs-sass",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Preprocessing",
+      "Frontend"
+    ],
+    "date": "2025-07-25"
+  },
+  {
+    "id": 117,
+    "title": "Union Types vs Intersection Types",
+    "slug": "union-vs-intersection",
+    "difficulty": "Medium",
+    "tags": [
+      "TypeScript",
+      "Type Safety",
+      "Programming"
+    ],
+    "date": "2025-07-26"
+  },
+  {
+    "id": 118,
+    "title": "Graph Database vs Relational Database",
+    "slug": "graph-db-vs-relational",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "Neo4j",
+      "MySQL"
+    ],
+    "date": "2025-07-27"
+  },
+  {
+    "id": 119,
+    "title": "I18n vs L10n",
+    "slug": "i18n-vs-l10n",
+    "difficulty": "Medium",
+    "tags": [
+      "Internationalization",
+      "Localization",
+      "Web"
+    ],
+    "date": "2025-07-28"
+  },
+  {
+    "id": 120,
+    "title": "Bitwise Operators vs Logical Operators",
+    "slug": "bitwise-vs-logical",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "C",
+      "Java",
+      "Performance"
+    ],
+    "date": "2025-07-29"
+  },
+  {
+    "id": 121,
+    "title": "WebRTC vs WebSockets",
+    "slug": "webrtc-vs-websockets",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time",
+      "Networking",
+      "JavaScript"
+    ],
+    "date": "2025-07-30"
+  },
+  {
+    "id": 122,
+    "title": "ES Modules vs CommonJS",
+    "slug": "es-modules-vs-commonjs",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "Module Systems",
+      "Node.js"
+    ],
+    "date": "2025-07-31"
+  },
+  {
+    "id": 123,
+    "title": "Active Record vs Data Mapper",
+    "slug": "active-record-vs-data-mapper",
+    "difficulty": "Medium",
+    "tags": [
+      "ORM",
+      "Ruby",
+      "PHP",
+      "Design Patterns"
+    ],
+    "date": "2025-08-01"
+  },
+  {
+    "id": 124,
+    "title": "Canvas vs SVG",
+    "slug": "canvas-vs-svg",
+    "difficulty": "Medium",
+    "tags": [
+      "Graphics",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-08-02"
+  },
+  {
+    "id": 125,
+    "title": "Semaphore vs Mutex",
+    "slug": "semaphore-vs-mutex",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "C",
+      "Threading"
+    ],
+    "date": "2025-08-03"
+  },
+  {
+    "id": 126,
+    "title": "Progressive Web Apps vs Native Apps",
+    "slug": "pwa-vs-native",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Mobile",
+      "Performance"
+    ],
+    "date": "2025-08-04"
+  },
+  {
+    "id": 127,
+    "title": "Babel vs TypeScript",
+    "slug": "babel-vs-typescript",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Transpilation",
+      "Type Safety"
+    ],
+    "date": "2025-08-05"
+  },
+  {
+    "id": 128,
+    "title": "Lazy Evaluation vs Eager Evaluation",
+    "slug": "lazy-vs-eager-evaluation",
+    "difficulty": "Hard",
+    "tags": [
+      "Programming",
+      "Haskell",
+      "JavaScript"
+    ],
+    "date": "2025-08-06"
+  },
+  {
+    "id": 129,
+    "title": "GCP vs Azure",
+    "slug": "gcp-vs-azure",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud",
+      "Google Cloud",
+      "Microsoft Azure"
+    ],
+    "date": "2025-08-07"
+  },
+  {
+    "id": 130,
+    "title": "Pure Functions vs Impure Functions",
+    "slug": "pure-vs-impure",
+    "difficulty": "Medium",
+    "tags": [
+      "Functional Programming",
+      "JavaScript",
+      "Python"
+    ],
+    "date": "2025-08-08"
+  },
+  {
+    "id": 131,
+    "title": "Hot Reload vs Hot Restart",
+    "slug": "hot-reload-vs-hot-restart",
+    "difficulty": "Easy",
+    "tags": [
+      "Flutter",
+      "Development",
+      "Frontend"
+    ],
+    "date": "2025-08-09"
+  },
+  {
+    "id": 132,
+    "title": "CQRS vs Event Sourcing",
+    "slug": "cqrs-vs-event-sourcing",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Database"
+    ],
+    "date": "2025-08-10"
+  },
+  {
+    "id": 133,
+    "title": "REST API vs SOAP API",
+    "slug": "rest-api-vs-soap-api",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Web Services",
+      "JSON",
+      "XML"
+    ],
+    "date": "2025-08-11"
+  },
+  {
+    "id": 134,
+    "title": "Stack vs Queue",
+    "slug": "stack-vs-queue",
+    "difficulty": "Easy",
+    "tags": [
+      "Data Structures",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-08-12"
+  },
+  {
+    "id": 135,
+    "title": "GraphQL Schema vs TypeDefs",
+    "slug": "graphql-schema-vs-typedefs",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Backend"
+    ],
+    "date": "2025-08-13"
+  },
+  {
+    "id": 136,
+    "title": "Dynamic Programming vs Greedy Algorithms",
+    "slug": "dp-vs-greedy",
+    "difficulty": "Hard",
+    "tags": [
+      "Algorithms",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-08-14"
+  },
+  {
+    "id": 137,
+    "title": "Serverless Architecture vs Serverful",
+    "slug": "serverless-vs-serverful",
+    "difficulty": "Medium",
+    "tags": [
+      "Cloud",
+      "AWS",
+      "Architecture"
+    ],
+    "date": "2025-08-15"
+  },
+  {
+    "id": 138,
+    "title": "Pointer Arithmetic vs Array Indexing",
+    "slug": "pointer-arithmetic-vs-array",
+    "difficulty": "Medium",
+    "tags": [
+      "C",
+      "C++",
+      "Memory Management"
+    ],
+    "date": "2025-08-16"
+  },
+  {
+    "id": 139,
+    "title": "React Native vs Flutter",
+    "slug": "react-native-vs-flutter",
+    "difficulty": "Medium",
+    "tags": [
+      "Mobile",
+      "Cross-Platform",
+      "JavaScript"
+    ],
+    "date": "2025-08-17"
+  },
+  {
+    "id": 140,
+    "title": "WeakSet vs Set",
+    "slug": "weakset-vs-set",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Data Structures",
+      "Memory"
+    ],
+    "date": "2025-08-18"
+  },
+  {
+    "id": 141,
+    "title": "BLOB vs CLOB",
+    "slug": "blob-vs-clob",
+    "difficulty": "Medium",
+    "tags": [
+      "Database",
+      "SQL",
+      "Storage"
+    ],
+    "date": "2025-08-19"
+  },
+  {
+    "id": 142,
+    "title": "Proxy vs Reflect",
+    "slug": "proxy-vs-reflect",
+    "difficulty": "Hard",
+    "tags": [
+      "JavaScript",
+      "Metaprogramming",
+      "ES6"
+    ],
+    "date": "2025-08-20"
+  },
+  {
+    "id": 143,
+    "title": "Horizontal Scaling vs Vertical Scaling",
+    "slug": "horizontal-vs-vertical-scaling",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "Performance"
+    ],
+    "date": "2025-08-21"
+  },
+  {
+    "id": 144,
+    "title": "CSS Variables vs Preprocessor Variables",
+    "slug": "css-vars-vs-preprocessor",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Sass"
+    ],
+    "date": "2025-08-22"
+  },
+  {
+    "id": 145,
+    "title": "Circuit Breaker vs Retry Pattern",
+    "slug": "circuit-breaker-vs-retry",
+    "difficulty": "Hard",
+    "tags": [
+      "Resilience",
+      "Microservices",
+      "Java"
+    ],
+    "date": "2025-08-23"
+  },
+  {
+    "id": 146,
+    "title": "Tail Call Optimization vs Recursion",
+    "slug": "tco-vs-recursion",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "JavaScript",
+      "Performance"
+    ],
+    "date": "2025-08-24"
+  },
+  {
+    "id": 147,
+    "title": "GraphQL Resolvers vs Middleware",
+    "slug": "graphql-resolvers-vs-middleware",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Node.js"
+    ],
+    "date": "2025-08-25"
+  },
+  {
+    "id": 148,
+    "title": "JIT Compilation vs AOT Compilation",
+    "slug": "jit-vs-aot",
+    "difficulty": "Hard",
+    "tags": [
+      "Performance",
+      "Java",
+      "JavaScript"
+    ],
+    "date": "2025-08-26"
+  },
+  {
+    "id": 149,
+    "title": "Local Storage vs Session Storage",
+    "slug": "local-vs-session-storage",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "Web Storage",
+      "Frontend"
+    ],
+    "date": "2025-08-27"
+  },
+  {
+    "id": 150,
+    "title": "Saga Pattern vs Choreography",
+    "slug": "saga-vs-choreography",
+    "difficulty": "Hard",
+    "tags": [
+      "Microservices",
+      "Architecture",
+      "Java"
+    ],
+    "date": "2025-08-28"
+  },
+  {
+    "id": 151,
+    "title": "REST API Versioning vs API Evolution",
+    "slug": "rest-versioning-vs-evolution",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Backend",
+      "Design"
+    ],
+    "date": "2025-08-29"
+  },
+  {
+    "id": 152,
+    "title": "Static Site Hosting vs Dynamic Hosting",
+    "slug": "static-vs-dynamic-hosting",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Netlify",
+      "AWS"
+    ],
+    "date": "2025-08-30"
+  },
+  {
+    "id": 153,
+    "title": "Dependency Hell vs Lockfiles",
+    "slug": "dependency-hell-vs-lockfiles",
+    "difficulty": "Medium",
+    "tags": [
+      "Node.js",
+      "Package Management",
+      "npm"
+    ],
+    "date": "2025-08-31"
+  },
+  {
+    "id": 154,
+    "title": "Immutable.js vs Immer",
+    "slug": "immutable-js-vs-immer",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "State Management",
+      "React"
+    ],
+    "date": "2025-09-01"
+  },
+  {
+    "id": 155,
+    "title": "Pub/Sub vs Message Queue",
+    "slug": "pub-sub-vs-message-queue",
+    "difficulty": "Medium",
+    "tags": [
+      "Messaging",
+      "RabbitMQ",
+      "Kafka"
+    ],
+    "date": "2025-09-02"
+  },
+  {
+    "id": 156,
+    "title": "Big Data vs Data Science",
+    "slug": "big-data-vs-data-science",
+    "difficulty": "Hard",
+    "tags": [
+      "Data",
+      "Hadoop",
+      "Python"
+    ],
+    "date": "2025-09-03"
+  },
+  {
+    "id": 157,
+    "title": "SPA vs MPA",
+    "slug": "spa-vs-mpa",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "React",
+      "PHP"
+    ],
+    "date": "2025-09-04"
+  },
+  {
+    "id": 158,
+    "title": "Weak Reference vs Soft Reference",
+    "slug": "weak-vs-soft-reference",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Memory Management",
+      "Garbage Collection"
+    ],
+    "date": "2025-09-05"
+  },
+  {
+    "id": 159,
+    "title": "API Gateway vs Service Mesh",
+    "slug": "api-gateway-vs-service-mesh",
+    "difficulty": "Hard",
+    "tags": [
+      "Microservices",
+      "Istio",
+      "Kong"
+    ],
+    "date": "2025-09-06"
+  },
+  {
+    "id": 160,
+    "title": "CSS Animations vs Transitions",
+    "slug": "css-animations-vs-transitions",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Performance"
+    ],
+    "date": "2025-09-07"
+  },
+  {
+    "id": 161,
+    "title": "Thread Safety vs Reentrancy",
+    "slug": "thread-safety-vs-reentrancy",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-09-08"
+  },
+  {
+    "id": 162,
+    "title": "Rollup vs Parcel",
+    "slug": "rollup-vs-parcel",
+    "difficulty": "Medium",
+    "tags": [
+      "Build Tools",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-09-09"
+  },
+  {
+    "id": 163,
+    "title": "ORM Query vs Native Query",
+    "slug": "orm-query-vs-native",
+    "difficulty": "Medium",
+    "tags": [
+      "Database",
+      "Hibernate",
+      "SQL"
+    ],
+    "date": "2025-09-10"
+  },
+  {
+    "id": 164,
+    "title": "Cache Aside vs Write Through",
+    "slug": "cache-aside-vs-write-through",
+    "difficulty": "Medium",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2025-09-11"
+  },
+  {
+    "id": 165,
+    "title": "Type Coercion vs Type Casting",
+    "slug": "type-coercion-vs-casting",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "TypeScript",
+      "Programming"
+    ],
+    "date": "2025-09-12"
+  },
+  {
+    "id": 166,
+    "title": "DynamoDB vs Cassandra",
+    "slug": "dynamodb-vs-cassandra",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "NoSQL",
+      "AWS"
+    ],
+    "date": "2025-09-13"
+  },
+  {
+    "id": 167,
+    "title": "Service Worker vs Workbox",
+    "slug": "service-worker-vs-workbox",
+    "difficulty": "Medium",
+    "tags": [
+      "PWA",
+      "JavaScript",
+      "Offline"
+    ],
+    "date": "2025-09-14"
+  },
+  {
+    "id": 168,
+    "title": "Pass by Value vs Pass by Reference",
+    "slug": "pass-by-value-vs-reference",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "C++",
+      "Java",
+      "Python"
+    ],
+    "date": "2025-09-15"
+  },
+  {
+    "id": 169,
+    "title": "Web Components vs Frameworks",
+    "slug": "web-components-vs-frameworks",
+    "difficulty": "Medium",
+    "tags": [
+      "Frontend",
+      "JavaScript",
+      "Custom Elements"
+    ],
+    "date": "2025-09-16"
+  },
+  {
+    "id": 170,
+    "title": "Deadlock vs Livelock",
+    "slug": "deadlock-vs-livelock",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "Operating Systems"
+    ],
+    "date": "2025-09-17"
+  },
+  {
+    "id": 171,
+    "title": "CSS Modules vs CSS-in-JS",
+    "slug": "css-modules-vs-css-in-js",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "React",
+      "Frontend"
+    ],
+    "date": "2025-09-18"
+  },
+  {
+    "id": 172,
+    "title": "Singleton Pattern vs Static Class",
+    "slug": "singleton-vs-static",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "C#"
+    ],
+    "date": "2025-09-19"
+  },
+  {
+    "id": 173,
+    "title": "GraphQL Fragments vs Inline Queries",
+    "slug": "graphql-fragments-vs-inline",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Optimization"
+    ],
+    "date": "2025-09-20"
+  },
+  {
+    "id": 174,
+    "title": "Cloud Functions vs Containers",
+    "slug": "cloud-functions-vs-containers",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud",
+      "AWS Lambda",
+      "Docker"
+    ],
+    "date": "2025-09-21"
+  },
+  {
+    "id": 175,
+    "title": "Fetch API vs XMLHttpRequest",
+    "slug": "fetch-vs-xhr",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "API",
+      "HTTP"
+    ],
+    "date": "2025-09-22"
+  },
+  {
+    "id": 176,
+    "title": "Adapter Pattern vs Facade Pattern",
+    "slug": "adapter-vs-facade",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-09-23"
+  },
+  {
+    "id": 177,
+    "title": "State Machine vs Workflow Engine",
+    "slug": "state-machine-vs-workflow",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Java",
+      "Business Logic"
+    ],
+    "date": "2025-09-24"
+  },
+  {
+    "id": 178,
+    "title": "Responsive Design vs Adaptive Design",
+    "slug": "responsive-vs-adaptive",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Web Design"
+    ],
+    "date": "2025-09-25"
+  },
+  {
+    "id": 179,
+    "title": "Thread Local Storage vs Global Variables",
+    "slug": "thread-local-vs-global",
+    "difficulty": "Medium",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-09-26"
+  },
+  {
+    "id": 180,
+    "title": "Apollo Client vs Relay",
+    "slug": "apollo-client-vs-relay",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "React",
+      "Frontend"
+    ],
+    "date": "2025-09-27"
+  },
+  {
+    "id": 181,
+    "title": "Lambda Calculus vs Turing Machine",
+    "slug": "lambda-calculus-vs-turing",
+    "difficulty": "Hard",
+    "tags": [
+      "Theory",
+      "Programming",
+      "Computer Science"
+    ],
+    "date": "2025-09-28"
+  },
+  {
+    "id": 182,
+    "title": "Code Splitting vs Lazy Loading",
+    "slug": "code-splitting-vs-lazy-loading",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Performance",
+      "Webpack"
+    ],
+    "date": "2025-09-29"
+  },
+  {
+    "id": 183,
+    "title": "Virtual Machine vs Container",
+    "slug": "vm-vs-container",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtualization",
+      "Docker",
+      "VMware"
+    ],
+    "date": "2025-09-30"
+  },
+  {
+    "id": 184,
+    "title": "RESTful Routing vs Resourceful Routing",
+    "slug": "restful-vs-resourceful",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Rails",
+      "Design"
+    ],
+    "date": "2025-10-01"
+  },
+  {
+    "id": 185,
+    "title": "Memoization vs Tabulation",
+    "slug": "memoization-vs-tabulation",
+    "difficulty": "Medium",
+    "tags": [
+      "Algorithms",
+      "Dynamic Programming",
+      "JavaScript"
+    ],
+    "date": "2025-10-02"
+  },
+  {
+    "id": 186,
+    "title": "Socket.io vs SignalR",
+    "slug": "socket-io-vs-signalr",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time",
+      "JavaScript",
+      "C#"
+    ],
+    "date": "2025-10-03"
+  },
+  {
+    "id": 187,
+    "title": "Polyfills vs Transpilers",
+    "slug": "polyfills-vs-transpilers",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Browser Compatibility",
+      "Babel"
+    ],
+    "date": "2025-10-04"
+  },
+  {
+    "id": 188,
+    "title": "Event Delegation vs Event Listeners",
+    "slug": "event-delegation-vs-listeners",
+    "difficulty": "Easy",
+    "tags": [
+      "JavaScript",
+      "DOM",
+      "Performance"
+    ],
+    "date": "2025-10-05"
+  },
+  {
+    "id": 189,
+    "title": "CQRS vs Saga",
+    "slug": "cqrs-vs-saga",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Microservices",
+      "Java"
+    ],
+    "date": "2025-10-06"
+  },
+  {
+    "id": 190,
+    "title": "Tail Recursion vs Head Recursion",
+    "slug": "tail-vs-head-recursion",
+    "difficulty": "Medium",
+    "tags": [
+      "Algorithms",
+      "Programming",
+      "Performance"
+    ],
+    "date": "2025-10-07"
+  },
+  {
+    "id": 191,
+    "title": "API Rate Limiting vs Throttling",
+    "slug": "rate-limiting-vs-throttling",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Security",
+      "Performance"
+    ],
+    "date": "2025-10-08"
+  },
+  {
+    "id": 192,
+    "title": "Microservices vs SOA",
+    "slug": "microservices-vs-soa",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Enterprise",
+      "Java"
+    ],
+    "date": "2025-10-09"
+  },
+  {
+    "id": 193,
+    "title": "Closure Scope vs Block Scope",
+    "slug": "closure-scope-vs-block",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Programming",
+      "ES6"
+    ],
+    "date": "2025-10-10"
+  },
+  {
+    "id": 194,
+    "title": "GraphQL Federation vs Apollo Gateway",
+    "slug": "graphql-federation-vs-gateway",
+    "difficulty": "Hard",
+    "tags": [
+      "GraphQL",
+      "Microservices",
+      "API"
+    ],
+    "date": "2025-10-11"
+  },
+  {
+    "id": 195,
+    "title": "Static Analysis vs Dynamic Analysis",
+    "slug": "static-vs-dynamic-analysis",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "Security",
+      "Code Quality"
+    ],
+    "date": "2025-10-12"
+  },
+  {
+    "id": 196,
+    "title": "Event Bus vs Message Broker",
+    "slug": "event-bus-vs-message-broker",
+    "difficulty": "Medium",
+    "tags": [
+      "Messaging",
+      "Microservices",
+      "Kafka"
+    ],
+    "date": "2025-10-13"
+  },
+  {
+    "id": 197,
+    "title": "CSS Frameworks vs Custom CSS",
+    "slug": "css-frameworks-vs-custom",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Tailwind"
+    ],
+    "date": "2025-10-14"
+  },
+  {
+    "id": 198,
+    "title": "Distributed Systems vs Centralized Systems",
+    "slug": "distributed-vs-centralized",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "Cloud"
+    ],
+    "date": "2025-10-15"
+  },
+  {
+    "id": 199,
+    "title": "Async/Await vs Generators",
+    "slug": "async-await-vs-generators",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "ES6"
+    ],
+    "date": "2025-10-16"
+  },
+  {
+    "id": 200,
+    "title": "Load Testing vs Stress Testing",
+    "slug": "load-vs-stress-testing",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "Performance",
+      "JMeter"
+    ],
+    "date": "2025-10-17"
+  },
+  {
+    "id": 201,
+    "title": "Composition API vs Options API",
+    "slug": "composition-vs-options-api",
+    "difficulty": "Medium",
+    "tags": [
+      "Vue.js",
+      "Frontend",
+      "JavaScript"
+    ],
+    "date": "2025-10-18"
+  },
+  {
+    "id": 202,
+    "title": "Cache Invalidation vs Cache Expiration",
+    "slug": "cache-invalidation-vs-expiration",
+    "difficulty": "Medium",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2025-10-19"
+  },
+  {
+    "id": 203,
+    "title": "Imperative UI vs Declarative UI",
+    "slug": "imperative-vs-declarative-ui",
+    "difficulty": "Medium",
+    "tags": [
+      "Frontend",
+      "React",
+      "Flutter"
+    ],
+    "date": "2025-10-20"
+  },
+  {
+    "id": 204,
+    "title": "ORM Migrations vs Flyway",
+    "slug": "orm-migrations-vs-flyway",
+    "difficulty": "Medium",
+    "tags": [
+      "Database",
+      "Java",
+      "DevOps"
+    ],
+    "date": "2025-10-21"
+  },
+  {
+    "id": 205,
+    "title": "GraphQL Caching vs REST Caching",
+    "slug": "graphql-caching-vs-rest",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Performance",
+      "Caching"
+    ],
+    "date": "2025-10-22"
+  },
+  {
+    "id": 206,
+    "title": "Manual Testing vs Automated Testing",
+    "slug": "manual-vs-automated-testing",
+    "difficulty": "Medium",
+    "tags": [
+      "QA",
+      "Selenium",
+      "Testing"
+    ],
+    "date": "2025-10-23"
+  },
+  {
+    "id": 207,
+    "title": "Closure vs Promise",
+    "slug": "closure-vs-promise",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "Programming"
+    ],
+    "date": "2025-10-24"
+  },
+  {
+    "id": 208,
+    "title": "Server-Sent Events vs Long Polling",
+    "slug": "sse-vs-long-polling",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time",
+      "JavaScript",
+      "Networking"
+    ],
+    "date": "2025-10-25"
+  },
+  {
+    "id": 209,
+    "title": "Dependency Inversion vs Dependency Injection",
+    "slug": "dependency-inversion-vs-di",
+    "difficulty": "Hard",
+    "tags": [
+      "Design Patterns",
+      "OOP",
+      "Java"
+    ],
+    "date": "2025-10-26"
+  },
+  {
+    "id": 210,
+    "title": "CSS Grid vs CSS Table",
+    "slug": "css-grid-vs-table",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2025-10-27"
+  },
+  {
+    "id": 211,
+    "title": "Event-Driven Architecture vs Request-Response",
+    "slug": "event-driven-vs-request-response",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "Microservices",
+      "Node.js"
+    ],
+    "date": "2025-10-28"
+  },
+  {
+    "id": 212,
+    "title": "Heap Sort vs Quick Sort",
+    "slug": "heap-sort-vs-quick-sort",
+    "difficulty": "Medium",
+    "tags": [
+      "Algorithms",
+      "Java",
+      "Performance"
+    ],
+    "date": "2025-10-29"
+  },
+  {
+    "id": 213,
+    "title": "API Authentication vs Authorization",
+    "slug": "api-auth-vs-authz",
+    "difficulty": "Medium",
+    "tags": [
+      "Security",
+      "API",
+      "OAuth"
+    ],
+    "date": "2025-10-30"
+  },
+  {
+    "id": 214,
+    "title": "React Router vs Next.js Routing",
+    "slug": "react-router-vs-nextjs",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Frontend",
+      "Routing"
+    ],
+    "date": "2025-10-31"
+  },
+  {
+    "id": 215,
+    "title": "Load Balancer Types vs Algorithms",
+    "slug": "load-balancer-types-vs-algorithms",
+    "difficulty": "Hard",
+    "tags": [
+      "Networking",
+      "Performance",
+      "DevOps"
+    ],
+    "date": "2025-11-01"
+  },
+  {
+    "id": 216,
+    "title": "Functional Components vs Class Components",
+    "slug": "functional-vs-class-components",
+    "difficulty": "Easy",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-11-02"
+  },
+  {
+    "id": 217,
+    "title": "GraphQL Schema Stitching vs Federation",
+    "slug": "schema-stitching-vs-federation",
+    "difficulty": "Hard",
+    "tags": [
+      "GraphQL",
+      "Microservices",
+      "API"
+    ],
+    "date": "2025-11-03"
+  },
+  {
+    "id": 218,
+    "title": "Object Pool vs Connection Pool",
+    "slug": "object-pool-vs-connection",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "Performance"
+    ],
+    "date": "2025-11-04"
+  },
+  {
+    "id": 219,
+    "title": "CSS Reset vs Normalize",
+    "slug": "css-reset-vs-normalize",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Web Design"
+    ],
+    "date": "2025-11-05"
+  },
+  {
+    "id": 220,
+    "title": "Distributed Cache vs Local Cache",
+    "slug": "distributed-vs-local-cache",
+    "difficulty": "Medium",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2025-11-06"
+  },
+  {
+    "id": 221,
+    "title": "Event Loop vs Call Stack",
+    "slug": "event-loop-vs-call-stack",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "Node.js"
+    ],
+    "date": "2025-11-07"
+  },
+  {
+    "id": 222,
+    "title": "CQRS vs Domain-Driven Design",
+    "slug": "cqrs-vs-ddd",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2025-11-08"
+  },
+  {
+    "id": 223,
+    "title": "CSS-in-JS vs CSS Modules",
+    "slug": "css-in-js-vs-modules",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "React",
+      "Frontend"
+    ],
+    "date": "2025-11-09"
+  },
+  {
+    "id": 224,
+    "title": "Micro Frontend vs Server-Side Includes",
+    "slug": "micro-frontend-vs-ssi",
+    "difficulty": "Hard",
+    "tags": [
+      "Frontend",
+      "Architecture",
+      "React"
+    ],
+    "date": "2025-11-10"
+  },
+  {
+    "id": 225,
+    "title": "Promise.all vs Promise.race",
+    "slug": "promise-all-vs-race",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Asynchronous",
+      "ES6"
+    ],
+    "date": "2025-11-11"
+  },
+  {
+    "id": 226,
+    "title": "REST vs RPC",
+    "slug": "rest-vs-rpc",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Architecture",
+      "gRPC"
+    ],
+    "date": "2025-11-12"
+  },
+  {
+    "id": 227,
+    "title": "Sharding vs Replication",
+    "slug": "sharding-vs-replication",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "Scalability",
+      "MongoDB"
+    ],
+    "date": "2025-11-13"
+  },
+  {
+    "id": 228,
+    "title": "Virtual Environment vs Global Environment",
+    "slug": "virtual-vs-global-env",
+    "difficulty": "Easy",
+    "tags": [
+      "Python",
+      "DevOps",
+      "Virtualenv"
+    ],
+    "date": "2025-11-14"
+  },
+  {
+    "id": 229,
+    "title": "Proxy Pattern vs Virtual Proxy",
+    "slug": "proxy-vs-virtual-proxy",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "Java",
+      "C++"
+    ],
+    "date": "2025-11-15"
+  },
+  {
+    "id": 230,
+    "title": "GraphQL vs tRPC",
+    "slug": "graphql-vs-trpc",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "TypeScript",
+      "Performance"
+    ],
+    "date": "2025-11-16"
+  },
+  {
+    "id": 231,
+    "title": "Code Review vs Pair Programming",
+    "slug": "code-review-vs-pair",
+    "difficulty": "Medium",
+    "tags": [
+      "Collaboration",
+      "Agile",
+      "Git"
+    ],
+    "date": "2025-11-17"
+  },
+  {
+    "id": 232,
+    "title": "CSS Specificity vs Inheritance",
+    "slug": "css-specificity-vs-inheritance",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Web Design"
+    ],
+    "date": "2025-11-18"
+  },
+  {
+    "id": 233,
+    "title": "EventEmitter vs RxJS",
+    "slug": "eventemitter-vs-rxjs",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "Reactive Programming",
+      "Node.js"
+    ],
+    "date": "2025-11-19"
+  },
+  {
+    "id": 234,
+    "title": "Lambda Architecture vs Kappa Architecture",
+    "slug": "lambda-vs-kappa",
+    "difficulty": "Hard",
+    "tags": [
+      "Big Data",
+      "Architecture",
+      "Kafka"
+    ],
+    "date": "2025-11-20"
+  },
+  {
+    "id": 235,
+    "title": "Static Site vs JAMstack",
+    "slug": "static-site-vs-jamstack",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Frontend",
+      "Gatsby"
+    ],
+    "date": "2025-11-21"
+  },
+  {
+    "id": 236,
+    "title": "Thread Dump vs Heap Dump",
+    "slug": "thread-dump-vs-heap-dump",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Debugging",
+      "Performance"
+    ],
+    "date": "2025-11-22"
+  },
+  {
+    "id": 237,
+    "title": "REST API vs Webhook",
+    "slug": "rest-api-vs-webhook",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "Integration"
+    ],
+    "date": "2025-11-23"
+  },
+  {
+    "id": 238,
+    "title": "Decorator Pattern vs Mixin",
+    "slug": "decorator-vs-mixin",
+    "difficulty": "Medium",
+    "tags": [
+      "Design Patterns",
+      "JavaScript",
+      "Python"
+    ],
+    "date": "2025-11-24"
+  },
+  {
+    "id": 239,
+    "title": "Cloud Native vs Traditional Hosting",
+    "slug": "cloud-native-vs-traditional",
+    "difficulty": "Medium",
+    "tags": [
+      "Cloud",
+      "Kubernetes",
+      "DevOps"
+    ],
+    "date": "2025-11-25"
+  },
+  {
+    "id": 240,
+    "title": "Object-Oriented vs Aspect-Oriented",
+    "slug": "oo-vs-ao",
+    "difficulty": "Hard",
+    "tags": [
+      "Programming",
+      "Java",
+      "Spring"
+    ],
+    "date": "2025-11-26"
+  },
+  {
+    "id": 241,
+    "title": "CSS Flexbox vs CSS Grid",
+    "slug": "flexbox-vs-grid",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2025-11-27"
+  },
+  {
+    "id": 242,
+    "title": "API Mocking vs Stubbing",
+    "slug": "api-mocking-vs-stubbing",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "API",
+      "Jest"
+    ],
+    "date": "2025-11-28"
+  },
+  {
+    "id": 243,
+    "title": "Distributed Tracing vs Logging",
+    "slug": "distributed-tracing-vs-logging",
+    "difficulty": "Hard",
+    "tags": [
+      "Monitoring",
+      "Microservices",
+      "Jaeger"
+    ],
+    "date": "2025-11-29"
+  },
+  {
+    "id": 244,
+    "title": "Immutable Data vs Mutable Data",
+    "slug": "immutable-vs-mutable-data",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "JavaScript",
+      "Data Structures"
+    ],
+    "date": "2025-11-30"
+  },
+  {
+    "id": 245,
+    "title": "REST Client vs GraphQL Client",
+    "slug": "rest-client-vs-graphql-client",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Frontend",
+      "JavaScript"
+    ],
+    "date": "2025-12-01"
+  },
+  {
+    "id": 246,
+    "title": "Event Storming vs Domain Modeling",
+    "slug": "event-storming-vs-domain",
+    "difficulty": "Hard",
+    "tags": [
+      "DDD",
+      "Architecture",
+      "Collaboration"
+    ],
+    "date": "2025-12-02"
+  },
+  {
+    "id": 247,
+    "title": "CSS Units: px vs rem",
+    "slug": "css-px-vs-rem",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Responsiveness"
+    ],
+    "date": "2025-12-03"
+  },
+  {
+    "id": 248,
+    "title": "Circuit Breaker vs Bulkhead",
+    "slug": "circuit-breaker-vs-bulkhead",
+    "difficulty": "Hard",
+    "tags": [
+      "Resilience",
+      "Microservices",
+      "Java"
+    ],
+    "date": "2025-12-04"
+  },
+  {
+    "id": 249,
+    "title": "React Query vs SWR",
+    "slug": "react-query-vs-swr",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Data Fetching",
+      "JavaScript"
+    ],
+    "date": "2025-12-05"
+  },
+  {
+    "id": 250,
+    "title": "Blocking Queue vs Non-Blocking Queue",
+    "slug": "blocking-vs-non-blocking-queue",
+    "difficulty": "Medium",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "Threading"
+    ],
+    "date": "2025-12-06"
+  },
+  {
+    "id": 251,
+    "title": "GraphQL Directives vs Middleware",
+    "slug": "graphql-directives-vs-middleware",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Node.js"
+    ],
+    "date": "2025-12-07"
+  },
+  {
+    "id": 252,
+    "title": "Code Coverage vs Mutation Testing",
+    "slug": "code-coverage-vs-mutation",
+    "difficulty": "Hard",
+    "tags": [
+      "Testing",
+      "Quality",
+      "Pitest"
+    ],
+    "date": "2025-12-08"
+  },
+  {
+    "id": 253,
+    "title": "CSS Frameworks vs Utility-First CSS",
+    "slug": "css-frameworks-vs-utility",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Tailwind",
+      "Bootstrap"
+    ],
+    "date": "2025-12-09"
+  },
+  {
+    "id": 254,
+    "title": "Distributed Lock vs Optimistic Lock",
+    "slug": "distributed-vs-optimistic-lock",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Database",
+      "Java"
+    ],
+    "date": "2025-12-10"
+  },
+  {
+    "id": 255,
+    "title": "API Testing vs UI Testing",
+    "slug": "api-vs-ui-testing",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "Postman",
+      "Selenium"
+    ],
+    "date": "2025-12-11"
+  },
+  {
+    "id": 256,
+    "title": "Event Propagation vs Event Bubbling",
+    "slug": "event-propagation-vs-bubbling",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "DOM",
+      "Events"
+    ],
+    "date": "2025-12-12"
+  },
+  {
+    "id": 257,
+    "title": "GraphQL Introspection vs Schema Registry",
+    "slug": "graphql-introspection-vs-registry",
+    "difficulty": "Hard",
+    "tags": [
+      "GraphQL",
+      "API",
+      "Schema"
+    ],
+    "date": "2025-12-13"
+  },
+  {
+    "id": 258,
+    "title": "Code Refactoring vs Code Rewriting",
+    "slug": "refactoring-vs-rewriting",
+    "difficulty": "Medium",
+    "tags": [
+      "Code Quality",
+      "Agile",
+      "Java"
+    ],
+    "date": "2025-12-14"
+  },
+  {
+    "id": 259,
+    "title": "CSS Box Model vs Flexbox",
+    "slug": "css-box-vs-flexbox",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2025-12-15"
+  },
+  {
+    "id": 260,
+    "title": "Message Queue vs Stream Processing",
+    "slug": "message-queue-vs-stream",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "Kafka",
+      "Processing"
+    ],
+    "date": "2025-12-16"
+  },
+  {
+    "id": 261,
+    "title": "Virtual Threads vs Platform Threads",
+    "slug": "virtual-vs-platform-threads",
+    "difficulty": "Hard",
+    "tags": [
+      "Java",
+      "Concurrency",
+      "Performance"
+    ],
+    "date": "2025-12-17"
+  },
+  {
+    "id": 262,
+    "title": "API Gateway vs Load Balancer",
+    "slug": "api-gateway-vs-load-balancer",
+    "difficulty": "Medium",
+    "tags": [
+      "Networking",
+      "Microservices",
+      "Kong"
+    ],
+    "date": "2025-12-18"
+  },
+  {
+    "id": 263,
+    "title": "CSS Frameworks vs Atomic CSS",
+    "slug": "css-frameworks-vs-atomic",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Tailwind"
+    ],
+    "date": "2025-12-19"
+  },
+  {
+    "id": 264,
+    "title": "Distributed Transaction vs Saga",
+    "slug": "distributed-transaction-vs-saga",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "Microservices",
+      "Java"
+    ],
+    "date": "2025-12-20"
+  },
+  {
+    "id": 265,
+    "title": "React Context vs Redux",
+    "slug": "react-context-vs-redux",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2025-12-21"
+  },
+  {
+    "id": 266,
+    "title": "Code Linting vs Formatting",
+    "slug": "linting-vs-formatting",
+    "difficulty": "Easy",
+    "tags": [
+      "Code Quality",
+      "ESLint",
+      "Prettier"
+    ],
+    "date": "2025-12-22"
+  },
+  {
+    "id": 267,
+    "title": "GraphQL Subscriptions vs Polling",
+    "slug": "graphql-subs-vs-polling",
+    "difficulty": "Medium",
+    "tags": [
+      "GraphQL",
+      "Real-time",
+      "API"
+    ],
+    "date": "2025-12-23"
+  },
+  {
+    "id": 268,
+    "title": "Microservices vs Serverless",
+    "slug": "microservices-vs-serverless",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS"
+    ],
+    "date": "2025-12-24"
+  },
+  {
+    "id": 269,
+    "title": "CSS Pseudo-Classes vs Pseudo-Elements",
+    "slug": "pseudo-classes-vs-elements",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Web Design"
+    ],
+    "date": "2025-12-25"
+  },
+  {
+    "id": 270,
+    "title": "Event Sourcing vs CQRS",
+    "slug": "event-sourcing-vs-cqrs",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Database"
+    ],
+    "date": "2025-12-26"
+  },
+  {
+    "id": 271,
+    "title": "API Mock Server vs Proxy",
+    "slug": "api-mock-vs-proxy",
+    "difficulty": "Medium",
+    "tags": [
+      "Testing",
+      "API",
+      "Development"
+    ],
+    "date": "2025-12-27"
+  },
+  {
+    "id": 272,
+    "title": "Thread Pool vs Executor Service",
+    "slug": "thread-pool-vs-executor",
+    "difficulty": "Medium",
+    "tags": [
+      "Java",
+      "Concurrency",
+      "Performance"
+    ],
+    "date": "2025-12-28"
+  },
+  {
+    "id": 273,
+    "title": "CSS Grid vs Bootstrap Grid",
+    "slug": "css-grid-vs-bootstrap",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2025-12-29"
+  },
+  {
+    "id": 274,
+    "title": "Distributed Logging vs Centralized Logging",
+    "slug": "distributed-vs-centralized-logging",
+    "difficulty": "Medium",
+    "tags": [
+      "Monitoring",
+      "ELK",
+      "DevOps"
+    ],
+    "date": "2025-12-30"
+  },
+  {
+    "id": 275,
+    "title": "React Hooks vs Higher-Order Components",
+    "slug": "react-hooks-vs-hoc",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2025-12-31"
+  },
+  {
+    "id": 276,
+    "title": "GraphQL Batching vs DataLoader",
+    "slug": "graphql-batching-vs-dataloader",
+    "difficulty": "Hard",
+    "tags": [
+      "GraphQL",
+      "Performance",
+      "API"
+    ],
+    "date": "2026-01-01"
+  },
+  {
+    "id": 277,
+    "title": "Code Smells vs Anti-Patterns",
+    "slug": "code-smells-vs-anti-patterns",
+    "difficulty": "Medium",
+    "tags": [
+      "Code Quality",
+      "Refactoring",
+      "Design"
+    ],
+    "date": "2026-01-02"
+  },
+  {
+    "id": 278,
+    "title": "CSS Positioning vs Display",
+    "slug": "css-positioning-vs-display",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2026-01-03"
+  },
+  {
+    "id": 279,
+    "title": "Microservices vs FaaS",
+    "slug": "microservices-vs-faas",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS Lambda"
+    ],
+    "date": "2026-01-04"
+  },
+  {
+    "id": 280,
+    "title": "Event Capturing vs Event Bubbling",
+    "slug": "event-capturing-vs-bubbling",
+    "difficulty": "Medium",
+    "tags": [
+      "JavaScript",
+      "DOM",
+      "Events"
+    ],
+    "date": "2026-01-05"
+  },
+  {
+    "id": 281,
+    "title": "API Security vs Data Privacy",
+    "slug": "api-security-vs-privacy",
+    "difficulty": "Hard",
+    "tags": [
+      "Security",
+      "API",
+      "GDPR"
+    ],
+    "date": "2026-01-06"
+  },
+  {
+    "id": 282,
+    "title": "CSS Frameworks vs BEM",
+    "slug": "css-frameworks-vs-bem",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Methodology"
+    ],
+    "date": "2026-01-07"
+  },
+  {
+    "id": 283,
+    "title": "Distributed Systems vs Edge Computing",
+    "slug": "distributed-vs-edge",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "IoT"
+    ],
+    "date": "2026-01-08"
+  },
+  {
+    "id": 284,
+    "title": "React Portals vs React Fragments",
+    "slug": "react-portals-vs-fragments",
+    "difficulty": "Easy",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-01-09"
+  },
+  {
+    "id": 285,
+    "title": "GraphQL vs OpenAPI",
+    "slug": "graphql-vs-openapi",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Specification",
+      "Swagger"
+    ],
+    "date": "2026-01-10"
+  },
+  {
+    "id": 286,
+    "title": "Code Profiling vs Tracing",
+    "slug": "profiling-vs-tracing",
+    "difficulty": "Medium",
+    "tags": [
+      "Performance",
+      "Java",
+      "Monitoring"
+    ],
+    "date": "2026-01-11"
+  },
+  {
+    "id": 287,
+    "title": "CSS Custom Properties vs SASS Variables",
+    "slug": "css-custom-vs-sass",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Sass"
+    ],
+    "date": "2026-01-12"
+  },
+  {
+    "id": 288,
+    "title": "Microservices vs Event-Driven Architecture",
+    "slug": "microservices-vs-event-driven",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-01-13"
+  },
+  {
+    "id": 289,
+    "title": "API Gateway vs BFF",
+    "slug": "api-gateway-vs-bff",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "Microservices",
+      "Frontend"
+    ],
+    "date": "2026-01-14"
+  },
+  {
+    "id": 290,
+    "title": "React Suspense vs Lazy Loading",
+    "slug": "react-suspense-vs-lazy",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-01-15"
+  },
+  {
+    "id": 291,
+    "title": "Distributed Consensus vs Leader Election",
+    "slug": "distributed-consensus-vs-leader",
+    "difficulty": "Hard",
+    "tags": [
+      "Distributed Systems",
+      "Raft",
+      "Zookeeper"
+    ],
+    "date": "2026-01-16"
+  },
+  {
+    "id": 292,
+    "title": "CSS Flexbox vs CSS Grid",
+    "slug": "flexbox-vs-grid-revisited",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2026-01-17"
+  },
+  {
+    "id": 293,
+    "title": "API Rate Limiting vs Quota",
+    "slug": "rate-limiting-vs-quota",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Security",
+      "Performance"
+    ],
+    "date": "2026-01-18"
+  },
+  {
+    "id": 294,
+    "title": "Microservices vs Monorepo",
+    "slug": "microservices-vs-monorepo",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DevOps",
+      "Git"
+    ],
+    "date": "2026-01-19"
+  },
+  {
+    "id": 295,
+    "title": "React Effects vs Lifecycle Methods",
+    "slug": "react-effects-vs-lifecycle",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-01-20"
+  },
+  {
+    "id": 296,
+    "title": "GraphQL vs Falcor",
+    "slug": "graphql-vs-falcor",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Data Fetching",
+      "JavaScript"
+    ],
+    "date": "2026-01-21"
+  },
+  {
+    "id": 297,
+    "title": "Code Review vs Code Audit",
+    "slug": "code-review-vs-audit",
+    "difficulty": "Medium",
+    "tags": [
+      "Code Quality",
+      "Security",
+      "Collaboration"
+    ],
+    "date": "2026-01-22"
+  },
+  {
+    "id": 298,
+    "title": "CSS Animation vs Web Animation API",
+    "slug": "css-animation-vs-web-api",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-01-23"
+  },
+  {
+    "id": 299,
+    "title": "Distributed Hash Table vs Centralized Index",
+    "slug": "dht-vs-centralized-index",
+    "difficulty": "Hard",
+    "tags": [
+      "Distributed Systems",
+      "Networking",
+      "DHT"
+    ],
+    "date": "2026-01-24"
+  },
+  {
+    "id": 300,
+    "title": "React Server Components vs Client Components",
+    "slug": "react-server-vs-client",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "Frontend"
+    ],
+    "date": "2026-01-25"
+  },
+  {
+    "id": 301,
+    "title": "API Gateway vs Reverse Proxy",
+    "slug": "api-gateway-vs-reverse-proxy",
+    "difficulty": "Medium",
+    "tags": [
+      "Networking",
+      "Microservices",
+      "NGINX"
+    ],
+    "date": "2026-01-26"
+  },
+  {
+    "id": 302,
+    "title": "React useReducer vs useContext",
+    "slug": "react-usereducer-vs-usecontext",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-01-27"
+  },
+  {
+    "id": 303,
+    "title": "Distributed Database vs Centralized Database",
+    "slug": "distributed-vs-centralized-db",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "Scalability",
+      "Cassandra"
+    ],
+    "date": "2026-01-28"
+  },
+  {
+    "id": 304,
+    "title": "CSS Transitions vs Keyframes",
+    "slug": "css-transitions-vs-keyframes",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Animation",
+      "Frontend"
+    ],
+    "date": "2026-01-29"
+  },
+  {
+    "id": 305,
+    "title": "Thread Synchronization vs Async Programming",
+    "slug": "thread-sync-vs-async",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "Node.js"
+    ],
+    "date": "2026-01-30"
+  },
+  {
+    "id": 306,
+    "title": "GraphQL vs JSON-RPC",
+    "slug": "graphql-vs-json-rpc",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-01-31"
+  },
+  {
+    "id": 307,
+    "title": "Static Typing vs Gradual Typing",
+    "slug": "static-vs-gradual-typing",
+    "difficulty": "Medium",
+    "tags": [
+      "Programming",
+      "TypeScript",
+      "Python"
+    ],
+    "date": "2026-02-01"
+  },
+  {
+    "id": 308,
+    "title": "Serverless Functions vs Containers",
+    "slug": "serverless-functions-vs-containers",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud",
+      "AWS Lambda",
+      "Docker"
+    ],
+    "date": "2026-02-02"
+  },
+  {
+    "id": 309,
+    "title": "CSS Flex vs CSS Grid",
+    "slug": "css-flex-vs-grid",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Layout"
+    ],
+    "date": "2026-02-03"
+  },
+  {
+    "id": 310,
+    "title": "Event-Driven vs Push-Pull Models",
+    "slug": "event-driven-vs-push-pull",
+    "difficulty": "Medium",
+    "tags": [
+      "Architecture",
+      "Messaging",
+      "Kafka"
+    ],
+    "date": "2026-02-04"
+  },
+  {
+    "id": 311,
+    "title": "React.memo vs React.memo with useCallback",
+    "slug": "react-memo-vs-usecallback",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-02-05"
+  },
+  {
+    "id": 312,
+    "title": "Distributed Tracing vs Application Performance Monitoring",
+    "slug": "distributed-tracing-vs-apm",
+    "difficulty": "Hard",
+    "tags": [
+      "Monitoring",
+      "Jaeger",
+      "New Relic"
+    ],
+    "date": "2026-02-06"
+  },
+  {
+    "id": 313,
+    "title": "CSS Media Queries vs Container Queries",
+    "slug": "media-vs-container-queries",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-02-07"
+  },
+  {
+    "id": 314,
+    "title": "REST API Caching vs Database Caching",
+    "slug": "rest-caching-vs-db-caching",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Performance",
+      "Redis"
+    ],
+    "date": "2026-02-08"
+  },
+  {
+    "id": 315,
+    "title": "Thread Pool vs Coroutines",
+    "slug": "thread-pool-vs-coroutines",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Kotlin",
+      "Java"
+    ],
+    "date": "2026-02-09"
+  },
+  {
+    "id": 316,
+    "title": "GraphQL vs REST Security",
+    "slug": "graphql-vs-rest-security",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Security",
+      "Authentication"
+    ],
+    "date": "2026-02-10"
+  },
+  {
+    "id": 317,
+    "title": "CSS Float vs Flexbox",
+    "slug": "css-float-vs-flexbox",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-02-11"
+  },
+  {
+    "id": 318,
+    "title": "Microservices vs Lambda Architecture",
+    "slug": "microservices-vs-lambda",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Big Data",
+      "AWS"
+    ],
+    "date": "2026-02-12"
+  },
+  {
+    "id": 319,
+    "title": "React useEffect vs useLayoutEffect",
+    "slug": "react-useeffect-vs-uselayouteffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Lifecycle",
+      "JavaScript"
+    ],
+    "date": "2026-02-13"
+  },
+  {
+    "id": 320,
+    "title": "Distributed Lock Manager vs Optimistic Concurrency",
+    "slug": "distributed-lock-vs-optimistic",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Database",
+      "Java"
+    ],
+    "date": "2026-02-14"
+  },
+  {
+    "id": 321,
+    "title": "CSS Preprocessors vs PostCSS",
+    "slug": "css-preprocessors-vs-postcss",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Sass"
+    ],
+    "date": "2026-02-15"
+  },
+  {
+    "id": 322,
+    "title": "REST API vs WebSocket API",
+    "slug": "rest-api-vs-websocket",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "JavaScript"
+    ],
+    "date": "2026-02-16"
+  },
+  {
+    "id": 323,
+    "title": "Server-Side vs Client-Side Validation",
+    "slug": "server-side-vs-client-side-validation",
+    "difficulty": "Easy",
+    "tags": [
+      "Security",
+      "Forms",
+      "JavaScript"
+    ],
+    "date": "2026-02-17"
+  },
+  {
+    "id": 324,
+    "title": "GraphQL vs REST Performance",
+    "slug": "graphql-vs-rest-performance",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Optimization",
+      "Backend"
+    ],
+    "date": "2026-02-18"
+  },
+  {
+    "id": 325,
+    "title": "CSS Grid vs Table Layout",
+    "slug": "css-grid-vs-table-layout",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-02-19"
+  },
+  {
+    "id": 326,
+    "title": "Microservices vs Service-Oriented Architecture",
+    "slug": "microservices-vs-soa",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Enterprise",
+      "Java"
+    ],
+    "date": "2026-02-20"
+  },
+  {
+    "id": 327,
+    "title": "React Context vs Redux Toolkit",
+    "slug": "react-context-vs-redux-toolkit",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-02-21"
+  },
+  {
+    "id": 328,
+    "title": "Distributed Systems vs Cloud Computing",
+    "slug": "distributed-vs-cloud",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "AWS",
+      "Networking"
+    ],
+    "date": "2026-02-22"
+  },
+  {
+    "id": 329,
+    "title": "CSS Variables vs CSS Custom Properties",
+    "slug": "css-variables-vs-custom",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Design"
+    ],
+    "date": "2026-02-23"
+  },
+  {
+    "id": 330,
+    "title": "Event Sourcing vs CQRS",
+    "slug": "event-sourcing-vs-cqrs",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Database"
+    ],
+    "date": "2026-02-24"
+  },
+  {
+    "id": 331,
+    "title": "React useState vs useReducer",
+    "slug": "react-usestate-vs-usereducer",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-02-25"
+  },
+  {
+    "id": 332,
+    "title": "Distributed Caching vs Local Caching",
+    "slug": "distributed-vs-local-caching",
+    "difficulty": "Medium",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2026-02-26"
+  },
+  {
+    "id": 333,
+    "title": "CSS Frameworks vs Inline Styles",
+    "slug": "css-frameworks-vs-inline",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "React"
+    ],
+    "date": "2026-02-27"
+  },
+  {
+    "id": 334,
+    "title": "Microservices vs Monolithic Architecture",
+    "slug": "microservices-vs-monolith",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Docker",
+      "Java"
+    ],
+    "date": "2026-02-28"
+  },
+  {
+    "id": 335,
+    "title": "React Router vs React Location",
+    "slug": "react-router-vs-location",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Routing",
+      "JavaScript"
+    ],
+    "date": "2026-03-01"
+  },
+  {
+    "id": 336,
+    "title": "Distributed Transactions vs Sagas",
+    "slug": "distributed-transactions-vs-sagas",
+    "difficulty": "Hard",
+    "tags": [
+      "Database",
+      "Microservices",
+      "Java"
+    ],
+    "date": "2026-03-02"
+  },
+  {
+    "id": 337,
+    "title": "CSS Animation vs JavaScript Animation",
+    "slug": "css-vs-js-animation",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-03-03"
+  },
+  {
+    "id": 338,
+    "title": "REST API vs GraphQL API",
+    "slug": "rest-vs-graphql-api",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Backend",
+      "JavaScript"
+    ],
+    "date": "2026-03-04"
+  },
+  {
+    "id": 339,
+    "title": "Serverless vs FaaS",
+    "slug": "serverless-vs-faas",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud",
+      "AWS Lambda",
+      "Architecture"
+    ],
+    "date": "2026-03-05"
+  },
+  {
+    "id": 340,
+    "title": "CSS Flexbox vs CSS Table",
+    "slug": "flexbox-vs-table",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-03-06"
+  },
+  {
+    "id": 341,
+    "title": "Microservices vs Event-Driven Architecture",
+    "slug": "microservices-vs-event-driven",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-03-07"
+  },
+  {
+    "id": 342,
+    "title": "React Hooks vs Class Components",
+    "slug": "react-hooks-vs-class",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-03-08"
+  },
+  {
+    "id": 343,
+    "title": "Distributed Systems vs Peer-to-Peer",
+    "slug": "distributed-vs-p2p",
+    "difficulty": "Hard",
+    "tags": [
+      "Networking",
+      "Architecture",
+      "Blockchain"
+    ],
+    "date": "2026-03-09"
+  },
+  {
+    "id": 344,
+    "title": "CSS Grid vs CSS Float",
+    "slug": "css-grid-vs-float",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-03-10"
+  },
+  {
+    "id": 345,
+    "title": "Microservices vs Serverless Functions",
+    "slug": "microservices-vs-serverless-func",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS"
+    ],
+    "date": "2026-03-11"
+  },
+  {
+    "id": 346,
+    "title": "React useMemo vs useCallback",
+    "slug": "react-usememo-vs-usecallback",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-03-12"
+  },
+  {
+    "id": 347,
+    "title": "Distributed Locking vs Optimistic Locking",
+    "slug": "distributed-vs-optimistic-locking",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Database",
+      "Java"
+    ],
+    "date": "2026-03-13"
+  },
+  {
+    "id": 348,
+    "title": "CSS Preprocessing vs Postprocessing",
+    "slug": "css-pre-vs-postprocessing",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Sass"
+    ],
+    "date": "2026-03-14"
+  },
+  {
+    "id": 349,
+    "title": "REST API vs SOAP API",
+    "slug": "rest-vs-soap-api",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Web Services",
+      "XML"
+    ],
+    "date": "2026-03-15"
+  },
+  {
+    "id": 350,
+    "title": "Server-Side Rendering vs Static Site Generation",
+    "slug": "ssr-vs-ssg",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Next.js",
+      "Performance"
+    ],
+    "date": "2026-03-16"
+  },
+  {
+    "id": 351,
+    "title": "CSS Units: em vs rem",
+    "slug": "css-em-vs-rem",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Responsiveness"
+    ],
+    "date": "2026-03-17"
+  },
+  {
+    "id": 352,
+    "title": "Microservices vs Lambda Functions",
+    "slug": "microservices-vs-lambda",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS"
+    ],
+    "date": "2026-03-18"
+  },
+  {
+    "id": 353,
+    "title": "React useRef vs createRef",
+    "slug": "react-useref-vs-createref",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM Manipulation",
+      "JavaScript"
+    ],
+    "date": "2026-03-19"
+  },
+  {
+    "id": 354,
+    "title": "Distributed Hash Tables vs Consistent Hashing",
+    "slug": "dht-vs-consistent-hashing",
+    "difficulty": "Hard",
+    "tags": [
+      "Distributed Systems",
+      "Networking",
+      "Scalability"
+    ],
+    "date": "2026-03-20"
+  },
+  {
+    "id": 355,
+    "title": "CSS Frameworks vs BEM",
+    "slug": "css-frameworks-vs-bem",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Methodology"
+    ],
+    "date": "2026-03-21"
+  },
+  {
+    "id": 356,
+    "title": "REST API vs gRPC",
+    "slug": "rest-vs-grpc",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Performance",
+      "Protobuf"
+    ],
+    "date": "2026-03-22"
+  },
+  {
+    "id": 357,
+    "title": "Serverless vs PaaS",
+    "slug": "serverless-vs-paas",
+    "difficulty": "Medium",
+    "tags": [
+      "Cloud",
+      "Heroku",
+      "AWS Lambda"
+    ],
+    "date": "2026-03-23"
+  },
+  {
+    "id": 358,
+    "title": "CSS Position: Absolute vs Relative",
+    "slug": "css-absolute-vs-relative",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-03-24"
+  },
+  {
+    "id": 359,
+    "title": "Microservices vs API Gateway",
+    "slug": "microservices-vs-api-gateway",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "Kong"
+    ],
+    "date": "2026-03-25"
+  },
+  {
+    "id": 360,
+    "title": "React useContext vs Redux",
+    "slug": "react-usecontext-vs-redux",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-03-26"
+  },
+  {
+    "id": 361,
+    "title": "Distributed Computing vs Parallel Computing",
+    "slug": "distributed-vs-parallel",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Performance",
+      "Java"
+    ],
+    "date": "2026-03-27"
+  },
+  {
+    "id": 362,
+    "title": "CSS Grid vs CSS Columns",
+    "slug": "css-grid-vs-columns",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-03-28"
+  },
+  {
+    "id": 363,
+    "title": "Microservices vs Domain-Driven Design",
+    "slug": "microservices-vs-ddd",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-03-29"
+  },
+  {
+    "id": 364,
+    "title": "React useEffect vs useMemo",
+    "slug": "react-useeffect-vs-usememo",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-03-30"
+  },
+  {
+    "id": 365,
+    "title": "Distributed Queue vs Centralized Queue",
+    "slug": "distributed-vs-centralized-queue",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "RabbitMQ",
+      "Scalability"
+    ],
+    "date": "2026-03-31"
+  },
+  {
+    "id": 366,
+    "title": "CSS Animation vs SVG Animation",
+    "slug": "css-vs-svg-animation",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "SVG",
+      "Frontend"
+    ],
+    "date": "2026-04-01"
+  },
+  {
+    "id": 367,
+    "title": "REST API vs Webhooks",
+    "slug": "rest-api-vs-webhooks",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "Integration"
+    ],
+    "date": "2026-04-02"
+  },
+  {
+    "id": 368,
+    "title": "Server-Side vs Edge-Side Rendering",
+    "slug": "ssr-vs-esr",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Next.js",
+      "CDN"
+    ],
+    "date": "2026-04-03"
+  },
+  {
+    "id": 369,
+    "title": "CSS Units: vw vs %",
+    "slug": "css-vw-vs-percent",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-04-04"
+  },
+  {
+    "id": 370,
+    "title": "Microservices vs Event Sourcing",
+    "slug": "microservices-vs-event-sourcing",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Kafka"
+    ],
+    "date": "2026-04-05"
+  },
+  {
+    "id": 371,
+    "title": "React useState vs Redux",
+    "slug": "react-usestate-vs-redux",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-04-06"
+  },
+  {
+    "id": 372,
+    "title": "Distributed Consensus vs Atomic Broadcast",
+    "slug": "distributed-consensus-vs-atomic",
+    "difficulty": "Hard",
+    "tags": [
+      "Distributed Systems",
+      "Raft",
+      "Paxos"
+    ],
+    "date": "2026-04-07"
+  },
+  {
+    "id": 373,
+    "title": "CSS Flexbox vs CSS Grid",
+    "slug": "flexbox-vs-grid-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-04-08"
+  },
+  {
+    "id": 374,
+    "title": "Microservices vs SOA",
+    "slug": "microservices-vs-soa-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Enterprise",
+      "Java"
+    ],
+    "date": "2026-04-09"
+  },
+  {
+    "id": 375,
+    "title": "React useReducer vs Context API",
+    "slug": "react-usereducer-vs-context",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-04-10"
+  },
+  {
+    "id": 376,
+    "title": "Distributed Tracing vs Logging",
+    "slug": "distributed-tracing-vs-logging",
+    "difficulty": "Hard",
+    "tags": [
+      "Monitoring",
+      "Jaeger",
+      "ELK"
+    ],
+    "date": "2026-04-11"
+  },
+  {
+    "id": 377,
+    "title": "CSS Media Queries vs CSS Grid",
+    "slug": "media-queries-vs-grid",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-04-12"
+  },
+  {
+    "id": 378,
+    "title": "REST API vs SOAP",
+    "slug": "rest-vs-soap",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Web Services",
+      "XML"
+    ],
+    "date": "2026-04-13"
+  },
+  {
+    "id": 379,
+    "title": "Serverless vs IaaS",
+    "slug": "serverless-vs-iaas",
+    "difficulty": "Medium",
+    "tags": [
+      "Cloud",
+      "AWS",
+      "Azure"
+    ],
+    "date": "2026-04-14"
+  },
+  {
+    "id": 380,
+    "title": "CSS Position: Fixed vs Sticky",
+    "slug": "css-fixed-vs-sticky",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-04-15"
+  },
+  {
+    "id": 381,
+    "title": "Microservices vs Hexagonal Architecture",
+    "slug": "microservices-vs-hexagonal",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Java",
+      "DDD"
+    ],
+    "date": "2026-04-16"
+  },
+  {
+    "id": 382,
+    "title": "React useCallback vs useMemo",
+    "slug": "react-usecallback-vs-usememo",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-04-17"
+  },
+  {
+    "id": 383,
+    "title": "Distributed Systems vs Grid Computing",
+    "slug": "distributed-vs-grid",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "Scalability"
+    ],
+    "date": "2026-04-18"
+  },
+  {
+    "id": 384,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-04-19"
+  },
+  {
+    "id": 385,
+    "title": "Microservices vs CQRS",
+    "slug": "microservices-vs-cqrs",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-04-20"
+  },
+  {
+    "id": 386,
+    "title": "React useContext vs useReducer",
+    "slug": "react-usecontext-vs-usereducer",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-04-21"
+  },
+  {
+    "id": 387,
+    "title": "Distributed Cache vs In-Memory Database",
+    "slug": "distributed-cache-vs-in-memory",
+    "difficulty": "Hard",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2026-04-22"
+  },
+  {
+    "id": 388,
+    "title": "CSS Animation vs Web Animations",
+    "slug": "css-vs-web-animations",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-04-23"
+  },
+  {
+    "id": 389,
+    "title": "REST API vs GraphQL Subscriptions",
+    "slug": "rest-vs-graphql-subs",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "JavaScript"
+    ],
+    "date": "2026-04-24"
+  },
+  {
+    "id": 390,
+    "title": "Server-Side vs Client-Side Routing",
+    "slug": "ssr-vs-csr-routing",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Next.js",
+      "React"
+    ],
+    "date": "2026-04-25"
+  },
+  {
+    "id": 391,
+    "title": "CSS Units: vh vs %",
+    "slug": "css-vh-vs-percent",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-04-26"
+  },
+  {
+    "id": 392,
+    "title": "Microservices vs Serverless Computing",
+    "slug": "microservices-vs-serverless",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS"
+    ],
+    "date": "2026-04-27"
+  },
+  {
+    "id": 393,
+    "title": "React useRef vs useState",
+    "slug": "react-useref-vs-usestate",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-04-28"
+  },
+  {
+    "id": 394,
+    "title": "Distributed Systems vs Cluster Computing",
+    "slug": "distributed-vs-cluster",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "Hadoop"
+    ],
+    "date": "2026-04-29"
+  },
+  {
+    "id": 395,
+    "title": "CSS Grid vs CSS Multi-Column",
+    "slug": "css-grid-vs-multicol",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-04-30"
+  },
+  {
+    "id": 396,
+    "title": "Microservices vs Event-Driven Systems",
+    "slug": "microservices-vs-event-driven-sys",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-05-01"
+  },
+  {
+    "id": 397,
+    "title": "React useMemo vs useEffect",
+    "slug": "react-usememo-vs-useeffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-05-02"
+  },
+  {
+    "id": 398,
+    "title": "Distributed Ledger vs Blockchain",
+    "slug": "distributed-ledger-vs-blockchain",
+    "difficulty": "Hard",
+    "tags": [
+      "Cryptography",
+      "Networking",
+      "Bitcoin"
+    ],
+    "date": "2026-05-03"
+  },
+  {
+    "id": 399,
+    "title": "CSS Flexbox vs CSS Grid",
+    "slug": "flexbox-vs-grid-revisited",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-05-04"
+  },
+  {
+    "id": 400,
+    "title": "Microservices vs RESTful Services",
+    "slug": "microservices-vs-restful",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-05-05"
+  },
+  {
+    "id": 401,
+    "title": "React useState vs useContext",
+    "slug": "react-usestate-vs-usecontext",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-05-06"
+  },
+  {
+    "id": 402,
+    "title": "Distributed Queue vs Topic",
+    "slug": "distributed-queue-vs-topic",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "Kafka",
+      "RabbitMQ"
+    ],
+    "date": "2026-05-07"
+  },
+  {
+    "id": 403,
+    "title": "CSS Animation vs Transition",
+    "slug": "css-animation-vs-transition",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Animation"
+    ],
+    "date": "2026-05-08"
+  },
+  {
+    "id": 404,
+    "title": "REST API vs GraphQL Queries",
+    "slug": "rest-vs-graphql-queries",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Data Fetching",
+      "JavaScript"
+    ],
+    "date": "2026-05-09"
+  },
+  {
+    "id": 405,
+    "title": "Server-Side vs Static Generation",
+    "slug": "ssr-vs-static-gen",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Next.js",
+      "Performance"
+    ],
+    "date": "2026-05-10"
+  },
+  {
+    "id": 406,
+    "title": "CSS Units: ch vs ex",
+    "slug": "css-ch-vs-ex",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Typography",
+      "Frontend"
+    ],
+    "date": "2026-05-11"
+  },
+  {
+    "id": 407,
+    "title": "Microservices vs Lambda Architecture",
+    "slug": "microservices-vs-lambda-arch",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Big Data",
+      "AWS"
+    ],
+    "date": "2026-05-12"
+  },
+  {
+    "id": 408,
+    "title": "React useLayoutEffect vs useEffect",
+    "slug": "react-uselayouteffect-vs-useeffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Lifecycle",
+      "JavaScript"
+    ],
+    "date": "2026-05-13"
+  },
+  {
+    "id": 409,
+    "title": "Distributed Systems vs Federated Systems",
+    "slug": "distributed-vs-federated",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "GraphQL"
+    ],
+    "date": "2026-05-14"
+  },
+  {
+    "id": 410,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-05-15"
+  },
+  {
+    "id": 411,
+    "title": "Microservices vs Event Sourcing",
+    "slug": "microservices-vs-event-sourcing",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Kafka"
+    ],
+    "date": "2026-05-16"
+  },
+  {
+    "id": 412,
+    "title": "React useRef vs useImperativeHandle",
+    "slug": "react-useref-vs-useimperativehandle",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-05-17"
+  },
+  {
+    "id": 413,
+    "title": "Distributed Lock vs Distributed Semaphore",
+    "slug": "distributed-lock-vs-semaphore",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Java",
+      "Zookeeper"
+    ],
+    "date": "2026-05-18"
+  },
+  {
+    "id": 414,
+    "title": "CSS Preprocessors vs CSS-in-JS",
+    "slug": "css-preprocessors-vs-in-js",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "React",
+      "Frontend"
+    ],
+    "date": "2026-05-19"
+  },
+  {
+    "id": 415,
+    "title": "REST API vs gRPC Performance",
+    "slug": "rest-vs-grpc-performance",
+    "difficulty": "Hard",
+    "tags": [
+      "API",
+      "Performance",
+      "Protobuf"
+    ],
+    "date": "2026-05-20"
+  },
+  {
+    "id": 416,
+    "title": "Server-Side vs Client-Side State",
+    "slug": "ssr-vs-csr-state",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "React",
+      "Next.js"
+    ],
+    "date": "2026-05-21"
+  },
+  {
+    "id": 417,
+    "title": "CSS Units: px vs pt",
+    "slug": "css-px-vs-pt",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Typography",
+      "Frontend"
+    ],
+    "date": "2026-05-22"
+  },
+  {
+    "id": 418,
+    "title": "Microservices vs Saga Pattern",
+    "slug": "microservices-vs-saga",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Java",
+      "Microservices"
+    ],
+    "date": "2026-05-23"
+  },
+  {
+    "id": 419,
+    "title": "React useMemo vs useCallback",
+    "slug": "react-usememo-vs-usecallback-again",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-05-24"
+  },
+  {
+    "id": 420,
+    "title": "Distributed Systems vs Cloud Native",
+    "slug": "distributed-vs-cloud-native",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kubernetes",
+      "AWS"
+    ],
+    "date": "2026-05-25"
+  },
+  {
+    "id": 421,
+    "title": "CSS Grid vs CSS Inline-Block",
+    "slug": "css-grid-vs-inline-block",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-05-26"
+  },
+  {
+    "id": 422,
+    "title": "Microservices vs REST API",
+    "slug": "microservices-vs-rest-api",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-05-27"
+  },
+  {
+    "id": 423,
+    "title": "React useContext vs useReducer",
+    "slug": "react-usecontext-vs-usereducer-again",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-05-28"
+  },
+  {
+    "id": 424,
+    "title": "Distributed Queue vs Pub/Sub",
+    "slug": "distributed-queue-vs-pubsub",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "Kafka",
+      "RabbitMQ"
+    ],
+    "date": "2026-05-29"
+  },
+  {
+    "id": 425,
+    "title": "CSS Animation vs CSS Transform",
+    "slug": "css-animation-vs-transform",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Performance"
+    ],
+    "date": "2026-05-30"
+  },
+  {
+    "id": 426,
+    "title": "REST API vs GraphQL Mutations",
+    "slug": "rest-vs-graphql-mutations",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Data Management",
+      "JavaScript"
+    ],
+    "date": "2026-05-31"
+  },
+  {
+    "id": 427,
+    "title": "Server-Side vs Incremental Static Regeneration",
+    "slug": "ssr-vs-isr",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Next.js",
+      "Performance"
+    ],
+    "date": "2026-06-01"
+  },
+  {
+    "id": 428,
+    "title": "CSS Units: rem vs em",
+    "slug": "css-rem-vs-em",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Typography",
+      "Frontend"
+    ],
+    "date": "2026-06-02"
+  },
+  {
+    "id": 429,
+    "title": "Microservices vs Event-Driven Architecture",
+    "slug": "microservices-vs-event-driven-arch",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-06-03"
+  },
+  {
+    "id": 430,
+    "title": "React useRef vs useState",
+    "slug": "react-useref-vs-usestate-again",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-06-04"
+  },
+  {
+    "id": 431,
+    "title": "Distributed Systems vs Edge Computing",
+    "slug": "distributed-vs-edge-computing",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "IoT"
+    ],
+    "date": "2026-06-05"
+  },
+  {
+    "id": 432,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox-revisited",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-06-06"
+  },
+  {
+    "id": 433,
+    "title": "Microservices vs Domain Events",
+    "slug": "microservices-vs-domain-events",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-06-07"
+  },
+  {
+    "id": 434,
+    "title": "React useEffect vs useLayoutEffect",
+    "slug": "react-useeffect-vs-uselayouteffect-again",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Lifecycle",
+      "JavaScript"
+    ],
+    "date": "2026-06-08"
+  },
+  {
+    "id": 435,
+    "title": "Distributed Cache vs CDN",
+    "slug": "distributed-cache-vs-cdn",
+    "difficulty": "Hard",
+    "tags": [
+      "Caching",
+      "Cloudflare",
+      "Performance"
+    ],
+    "date": "2026-06-09"
+  },
+  {
+    "id": 436,
+    "title": "CSS Animation vs JavaScript Animation",
+    "slug": "css-vs-js-animation-again",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-06-10"
+  },
+  {
+    "id": 437,
+    "title": "REST API vs WebSocket API",
+    "slug": "rest-vs-websocket-api",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "JavaScript"
+    ],
+    "date": "2026-06-11"
+  },
+  {
+    "id": 438,
+    "title": "Server-Side vs Edge Computing",
+    "slug": "ssr-vs-edge-computing",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Cloud",
+      "Next.js"
+    ],
+    "date": "2026-06-12"
+  },
+  {
+    "id": 439,
+    "title": "CSS Units: vw vs vh",
+    "slug": "css-vw-vs-vh",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-06-13"
+  },
+  {
+    "id": 440,
+    "title": "Microservices vs CQRS Architecture",
+    "slug": "microservices-vs-cqrs-arch",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-06-14"
+  },
+  {
+    "id": 441,
+    "title": "React useMemo vs useRef",
+    "slug": "react-usememo-vs-useref",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-06-15"
+  },
+  {
+    "id": 442,
+    "title": "Distributed Systems vs Fog Computing",
+    "slug": "distributed-vs-fog",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "IoT"
+    ],
+    "date": "2026-06-16"
+  },
+  {
+    "id": 443,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-06-17"
+  },
+  {
+    "id": 444,
+    "title": "Microservices vs RESTful Architecture",
+    "slug": "microservices-vs-restful-arch",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-06-18"
+  },
+  {
+    "id": 445,
+    "title": "React useContext vs useState",
+    "slug": "react-usecontext-vs-usestate",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-06-19"
+  },
+  {
+    "id": 446,
+    "title": "Distributed Queue vs Stream Processing",
+    "slug": "distributed-queue-vs-stream",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "Kafka",
+      "Processing"
+    ],
+    "date": "2026-06-20"
+  },
+  {
+    "id": 447,
+    "title": "CSS Animation vs CSS Transition",
+    "slug": "css-animation-vs-transition-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Animation"
+    ],
+    "date": "2026-06-21"
+  },
+  {
+    "id": 448,
+    "title": "REST API vs GraphQL Subscriptions",
+    "slug": "rest-vs-graphql-subscriptions",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "JavaScript"
+    ],
+    "date": "2026-06-22"
+  },
+  {
+    "id": 449,
+    "title": "Server-Side vs Client-Side Performance",
+    "slug": "ssr-vs-csr-performance",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "React",
+      "Next.js"
+    ],
+    "date": "2026-06-23"
+  },
+  {
+    "id": 450,
+    "title": "CSS Units: rem vs ch",
+    "slug": "css-rem-vs-ch",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Typography",
+      "Frontend"
+    ],
+    "date": "2026-06-24"
+  },
+  {
+    "id": 451,
+    "title": "Microservices vs Event-Driven Design",
+    "slug": "microservices-vs-event-driven-design",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-06-25"
+  },
+  {
+    "id": 452,
+    "title": "React useRef vs useImperativeHandle",
+    "slug": "react-useref-vs-useimperativehandle-again",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-06-26"
+  },
+  {
+    "id": 453,
+    "title": "Distributed Systems vs Decentralized Systems",
+    "slug": "distributed-vs-decentralized",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Networking",
+      "Blockchain"
+    ],
+    "date": "2026-06-27"
+  },
+  {
+    "id": 454,
+    "title": "CSS Grid vs CSS Table",
+    "slug": "grid-vs-table-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-06-28"
+  },
+  {
+    "id": 455,
+    "title": "Microservices vs Domain-Driven Design",
+    "slug": "microservices-vs-ddd-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-06-29"
+  },
+  {
+    "id": 456,
+    "title": "React useEffect vs useCallback",
+    "slug": "react-useeffect-vs-usecallback",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-06-30"
+  },
+  {
+    "id": 457,
+    "title": "Distributed Cache vs Local Storage",
+    "slug": "distributed-cache-vs-local-storage",
+    "difficulty": "Hard",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Performance"
+    ],
+    "date": "2026-07-01"
+  },
+  {
+    "id": 458,
+    "title": "CSS Animation vs SVG Animation",
+    "slug": "css-vs-svg-animation-again",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "SVG",
+      "Frontend"
+    ],
+    "date": "2026-07-02"
+  },
+  {
+    "id": 459,
+    "title": "REST API vs gRPC Streaming",
+    "slug": "rest-vs-grpc-streaming",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Real-time",
+      "Protobuf"
+    ],
+    "date": "2026-07-03"
+  },
+  {
+    "id": 460,
+    "title": "Server-Side vs Edge-Side Includes",
+    "slug": "ssr-vs-esi",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "CDN",
+      "Next.js"
+    ],
+    "date": "2026-07-04"
+  },
+  {
+    "id": 461,
+    "title": "CSS Units: vh vs vw",
+    "slug": "css-vh-vs-vw",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-07-05"
+  },
+  {
+    "id": 462,
+    "title": "Microservices vs Saga Pattern",
+    "slug": "microservices-vs-saga-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Java",
+      "Microservices"
+    ],
+    "date": "2026-07-06"
+  },
+  {
+    "id": 463,
+    "title": "React useState vs useMemo",
+    "slug": "react-usestate-vs-usememo",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-07-07"
+  },
+  {
+    "id": 464,
+    "title": "Distributed Systems vs Cloud Architecture",
+    "slug": "distributed-vs-cloud-arch",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "AWS",
+      "Networking"
+    ],
+    "date": "2026-07-08"
+  },
+  {
+    "id": 465,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox-revisited-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-07-09"
+  },
+  {
+    "id": 466,
+    "title": "Microservices vs RESTful Design",
+    "slug": "microservices-vs-restful-design",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-07-10"
+  },
+  {
+    "id": 467,
+    "title": "React useRef vs useContext",
+    "slug": "react-useref-vs-usecontext",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-07-11"
+  },
+  {
+    "id": 468,
+    "title": "Distributed Queue vs Message Broker",
+    "slug": "distributed-queue-vs-broker",
+    "difficulty": "Hard",
+    "tags": [
+      "Messaging",
+      "RabbitMQ",
+      "Kafka"
+    ],
+    "date": "2026-07-12"
+  },
+  {
+    "id": 469,
+    "title": "CSS Animation vs JavaScript Timers",
+    "slug": "css-vs-js-timers",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "Frontend"
+    ],
+    "date": "2026-07-13"
+  },
+  {
+    "id": 470,
+    "title": "REST API vs GraphQL Schema",
+    "slug": "rest-vs-graphql-schema",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Data Modeling",
+      "JavaScript"
+    ],
+    "date": "2026-07-14"
+  },
+  {
+    "id": 471,
+    "title": "Server-Side vs Client-Side Security",
+    "slug": "ssr-vs-csr-security",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "Security",
+      "React"
+    ],
+    "date": "2026-07-15"
+  },
+  {
+    "id": 472,
+    "title": "CSS Units: rem vs vw",
+    "slug": "css-rem-vs-vw",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-07-16"
+  },
+  {
+    "id": 473,
+    "title": "Microservices vs Event-Driven Microservices",
+    "slug": "microservices-vs-event-driven-micro",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-07-17"
+  },
+  {
+    "id": 474,
+    "title": "React useEffect vs useRef",
+    "slug": "react-useeffect-vs-useref",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Lifecycle",
+      "JavaScript"
+    ],
+    "date": "2026-07-18"
+  },
+  {
+    "id": 475,
+    "title": "Distributed Systems vs Peer-to-Peer Networks",
+    "slug": "distributed-vs-p2p-networks",
+    "difficulty": "Hard",
+    "tags": [
+      "Networking",
+      "Blockchain",
+      "Architecture"
+    ],
+    "date": "2026-07-19"
+  },
+  {
+    "id": 476,
+    "title": "CSS Grid vs CSS Float",
+    "slug": "grid-vs-float-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-07-20"
+  },
+  {
+    "id": 477,
+    "title": "Microservices vs CQRS Implementation",
+    "slug": "microservices-vs-cqrs-impl",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "DDD",
+      "Java"
+    ],
+    "date": "2026-07-21"
+  },
+  {
+    "id": 478,
+    "title": "React useMemo vs useLayoutEffect",
+    "slug": "react-usememo-vs-uselayouteffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Performance",
+      "JavaScript"
+    ],
+    "date": "2026-07-22"
+  },
+  {
+    "id": 479,
+    "title": "Distributed Cache vs Distributed Database",
+    "slug": "distributed-cache-vs-db",
+    "difficulty": "Hard",
+    "tags": [
+      "Caching",
+      "Redis",
+      "Cassandra"
+    ],
+    "date": "2026-07-23"
+  },
+  {
+    "id": 480,
+    "title": "CSS Animation vs CSS Keyframes",
+    "slug": "css-animation-vs-keyframes-again",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Animation"
+    ],
+    "date": "2026-07-24"
+  },
+  {
+    "id": 481,
+    "title": "REST API vs gRPC Security",
+    "slug": "rest-vs-grpc-security",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Security",
+      "Authentication"
+    ],
+    "date": "2026-07-25"
+  },
+  {
+    "id": 482,
+    "title": "Server-Side vs Edge-Side Caching",
+    "slug": "ssr-vs-edge-caching",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "CDN",
+      "Performance"
+    ],
+    "date": "2026-07-26"
+  },
+  {
+    "id": 483,
+    "title": "CSS Units: vh vs %",
+    "slug": "css-vh-vs-percent-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-07-27"
+  },
+  {
+    "id": 484,
+    "title": "Microservices vs Event-Driven Architecture",
+    "slug": "microservices-vs-event-driven-arch-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-07-28"
+  },
+  {
+    "id": 485,
+    "title": "React useRef vs useCallback",
+    "slug": "react-useref-vs-usecallback",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-07-29"
+  },
+  {
+    "id": 486,
+    "title": "Distributed Systems vs Mesh Networking",
+    "slug": "distributed-vs-mesh",
+    "difficulty": "Hard",
+    "tags": [
+      "Networking",
+      "Architecture",
+      "IoT"
+    ],
+    "date": "2026-07-30"
+  },
+  {
+    "id": 487,
+    "title": "CSS Grid vs CSS Inline",
+    "slug": "css-grid-vs-inline",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-07-31"
+  },
+  {
+    "id": 488,
+    "title": "Microservices vs RESTful Microservices",
+    "slug": "microservices-vs-restful-micro",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-08-01"
+  },
+  {
+    "id": 489,
+    "title": "React useState vs useEffect",
+    "slug": "react-usestate-vs-useeffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "Lifecycle",
+      "JavaScript"
+    ],
+    "date": "2026-08-02"
+  },
+  {
+    "id": 490,
+    "title": "Distributed Queue vs Distributed Lock",
+    "slug": "distributed-queue-vs-lock",
+    "difficulty": "Hard",
+    "tags": [
+      "Concurrency",
+      "Messaging",
+      "Java"
+    ],
+    "date": "2026-08-03"
+  },
+  {
+    "id": 491,
+    "title": "CSS Animation vs CSS Transform",
+    "slug": "css-animation-vs-transform-again",
+    "difficulty": "Medium",
+    "tags": [
+      "CSS",
+      "Frontend",
+      "Performance"
+    ],
+    "date": "2026-08-04"
+  },
+  {
+    "id": 492,
+    "title": "REST API vs GraphQL Performance",
+    "slug": "rest-vs-graphql-performance-again",
+    "difficulty": "Medium",
+    "tags": [
+      "API",
+      "Optimization",
+      "JavaScript"
+    ],
+    "date": "2026-08-05"
+  },
+  {
+    "id": 493,
+    "title": "Server-Side vs Client-Side Rendering",
+    "slug": "ssr-vs-csr-rendering",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Development",
+      "React",
+      "Next.js"
+    ],
+    "date": "2026-08-06"
+  },
+  {
+    "id": 494,
+    "title": "CSS Units: rem vs vh",
+    "slug": "css-rem-vs-vh",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Responsive Design",
+      "Frontend"
+    ],
+    "date": "2026-08-07"
+  },
+  {
+    "id": 495,
+    "title": "Microservices vs Event-Driven Design",
+    "slug": "microservices-vs-event-driven-design-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Kafka",
+      "Node.js"
+    ],
+    "date": "2026-08-08"
+  },
+  {
+    "id": 496,
+    "title": "React useRef vs useLayoutEffect",
+    "slug": "react-useref-vs-uselayouteffect",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "DOM",
+      "JavaScript"
+    ],
+    "date": "2026-08-09"
+  },
+  {
+    "id": 497,
+    "title": "Distributed Systems vs Hybrid Cloud",
+    "slug": "distributed-vs-hybrid",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "Cloud",
+      "AWS"
+    ],
+    "date": "2026-08-10"
+  },
+  {
+    "id": 498,
+    "title": "CSS Grid vs CSS Flexbox",
+    "slug": "grid-vs-flexbox-revisited-again",
+    "difficulty": "Easy",
+    "tags": [
+      "CSS",
+      "Layout",
+      "Frontend"
+    ],
+    "date": "2026-08-11"
+  },
+  {
+    "id": 499,
+    "title": "Microservices vs RESTful Architecture",
+    "slug": "microservices-vs-restful-arch-again",
+    "difficulty": "Hard",
+    "tags": [
+      "Architecture",
+      "API",
+      "Java"
+    ],
+    "date": "2026-08-12"
+  },
+  {
+    "id": 500,
+    "title": "React useContext vs useMemo",
+    "slug": "react-usecontext-vs-usememo",
+    "difficulty": "Medium",
+    "tags": [
+      "React",
+      "State Management",
+      "JavaScript"
+    ],
+    "date": "2026-08-13"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "topics": [
+    {
+      "id": "ts-types",
+      "title": "TypeScript Types",
+      "slug": "ts-types",
+      "description": "Understand TypeScript\u2019s static typing system including interfaces and generics.",
+      "difficulty": "Beginner",
+      "tags": [
+        "TypeScript",
+        "Types",
+        "Generics"
+      ],
+      "subtopics": [
+        {
+          "id": "ts-interfaces",
+          "title": "Interfaces",
+          "slug": "ts-interfaces",
+          "description": "Define object shapes using interfaces and type aliases.",
+          "difficulty": "Beginner",
+          "tags": [
+            "TypeScript",
+            "Interfaces"
+          ],
+          "related_questions": [
+            "What is the difference between type and interface in TypeScript?",
+            "How do you extend interfaces?"
+          ]
+        }
+      ]
+    }
+  ]
+}

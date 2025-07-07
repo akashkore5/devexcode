@@ -1,0 +1,34 @@
+{
+  "topics": [
+    {
+      "id": "js-fundamentals",
+      "title": "JavaScript Fundamentals",
+      "slug": "js-fundamentals",
+      "description": "Grasp the core concepts of JavaScript used in web development.",
+      "difficulty": "Beginner",
+      "tags": [
+        "JavaScript",
+        "Web",
+        "Interview"
+      ],
+      "subtopics": [
+        {
+          "id": "js-functions",
+          "title": "Functions and Scope",
+          "slug": "js-functions",
+          "description": "Learn about function declaration, expressions, and lexical scope.",
+          "difficulty": "Beginner",
+          "tags": [
+            "Functions",
+            "Scope",
+            "JavaScript"
+          ],
+          "related_questions": [
+            "What is the difference between function declarations and expressions?",
+            "How does lexical scoping work in JavaScript?"
+          ]
+        }
+      ]
+    }
+  ]
+}

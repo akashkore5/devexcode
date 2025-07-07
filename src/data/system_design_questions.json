@@ -1,20 +1,2004 @@
 [
   {
-    "id": 1,
-    "title": "Design a URL Shortener",
+    "id": "1",
+    "title": "Design a URL Preview Service",
     "difficulty": "Medium",
-    "description": "Design a service like TinyURL or bit.ly that takes a long URL and generates a short, unique alias for it."
+    "tags": [
+      "API Design",
+      "URL Parsing",
+      "Content Summarization"
+    ],
+    "description": "The URL Preview Service is designed to provide a preview of the content contained within a given URL, allowing users to quickly understand the topic and relevance of the page without having to visit it."
   },
   {
-    "id": 2,
-    "title": "Design a Messaging App",
-    "difficulty": "Hard",
-    "description": "Design a real-time messaging service like WhatsApp or Telegram with features like one-on-one chat, group chat, and media sharing."
+    "id": "2",
+    "title": "Design a Rate Limiter",
+    "difficulty": "Medium",
+    "tags": [
+      "System Scalability",
+      "API Protection",
+      "Distributed Systems"
+    ],
+    "description": "A Rate Limiter controls the number of requests a user or service can make to an API within a specified time frame, preventing abuse and ensuring fair resource usage."
   },
   {
-    "id": 3,
-    "title": "Design a Ride-Sharing Service",
+    "id": "3",
+    "title": "Design a Notification System",
+    "difficulty": "Medium",
+    "tags": [
+      "Event-Driven Architecture",
+      "Push Notifications",
+      "Message Queues"
+    ],
+    "description": "A Notification System delivers real-time or scheduled messages to users via email, SMS, or push notifications, ensuring timely and reliable communication."
+  },
+  {
+    "id": "4",
+    "title": "Design a Food Delivery System",
     "difficulty": "Hard",
-    "description": "Design a ride-sharing service like Uber or Lyft that connects drivers with passengers."
+    "tags": [
+      "Geolocation",
+      "Order Management",
+      "Real-time Tracking"
+    ],
+    "description": "A Food Delivery System connects restaurants, customers, and delivery personnel, enabling seamless order placement, tracking, and delivery."
+  },
+  {
+    "id": "5",
+    "title": "Design a Logging System",
+    "difficulty": "Medium",
+    "tags": [
+      "Monitoring",
+      "Distributed Systems",
+      "Data Storage"
+    ],
+    "description": "A Logging System captures, stores, and analyzes logs from various services to monitor system health, debug issues, and ensure operational reliability."
+  },
+  {
+    "id": "6",
+    "title": "Design a Video Streaming Service",
+    "difficulty": "Hard",
+    "tags": [
+      "Content Delivery",
+      "Streaming Protocols",
+      "Scalability"
+    ],
+    "description": "A Video Streaming Service delivers high-quality video content to users with minimal latency, supporting adaptive bitrate streaming and global accessibility."
+  },
+  {
+    "id": "7",
+    "title": "Design a Web Crawler",
+    "difficulty": "Medium",
+    "tags": [
+      "Web Scraping",
+      "Distributed Systems",
+      "Data Indexing"
+    ],
+    "description": "A Web Crawler systematically browses the internet to index web pages, respecting robots.txt and handling large-scale data extraction."
+  },
+  {
+    "id": "8",
+    "title": "Design a Payment Gateway",
+    "difficulty": "Hard",
+    "tags": [
+      "Security",
+      "Transaction Processing",
+      "API Integration"
+    ],
+    "description": "A Payment Gateway securely processes online payments, ensuring compliance with standards like PCI-DSS and handling multiple payment methods."
+  },
+  {
+    "id": "9",
+    "title": "Design a File Sharing Service like Google Drive",
+    "difficulty": "Hard",
+    "tags": [
+      "Cloud Storage",
+      "File Synchronization",
+      "Access Control"
+    ],
+    "description": "A File Sharing Service enables users to store, share, and collaborate on files with real-time synchronization and robust access controls."
+  },
+  {
+    "id": "10",
+    "title": "Design an Online IDE",
+    "difficulty": "Hard",
+    "tags": [
+      "Code Execution",
+      "Containerization",
+      "Real-time Collaboration"
+    ],
+    "description": "An Online IDE provides a browser-based environment for writing, compiling, and running code, supporting multiple languages and collaborative features."
+  },
+  {
+    "id": "11",
+    "title": "Design a Travel Booking System",
+    "difficulty": "Hard",
+    "tags": [
+      "Inventory Management",
+      "Payment Integration",
+      "Search Optimization"
+    ],
+    "description": "A Travel Booking System allows users to search, book, and manage travel arrangements like flights, hotels, and car rentals."
+  },
+  {
+    "id": "12",
+    "title": "Design a System like Uber",
+    "difficulty": "Hard",
+    "tags": [
+      "Geolocation",
+      "Real-time Matching",
+      "Scalability"
+    ],
+    "description": "A Ride-Sharing System like Uber matches drivers with passengers, providing real-time tracking, pricing, and payment processing."
+  },
+  {
+    "id": "13",
+    "title": "Design a System like WhatsApp",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Messaging",
+      "End-to-End Encryption",
+      "Scalability"
+    ],
+    "description": "A Messaging System like WhatsApp supports real-time, secure communication with text, voice, and multimedia capabilities."
+  },
+  {
+    "id": "14",
+    "title": "Design a Twitter Feed",
+    "difficulty": "Medium",
+    "tags": [
+      "Social Media",
+      "Real-time Data",
+      "Content Ranking"
+    ],
+    "description": "A Twitter Feed system curates and delivers real-time posts to users based on their interests, followers, and engagement."
+  },
+  {
+    "id": "15",
+    "title": "Design an API Rate Limiter",
+    "difficulty": "Medium",
+    "tags": [
+      "API Protection",
+      "Distributed Systems",
+      "Scalability"
+    ],
+    "description": "An API Rate Limiter restricts the number of API calls a client can make within a time window to prevent overuse and ensure fair access."
+  },
+  {
+    "id": "16",
+    "title": "Design a Hotel Management System",
+    "difficulty": "Medium",
+    "tags": [
+      "Reservation Management",
+      "Inventory Tracking",
+      "Billing"
+    ],
+    "description": "A Hotel Management System handles room bookings, guest services, billing, and inventory for efficient hotel operations."
+  },
+  {
+    "id": "17",
+    "title": "Design a Load Balancer",
+    "difficulty": "Medium",
+    "tags": [
+      "Scalability",
+      "Distributed Systems",
+      "Traffic Management"
+    ],
+    "description": "A Load Balancer distributes incoming network traffic across multiple servers to ensure high availability and performance."
+  },
+  {
+    "id": "18",
+    "title": "Design a Parking Lot System",
+    "difficulty": "Easy",
+    "tags": [
+      "Resource Allocation",
+      "Real-time Tracking",
+      "Billing"
+    ],
+    "description": "A Parking Lot System manages vehicle parking, tracking available spots, and handling payments for parking services."
+  },
+  {
+    "id": "19",
+    "title": "Design an Email Service",
+    "difficulty": "Medium",
+    "tags": [
+      "Message Delivery",
+      "Spam Filtering",
+      "Scalability"
+    ],
+    "description": "An Email Service enables users to send, receive, and manage emails with features like spam filtering and storage."
+  },
+  {
+    "id": "20",
+    "title": "Design a Media Upload Service",
+    "difficulty": "Medium",
+    "tags": [
+      "File Handling",
+      "Content Delivery",
+      "Scalability"
+    ],
+    "description": "A Media Upload Service allows users to upload, store, and share media files with efficient storage and retrieval mechanisms."
+  },
+  {
+    "id": "21",
+    "title": "Design a System to Detect Fraud",
+    "difficulty": "Hard",
+    "tags": [
+      "Machine Learning",
+      "Anomaly Detection",
+      "Real-time Processing"
+    ],
+    "description": "A Fraud Detection System identifies suspicious activities in transactions or user behavior using machine learning and rule-based approaches."
+  },
+  {
+    "id": "22",
+    "title": "Design a Real-time Collaborative Document Editor",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Collaboration",
+      "Conflict Resolution",
+      "Scalability"
+    ],
+    "description": "A Collaborative Document Editor enables multiple users to edit documents simultaneously with real-time updates and conflict resolution."
+  },
+  {
+    "id": "23",
+    "title": "Design a Chatbot Platform",
+    "difficulty": "Medium",
+    "tags": [
+      "Natural Language Processing",
+      "API Integration",
+      "Scalability"
+    ],
+    "description": "A Chatbot Platform allows businesses to create and deploy automated conversational agents for customer support and engagement."
+  },
+  {
+    "id": "24",
+    "title": "Design a URL Shortener",
+    "difficulty": "Easy",
+    "tags": [
+      "URL Mapping",
+      "Database Design",
+      "Scalability"
+    ],
+    "description": "A URL Shortener converts long URLs into short, shareable links while tracking clicks and ensuring reliability."
+  },
+  {
+    "id": "25",
+    "title": "Design an Online Compiler",
+    "difficulty": "Hard",
+    "tags": [
+      "Code Execution",
+      "Containerization",
+      "Scalability"
+    ],
+    "description": "An Online Compiler provides a platform for users to write, compile, and execute code in multiple programming languages."
+  },
+  {
+    "id": "26",
+    "title": "Design an E-commerce Website Backend",
+    "difficulty": "Hard",
+    "tags": [
+      "Inventory Management",
+      "Payment Processing",
+      "Scalability"
+    ],
+    "description": "An E-commerce Backend manages product catalogs, user orders, payments, and logistics for an online shopping platform."
+  },
+  {
+    "id": "27",
+    "title": "Design a Calendar Scheduling App",
+    "difficulty": "Medium",
+    "tags": [
+      "Event Management",
+      "Time Zone Handling",
+      "Notifications"
+    ],
+    "description": "A Calendar Scheduling App allows users to create, manage, and share events with reminders and time zone support."
+  },
+  {
+    "id": "28",
+    "title": "Design a Survey Management System",
+    "difficulty": "Medium",
+    "tags": [
+      "Data Collection",
+      "Analytics",
+      "User Interface"
+    ],
+    "description": "A Survey Management System enables creation, distribution, and analysis of surveys to gather user feedback."
+  },
+  {
+    "id": "29",
+    "title": "Design a Ride Sharing System",
+    "difficulty": "Hard",
+    "tags": [
+      "Geolocation",
+      "Real-time Matching",
+      "Payment Integration"
+    ],
+    "description": "A Ride Sharing System connects drivers and passengers with real-time tracking and dynamic pricing."
+  },
+  {
+    "id": "30",
+    "title": "Design a Messaging Queue System",
+    "difficulty": "Medium",
+    "tags": [
+      "Event-Driven Architecture",
+      "Scalability",
+      "Reliability"
+    ],
+    "description": "A Messaging Queue System enables asynchronous communication between services, ensuring reliable message delivery."
+  },
+  {
+    "id": "31",
+    "title": "Design a YouTube Recommendation Engine",
+    "difficulty": "Hard",
+    "tags": [
+      "Machine Learning",
+      "Content Ranking",
+      "Scalability"
+    ],
+    "description": "A Recommendation Engine suggests videos to users based on their viewing history, preferences, and trends."
+  },
+  {
+    "id": "32",
+    "title": "Design a Resume Parser",
+    "difficulty": "Medium",
+    "tags": [
+      "Natural Language Processing",
+      "Data Extraction",
+      "Text Analysis"
+    ],
+    "description": "A Resume Parser extracts structured information like skills, experience, and education from unstructured resume documents."
+  },
+  {
+    "id": "33",
+    "title": "Design an Event Booking System",
+    "difficulty": "Medium",
+    "tags": [
+      "Reservation Management",
+      "Payment Integration",
+      "Notifications"
+    ],
+    "description": "An Event Booking System allows users to browse, book, and manage tickets for events like concerts or conferences."
+  },
+  {
+    "id": "34",
+    "title": "Design an API Gateway",
+    "difficulty": "Medium",
+    "tags": [
+      "API Management",
+      "Security",
+      "Scalability"
+    ],
+    "description": "An API Gateway acts as a reverse proxy to route, authenticate, and monitor API requests across multiple services."
+  },
+  {
+    "id": "35",
+    "title": "Design an Online Code Judge",
+    "difficulty": "Hard",
+    "tags": [
+      "Code Execution",
+      "Test Case Evaluation",
+      "Scalability"
+    ],
+    "description": "An Online Code Judge evaluates user-submitted code against predefined test cases for correctness and performance."
+  },
+  {
+    "id": "36",
+    "title": "Design a Stock Trading Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Transaction Processing",
+      "Security"
+    ],
+    "description": "A Stock Trading Platform enables users to buy, sell, and monitor stocks with real-time market data and secure transactions."
+  },
+  {
+    "id": "37",
+    "title": "Design a Digital Wallet System",
+    "difficulty": "Hard",
+    "tags": [
+      "Payment Processing",
+      "Security",
+      "Transaction Management"
+    ],
+    "description": "A Digital Wallet System allows users to store, send, and receive money securely with support for multiple currencies."
+  },
+  {
+    "id": "38",
+    "title": "Design a Movie Ticket Booking System",
+    "difficulty": "Medium",
+    "tags": [
+      "Reservation Management",
+      "Payment Integration",
+      "Seat Allocation"
+    ],
+    "description": "A Movie Ticket Booking System enables users to browse showtimes, select seats, and purchase tickets online."
+  },
+  {
+    "id": "39",
+    "title": "Design a Multitenant SaaS App",
+    "difficulty": "Hard",
+    "tags": [
+      "Scalability",
+      "Data Isolation",
+      "Tenant Management"
+    ],
+    "description": "A Multitenant SaaS App serves multiple customers with isolated data and customizable features on a shared infrastructure."
+  },
+  {
+    "id": "40",
+    "title": "Design a Social Media Analytics Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Analytics",
+      "Real-time Processing",
+      "Visualization"
+    ],
+    "description": "A Social Media Analytics Platform tracks and analyzes user engagement, trends, and campaign performance across platforms."
+  },
+  {
+    "id": "41",
+    "title": "Design a Resume Search Engine",
+    "difficulty": "Medium",
+    "tags": [
+      "Search Optimization",
+      "Text Analysis",
+      "Data Indexing"
+    ],
+    "description": "A Resume Search Engine indexes and retrieves resumes based on keywords, skills, and other criteria for recruiters."
+  },
+  {
+    "id": "42",
+    "title": "Design an IoT Management Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Device Management",
+      "Real-time Data",
+      "Scalability"
+    ],
+    "description": "An IoT Management Platform monitors and controls connected devices, handling data collection and device communication."
+  },
+  {
+    "id": "43",
+    "title": "Design a Password Manager",
+    "difficulty": "Medium",
+    "tags": [
+      "Security",
+      "Encryption",
+      "User Authentication"
+    ],
+    "description": "A Password Manager securely stores and manages user credentials with strong encryption and easy access."
+  },
+  {
+    "id": "44",
+    "title": "Design a Subscription Billing System",
+    "difficulty": "Medium",
+    "tags": [
+      "Payment Processing",
+      "Recurring Billing",
+      "Scalability"
+    ],
+    "description": "A Subscription Billing System manages recurring payments, subscription plans, and user billing information."
+  },
+  {
+    "id": "45",
+    "title": "Design an Issue Tracker like Jira",
+    "difficulty": "Medium",
+    "tags": [
+      "Project Management",
+      "Workflow Automation",
+      "Collaboration"
+    ],
+    "description": "An Issue Tracker like Jira enables teams to create, assign, and track tasks or bugs throughout their lifecycle."
+  },
+  {
+    "id": "46",
+    "title": "Design a Realtime Bidding System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Processing",
+      "Auction Mechanics",
+      "Scalability"
+    ],
+    "description": "A Realtime Bidding System facilitates automated auctions for ad placements with low-latency bid processing."
+  },
+  {
+    "id": "47",
+    "title": "Design a Support Chat Widget",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time Messaging",
+      "Customer Support",
+      "Scalability"
+    ],
+    "description": "A Support Chat Widget enables businesses to provide real-time customer support via a website-embedded chat interface."
+  },
+  {
+    "id": "48",
+    "title": "Design a Server Monitoring Tool",
+    "difficulty": "Medium",
+    "tags": [
+      "Monitoring",
+      "Real-time Data",
+      "Alerting"
+    ],
+    "description": "A Server Monitoring Tool tracks server performance metrics, detects anomalies, and sends alerts for issues."
+  },
+  {
+    "id": "49",
+    "title": "Design a Podcast Streaming Service",
+    "difficulty": "Medium",
+    "tags": [
+      "Content Delivery",
+      "Streaming",
+      "Scalability"
+    ],
+    "description": "A Podcast Streaming Service delivers audio content to users with features like subscriptions and offline downloads."
+  },
+  {
+    "id": "50",
+    "title": "Design a Fitness Tracking App",
+    "difficulty": "Medium",
+    "tags": [
+      "Data Tracking",
+      "User Interface",
+      "Analytics"
+    ],
+    "description": "A Fitness Tracking App monitors user activities, health metrics, and provides personalized fitness insights."
+  },
+  {
+    "id": "51",
+    "title": "Design a Smart Home Automation System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Device Control",
+      "Real-time Processing"
+    ],
+    "description": "A Smart Home Automation System integrates and controls home devices like lights, thermostats, and security systems."
+  },
+  {
+    "id": "52",
+    "title": "Design a Virtual Reality Streaming Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Streaming",
+      "Virtual Reality",
+      "Scalability"
+    ],
+    "description": "A VR Streaming Platform delivers immersive video content to VR headsets with low latency and high quality."
+  },
+  {
+    "id": "53",
+    "title": "Design a Blockchain-based Voting System",
+    "difficulty": "Hard",
+    "tags": [
+      "Blockchain",
+      "Security",
+      "Transparency"
+    ],
+    "description": "A Blockchain-based Voting System ensures secure, transparent, and tamper-proof voting with verifiable results."
+  },
+  {
+    "id": "54",
+    "title": "Design a Cryptocurrency Exchange",
+    "difficulty": "Hard",
+    "tags": [
+      "Transaction Processing",
+      "Security",
+      "Real-time Data"
+    ],
+    "description": "A Cryptocurrency Exchange enables users to trade digital assets with high security and real-time market data."
+  },
+  {
+    "id": "55",
+    "title": "Design a Peer-to-Peer Lending Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Financial Systems",
+      "Risk Assessment",
+      "Payment Integration"
+    ],
+    "description": "A P2P Lending Platform connects borrowers and lenders, managing loans, repayments, and risk evaluation."
+  },
+  {
+    "id": "56",
+    "title": "Design a Cloud Storage Service",
+    "difficulty": "Hard",
+    "tags": [
+      "File Storage",
+      "Scalability",
+      "Security"
+    ],
+    "description": "A Cloud Storage Service provides scalable, secure storage for user files with features like sharing and versioning."
+  },
+  {
+    "id": "57",
+    "title": "Design a Weather Forecasting System",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Processing",
+      "Machine Learning",
+      "Real-time Data"
+    ],
+    "description": "A Weather Forecasting System predicts weather conditions using historical and real-time data with machine learning models."
+  },
+  {
+    "id": "58",
+    "title": "Design a Language Translation Service",
+    "difficulty": "Hard",
+    "tags": [
+      "Natural Language Processing",
+      "API Integration",
+      "Scalability"
+    ],
+    "description": "A Language Translation Service provides real-time text and speech translation across multiple languages."
+  },
+  {
+    "id": "59",
+    "title": "Design a Personal Finance Management App",
+    "difficulty": "Medium",
+    "tags": [
+      "Data Analytics",
+      "User Interface",
+      "Security"
+    ],
+    "description": "A Personal Finance App helps users track expenses, manage budgets, and plan financial goals securely."
+  },
+  {
+    "id": "60",
+    "title": "Design a Job Search Platform",
+    "difficulty": "Medium",
+    "tags": [
+      "Search Optimization",
+      "User Matching",
+      "Scalability"
+    ],
+    "description": "A Job Search Platform connects job seekers with employers through keyword-based searches and personalized recommendations."
+  },
+  {
+    "id": "61",
+    "title": "Design a Knowledge Sharing Platform",
+    "difficulty": "Medium",
+    "tags": [
+      "Content Management",
+      "Collaboration",
+      "Search Optimization"
+    ],
+    "description": "A Knowledge Sharing Platform enables users to create, share, and discover educational content collaboratively."
+  },
+  {
+    "id": "62",
+    "title": "Design a Video Conferencing System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Communication",
+      "Streaming",
+      "Scalability"
+    ],
+    "description": "A Video Conferencing System supports real-time audio and video communication with features like screen sharing and recording."
+  },
+  {
+    "id": "63",
+    "title": "Design a Music Streaming Service",
+    "difficulty": "Hard",
+    "tags": [
+      "Content Delivery",
+      "Streaming",
+      "Scalability"
+    ],
+    "description": "A Music Streaming Service delivers high-quality audio to users with personalized playlists and offline access."
+  },
+  {
+    "id": "64",
+    "title": "Design a Virtual Event Hosting Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Streaming",
+      "Event Management",
+      "Scalability"
+    ],
+    "description": "A Virtual Event Platform hosts online events with features like live streaming, chat, and attendee management."
+  },
+  {
+    "id": "65",
+    "title": "Design a Real-time Stock Market Dashboard",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Visualization",
+      "Scalability"
+    ],
+    "description": "A Stock Market Dashboard provides real-time stock prices, charts, and analytics for traders and investors."
+  },
+  {
+    "id": "66",
+    "title": "Design a Smart Traffic Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Real-time Processing",
+      "Data Analytics"
+    ],
+    "description": "A Smart Traffic Management System optimizes traffic flow using real-time data from sensors and cameras."
+  },
+  {
+    "id": "67",
+    "title": "Design a Healthcare Appointment Booking System",
+    "difficulty": "Medium",
+    "tags": [
+      "Reservation Management",
+      "Notifications",
+      "User Interface"
+    ],
+    "description": "A Healthcare Appointment System allows patients to book, manage, and receive reminders for medical appointments."
+  },
+  {
+    "id": "68",
+    "title": "Design a Virtual Classroom Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Communication",
+      "Content Management",
+      "Scalability"
+    ],
+    "description": "A Virtual Classroom Platform supports online learning with video, quizzes, and collaborative tools."
+  },
+  {
+    "id": "69",
+    "title": "Design a Crowdfunding Platform",
+    "difficulty": "Medium",
+    "tags": [
+      "Payment Integration",
+      "User Engagement",
+      "Scalability"
+    ],
+    "description": "A Crowdfunding Platform enables users to create and support campaigns with secure payment processing."
+  },
+  {
+    "id": "70",
+    "title": "Design a Real-time Multiplayer Game Backend",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Processing",
+      "Scalability",
+      "Game Mechanics"
+    ],
+    "description": "A Multiplayer Game Backend handles real-time player interactions, state synchronization, and matchmaking."
+  },
+  {
+    "id": "71",
+    "title": "Design a Document Management System",
+    "difficulty": "Medium",
+    "tags": [
+      "File Storage",
+      "Access Control",
+      "Search Optimization"
+    ],
+    "description": "A Document Management System organizes, stores, and retrieves documents with version control and access permissions."
+  },
+  {
+    "id": "72",
+    "title": "Design a Smart Inventory Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Tracking"
+    ],
+    "description": "A Smart Inventory System tracks stock levels in real-time using IoT devices and predictive analytics."
+  },
+  {
+    "id": "73",
+    "title": "Design a Fraud Detection System for E-commerce",
+    "difficulty": "Hard",
+    "tags": [
+      "Machine Learning",
+      "Anomaly Detection",
+      "Real-time Processing"
+    ],
+    "description": "An E-commerce Fraud Detection System identifies fraudulent transactions using machine learning and behavioral analysis."
+  },
+  {
+    "id": "74",
+    "title": "Design a Personalized News Aggregator",
+    "difficulty": "Medium",
+    "tags": [
+      "Content Ranking",
+      "Machine Learning",
+      "Scalability"
+    ],
+    "description": "A News Aggregator curates personalized news articles based on user preferences and reading history."
+  },
+  {
+    "id": "75",
+    "title": "Design a Social Media Platform for Professionals",
+    "difficulty": "Hard",
+    "tags": [
+      "Social Networking",
+      "Content Management",
+      "Scalability"
+    ],
+    "description": "A Professional Social Media Platform connects users for networking, job opportunities, and knowledge sharing."
+  },
+  {
+    "id": "76",
+    "title": "Design a Real-time Translation Chat App",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Messaging",
+      "Natural Language Processing",
+      "Scalability"
+    ],
+    "description": "A Translation Chat App enables real-time multilingual communication with automatic language translation."
+  },
+  {
+    "id": "77",
+    "title": "Design a Virtual Try-On System for E-commerce",
+    "difficulty": "Hard",
+    "tags": [
+      "Augmented Reality",
+      "Image Processing",
+      "User Interface"
+    ],
+    "description": "A Virtual Try-On System allows users to visualize products like clothing or accessories on themselves using AR."
+  },
+  {
+    "id": "78",
+    "title": "Design a Smart Waste Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Waste Management System optimizes waste collection and recycling using IoT sensors and analytics."
+  },
+  {
+    "id": "79",
+    "title": "Design a Real-time Sports Score Update System",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time Data",
+      "Push Notifications",
+      "Scalability"
+    ],
+    "description": "A Sports Score Update System delivers live scores and match updates to users via notifications and dashboards."
+  },
+  {
+    "id": "80",
+    "title": "Design a Drone Delivery System",
+    "difficulty": "Hard",
+    "tags": [
+      "Geolocation",
+      "Real-time Tracking",
+      "Automation"
+    ],
+    "description": "A Drone Delivery System manages autonomous drone deliveries with route optimization and real-time tracking."
+  },
+  {
+    "id": "81",
+    "title": "Design a Smart Energy Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Energy Management System optimizes energy consumption in buildings using IoT and predictive analytics."
+  },
+  {
+    "id": "82",
+    "title": "Design a Virtual Museum Tour Platform",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A Virtual Museum Tour Platform provides immersive online tours of museum exhibits with interactive features."
+  },
+  {
+    "id": "83",
+    "title": "Design a Real-time Traffic Alert System",
+    "difficulty": "Medium",
+    "tags": [
+      "Geolocation",
+      "Real-time Data",
+      "Notifications"
+    ],
+    "description": "A Traffic Alert System delivers real-time updates on road conditions, accidents, and congestion to users."
+  },
+  {
+    "id": "84",
+    "title": "Design a Smart City Management Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart City Platform integrates IoT and analytics to manage urban services like traffic, energy, and waste."
+  },
+  {
+    "id": "85",
+    "title": "Design a Real-time Auction System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Processing",
+      "Auction Mechanics",
+      "Scalability"
+    ],
+    "description": "A Real-time Auction System facilitates online bidding with low-latency updates and secure transactions."
+  },
+  {
+    "id": "86",
+    "title": "Design a Virtual Pet Care App",
+    "difficulty": "Easy",
+    "tags": [
+      "User Engagement",
+      "Game Mechanics",
+      "Notifications"
+    ],
+    "description": "A Virtual Pet Care App allows users to adopt and care for digital pets with interactive features and reminders."
+  },
+  {
+    "id": "87",
+    "title": "Design a Smart Farming System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "A Smart Farming System uses IoT and analytics to monitor crops, soil, and equipment for optimized agriculture."
+  },
+  {
+    "id": "88",
+    "title": "Design a Real-time Weather Alert System",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time Data",
+      "Notifications",
+      "Geolocation"
+    ],
+    "description": "A Weather Alert System sends real-time warnings about severe weather conditions to users in affected areas."
+  },
+  {
+    "id": "89",
+    "title": "Design a Virtual Reality Shopping Experience",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "E-commerce",
+      "User Interface"
+    ],
+    "description": "A VR Shopping Experience allows users to browse and purchase products in an immersive virtual store."
+  },
+  {
+    "id": "90",
+    "title": "Design a Smart Home Security System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Real-time Monitoring",
+      "Security"
+    ],
+    "description": "A Smart Home Security System monitors and protects homes using IoT devices like cameras and sensors."
+  },
+  {
+    "id": "91",
+    "title": "Design a Real-time Language Learning App",
+    "difficulty": "Medium",
+    "tags": [
+      "Natural Language Processing",
+      "User Engagement",
+      "Scalability"
+    ],
+    "description": "A Language Learning App provides interactive, real-time lessons and practice for language acquisition."
+  },
+  {
+    "id": "92",
+    "title": "Design a Virtual Reality Fitness App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Data Tracking",
+      "User Interface"
+    ],
+    "description": "A VR Fitness App offers immersive workout experiences with real-time tracking of user performance."
+  },
+  {
+    "id": "93",
+    "title": "Design a Smart Water Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Water Management System monitors and optimizes water usage in urban or agricultural settings."
+  },
+  {
+    "id": "94",
+    "title": "Design a Real-time Disaster Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Notifications"
+    ],
+    "description": "A Disaster Management System coordinates real-time responses to natural disasters with alerts and resource allocation."
+  },
+  {
+    "id": "95",
+    "title": "Design a Virtual Reality Travel Experience",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Travel Experience provides immersive virtual tours of global destinations with interactive features."
+  },
+  {
+    "id": "96",
+    "title": "Design a Smart Air Quality Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Air Quality System monitors pollution levels in real-time and provides actionable insights."
+  },
+  {
+    "id": "97",
+    "title": "Design a Real-time Emergency Response System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Notifications"
+    ],
+    "description": "An Emergency Response System coordinates real-time communication and resource deployment during crises."
+  },
+  {
+    "id": "98",
+    "title": "Design a Virtual Reality Education Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Content Management",
+      "Scalability"
+    ],
+    "description": "A VR Education Platform delivers immersive learning experiences with interactive lessons and simulations."
+  },
+  {
+    "id": "99",
+    "title": "Design a Smart Recycling System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "A Smart Recycling System optimizes waste sorting and recycling using IoT sensors and machine learning."
+  },
+  {
+    "id": "100",
+    "title": "Design a Real-time Earthquake Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Notifications"
+    ],
+    "description": "An Earthquake Monitoring System detects seismic activity in real-time and alerts affected regions."
+  },
+  {
+    "id": "101",
+    "title": "Design a Virtual Reality Concert Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Streaming",
+      "Scalability"
+    ],
+    "description": "A VR Concert Platform streams live or recorded concerts in an immersive virtual environment."
+  },
+  {
+    "id": "102",
+    "title": "Design a Smart Wildlife Tracking System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Wildlife Tracking System monitors animal movements and habitats using IoT devices and analytics."
+  },
+  {
+    "id": "103",
+    "title": "Design a Real-time Pollution Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Pollution Monitoring System tracks environmental pollutants in real-time for urban or industrial areas."
+  },
+  {
+    "id": "104",
+    "title": "Design a Virtual Reality Art Gallery",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Art Gallery provides an immersive experience for users to explore and interact with digital artworks."
+  },
+  {
+    "id": "105",
+    "title": "Design a Smart Classroom Management System",
+    "difficulty": "Medium",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "User Interface"
+    ],
+    "description": "A Smart Classroom System enhances learning with IoT-enabled tools for attendance, engagement, and resource management."
+  },
+  {
+    "id": "106",
+    "title": "Design a Real-time Disease Outbreak Tracker",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Disease Outbreak Tracker monitors and predicts the spread of infectious diseases in real-time."
+  },
+  {
+    "id": "107",
+    "title": "Design a Virtual Reality Fitness Coaching App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Data Tracking",
+      "User Interface"
+    ],
+    "description": "A VR Fitness Coaching App provides personalized workout guidance in an immersive virtual environment."
+  },
+  {
+    "id": "108",
+    "title": "Design a Smart Disaster Recovery System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Automation",
+      "Scalability"
+    ],
+    "description": "A Disaster Recovery System ensures rapid restoration of services and data after natural or technical disasters."
+  },
+  {
+    "id": "109",
+    "title": "Design a Real-time Ocean Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Ocean Monitoring System tracks marine conditions like temperature, currents, and pollution in real-time."
+  },
+  {
+    "id": "110",
+    "title": "Design a Virtual Reality Sports Training App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Data Tracking",
+      "User Interface"
+    ],
+    "description": "A VR Sports Training App provides immersive training simulations for athletes with performance tracking."
+  },
+  {
+    "id": "111",
+    "title": "Design a Smart Forest Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Forest Management System monitors forest health, detects fires, and tracks wildlife using IoT."
+  },
+  {
+    "id": "112",
+    "title": "Design a Real-time Air Traffic Control System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Scalability"
+    ],
+    "description": "An Air Traffic Control System manages aircraft movements in real-time to ensure safety and efficiency."
+  },
+  {
+    "id": "113",
+    "title": "Design a Virtual Reality Meditation App",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "User Interface",
+      "Content Delivery"
+    ],
+    "description": "A VR Meditation App provides immersive guided meditation sessions in calming virtual environments."
+  },
+  {
+    "id": "114",
+    "title": "Design a Smart Urban Planning System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Simulation"
+    ],
+    "description": "A Smart Urban Planning System uses IoT and analytics to optimize city infrastructure and resource allocation."
+  },
+  {
+    "id": "115",
+    "title": "Design a Real-time Cryptocurrency Price Tracker",
+    "difficulty": "Medium",
+    "tags": [
+      "Real-time Data",
+      "Visualization",
+      "Scalability"
+    ],
+    "description": "A Cryptocurrency Price Tracker provides real-time price updates and market trends for digital assets."
+  },
+  {
+    "id": "116",
+    "title": "Design a Virtual Reality Shopping Mall",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "E-commerce",
+      "User Interface"
+    ],
+    "description": "A VR Shopping Mall offers an immersive shopping experience with virtual stores and interactive features."
+  },
+  {
+    "id": "117",
+    "title": "Design a Smart Fleet Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Smart Fleet Management System tracks and optimizes vehicle operations using IoT and real-time analytics."
+  },
+  {
+    "id": "118",
+    "title": "Design a Real-time Wildlife Conservation System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Wildlife Conservation System monitors and protects endangered species using IoT and real-time data."
+  },
+  {
+    "id": "119",
+    "title": "Design a Virtual Reality Adventure Game",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Game Mechanics",
+      "Scalability"
+    ],
+    "description": "A VR Adventure Game provides immersive storytelling and interactive gameplay in a virtual environment."
+  },
+  {
+    "id": "120",
+    "title": "Design a Smart Home Energy Optimization System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "A Smart Home Energy System optimizes energy usage with IoT devices and predictive analytics."
+  },
+  {
+    "id": "121",
+    "title": "Design a Real-time Epidemic Simulation Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Simulation",
+      "Data Analytics",
+      "Real-time Processing"
+    ],
+    "description": "An Epidemic Simulation Platform models disease spread in real-time to aid public health planning."
+  },
+  {
+    "id": "122",
+    "title": "Design a Virtual Reality Escape Room",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Game Mechanics",
+      "User Interface"
+    ],
+    "description": "A VR Escape Room provides immersive puzzle-solving experiences in a virtual environment."
+  },
+  {
+    "id": "123",
+    "title": "Design a Smart Parking Guidance System",
+    "difficulty": "Medium",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Parking Guidance System directs drivers to available parking spaces using IoT sensors."
+  },
+  {
+    "id": "124",
+    "title": "Design a Real-time Space Exploration Dashboard",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Visualization",
+      "Scalability"
+    ],
+    "description": "A Space Exploration Dashboard displays real-time data from space missions and satellite feeds."
+  },
+  {
+    "id": "125",
+    "title": "Design a Virtual Reality Language Immersion App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Natural Language Processing",
+      "User Interface"
+    ],
+    "description": "A VR Language Immersion App teaches languages through immersive virtual scenarios and interactions."
+  },
+  {
+    "id": "126",
+    "title": "Design a Smart Retail Inventory System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Tracking"
+    ],
+    "description": "A Smart Retail Inventory System tracks stock levels and predicts demand using IoT and analytics."
+  },
+  {
+    "id": "127",
+    "title": "Design a Real-time Financial Risk Analysis Tool",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Analytics",
+      "Real-time Processing",
+      "Visualization"
+    ],
+    "description": "A Financial Risk Analysis Tool evaluates market risks in real-time for traders and institutions."
+  },
+  {
+    "id": "128",
+    "title": "Design a Virtual Reality Historical Tour",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Historical Tour provides immersive experiences of historical events and locations."
+  },
+  {
+    "id": "129",
+    "title": "Design a Smart Water Quality Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Water Quality Monitoring System tracks water purity in real-time using IoT sensors."
+  },
+  {
+    "id": "130",
+    "title": "Design a Real-time Supply Chain Tracking System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Real-time Tracking"
+    ],
+    "description": "A Supply Chain Tracking System monitors goods movement in real-time for transparency and efficiency."
+  },
+  {
+    "id": "131",
+    "title": "Design a Virtual Reality Science Lab",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Science Lab provides immersive simulations for conducting virtual scientific experiments."
+  },
+  {
+    "id": "132",
+    "title": "Design a Smart Traffic Signal Optimization System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Processing"
+    ],
+    "description": "A Traffic Signal Optimization System adjusts signals in real-time to reduce congestion."
+  },
+  {
+    "id": "133",
+    "title": "Design a Real-time Weather Prediction System",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Processing",
+      "Machine Learning",
+      "Real-time Data"
+    ],
+    "description": "A Weather Prediction System forecasts conditions using real-time data and machine learning models."
+  },
+  {
+    "id": "134",
+    "title": "Design a Virtual Reality Theme Park",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Game Mechanics",
+      "Scalability"
+    ],
+    "description": "A VR Theme Park offers immersive rides and attractions in a virtual environment."
+  },
+  {
+    "id": "135",
+    "title": "Design a Smart Waste Sorting System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Machine Learning",
+      "Automation"
+    ],
+    "description": "A Smart Waste Sorting System automatically categorizes waste using IoT and machine learning."
+  },
+  {
+    "id": "136",
+    "title": "Design a Real-time Renewable Energy Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Renewable Energy Monitoring System tracks solar, wind, and other energy sources in real-time."
+  },
+  {
+    "id": "137",
+    "title": "Design a Virtual Reality Space Exploration App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Space Exploration App provides immersive journeys through virtual space environments."
+  },
+  {
+    "id": "138",
+    "title": "Design a Smart City Waste Collection System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart City Waste Collection System optimizes routes and schedules for waste pickup using IoT."
+  },
+  {
+    "id": "139",
+    "title": "Design a Real-time Wildlife Migration Tracker",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Wildlife Migration Tracker monitors animal movements in real-time for conservation efforts."
+  },
+  {
+    "id": "140",
+    "title": "Design a Virtual Reality Aquarium",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Aquarium provides an immersive experience of underwater ecosystems and marine life."
+  },
+  {
+    "id": "141",
+    "title": "Design a Smart Urban Air Quality Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Air Quality Management System monitors and mitigates pollution using IoT and analytics."
+  },
+  {
+    "id": "142",
+    "title": "Design a Real-time Forest Fire Detection System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Real-time Monitoring",
+      "Data Analytics"
+    ],
+    "description": "A Forest Fire Detection System identifies fire risks in real-time using IoT sensors and analytics."
+  },
+  {
+    "id": "143",
+    "title": "Design a Virtual Reality Zoo Experience",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Zoo Experience provides immersive tours of virtual animal habitats and interactions."
+  },
+  {
+    "id": "144",
+    "title": "Design a Smart Building Energy Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "A Building Energy Management System optimizes energy use in commercial buildings using IoT."
+  },
+  {
+    "id": "145",
+    "title": "Design a Real-time Flood Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Real-time Monitoring",
+      "Data Analytics"
+    ],
+    "description": "A Flood Monitoring System tracks water levels in real-time to predict and mitigate flooding."
+  },
+  {
+    "id": "146",
+    "title": "Design a Virtual Reality Museum Exhibit",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Museum Exhibit provides immersive displays of artifacts with interactive storytelling."
+  },
+  {
+    "id": "147",
+    "title": "Design a Smart Agriculture Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Agriculture System monitors crops and soil conditions in real-time for precision farming."
+  },
+  {
+    "id": "148",
+    "title": "Design a Real-time Traffic Congestion Analysis Tool",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Processing"
+    ],
+    "description": "A Traffic Congestion Analysis Tool provides real-time insights to reduce urban traffic bottlenecks."
+  },
+  {
+    "id": "149",
+    "title": "Design a Virtual Reality Art Creation App",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "User Interface",
+      "Content Creation"
+    ],
+    "description": "A VR Art Creation App enables users to create and share digital art in an immersive environment."
+  },
+  {
+    "id": "150",
+    "title": "Design a Smart Home Appliance Control System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Automation",
+      "Real-time Control"
+    ],
+    "description": "A Smart Home Appliance Control System manages household devices via IoT for efficiency and convenience."
+  },
+  {
+    "id": "151",
+    "title": "Design a Real-time Earth Observation Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Data Analytics",
+      "Visualization"
+    ],
+    "description": "An Earth Observation Platform provides real-time satellite data for environmental and urban monitoring."
+  },
+  {
+    "id": "152",
+    "title": "Design a Virtual Reality Spacewalk Simulator",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Spacewalk Simulator offers immersive experiences of spacewalks with realistic physics."
+  },
+  {
+    "id": "153",
+    "title": "Design a Smart City Lighting System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Automation",
+      "Energy Efficiency"
+    ],
+    "description": "A Smart City Lighting System optimizes street lighting using IoT for energy savings and safety."
+  },
+  {
+    "id": "154",
+    "title": "Design a Real-time Urban Noise Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Noise Monitoring System tracks noise levels in real-time to mitigate urban pollution."
+  },
+  {
+    "id": "155",
+    "title": "Design a Virtual Reality Wildlife Safari",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Wildlife Safari provides immersive tours of virtual ecosystems with interactive wildlife."
+  },
+  {
+    "id": "156",
+    "title": "Design a Smart Grid Energy Distribution System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Smart Grid System optimizes energy distribution using IoT and real-time analytics."
+  },
+  {
+    "id": "157",
+    "title": "Design a Real-time River Pollution Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A River Pollution Monitoring System tracks water quality in real-time to prevent environmental damage."
+  },
+  {
+    "id": "158",
+    "title": "Design a Virtual Reality Underwater Exploration App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Underwater Exploration App provides immersive journeys through virtual ocean environments."
+  },
+  {
+    "id": "159",
+    "title": "Design a Smart Wastewater Treatment System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "A Smart Wastewater Treatment System optimizes water purification using IoT and analytics."
+  },
+  {
+    "id": "160",
+    "title": "Design a Real-time Wildlife Habitat Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "A Wildlife Habitat Monitoring System tracks environmental conditions in real-time for conservation."
+  },
+  {
+    "id": "161",
+    "title": "Design a Virtual Reality Space Mission Simulator",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Space Mission Simulator provides immersive training for virtual space missions."
+  },
+  {
+    "id": "162",
+    "title": "Design a Smart Urban Mobility Platform",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Processing"
+    ],
+    "description": "A Smart Urban Mobility Platform optimizes transportation systems using IoT and real-time data."
+  },
+  {
+    "id": "163",
+    "title": "Design a Real-time Epidemic Contact Tracing System",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Geolocation",
+      "Data Analytics"
+    ],
+    "description": "An Epidemic Contact Tracing System tracks disease spread in real-time to contain outbreaks."
+  },
+  {
+    "id": "164",
+    "title": "Design a Virtual Reality Cultural Heritage Tour",
+    "difficulty": "Medium",
+    "tags": [
+      "Virtual Reality",
+      "Content Delivery",
+      "User Interface"
+    ],
+    "description": "A VR Cultural Heritage Tour provides immersive experiences of cultural landmarks and history."
+  },
+  {
+    "id": "165",
+    "title": "Design a Smart Renewable Energy Forecasting System",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Analytics",
+      "Machine Learning",
+      "Real-time Monitoring"
+    ],
+    "description": "A Renewable Energy Forecasting System predicts energy production using IoT and machine learning."
+  },
+  {
+    "id": "166",
+    "title": "Design a Real-time Urban Flood Prediction System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Flood Prediction System forecasts flooding risks in real-time using IoT and analytics."
+  },
+  {
+    "id": "167",
+    "title": "Design a Virtual Reality Interactive Storytelling App",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Content Creation",
+      "User Interface"
+    ],
+    "description": "A VR Storytelling App enables users to experience and influence immersive narrative scenarios."
+  },
+  {
+    "id": "168",
+    "title": "Design a Smart Urban Waste Recycling System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Automation"
+    ],
+    "description": "An Urban Waste Recycling System optimizes recycling processes using IoT and machine learning."
+  },
+  {
+    "id": "169",
+    "title": "Design a Real-time Marine Life Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "A Marine Life Monitoring System tracks ocean ecosystems in real-time for conservation efforts."
+  },
+  {
+    "id": "170",
+    "title": "Design a Virtual Reality Space Exploration Game",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Game Mechanics",
+      "Scalability"
+    ],
+    "description": "A VR Space Exploration Game offers immersive adventures in a virtual universe with interactive gameplay."
+  },
+  {
+    "id": "171",
+    "title": "Design a Smart Urban Traffic Flow Optimization System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Processing"
+    ],
+    "description": "An Urban Traffic Flow System optimizes traffic using IoT and real-time analytics."
+  },
+  {
+    "id": "172",
+    "title": "Design a Real-time Air Quality Forecasting System",
+    "difficulty": "Hard",
+    "tags": [
+      "Data Analytics",
+      "Machine Learning",
+      "Real-time Monitoring"
+    ],
+    "description": "An Air Quality Forecasting System predicts pollution levels using IoT and machine learning."
+  },
+  {
+    "id": "173",
+    "title": "Design a Virtual Reality Historical Battle Simulator",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Historical Battle Simulator recreates historical battles with immersive gameplay and realism."
+  },
+  {
+    "id": "174",
+    "title": "Design a Smart Urban Green Space Management System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Green Space System monitors and maintains parks using IoT and analytics."
+  },
+  {
+    "id": "175",
+    "title": "Design a Real-time Urban Heat Island Monitoring System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Heat Island System tracks temperature variations in cities to mitigate heat effects."
+  },
+  {
+    "id": "176",
+    "title": "Design a Virtual Reality Wildlife Conservation Game",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Game Mechanics",
+      "User Interface"
+    ],
+    "description": "A VR Wildlife Conservation Game educates players through immersive conservation challenges."
+  },
+  {
+    "id": "177",
+    "title": "Design a Smart Urban Noise Pollution Control System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Noise Pollution System monitors and mitigates noise levels using IoT and analytics."
+  },
+  {
+    "id": "178",
+    "title": "Design a Real-time Urban Energy Consumption Dashboard",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Data Analytics",
+      "Visualization"
+    ],
+    "description": "An Urban Energy Consumption Dashboard tracks city-wide energy usage in real-time."
+  },
+  {
+    "id": "179",
+    "title": "Design a Virtual Reality Space Station Simulator",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "User Interface"
+    ],
+    "description": "A VR Space Station Simulator provides immersive training for virtual space station operations."
+  },
+  {
+    "id": "180",
+    "title": "Design a Smart Urban Water Distribution System",
+    "difficulty": "Hard",
+    "tags": [
+      "IoT",
+      "Data Analytics",
+      "Real-time Monitoring"
+    ],
+    "description": "An Urban Water Distribution System optimizes water supply using IoT and real-time analytics."
+  },
+  {
+    "id": "181",
+    "title": "Design a Real-time Urban Waste Management Dashboard",
+    "difficulty": "Hard",
+    "tags": [
+      "Real-time Data",
+      "Data Analytics",
+      "Visualization"
+    ],
+    "description": "An Urban Waste Management Dashboard monitors waste collection and recycling in real-time."
+  },
+  {
+    "id": "182",
+    "title": "Design a Virtual Reality Urban Planning Tool",
+    "difficulty": "Hard",
+    "tags": [
+      "Virtual Reality",
+      "Simulation",
+      "Data Visualization"
+    ],
+    "description": "A VR Urban Planning Tool enables city planners to visualize and simulate urban designs immersively."
   }
 ]

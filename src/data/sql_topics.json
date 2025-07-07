@@ -1,0 +1,33 @@
+{
+  "topics": [
+    {
+      "id": "sql-queries",
+      "title": "SQL Queries",
+      "slug": "sql-queries",
+      "description": "Master SQL query writing including SELECT, JOIN, GROUP BY.",
+      "difficulty": "Beginner",
+      "tags": [
+        "SQL",
+        "Database",
+        "Queries"
+      ],
+      "subtopics": [
+        {
+          "id": "sql-joins",
+          "title": "Joins in SQL",
+          "slug": "sql-joins",
+          "description": "Learn INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN.",
+          "difficulty": "Intermediate",
+          "tags": [
+            "SQL",
+            "Joins"
+          ],
+          "related_questions": [
+            "What is the difference between INNER JOIN and OUTER JOIN?",
+            "When should you use a LEFT JOIN?"
+          ]
+        }
+      ]
+    }
+  ]
+}
