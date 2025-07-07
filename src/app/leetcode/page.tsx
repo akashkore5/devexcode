@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import Head from "next/head";
 import { useRouter } from "next/navigation";
 import problems from "../../data/problems.json";
 import Link from "next/link";
@@ -22,7 +23,7 @@ import {
 
 // Helper to generate URL-friendly slug from title
 const generateSlug = (title: string) => {
-  return title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]+/g, "");
+  return title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 };
 
 const cardVariants = {
@@ -32,7 +33,11 @@ const cardVariants = {
 
 const difficultyVariants = {
   hidden: { scale: 0, opacity: 0 },
-  visible: { scale: 1, opacity: 1, transition: { duration: 0.5, type: "spring", stiffness: 100 } },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { duration: 0.5, type: "spring", stiffness: 100 },
+  },
 };
 
 const iconVariants = {
