@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback, ReactNode } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
-import { useTheme } from "next-themes";
 import {
   SunIcon,
   MoonIcon,
@@ -15,14 +14,16 @@ import {
   HomeIcon,
   CodeBracketIcon,
   RocketLaunchIcon,
+  BookOpenIcon,
   LightBulbIcon,
+  ScaleIcon,
   PuzzlePieceIcon,
   StarIcon,
   CodeBracketSquareIcon,
+  BellIcon,
   UsersIcon,
-  AcademicCapIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline";
+  BriefcaseIcon
+} from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
 import { LoginModal } from "./LoginModal";
 import { ProfileModal } from "./ProfileModal";
@@ -37,38 +38,54 @@ const menuVariants = {
   exit: { opacity: 0, x: "100%", transition: { duration: 0.3 } },
 };
 
-type AppLayoutProps = {
-  children: ReactNode;
-  title?: string;
-  description?: string;
+const popupVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
+  exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
 };
 
-export function AppLayout({
-  children,
-  title = "DevExCode - Coding & System Design Prep",
-  description = "Master coding interviews with expertly crafted Leetcode solutions, system design guides, TechBit daily terms, QuickLearn lessons, Micro Dev Tips, and Tech Battles.",
-}: AppLayoutProps) {
+type AppLayoutProps = {
+  children: ReactNode;
+};
+
+export function AppLayout({ children }: AppLayoutProps) {
   const { data: session, status } = useSession();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [initialModalMode, setInitialModalMode] = useState<"signin" | "register">("signin");
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [theme, setTheme] = useState('light');
+  const [isThemeLoading, setIsThemeLoading] = useState(true);
 
+  // Register service worker on client-side only
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const oauthError = urlParams.get("error");
-    if (oauthError) {
-      console.error("[Layout] OAuth error:", oauthError);
-      toast.error(`Authentication failed: ${oauthError}`, { duration: 5000 });
+    if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js", { scope: "/" })
+        .then((registration) => {
+          console.log("Service worker registered successfully:", registration);
+        })
+        .catch((error) => {
+          console.error("Service worker registration failed:", error);
+        });
     }
+
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+    setIsThemeLoading(false);
   }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-  }, [resolvedTheme, setTheme]);
-
+    setIsThemeLoading(true);
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    setTimeout(() => setIsThemeLoading(false), 300);
+  }, [theme]);
+  
   const openModal = useCallback(
     (mode: 'signin' | 'register') => {
       setInitialModalMode(mode);
@@ -85,24 +102,18 @@ export function AppLayout({
   const navLinks = [
       { href: "/leetcode", label: "LeetCode", icon: CodeBracketIcon },
       { href: "/system-design", label: "System Design", icon: RocketLaunchIcon },
-      { href: "/daily-term", label: "TechBit", icon: LightBulbIcon },
-      { href: "/mcqs", label: "QuickLearn", icon: QuestionMarkCircleIcon },
-      // { href: "/gfg", label: "GFG", icon: CodeBracketSquareIcon },
-      // { href: "/potd", label: "POTD", icon: StarIcon },
-      { href: "/profile", label: "Profile", icon: UserIcon, auth: true },
+      { href: "/interview", label: "Interview", icon: CodeBracketSquareIcon },
+      { href: "/services", label: "Services", icon: BriefcaseIcon },
+      { href: "/learn10", label: "QuickLearn", icon: BookOpenIcon },
+      { href: "/daily-term", label: "TechBit", icon: PuzzlePieceIcon },
+      { href: "/micro-dev-tips", label: "DevTips", icon: LightBulbIcon },
+      { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
+      { href: "/potd", label: "POTD", icon: StarIcon },
+      { href: "/community", label: "Community", icon: UsersIcon },
   ];
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background">
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      </Head>
-
       <header className="bg-card/80 dark:bg-card/80 shadow-sm p-4 sticky top-0 z-50 backdrop-blur-sm border-b">
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="text-2xl sm:text-3xl font-extrabold text-primary hover:scale-105 transition-transform duration-200" aria-label="DevExCode Home">
@@ -110,7 +121,7 @@ export function AppLayout({
           </Link>
           <SpeedInsights />
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center space-x-6">
-             {navLinks.filter(item => !item.auth).map((item) => (
+             {navLinks.filter(item => item.auth).map((item) => (
               <Link key={item.href} href={item.href} className={`text-sm font-bold transition-colors duration-200 ${pathname === item.href ? "text-primary border-b-2 border-primary" : "text-foreground/70 hover:text-primary"}`} aria-current={pathname === item.href ? "page" : undefined}>
                 {item.label}
               </Link>
@@ -133,13 +144,13 @@ export function AppLayout({
                 </button>
               </div>
             )}
-            <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring transition-colors" aria-label={`Switch to ${resolvedTheme === "light" ? "dark" : "light"} mode`}>
-              {resolvedTheme === "light" ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+            <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring transition-colors" aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>
+              {theme === "light" ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
             </button>
           </nav>
           <div className="md:hidden flex items-center space-x-2">
-             <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring transition-colors" aria-label={`Switch to ${resolvedTheme === "light" ? "dark" : "light"} mode`}>
-                {resolvedTheme === "light" ? <MoonIcon className="w-6 h-6" /> : <SunIcon className="w-6 h-6" />}
+             <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-accent focus:outline-none focus:ring-2 focus:ring-ring transition-colors" aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>
+                {theme === "light" ? <MoonIcon className="w-6 h-6" /> : <SunIcon className="w-6 h-6" />}
             </button>
             <button className="p-1.5" onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isMenuOpen}>
               {isMenuOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
