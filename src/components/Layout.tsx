@@ -1,4 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
+'use client';
+
+import { useState, useEffect, useCallback, ReactNode, useRef } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
@@ -24,8 +26,8 @@ import {
 } from "@heroicons/react/24/solid";
 import DOMPurify from "isomorphic-dompurify";
 import { toast } from "react-hot-toast";
-import LoginModal from "./LoginModal";
-import ProfileModal from "./ProfileModal";
+import { LoginModal } from "./LoginModal";
+import { ProfileModal } from "./ProfileModal";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -43,13 +45,36 @@ const popupVariants = {
   exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
 };
 
+interface LayoutProps {
+  children: ReactNode;
+  title?: string;
+  description?: string;
+  isLoginModalOpen?: boolean;
+  setIsLoginModalOpen?: (isOpen: boolean) => void;
+}
+
+interface BeforeInstallPromptEvent extends Event {
+  readonly platforms: Array<string>;
+  readonly userChoice: Promise<{
+    outcome: 'accepted' | 'dismissed';
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
+}
+
+interface DailyTerm {
+  term: string;
+  shortExplanation: string;
+  date: string;
+}
+
 export default function Layout({
   children,
   title = "DevExCode - Coding & System Design Prep",
   description = "Master coding interviews with expertly crafted Leetcode solutions, system design guides, TechBit daily terms, QuickLearn lessons, Micro Dev Tips, and Tech Battles.",
   isLoginModalOpen: externalIsLoginModalOpen,
   setIsLoginModalOpen: externalSetIsLoginModalOpen,
-}) {
+}: LayoutProps) {
   const { data: session, status } = useSession({
     onUnauthenticated() {},
   });
@@ -58,12 +83,12 @@ export default function Layout({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [internalIsLoginModalOpen, setInternalIsLoginModalOpen] = useState(false);
-  const [initialModalMode, setInitialModalMode] = useState("signin");
+  const [initialModalMode, setInitialModalMode] = useState<"signin" | "register">("signin");
   const [isThemeLoading, setIsThemeLoading] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstallPromptOpen, setIsInstallPromptOpen] = useState(false);
   const [isGoogleSignInPopupOpen, setIsGoogleSignInPopupOpen] = useState(true);
-  const [dailyTerm, setDailyTerm] = useState(null);
+  const [dailyTerm, setDailyTerm] = useState<DailyTerm | null>(null);
   const [isLoadingTerm, setIsLoadingTerm] = useState(false);
   const [showDailyTermPopup, setShowDailyTermPopup] = useState(false);
   const [isSessionLoaded, setIsSessionLoaded] = useState(false);
@@ -73,7 +98,7 @@ export default function Layout({
   const setIsLoginModalOpen = externalSetIsLoginModalOpen || setInternalIsLoginModalOpen;
 
   // Calculate popup offset based on active popups
-  const getPopupOffset = useCallback((index) => {
+  const getPopupOffset = useCallback((index: number) => {
     return index * 100; // Vertical offset for stacking
   }, []);
 
@@ -112,9 +137,9 @@ export default function Layout({
     const isInstalled = window.matchMedia("(display-mode: standalone)").matches;
     const hasShownInSession = sessionStorage.getItem("installPromptShown");
 
-    const handleBeforeInstallPrompt = (e) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
       if (!isInstalled && !hasShownInSession) {
         setIsInstallPromptOpen(true);
         sessionStorage.setItem("installPromptShown", "true");
@@ -139,7 +164,7 @@ export default function Layout({
             console.error("[Layout] fetchDailyTerm Failed:", data.message);
             toast.error(data.message || "Failed to fetch daily term");
           }
-        } catch (error) {
+        } catch (error: any) {
           console.error("[Layout] fetchDailyTerm Error:", error.message);
           toast.error("Error loading daily term");
         } finally {
@@ -195,7 +220,7 @@ export default function Layout({
   }, [theme]);
 
   const openModal = useCallback(
-    (mode) => {
+    (mode: 'signin' | 'register') => {
       setInitialModalMode(mode);
       setIsLoginModalOpen(true);
       setIsMenuOpen(false);
@@ -218,7 +243,7 @@ export default function Layout({
     try {
       await signIn("google", { callbackUrl: router.asPath || "/", prompt: "select_account" });
       setIsGoogleSignInPopupOpen(false);
-    } catch (error) {
+    } catch (error: any) {
       console.error("[Layout] Google sign-in error:", error.message);
       toast.error("Google sign-in failed. Please try again.");
     }
@@ -235,6 +260,19 @@ export default function Layout({
     status === "authenticated" && showDailyTermPopup && dailyTerm,
     isInstallPromptOpen,
   ].filter(Boolean).length;
+
+  const navLinks = [
+      { href: "/leetcode", label: "Leetcode", icon: CodeBracketIcon },
+      { href: "/system-design", label: "System Design", icon: RocketLaunchIcon },
+      { href: "/interview", label: "Interview", icon: CodeBracketSquareIcon },
+      { href: "/services", label: "Services", icon: BriefcaseIcon },
+      { href: "/learn10", label: "QuickLearn", icon: BookOpenIcon },
+      { href: "/daily-term", label: "TechBit", icon: PuzzlePieceIcon },
+      { href: "/micro-dev-tips", label: "DevTips", icon: LightBulbIcon },
+      { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
+      { href: "/potd", label: "POTD", icon: StarIcon },
+      { href: "/community", label: "Community", icon: UsersIcon },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-900 dark:to-slate-800 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col font-sans">
@@ -310,18 +348,7 @@ export default function Layout({
           </Link>
           <SpeedInsights />
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center space-x-4 lg:space-x-6">
-            {[
-              { href: "/leetcode", label: "Leetcode", icon: CodeBracketIcon },
-              { href: "/system-design", label: "System Design", icon: RocketLaunchIcon },
-              { href: "/interview", label: "Interview", icon: CodeBracketSquareIcon },
-              { href: "/services", label: "Services", icon: BriefcaseIcon },
-              { href: "/learn10", label: "QuickLearn", icon: BookOpenIcon },
-              { href: "/daily-term", label: "TechBit", icon: PuzzlePieceIcon },
-              { href: "/micro-dev-tips", label: "DevTips", icon: LightBulbIcon },
-              { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
-              { href: "/potd", label: "POTD", icon: StarIcon },
-              { href: "/community", label: "Community", icon: UsersIcon },
-            ].map((item) => (
+            {navLinks.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
