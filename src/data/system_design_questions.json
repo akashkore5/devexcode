@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Design a URL Shortener",
+    "difficulty": "Medium",
+    "description": "Design a service like TinyURL or bit.ly that takes a long URL and generates a short, unique alias for it."
+  },
+  {
+    "id": 2,
+    "title": "Design a Messaging App",
+    "difficulty": "Hard",
+    "description": "Design a real-time messaging service like WhatsApp or Telegram with features like one-on-one chat, group chat, and media sharing."
+  },
+  {
+    "id": 3,
+    "title": "Design a Ride-Sharing Service",
+    "difficulty": "Hard",
+    "description": "Design a ride-sharing service like Uber or Lyft that connects drivers with passengers."
+  }
+]

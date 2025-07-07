@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "tags": ["Array", "Hash Table"],
+    "acceptance_rate": "51.1%",
+    "companies": ["Google", "Amazon", "Facebook"]
+  },
+  {
+    "id": 2,
+    "title": "Add Two Numbers",
+    "difficulty": "Medium",
+    "tags": ["Linked List", "Math", "Recursion"],
+    "acceptance_rate": "42.3%",
+    "companies": ["Microsoft", "Bloomberg", "Adobe"]
+  },
+  {
+    "id": 3,
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "Medium",
+    "tags": ["Hash Table", "String", "Sliding Window"],
+    "acceptance_rate": "34.5%",
+    "companies": ["Amazon", "Apple", "Google"]
+  }
+]
