@@ -43,6 +43,8 @@ if (process.env.NODE_ENV === 'development') {
   clientPromise = connectWithRetry(client);
 }
 
+export default clientPromise;
+
 // Exponential backoff retry logic
 async function connectWithRetry(client, maxRetries = 5, baseDelay = 2000) {
   let lastError;

@@ -35,13 +35,17 @@ export const NotificationSignupSection = ({ session, className }: NotificationSi
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                 >
-                    <Button size="lg"
-                        className="text-lg font-semibold shadow-lg"
+                    <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
+                        className="inline-block"
                     >
-                        Subscribe Now
-                    </Button>
+                        <Button size="lg"
+                            className="text-lg font-semibold shadow-lg"
+                        >
+                            Subscribe Now
+                        </Button>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

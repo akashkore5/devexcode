@@ -29,7 +29,13 @@ const CodeParticle: FC<{ delay: number, xStart: number, yStart: number, size: nu
   }, [controls, delay, xStart, yStart, speed]);
 
   const snippets = ["{...}", "if(err)", "404", "null", "=>", "console.log()", "try{}", "catch(e)", "fetch()", "useState()"];
-  const snippet = snippets[Math.floor(Math.random() * snippets.length)];
+  const [snippet, setSnippet] = useState("");
+
+  useEffect(() => {
+    setSnippet(snippets[Math.floor(Math.random() * snippets.length)]);
+  }, []);
+
+  if (!snippet) return null;
 
   return (
     <motion.div
@@ -142,14 +148,35 @@ export default function NotFound() {
   };
 
   // Particle configurations with variations
-  const particles = Array.from({ length: 15 }, (_, i) => ({
-    delay: i * 0.3,
-    xStart: Math.random() * 800 - 400,
-    yStart: -150,
-    size: Math.random() * 8 + 8, // Between 8px and 16px
-    speed: Math.random() * 2 + 3, // Between 3s and 5s
-    color: `hsl(${Math.random() * 60 + 220}, 70%, 60%)`, // Shades of indigo and purple
-  }));
+  const [particles, setParticles] = useState<any[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    const newParticles = Array.from({ length: 15 }, (_, i) => ({
+      delay: i * 0.3,
+      xStart: Math.random() * 800 - 400,
+      yStart: -150,
+      size: Math.random() * 8 + 8, // Between 8px and 16px
+      speed: Math.random() * 2 + 3, // Between 3s and 5s
+      color: `hsl(${Math.random() * 60 + 220}, 70%, 60%)`, // Shades of indigo and purple
+    }));
+    setParticles(newParticles);
+  }, []);
+
+  if (!mounted) {
+    return (
+        <section className="py-8 bg-gray-50 dark:bg-slate-900 min-h-[calc(100vh-300px)] flex items-center justify-center relative overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <div className="animate-pulse space-y-8">
+                     <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto"></div>
+                     <div className="h-12 w-32 bg-gray-200 dark:bg-gray-700 rounded mx-auto"></div>
+                     <div className="h-8 w-48 bg-gray-200 dark:bg-gray-700 rounded mx-auto"></div>
+                </div>
+            </div>
+        </section>
+    );
+  }
 
   return (
     <section className="py-8 bg-gray-50 dark:bg-slate-900 min-h-[calc(100vh-300px)] flex items-center justify-center relative overflow-hidden">

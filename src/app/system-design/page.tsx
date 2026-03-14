@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import Head from "next/head";
-import { useRouter } from "next/navigation";
 import { DataService, Problem } from "@/lib/data-service";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,21 +9,17 @@ import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
 import { Button } from "@/components/ui/button";
 import {
-  ChevronUpIcon,
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
   XMarkIcon,
-  DocumentTextIcon,
   TableCellsIcon,
   ListBulletIcon,
   CheckCircleIcon,
   HeartIcon,
   MagnifyingGlassIcon,
   FunnelIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon
 } from "@heroicons/react/24/outline";
 
-// Helper to generate URL-friendly slug from title
 const generateSlug = (title: string) => {
   return title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
 };
@@ -34,18 +29,17 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
-export default function LeetcodePage() {
-  const router = useRouter();
+export default function SystemDesignPage() {
   const { data: session, status } = useSession();
-  const [problems, setProblems] = useState<Problem[]>([]);
+  const [questions, setQuestions] = useState<Problem[]>([]);
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState("All");
   const [tag, setTag] = useState("All");
   const [perPage, setPerPage] = useState(15);
   const [page, setPage] = useState(1);
   const [viewMode, setViewMode] = useState("table");
-  const [solvedProblems, setSolvedProblems] = useState<number[]>([]);
-  const [taggedProblems, setTaggedProblems] = useState<number[]>([]);
+  const [solvedQuestions, setSolvedQuestions] = useState<number[]>([]);
+  const [taggedQuestions, setTaggedQuestions] = useState<number[]>([]);
   const [allTags, setAllTags] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -53,10 +47,10 @@ export default function LeetcodePage() {
     const loadData = async () => {
       setIsLoading(true);
       const [probs, tags] = await Promise.all([
-        DataService.getProblems(),
-        DataService.getTags()
+        DataService.getSystemDesignQuestions(),
+        DataService.getSystemDesignTags()
       ]);
-      setProblems(probs);
+      setQuestions(probs);
       setAllTags(["All", ...tags]);
       setIsLoading(false);
     };
@@ -74,25 +68,25 @@ export default function LeetcodePage() {
       const response = await fetch("/api/user/progress/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "leetcode", action: "all" }),
+        body: JSON.stringify({ type: "systemdesign", action: "all" }),
       });
       if (!response.ok) throw new Error(`API error: ${response.status}`);
       const data = await response.json();
-      setSolvedProblems((data.solved || []).map(Number));
-      setTaggedProblems((data.tagged || []).map(Number));
+      setSolvedQuestions((data.solved || []).map(Number));
+      setTaggedQuestions((data.tagged || []).map(Number));
     } catch (error) {
       console.error("Error fetching progress:", error);
     }
   }, []);
 
   const filtered = useMemo(() => {
-    return problems.filter((p) => {
-      const matchesSearch = p.title.toLowerCase().includes(search.toLowerCase()) || p.id.toString() === search;
-      const matchesDifficulty = difficulty === "All" || p.difficulty === difficulty;
-      const matchesTag = tag === "All" || p.tags?.some((t) => t.toLowerCase() === tag.toLowerCase());
+    return questions.filter((q) => {
+      const matchesSearch = q.title.toLowerCase().includes(search.toLowerCase()) || q.id.toString() === search;
+      const matchesDifficulty = difficulty === "All" || q.difficulty === difficulty;
+      const matchesTag = tag === "All" || q.tags?.some((t) => t.toLowerCase() === tag.toLowerCase());
       return matchesSearch && matchesDifficulty && matchesTag;
     });
-  }, [problems, search, difficulty, tag]);
+  }, [questions, search, difficulty, tag]);
 
   const totalPages = Math.ceil(filtered.length / perPage);
   const paginated = filtered.slice((page - 1) * perPage, page * perPage);
@@ -108,19 +102,19 @@ export default function LeetcodePage() {
       return;
     }
     const numericId = Number(id);
-    const currentSet = action === 'solved' ? solvedProblems : taggedProblems;
+    const currentSet = action === 'solved' ? solvedQuestions : taggedQuestions;
     const isCompleted = currentSet.includes(numericId);
 
     try {
       const response = await fetch('/api/user/progress', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'leetcode', action, id: numericId, remove: isCompleted }),
+        body: JSON.stringify({ type: 'systemdesign', action, id: numericId, remove: isCompleted }),
       });
       if (response.ok) {
-        const updater = action === 'solved' ? setSolvedProblems : setTaggedProblems;
+        const updater = action === 'solved' ? setSolvedQuestions : setTaggedQuestions;
         updater((prev) => (isCompleted ? prev.filter((pid) => pid !== numericId) : [...prev, numericId]));
-        toast.success(`Problem ${isCompleted ? 'un' : ''}${action}!`);
+        toast.success(`Question ${isCompleted ? 'un' : ''}${action}!`);
       }
     } catch (error) {
       toast.error('An error occurred.');
@@ -129,8 +123,11 @@ export default function LeetcodePage() {
 
   const difficultyColors = {
     Easy: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+    Beginner: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
     Medium: "bg-amber-500/10 text-amber-500 border-amber-500/20",
+    Intermediate: "bg-amber-500/10 text-amber-500 border-amber-500/20",
     Hard: "bg-rose-500/10 text-rose-500 border-rose-500/20",
+    Advanced: "bg-rose-500/10 text-rose-500 border-rose-500/20",
   };
 
   if (isLoading) {
@@ -144,13 +141,13 @@ export default function LeetcodePage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
       <Head>
-        <title>LeetCode Explorer | DevExCode</title>
+        <title>System Design | DevExCode</title>
       </Head>
 
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
         <div>
-          <h1 className="text-4xl font-black gradient-text mb-2">LeetCode Explorer</h1>
-          <p className="text-muted-foreground">Master {problems.length} coding challenges with expert solutions.</p>
+          <h1 className="text-4xl font-black gradient-text mb-2">System Design</h1>
+          <p className="text-muted-foreground">Architecting scalable, reliable, and maintainable systems.</p>
         </div>
         
         <div className="flex items-center gap-3">
@@ -158,7 +155,7 @@ export default function LeetcodePage() {
             <MagnifyingGlassIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground group-focus-within:text-primary transition-colors" />
             <input 
               type="text" 
-              placeholder="Search problems..."
+              placeholder="Search concepts..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-12 pr-6 py-3 bg-card border border-border rounded-2xl w-full sm:w-[300px] focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all shadow-sm"
@@ -176,7 +173,6 @@ export default function LeetcodePage() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        {/* Sidebar Filters */}
         <aside className="lg:col-span-1 space-y-8">
           <div className="glass dark:glass-dark p-6 rounded-3xl border border-white/10 shadow-xl sticky top-32">
             <div className="flex items-center gap-2 mb-6">
@@ -186,7 +182,7 @@ export default function LeetcodePage() {
 
             <div className="space-y-6">
               <div>
-                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3 block">Difficulty</label>
+                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3 block">Level</label>
                 <div className="flex flex-wrap gap-2">
                   {["All", "Easy", "Medium", "Hard"].map((d) => (
                     <button
@@ -203,7 +199,7 @@ export default function LeetcodePage() {
               </div>
 
               <div>
-                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3 block">Topics</label>
+                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3 block">Architecture Topics</label>
                 <div className="max-h-[300px] overflow-y-auto pr-2 custom-scrollbar flex flex-wrap gap-2">
                   {allTags.map((t) => (
                     <button
@@ -222,7 +218,6 @@ export default function LeetcodePage() {
           </div>
         </aside>
 
-        {/* Problems List */}
         <main className="lg:col-span-3">
           {viewMode === 'table' ? (
             <div className="glass dark:glass-dark rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
@@ -231,15 +226,15 @@ export default function LeetcodePage() {
                   <thead>
                     <tr className="border-b border-border bg-muted/30">
                       <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Status</th>
-                      <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Problem</th>
-                      <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Difficulty</th>
+                      <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Topic</th>
+                      <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Level</th>
                       <th className="px-6 py-4 text-xs font-black uppercase tracking-widest text-muted-foreground">Actions</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
-                    {paginated.map((p) => (
+                    {paginated.map((q) => (
                       <motion.tr 
-                        key={p.id} 
+                        key={q.id} 
                         variants={cardVariants} 
                         initial="hidden" 
                         animate="visible"
@@ -247,29 +242,29 @@ export default function LeetcodePage() {
                       >
                         <td className="px-6 py-5">
                           <div className="flex gap-2">
-                            <CheckCircleIcon className={`w-5 h-5 ${solvedProblems.includes(Number(p.id)) ? 'text-emerald-500' : 'text-muted-foreground/30'}`} />
-                            <HeartIcon className={`w-5 h-5 ${taggedProblems.includes(Number(p.id)) ? 'text-rose-500' : 'text-muted-foreground/30'}`} />
+                            <CheckCircleIcon className={`w-5 h-5 ${solvedQuestions.includes(Number(q.id)) ? 'text-emerald-500' : 'text-muted-foreground/30'}`} />
+                            <HeartIcon className={`w-5 h-5 ${taggedQuestions.includes(Number(q.id)) ? 'text-rose-500' : 'text-muted-foreground/30'}`} />
                           </div>
                         </td>
                         <td className="px-6 py-5">
-                          <Link href={`/leetcode/${p.id}-${generateSlug(p.title)}`} className="font-bold text-foreground group-hover:text-primary transition-colors">
-                            {p.id}. {p.title}
+                          <Link href={`/system-design/${q.id}-${generateSlug(q.title)}`} className="font-bold text-foreground group-hover:text-primary transition-colors">
+                            {q.id}. {q.title}
                           </Link>
                           <div className="flex gap-1 mt-1">
-                            {p.tags?.slice(0, 3).map(t => <span key={t} className="text-[10px] text-muted-foreground uppercase font-bold tracking-tighter">#{t}</span>)}
+                            {q.tags?.slice(0, 3).map(t => <span key={t} className="text-[10px] text-muted-foreground uppercase font-bold tracking-tighter">#{t}</span>)}
                           </div>
                         </td>
                         <td className="px-6 py-5">
-                          <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${difficultyColors[p.difficulty as keyof typeof difficultyColors]}`}>
-                            {p.difficulty}
+                          <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${difficultyColors[q.difficulty as keyof typeof difficultyColors] || difficultyColors.Easy}`}>
+                            {q.difficulty}
                           </span>
                         </td>
                         <td className="px-6 py-5">
                            <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                             <Button size="sm" variant="outline" className="h-8 w-8 p-0 rounded-lg" onClick={() => handleMarkAction(p.id, 'solved')}>
+                             <Button size="sm" variant="outline" className="h-8 w-8 p-0 rounded-lg" onClick={() => handleMarkAction(q.id, 'solved')}>
                                <CheckCircleIcon className="w-4 h-4" />
                              </Button>
-                             <Button size="sm" variant="outline" className="h-8 w-8 p-0 rounded-lg" onClick={() => handleMarkAction(p.id, 'tagged')}>
+                             <Button size="sm" variant="outline" className="h-8 w-8 p-0 rounded-lg" onClick={() => handleMarkAction(q.id, 'tagged')}>
                                <HeartIcon className="w-4 h-4" />
                              </Button>
                            </div>
@@ -281,33 +276,40 @@ export default function LeetcodePage() {
               </div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {paginated.map((p) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {paginated.map((q) => (
                 <motion.div 
-                  key={p.id} 
+                  key={q.id} 
                   variants={cardVariants} 
                   initial="hidden" 
                   animate="visible"
-                  className="premium-card p-6 rounded-3xl"
+                  className="premium-card p-8 rounded-3xl"
                 >
-                  <div className="flex justify-between items-start mb-4">
-                    <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${difficultyColors[p.difficulty as keyof typeof difficultyColors]}`}>
-                      {p.difficulty}
+                  <div className="flex justify-between items-start mb-6">
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest border ${difficultyColors[q.difficulty as keyof typeof difficultyColors] || difficultyColors.Easy}`}>
+                      {q.difficulty}
                     </span>
                     <div className="flex gap-2">
-                       <CheckCircleIcon className={`w-5 h-5 ${solvedProblems.includes(Number(p.id)) ? 'text-emerald-500' : 'text-muted-foreground/30'}`} />
-                       <HeartIcon className={`w-5 h-5 ${taggedProblems.includes(Number(p.id)) ? 'text-rose-500' : 'text-muted-foreground/30'}`} />
+                       <CheckCircleIcon className={`w-5 h-5 ${solvedQuestions.includes(Number(q.id)) ? 'text-emerald-500' : 'text-muted-foreground/30'}`} />
+                       <HeartIcon className={`w-5 h-5 ${taggedQuestions.includes(Number(q.id)) ? 'text-rose-500' : 'text-muted-foreground/30'}`} />
                     </div>
                   </div>
-                  <Link href={`/leetcode/${p.id}-${generateSlug(p.title)}`} className="text-xl font-bold hover:text-primary transition-colors block mb-4">
-                    {p.id}. {p.title}
+                  <Link href={`/system-design/${q.id}-${generateSlug(q.title)}`} className="text-2xl font-black leading-tight hover:text-primary transition-colors block mb-4">
+                    {q.id}. {q.title}
                   </Link>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {p.tags?.map(t => <span key={t} className="px-2 py-1 bg-muted rounded-lg text-[10px] font-bold text-muted-foreground">{t}</span>)}
+                  <p className="text-muted-foreground text-sm line-clamp-2 mb-6">
+                    A deep dive into {q.title.toLowerCase()}, exploring its core components and trade-offs.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {q.tags?.map(t => <span key={t} className="px-3 py-1 bg-muted rounded-xl text-[10px] font-bold text-muted-foreground uppercase">{t}</span>)}
                   </div>
-                  <div className="flex gap-2">
-                    <Button className="flex-grow rounded-xl font-bold" size="sm" onClick={() => handleMarkAction(p.id, 'solved')}>Solve</Button>
-                    <Button variant="outline" className="rounded-xl font-bold" size="sm" onClick={() => handleMarkAction(p.id, 'tagged')}>Tag</Button>
+                  <div className="flex gap-3">
+                    <Link href={`/system-design/${q.id}-${generateSlug(q.title)}`} className="flex-grow">
+                      <Button className="w-full rounded-2xl font-black py-6">Learn System</Button>
+                    </Link>
+                    <Button variant="outline" className="rounded-2xl w-14 h-14 p-0" onClick={() => handleMarkAction(q.id, 'tagged')}>
+                      <HeartIcon className="w-6 h-6" />
+                    </Button>
                   </div>
                 </motion.div>
               ))}
@@ -328,7 +330,6 @@ export default function LeetcodePage() {
               <div className="flex items-center gap-2">
                 {[...Array(totalPages)].map((_, i) => {
                   const pNum = i + 1;
-                  // Only show 3 pages around current
                   if (pNum === 1 || pNum === totalPages || (pNum >= page - 1 && pNum <= page + 1)) {
                     return (
                       <button

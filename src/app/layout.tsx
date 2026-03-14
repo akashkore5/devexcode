@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { Providers } from './providers';
 import { Toaster } from 'react-hot-toast';
 import { AppLayout } from '@/components/AppLayout';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const outfit = Outfit({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'DevExCode - Your Ultimate Guide to Acing Tech Interviews',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <Providers>
           <AppLayout>
             {children}
