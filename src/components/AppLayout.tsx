@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, ReactNode } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   SunIcon,
@@ -23,11 +22,12 @@ import {
   BellIcon,
   UsersIcon,
   BriefcaseIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
+  ChevronDownIcon
 } from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
-import { LoginModal } from "./LoginModal";
-import { ProfileModal } from "./ProfileModal";
+import { LoginModal } from "@/components/LoginModal";
+import { ProfileModal } from "@/components/ProfileModal";
 import { signIn, useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -54,7 +54,8 @@ export function AppLayout({ children }: AppLayoutProps) {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
+  const [internalIsLoginModalOpen, setInternalIsLoginModalOpen] = useState(false);
   const [initialModalMode, setInitialModalMode] = useState<"signin" | "register">("signin");
   const [theme, setTheme] = useState('light');
   const [isThemeLoading, setIsThemeLoading] = useState(true);
@@ -90,7 +91,7 @@ export function AppLayout({ children }: AppLayoutProps) {
   const openModal = useCallback(
     (mode: 'signin' | 'register') => {
       setInitialModalMode(mode);
-      setIsLoginModalOpen(true);
+      setInternalIsLoginModalOpen(true);
       setIsMenuOpen(false);
       setIsProfileDropdownOpen(false);
     },
@@ -127,7 +128,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               </Link>
               
               <nav role="navigation" aria-label="Main navigation" className="hidden lg:flex items-center space-x-1">
-                {navLinks.slice(0, 5).map((item) => (
+                {navLinks.slice(0, 4).map((item) => (
                   <Link 
                     key={item.href} 
                     href={item.href} 
@@ -140,6 +141,57 @@ export function AppLayout({ children }: AppLayoutProps) {
                     {item.label}
                   </Link>
                 ))}
+
+                <div className="relative">
+                  <button 
+                    onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)}
+                    onMouseEnter={() => setIsMoreDropdownOpen(true)}
+                    className={`px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200 flex items-center space-x-1 ${
+                      navLinks.slice(4).some(link => pathname === link.href)
+                        ? "bg-primary/10 text-primary" 
+                        : "text-foreground/70 hover:bg-primary/10 hover:text-primary"
+                    }`}
+                  >
+                    <span>More</span>
+                    <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isMoreDropdownOpen ? "rotate-180" : ""}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {isMoreDropdownOpen && (
+                      <>
+                        <div 
+                          className="fixed inset-0 z-40" 
+                          onClick={() => setIsMoreDropdownOpen(false)}
+                        />
+                        <motion.div
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          onMouseLeave={() => setIsMoreDropdownOpen(false)}
+                          className="absolute top-full right-0 mt-2 w-56 glass dark:glass-dark rounded-2xl p-2 border border-white/10 shadow-2xl z-50 overflow-hidden"
+                        >
+                          <div className="grid gap-1">
+                            {navLinks.slice(4).map((item) => (
+                              <Link 
+                                key={item.href} 
+                                href={item.href} 
+                                onClick={() => setIsMoreDropdownOpen(false)}
+                                className={`flex items-center space-x-3 px-4 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                                  pathname === item.href 
+                                    ? "bg-primary text-white" 
+                                    : "text-foreground/70 hover:bg-primary/10 hover:text-primary"
+                                }`}
+                              >
+                                <item.icon className="w-5 h-5 opacity-70" />
+                                <span>{item.label}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </div>
                 
                 <div className="w-px h-6 bg-border mx-2" />
                 
@@ -311,8 +363,8 @@ export function AppLayout({ children }: AppLayoutProps) {
 
       
       <AnimatePresence>
-        {isLoginModalOpen && (
-            <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} initialMode={initialModalMode} onLoginSuccess={() => { setIsLoginModalOpen(false); toast.success("Logged in successfully"); }} />
+        {internalIsLoginModalOpen && (
+            <LoginModal isOpen={internalIsLoginModalOpen} onClose={() => setInternalIsLoginModalOpen(false)} initialMode={initialModalMode} onLoginSuccess={() => { setInternalIsLoginModalOpen(false); toast.success("Logged in successfully"); }} />
         )}
       </AnimatePresence>
     </div>

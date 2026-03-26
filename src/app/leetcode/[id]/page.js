@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { redirect } from "next/navigation";
 import ProblemPageClient from "./ProblemPageClient";
 
 export async function generateStaticParams() {
@@ -48,6 +49,12 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { id: slug } = await params;
+  if (slug === "75") {
+    redirect("/leetcode/leetcode75");
+  }
+  if (slug === "150") {
+    redirect("/leetcode/leetcode150");
+  }
   try {
     const id = slug.split("-")[0];
     const filePath = path.join(process.cwd(), "src", "posts", `${id}.md`);

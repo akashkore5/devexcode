@@ -5,7 +5,7 @@ import { Toaster, toast } from "react-hot-toast";
 import { Component } from "react";
 import hljs from "highlight.js";
 import "highlight.js/styles/github-dark.css";
-import Layout from "../../../components/Layout";
+// import Layout from "../../../components/Layout";
 import { useParams, useRouter } from "next/navigation";
 import DOMPurify from "isomorphic-dompurify";
 import { useSession } from "next-auth/react";
@@ -528,12 +528,7 @@ const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, content
   };
 
   return (
-    <Layout
-      title={`LeetCode ${frontMatter.id}: ${frontMatter.title} Solution - DevExCode`}
-      description={`Master LeetCode problem ${frontMatter.id} (${frontMatter.title}) with optimized Java, C++, and Python solutions. Detailed explanations, interactive code editor, and execution results included.`}
-      isLoginModalOpen={isLoginModalOpen}
-      setIsLoginModalOpen={setIsLoginModalOpen}
-    >
+    <div className="pt-24 min-h-screen bg-slate-50 dark:bg-slate-900">
       <Toaster />
       <main className="flex-grow max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-8">
         <section className="mb-8">
@@ -880,7 +875,7 @@ const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, content
           </Link>
         </section>
       </main>
-    </Layout>
+    </div>
   );
 });
 

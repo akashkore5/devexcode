@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, ReactNode, useRef } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   SunIcon,
@@ -22,14 +21,15 @@ import {
   CodeBracketSquareIcon,
   BellIcon,
   UsersIcon,
-  BriefcaseIcon
+  BriefcaseIcon,
+  ChevronDownIcon
 } from "@heroicons/react/24/solid";
 import DOMPurify from "isomorphic-dompurify";
-import { toast } from "react-hot-toast";
-import { LoginModal } from "./LoginModal";
-import { ProfileModal } from "./ProfileModal";
+import { Toaster, toast } from "react-hot-toast";
+import { LoginModal } from "@/components/LoginModal";
+import { ProfileModal } from "@/components/ProfileModal";
 import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Animation Variants
@@ -79,9 +79,12 @@ export default function Layout({
     onUnauthenticated() {},
   });
   const router = useRouter();
+  const pathname = usePathname();
+
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
   const [internalIsLoginModalOpen, setInternalIsLoginModalOpen] = useState(false);
   const [initialModalMode, setInitialModalMode] = useState<"signin" | "register">("signin");
   const [isThemeLoading, setIsThemeLoading] = useState(false);
@@ -241,7 +244,7 @@ export default function Layout({
 
   const handleGoogleSignIn = useCallback(async () => {
     try {
-      await signIn("google", { callbackUrl: router.asPath || "/", prompt: "select_account" });
+      await signIn("google", { callbackUrl: pathname || "/", prompt: "select_account" });
       setIsGoogleSignInPopupOpen(false);
     } catch (error: any) {
       console.error("[Layout] Google sign-in error:", error.message);
@@ -276,65 +279,7 @@ export default function Layout({
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-900 dark:to-slate-800 text-gray-900 dark:text-gray-100 transition-colors duration-300 flex flex-col font-sans">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="leetcode, system design, TechBit, QuickLearn, Micro Dev Tips, Tech Battles, POTD, coding, algorithms, interview prep, programming, daily terms, community, career services"
-        />
-        <meta name="author" content="DevExCode Team" />
-        <meta name="description" content={description} />
-        <meta property="og:site_name" content="DevExCode" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://devexcode.com" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://devexcode.com/og-image.jpg" />
-        <meta property="og:image:alt" content="DevExCode Coding and System Design Prep" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://devexcode.com/twitter-image.jpg" />
-        <meta name="twitter:creator" content="@devexcode" />
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="preload" href="/favicon.ico" as="image" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#4f46e5" />
-        <link rel="sitemap" href="/sitemaps.xml" />
-        <meta name="format-detection" content="telephone=no" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(
-              JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "DevExCode",
-                url: "https://devexcode.com",
-                description: description,
-                publisher: {
-                  "@type": "Organization",
-                  name: "DevExCode Team",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://devexcode.com/logo.png",
-                    width: 150,
-                    height: 50,
-                  },
-                },
-                potentialAction: {
-                  "@type": "SearchAction",
-                  target: "https://devexcode.com/search?q={search_term_string}",
-                  "query-input": "required name=search_term_string",
-                },
-              })
-            ),
-          }}
-        />
-      </Head>
+      <Toaster />
 
       {/* Header */}
       <header className="bg-white/90 dark:bg-slate-900/90 shadow-md p-4 sticky top-0 z-50 backdrop-blur-sm border-b border-gray-200/50 dark:border-slate-700/50">
@@ -348,20 +293,71 @@ export default function Layout({
           </Link>
           <SpeedInsights />
           <nav role="navigation" aria-label="Main navigation" className="hidden md:flex items-center space-x-4 lg:space-x-6">
-            {navLinks.map((item) => (
+            {navLinks.slice(0, 4).map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={`text-sm font-bold transition-colors duration-200 ${
-                  router.pathname === item.href
+                  pathname === item.href
                     ? "text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400"
                     : "text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
                 }`}
-                aria-current={router.pathname === item.href ? "page" : undefined}
+                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {item.label}
               </Link>
             ))}
+
+            <div className="relative group">
+              <button
+                onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)}
+                onMouseEnter={() => setIsMoreDropdownOpen(true)}
+                className={`flex items-center space-x-1 text-sm font-bold transition-colors duration-200 ${
+                  navLinks.slice(4).some(link => pathname === link.href)
+                    ? "text-indigo-600 dark:text-indigo-400"
+                    : "text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+                }`}
+              >
+                <span>More</span>
+                <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isMoreDropdownOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              <AnimatePresence>
+                {isMoreDropdownOpen && (
+                  <>
+                    <div 
+                      className="fixed inset-0 z-40" 
+                      onClick={() => setIsMoreDropdownOpen(false)}
+                    />
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      onMouseLeave={() => setIsMoreDropdownOpen(false)}
+                      className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl p-2 shadow-xl border border-gray-200 dark:border-slate-700 z-50 overflow-hidden"
+                    >
+                      <div className="flex flex-col">
+                        {navLinks.slice(4).map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsMoreDropdownOpen(false)}
+                            className={`flex items-center space-x-3 px-4 py-2 rounded-lg text-sm font-bold transition-colors duration-200 ${
+                              pathname === item.href
+                                ? "bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-indigo-400"
+                                : "text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-slate-700 hover:text-indigo-600 dark:hover:text-indigo-400"
+                            }`}
+                          >
+                            <item.icon className="w-5 h-5 opacity-70" />
+                            <span>{item.label}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  </>
+                )}
+              </AnimatePresence>
+            </div>
             {status === "authenticated" ? (
               <button
                 onClick={toggleProfileDropdown}
@@ -462,7 +458,7 @@ export default function Layout({
                   href={item.href}
                   className="flex items-center space-x-2 text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 py-2"
                   onClick={toggleMenu}
-                  aria-current={router.pathname === item.href ? "page" : undefined}
+                  aria-current={pathname === item.href ? "page" : undefined}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.label}</span>
