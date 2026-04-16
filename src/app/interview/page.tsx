@@ -1,4 +1,4 @@
-import { DataService } from "@/lib/data-service";
+import { DataService } from "../../lib/data-service";
 import InterviewClient from "./InterviewClient";
 import fs from "fs";
 import path from "path";

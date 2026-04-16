@@ -18,7 +18,7 @@ import {
   BookmarkIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { Problem } from "@/lib/data-service";
+import { Problem } from "../../../lib/data-service";
 
 interface Props {
   topic: Problem;

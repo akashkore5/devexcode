@@ -11,7 +11,7 @@ import {
   MagnifyingGlassIcon,
   UserCircleIcon,
 } from "@heroicons/react/24/solid";
-import reactTopics from "../../data/react_topics.json";
+import reactTopics from "../../../data/react_topics.json";
 import debounce from "lodash/debounce";
 
 export default function ReactTopicsDashboard() {

@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { DataService } from "@/lib/data-service";
+import { DataService } from "../../../lib/data-service";
 import Learn10DetailClient from "./Learn10DetailClient";
 import { notFound } from "next/navigation";
 

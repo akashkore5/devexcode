@@ -1,4 +1,4 @@
-import { DataService } from "@/lib/data-service";
+import { DataService } from "../../lib/data-service";
 import Learn10Client from "./Learn10Client";
 
 export default async function Learn10Page() {

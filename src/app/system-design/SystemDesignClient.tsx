@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useCallback } from "react";
-import { DataService, Problem } from "@/lib/data-service";
+import { DataService, Problem } from "../../lib/data-service";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
