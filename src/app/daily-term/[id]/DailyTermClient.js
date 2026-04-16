@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Calendar from "react-calendar";
 import { toast } from "react-hot-toast";
-import dailyTerms from "@/data/daily_terms.json";
+import dailyTerms from "../../../data/daily_terms.json";
 import DOMPurify from "isomorphic-dompurify";
 import { ChevronLeftIcon, CalendarIcon } from "@heroicons/react/24/solid";
 import { FaTwitter, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";

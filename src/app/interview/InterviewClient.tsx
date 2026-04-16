@@ -14,8 +14,8 @@ import {
   RocketLaunchIcon,
   DocumentTextIcon
 } from "@heroicons/react/24/outline";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "../../components/ui/button";
+import { Badge } from "../../components/ui/badge";
 import Link from "next/link";
 
 interface Props {
