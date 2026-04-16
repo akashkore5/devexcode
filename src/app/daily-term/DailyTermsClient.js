@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import dailyTerms from "@/data/daily_terms.json";
+import dailyTerms from "../../data/daily_terms.json";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 // import Layout from "@/components/Layout";
