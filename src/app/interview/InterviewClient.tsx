@@ -11,9 +11,11 @@ import {
   QueueListIcon,
   ArrowRightIcon,
   SparklesIcon,
-  RocketLaunchIcon
+  RocketLaunchIcon,
+  DocumentTextIcon
 } from "@heroicons/react/24/outline";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
 interface Props {
@@ -220,6 +222,47 @@ export default function InterviewClient({ stats }: Props) {
                   </motion.div>
                 ))}
              </div>
+          </div>
+        </div>
+
+        {/* Interview Ready Section */}
+        <div className="mb-20">
+          <div className="flex items-center justify-between mb-10">
+            <div>
+              <h3 className="text-3xl font-black tracking-tight mb-2">Interview Ready</h3>
+              <p className="text-muted-foreground font-medium">Topic-wise master sheets for quick revision and deep prep.</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="premium-card p-10 rounded-[48px] border border-primary/20 bg-primary/5 relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-white shadow-lg">
+                  <DocumentTextIcon className="w-7 h-7" />
+                </div>
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">NEW</Badge>
+              </div>
+              <h4 className="text-2xl font-black mb-4">Java BE Interview</h4>
+              <p className="text-sm text-muted-foreground font-medium leading-relaxed mb-10">
+                End-to-end questions and answers for Java Backend Developers. JVM, Spring, Microservices, and more.
+              </p>
+              <Link href="/interview/ready/java">
+                <Button className="w-full rounded-2xl font-black py-7 bg-primary hover:shadow-xl transition-all">
+                  Full Read Prep
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Placeholder for future languages */}
+            <div className="p-10 rounded-[48px] border border-dashed border-border flex flex-col items-center justify-center text-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all group">
+              <CodeBracketIcon className="w-12 h-12 text-muted-foreground mb-4 group-hover:text-primary transition-colors" />
+              <h4 className="text-xl font-bold mb-2">More Coming Soon</h4>
+              <p className="text-xs font-medium text-muted-foreground">We're curating master sheets for Python, React, and Go.</p>
+            </div>
           </div>
         </div>
 

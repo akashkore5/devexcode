@@ -7,8 +7,24 @@ import javaTopics from "@/data/java_topics.json";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const filePath = path.join(process.cwd(), "dailyblogsjava", `${id}.md`);
   
+  // Try dailyblogsjava first
+  let filePath = path.join(process.cwd(), "dailyblogsjava", `${id}.md`);
+  
+  // If not there, search src/content/interview-prep/java recursively
+  if (!fs.existsSync(filePath)) {
+    const interviewBase = path.join(process.cwd(), "src/content/interview-prep/java");
+    const categories = fs.readdirSync(interviewBase);
+    
+    for (const cat of categories) {
+      const potentialPath = path.join(interviewBase, cat, `${id}.md`);
+      if (fs.existsSync(potentialPath)) {
+        filePath = potentialPath;
+        break;
+      }
+    }
+  }
+
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContent);
@@ -31,7 +47,26 @@ export async function generateMetadata({ params }) {
 
 export default async function JavaArticlePage({ params }) {
   const { id } = await params;
-  const filePath = path.join(process.cwd(), "dailyblogsjava", `${id}.md`);
+  
+  // Try dailyblogsjava first
+  let filePath = path.join(process.cwd(), "dailyblogsjava", `${id}.md`);
+  
+  // If not there, search src/content/interview-prep/java recursively
+  if (!fs.existsSync(filePath)) {
+    const interviewBase = path.join(process.cwd(), "src/content/interview-prep/java");
+    try {
+      const categories = fs.readdirSync(interviewBase);
+      for (const cat of categories) {
+        const potentialPath = path.join(interviewBase, cat, `${id}.md`);
+        if (fs.existsSync(potentialPath)) {
+          filePath = potentialPath;
+          break;
+        }
+      }
+    } catch (err) {
+      console.error("Error reading interview base directory:", err);
+    }
+  }
   
   let frontmatter, content;
   try {
