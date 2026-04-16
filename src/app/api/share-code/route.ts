@@ -1,4 +1,4 @@
-import { Jimp, Font } from "jimp";
+import { Jimp } from "jimp";
 import path from "path";
 import fs from "fs";
 import crypto from "crypto";
@@ -61,9 +61,9 @@ export async function GET(request: Request) {
     });
 
     // Load fonts
-    const fontTitle = await Jimp.loadFont(Font.SANS_32_WHITE);
-    const fontCode = await Jimp.loadFont(Font.SANS_16_WHITE);
-    const fontFooter = await Jimp.loadFont(Font.SANS_16_WHITE);
+    const fontTitle = await Jimp.loadFont(Jimp.FONT_SANS_32_WHITE);
+    const fontCode = await Jimp.loadFont(Jimp.FONT_SANS_16_WHITE);
+    const fontFooter = await Jimp.loadFont(Jimp.FONT_SANS_16_WHITE);
 
     // Draw header
     image.print({

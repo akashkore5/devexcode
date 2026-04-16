@@ -108,17 +108,17 @@ export default function JavaTopicsDashboard() {
         const filteredSubtopics = topic.subtopics.filter((subtopic) => {
           const matchesSearch = searchQuery
             ? subtopic.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              subtopic.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+              subtopic.tags?.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
             : true;
           const matchesDifficulty =
             difficultyFilter === "All" || subtopic.difficulty === difficultyFilter;
-          const matchesTag = tagFilter === "All" || subtopic.tags.includes(tagFilter);
+          const matchesTag = tagFilter === "All" || subtopic.tags?.includes(tagFilter);
           return matchesSearch && matchesDifficulty && matchesTag;
         });
 
         const topicMatchesSearch = searchQuery
           ? topic.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            topic.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+            topic.tags?.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
           : true;
         
         if (topicMatchesSearch || filteredSubtopics.length > 0) {
@@ -142,8 +142,8 @@ export default function JavaTopicsDashboard() {
   const uniqueTags = useMemo(() => {
     const tags = new Set();
     javaTopics.topics.forEach((topic) => {
-      topic.tags.forEach((tag) => tags.add(tag));
-      topic.subtopics.forEach((subtopic) => subtopic.tags.forEach((tag) => tags.add(tag)));
+      topic.tags?.forEach((tag) => tags.add(tag));
+      topic.subtopics?.forEach((subtopic) => subtopic.tags?.forEach((tag) => tags.add(tag)));
     });
     return ["All", ...Array.from(tags).sort()];
   }, []);

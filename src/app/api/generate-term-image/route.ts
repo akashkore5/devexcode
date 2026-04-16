@@ -1,4 +1,4 @@
-import { Jimp, Font } from "jimp";
+import { Jimp } from "jimp";
 import dailyTerms from "@/data/daily_terms.json";
 import { NextResponse } from "next/server";
 import NodeCache from "node-cache";
@@ -36,9 +36,8 @@ export async function GET(request: Request) {
     });
 
     // Load fonts (Jimp uses Bitmap fonts)
-    // We'll use a builtin font for now to ensure it works
-    const fontTitle = await Jimp.loadFont(Font.SANS_64_BLACK);
-    const fontText = await Jimp.loadFont(Font.SANS_32_BLACK);
+    const fontTitle = await Jimp.loadFont(Jimp.FONT_SANS_64_BLACK);
+    const fontText = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK);
 
     // Draw the term title
     image.print({
@@ -59,7 +58,7 @@ export async function GET(request: Request) {
     });
 
     // Draw the footer (website name)
-    const fontFooter = await Jimp.loadFont(Font.SANS_32_BLACK);
+    const fontFooter = await Jimp.loadFont(Jimp.FONT_SANS_32_BLACK);
     image.print({
         font: fontFooter,
         x: 60,
