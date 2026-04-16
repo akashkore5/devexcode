@@ -50,24 +50,6 @@
           ]
         },
         {
-          "id": "core-java-collections",
-          "title": "Collections Framework",
-          "slug": "core-java-collections",
-          "description": "Utilize Java's built-in data structures like List, Set, Map, and their implementations (ArrayList, HashSet, HashMap).",
-          "difficulty": "Beginner",
-          "tags": [
-            "Collections",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
-          "related_questions": [
-            "What is the difference between ArrayList and LinkedList?",
-            "How does HashMap work internally in Java?",
-            "Explain the difference between Set and List interfaces."
-          ]
-        },
-        {
           "id": "core-java-exceptions",
           "title": "Exception Handling",
           "slug": "core-java-exceptions",
@@ -83,24 +65,6 @@
             "What is the difference between checked and unchecked exceptions?",
             "Explain the hierarchy of exception classes in Java.",
             "How do you create a custom exception in Java?"
-          ]
-        },
-        {
-          "id": "core-java-collections-internal-working",
-          "title": "Core Java Collections: Internal Working of List, Set, Map, and Queue",
-          "slug": "core-java-collections-internal-working",
-          "description": "Utilize Java's built-in data structures like List, Set, Map, and their implementations (ArrayList, HashSet, HashMap).",
-          "difficulty": "Beginner",
-          "tags": [
-            "Collections",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
-          "related_questions": [
-            "What is the difference between ArrayList and LinkedList?",
-            "How does HashMap work internally in Java?",
-            "Explain the difference between Set and List interfaces."
           ]
         },
         {
@@ -260,6 +224,30 @@
             "Explain the role of the ZoneId class in the Java Date and Time API."
           ]
         }
+      ]
+    },
+    {
+      "id": "collections",
+      "title": "Java Collections Framework",
+      "slug": "collections",
+      "description": "Expert-level deep dive into HashMap, Concurrent Collections, Sorting, and Generics pitfalls.",
+      "difficulty": "Intermediate",
+      "tags": ["Collections", "Data Structures", "Java"],
+      "subtopics": [
+        { "id": "hashmap-internals", "title": "HashMap Internals (RB-Trees)", "slug": "hashmap-internals" },
+        { "id": "concurrenthashmap-locking", "title": "ConcurrentHashMap Locking", "slug": "concurrenthashmap-locking" },
+        { "id": "arraylist-vs-linkedlist", "title": "ArrayList vs LinkedList", "slug": "arraylist-vs-linkedlist" },
+        { "id": "comparator-vs-comparable", "title": "Comparator vs Comparable", "slug": "comparator-vs-comparable" },
+        { "id": "copyonwritearraylist", "title": "CopyOnWriteArrayList", "slug": "copyonwritearraylist" },
+        { "id": "weakhashmap-and-references", "title": "WeakHashMap & References", "slug": "weakhashmap-and-references" },
+        { "id": "priority-queue", "title": "PriorityQueue Guide", "slug": "priority-queue" },
+        { "id": "generic-array-pitfalls", "title": "Generic Array Pitfalls", "slug": "generic-array-pitfalls" },
+        { "id": "collections-utility-puzzles", "title": "Utility Puzzles & Conversions", "slug": "collections-utility-puzzles" },
+        { "id": "sorting-custom-objects", "title": "Sorting Custom Objects", "slug": "sorting-custom-objects" },
+        { "id": "iterator-vs-listiterator", "title": "Iterator vs ListIterator", "slug": "iterator-vs-listiterator" },
+        { "id": "synchronized-vs-concurrent-collections", "title": "Synchronized vs Concurrent", "slug": "synchronized-vs-concurrent-collections" },
+        { "id": "immutable-class-guide", "title": "Immutable Class Guide", "slug": "immutable-class-guide" },
+        { "id": "cloning-shallow-vs-deep", "title": "Shallow vs Deep Cloning", "slug": "cloning-shallow-vs-deep" }
       ]
     },
     {
