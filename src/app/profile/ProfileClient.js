@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
 import { UserIcon, CodeBracketIcon, RocketLaunchIcon, ArrowPathIcon, BookOpenIcon, LightBulbIcon, ScaleIcon, CodeBracketSquareIcon } from "@heroicons/react/24/solid";
 import DOMPurify from "isomorphic-dompurify";
-import Layout from "@/components/Layout";
+import Layout from "../../components/Layout";
 import dynamic from "next/dynamic";
-import problems from "@/data/problems.json";
-import systemDesignQuestions from "@/data/system_design_questions.json";
-import learn10Questions from "@/data/10min_topics.json";
-import devTipsData from "@/data/micro_dev_tips.json";
-import techBattlesData from "@/data/tech_battles.json";
-import gfgProblems from "@/data/gfgproblems.json";
+import problems from "../../data/problems.json";
+import systemDesignQuestions from "../../data/system_design_questions.json";
+import learn10Questions from "../../data/10min_topics.json";
+import devTipsData from "../../data/micro_dev_tips.json";
+import techBattlesData from "../../data/tech_battles.json";
+import gfgProblems from "../../data/gfgproblems.json";
 import debounce from "lodash/debounce";
 
 // Lazy-load Chart.js components

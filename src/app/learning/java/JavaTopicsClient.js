@@ -12,8 +12,8 @@ import {
   UserCircleIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
-import { Button } from "@/components/ui/button";
-import javaTopics from "@/data/java_topics.json";
+import { Button } from "../../../components/ui/button";
+import javaTopics from "../../../data/java_topics.json";
 import debounce from "lodash/debounce";
 
 export default function JavaTopicsDashboard() {

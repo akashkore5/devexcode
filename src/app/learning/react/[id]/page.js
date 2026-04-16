@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import ReactArticleClient from "./ReactArticleClient";
-import reactTopics from "@/data/react_topics.json";
+import reactTopics from "../../../../data/react_topics.json";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;

@@ -2,12 +2,12 @@
 
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { DataService, Problem } from "@/lib/data-service";
+import { DataService, Problem } from "../../lib/data-service";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   ChevronUpIcon,
   ChevronDownIcon,

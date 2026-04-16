@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 import crypto from "crypto";
 import NodeCache from "node-cache";
-import gfgProblems from "@/data/gfgproblems.json";
+import gfgProblems from "../../../data/gfgproblems.json";
 import matter from "gray-matter";
 import { NextResponse } from "next/server";
 

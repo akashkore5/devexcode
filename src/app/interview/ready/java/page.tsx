@@ -7,10 +7,10 @@ import {
   TagIcon
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon as CheckCircleSolid, TagIcon as TagIconSolid } from "@heroicons/react/24/solid";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "../../../../components/ui/badge";
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/lib/auth';
-import { getDb } from '@/lib/mongodb';
+import { authOptions } from '../../../../lib/auth';
+import { getDb } from '../../../../lib/mongodb';
 
 async function getInterviewQuestionsWithProgress() {
   const session = await getServerSession(authOptions);

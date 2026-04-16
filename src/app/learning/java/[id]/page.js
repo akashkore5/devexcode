@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
 import JavaArticleClient from "./JavaArticleClient";
-import javaTopics from "@/data/java_topics.json";
+import javaTopics from "../../../../data/java_topics.json";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;

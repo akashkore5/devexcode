@@ -9,7 +9,7 @@ import {
   SparklesIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 const containerVariants = {
   hidden: { opacity: 0 },

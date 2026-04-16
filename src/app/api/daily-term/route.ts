@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import dailyTerms from "@/data/daily_terms.json";
+import dailyTerms from "../../../data/daily_terms.json";
 
 export async function GET(request: Request) {
   try {

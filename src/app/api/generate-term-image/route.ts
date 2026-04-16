@@ -1,5 +1,5 @@
 import { Jimp } from "jimp";
-import dailyTerms from "@/data/daily_terms.json";
+import dailyTerms from "../../../data/daily_terms.json";
 import { NextResponse } from "next/server";
 import NodeCache from "node-cache";
 

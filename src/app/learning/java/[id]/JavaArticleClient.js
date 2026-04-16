@@ -2,13 +2,13 @@
 
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
-import Layout from "@/components/Layout";
+import Layout from "../../../../components/Layout";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { motion, AnimatePresence } from "framer-motion";
 import DOMPurify from "isomorphic-dompurify";
-import javaTopics from "@/data/java_topics.json";
+import javaTopics from "../../../../data/java_topics.json";
 import {
   ChevronLeftIcon,
   CheckCircleIcon,

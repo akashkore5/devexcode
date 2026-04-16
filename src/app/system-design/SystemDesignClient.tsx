@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import {
   XMarkIcon,
   TableCellsIcon,

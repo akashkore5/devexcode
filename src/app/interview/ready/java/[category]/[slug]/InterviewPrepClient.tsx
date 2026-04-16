@@ -17,8 +17,8 @@ import {
   UserCircleIcon
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon as CheckCircleSolid, TagIcon as TagIconSolid } from "@heroicons/react/24/solid";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "../../../../../../components/ui/button";
+import { Badge } from "../../../../../../components/ui/badge";
 import Link from 'next/link';
 import { toast, Toaster } from 'react-hot-toast';
 import { useSession } from "next-auth/react";

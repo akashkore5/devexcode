@@ -7,7 +7,7 @@ import rehypeRaw from "rehype-raw";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../../components/ui/button";
 import { 
   ChevronLeftIcon, 
   CheckCircleIcon, 

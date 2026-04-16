@@ -14,7 +14,7 @@ import {
   CheckCircleIcon,
   ChatBubbleLeftRightIcon
 } from "@heroicons/react/24/outline";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import { toast } from "react-hot-toast";
 import { useSession } from "next-auth/react";
 

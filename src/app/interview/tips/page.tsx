@@ -9,7 +9,7 @@ import {
   ShieldCheckIcon,
   ChatBubbleBottomCenterTextIcon
 } from "@heroicons/react/24/outline";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 import Link from "next/link";
 
 const tips = [
