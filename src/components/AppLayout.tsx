@@ -117,9 +117,8 @@ export function AppLayout({ children }: AppLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background selection:bg-primary/20 selection:text-primary">
       <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div className="mx-4 my-4">
-          <div className="container mx-auto">
-            <div className="glass dark:glass-dark rounded-3xl px-6 py-4 flex justify-between items-center border border-white/10 shadow-2xl">
+        <div className="mx-1 sm:mx-4 my-2 sm:my-4">
+            <div className="glass dark:glass-dark rounded-2xl sm:rounded-3xl px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center border border-white/10 shadow-2xl">
               <Link href="/" className="flex items-center space-x-2 group" aria-label="DevExCode Home">
                 <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:rotate-6 transition-transform">
                   <span className="text-white font-black text-xl">D</span>
@@ -232,7 +231,6 @@ export function AppLayout({ children }: AppLayoutProps) {
                 <button className="p-2 rounded-xl bg-primary/10 text-primary" onClick={toggleMenu} aria-label="Toggle menu">
                   {isMenuOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
                 </button>
-              </div>
             </div>
           </div>
         </div>
@@ -243,7 +241,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               initial={{ opacity: 0, y: -20, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              className="lg:hidden absolute top-full left-4 right-4 mt-2"
+              className="lg:hidden absolute top-full left-2 right-2 sm:left-4 sm:right-4 mt-2"
             >
               <div className="glass dark:glass-dark rounded-3xl p-6 border border-white/10 shadow-2xl max-h-[80vh] overflow-y-auto">
                 <div className="grid grid-cols-2 gap-4">
