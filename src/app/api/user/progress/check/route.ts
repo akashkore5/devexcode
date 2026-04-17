@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/lib/auth';
-import { getDb } from '@/lib/mongodb';
+import { authOptions } from '../../../../../lib/auth';
+import { getDb } from '../../../../../lib/mongodb';
 
 function getUTCMidnight(ts: number) {
   const d = new Date(ts);

@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Providers } from './providers';
 import { Toaster } from 'react-hot-toast';
-import { AppLayout } from '@/components/AppLayout';
+import { AppLayout } from '../components/AppLayout';
 import { Outfit } from 'next/font/google';
 
 const outfit = Outfit({ subsets: ['latin'] });
