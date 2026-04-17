@@ -1,6 +1,6 @@
-import problems from "@/data/problems.json";
-import systemDesignQuestions from "@/data/system_design_questions.json";
-import learn10Topics from "@/data/10min_topics.json";
+import problems from "../data/problems.json";
+import systemDesignQuestions from "../data/system_design_questions.json";
+import learn10Topics from "../data/10min_topics.json";
 
 export type Problem = {
   id: string | number;

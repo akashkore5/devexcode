@@ -26,8 +26,8 @@ import {
   ChevronDownIcon
 } from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
-import { LoginModal } from "@/components/LoginModal";
-import { ProfileModal } from "@/components/ProfileModal";
+import { LoginModal } from "./LoginModal";
+import { ProfileModal } from "./ProfileModal";
 import { signIn, useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";

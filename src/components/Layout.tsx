@@ -26,8 +26,8 @@ import {
 } from "@heroicons/react/24/solid";
 import DOMPurify from "isomorphic-dompurify";
 import { Toaster, toast } from "react-hot-toast";
-import { LoginModal } from "@/components/LoginModal";
-import { ProfileModal } from "@/components/ProfileModal";
+import { LoginModal } from "./LoginModal";
+import { ProfileModal } from "./ProfileModal";
 import { signIn, useSession } from "next-auth/react";
 import { useRouter, usePathname } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
