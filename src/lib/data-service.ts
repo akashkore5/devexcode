@@ -10,6 +10,7 @@ export type Problem = {
   url?: string;
   category?: string;
   question?: string;
+  description?: string;
 };
 
 const getLearn10Category = (id: number) => {

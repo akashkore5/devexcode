@@ -3,18 +3,10 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 import bcrypt from 'bcrypt';
 import { sendWelcomeEmail } from './email';
-import clientPromise, { getDb } from './mongodb';
+import { getDb, getMongoClient } from './mongodb';
 
-// Diagnostic check for environment variables
-if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
-  console.warn('NextAuth: Google OAuth environment variables are missing (GOOGLE_CLIENT_ID or GOOGLE_CLIENT_SECRET)');
-}
-if (!process.env.NEXTAUTH_SECRET) {
-  console.warn('NextAuth: NEXTAUTH_SECRET is missing');
-}
-
-export const authOptions = {
-  adapter: MongoDBAdapter(clientPromise),
+const authOptions = {
+  adapter: MongoDBAdapter(getMongoClient()),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -124,3 +116,9 @@ export const authOptions = {
     maxAge: 60 * 60 * 24 * 7,
   },
 };
+
+async function getAuthOptions() {
+  return authOptions;
+}
+
+export { authOptions, getAuthOptions };

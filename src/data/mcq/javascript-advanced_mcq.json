@@ -1,0 +1,212 @@
+[
+    {
+      "id": 1,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom iterable?",
+      "code": "```javascript\nconst obj = {\n  [Symbol.iterator]: function* () {\n    yield 1;\n    yield 2;\n  }\n};\nconsole.log([...obj]);\n```",
+      "options": [
+        "[1, 2]",
+        "Throws an error",
+        "[1]",
+        "[]"
+      ],
+      "correctAnswer": "[1, 2]",
+      "explanation": "The custom iterator yields 1 and 2, which the spread operator collects into an array."
+    },
+    {
+      "id": 2,
+      "category": "JavaScript",
+      "question": "What happens in the following JavaScript code using an async function with Promise.all?",
+      "code": "```javascript\nasync function main() {\n  const results = await Promise.all([\n    Promise.resolve(1),\n    Promise.resolve(2)\n  ]);\n  console.log(results);\n}\nmain();\n```",
+      "options": [
+        "Prints '[1, 2]'",
+        "Throws an error",
+        "Prints '1 2'",
+        "No output"
+      ],
+      "correctAnswer": "Prints '[1, 2]'",
+      "explanation": "Promise.all resolves both promises, returning an array of results."
+    },
+    {
+      "id": 3,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a Proxy with a set trap?",
+      "code": "```javascript\nconst target = {};\nconst proxy = new Proxy(target, {\n  set: (obj, prop, value) => {\n    obj[prop] = value * 2;\n    return true;\n  }\n});\nproxy.x = 5;\nconsole.log(target.x);\n```",
+      "options": [
+        "10",
+        "5",
+        "Throws an error",
+        "undefined"
+      ],
+      "correctAnswer": "10",
+      "explanation": "The set trap doubles the value, storing 10 in target.x."
+    },
+    {
+      "id": 4,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a WeakSet?",
+      "code": "```javascript\nconst ws = new WeakSet();\nconst obj = {};\nws.add(obj);\nconsole.log(ws.has(obj));\nobj = null;\n```",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an error",
+        "Unpredictable"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "The WeakSet contains obj at the time of the check, so has returns true. The reassignment doesn’t affect the output."
+    },
+    {
+      "id": 5,
+      "category": "JavaScript",
+      "question": "What happens in the following JavaScript code using an event loop with setImmediate?",
+      "code": "```javascript\nsetImmediate(() => console.log('Immediate'));\nPromise.resolve().then(() => console.log('Promise'));\nconsole.log('Sync');\n```",
+      "options": [
+        "Prints 'Sync Promise Immediate'",
+        "Prints 'Sync Immediate Promise'",
+        "Throws an error",
+        "Unpredictable order"
+      ],
+      "correctAnswer": "Prints 'Sync Promise Immediate'",
+      "explanation": "Sync runs first, then microtasks (Promise), then macrotasks (setImmediate)."
+    },
+    {
+      "id": 6,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom Symbol property?",
+      "code": "```javascript\nconst sym = Symbol('key');\nclass MyClass {\n  [sym]() { return 42; }\n}\nconst obj = new MyClass();\nconsole.log(obj[sym]());\n```",
+      "options": [
+        "42",
+        "Throws an error",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "42",
+      "explanation": "The Symbol-keyed method returns 42 when called."
+    },
+    {
+      "id": 7,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom event emitter?",
+      "code": "```javascript\nconst { EventEmitter } = require('events');\nconst ee = new EventEmitter();\nee.on('event', () => console.log('Fired'));\nee.emit('event');\n```",
+      "options": [
+        "Prints 'Fired'",
+        "Throws an error",
+        "No output",
+        "Prints 'event'"
+      ],
+      "correctAnswer": "Prints 'Fired'",
+      "explanation": "The event emitter triggers the 'event' listener, printing 'Fired'."
+    },
+    {
+      "id": 8,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom generator with throw?",
+      "code": "```javascript\nfunction* gen() {\n  try {\n    yield 1;\n  } catch (e) {\n    console.log('Caught');\n  }\n}\nconst g = gen();\ng.next();\ng.throw();\n```",
+      "options": [
+        "Prints 'Caught'",
+        "Throws an error",
+        "No output",
+        "Prints '1'"
+      ],
+      "correctAnswer": "Prints 'Caught'",
+      "explanation": "The throw method injects an error, caught by the try-catch block."
+    },
+    {
+      "id": 9,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using BigInt?",
+      "code": "```javascript\nconst a = 2n ** 100n;\nconsole.log(Number(a % 3n));\n```",
+      "options": [
+        "1",
+        "0",
+        "Throws an error",
+        "2"
+      ],
+      "correctAnswer": "1",
+      "explanation": "2^100 mod 3 = 1, converted to a Number."
+    },
+    {
+      "id": 10,
+      "category": "JavaScript",
+      "question": "What happens in the following JavaScript code using a custom async iterator?",
+      "code": "```javascript\nconst asyncIter = {\n  async *[Symbol.asyncIterator]() {\n    yield 1;\n    yield 2;\n  }\n};\n(async () => {\n  for await (const x of asyncIter) {\n    console.log(x);\n  }\n})();\n```",
+      "options": [
+        "Prints '1 2'",
+        "Throws an error",
+        "No output",
+        "Prints '1'"
+      ],
+      "correctAnswer": "Prints '1 2'",
+      "explanation": "The async iterator yields 1 and 2, printed by for await."
+    },
+    {
+      "id": 11,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom Reflect operation?",
+      "code": "```javascript\nconst obj = {};\nReflect.defineProperty(obj, 'x', { value: 42, writable: false });\nobj.x = 100;\nconsole.log(obj.x);\n```",
+      "options": [
+        "42",
+        "100",
+        "Throws an error",
+        "undefined"
+      ],
+      "correctAnswer": "42",
+      "explanation": "The non-writable property prevents the assignment, keeping x as 42."
+    },
+    {
+      "id": 12,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom Intl formatter?",
+      "code": "```javascript\nconst formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });\nconsole.log(formatter.format(1234.56));\n```",
+      "options": [
+        "$1,234.56",
+        "1234.56",
+        "Throws an error",
+        "USD 1234.56"
+      ],
+      "correctAnswer": "$1,234.56",
+      "explanation": "The Intl formatter formats the number as a US dollar amount."
+    },
+    {
+      "id": 13,
+      "category": "JavaScript",
+      "question": "What happens in the following JavaScript code using a custom Promise.race?",
+      "code": "```javascript\nconst p1 = new Promise(resolve => setTimeout(() => resolve('Slow'), 100));\nconst p2 = Promise.resolve('Fast');\nPromise.race([p1, p2]).then(value => console.log(value));\n```",
+      "options": [
+        "Prints 'Fast'",
+        "Prints 'Slow'",
+        "Throws an error",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Fast'",
+      "explanation": "Promise.race resolves with the first settled promise, which is p2 ('Fast')."
+    },
+    {
+      "id": 14,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom Atomics operation?",
+      "code": "```javascript\nconst buffer = new SharedArrayBuffer(4);\nconst arr = new Int32Array(buffer);\nAtomics.store(arr, 0, 42);\nconsole.log(Atomics.load(arr, 0));\n```",
+      "options": [
+        "42",
+        "0",
+        "Throws an error",
+        "undefined"
+      ],
+      "correctAnswer": "42",
+      "explanation": "Atomics.store sets the value, and Atomics.load retrieves it."
+    },
+    {
+      "id": 15,
+      "category": "JavaScript",
+      "question": "What is the output of the following JavaScript code using a custom private class field?",
+      "code": "```javascript\nclass MyClass {\n  #x = 42;\n  getX() { return this.#x; }\n}\nconst obj = new MyClass();\nconsole.log(obj.getX());\n```",
+      "options": [
+        "42",
+        "Throws an error",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "42",
+      "explanation": "The private field #x is accessed via getX, returning 42."
+    }
+  ]

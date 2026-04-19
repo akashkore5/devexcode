@@ -36,12 +36,12 @@ export default async function SystemDesignDetailPage({ params }: { params: { id:
         frontmatter = matterResult.data;
         content = matterResult.content;
       } else {
-        content = `# ${question.title}\n\nExcellent system design content for this topic is currently being crafted. \n\n### What to expect:\n- Architectural blueprints\n- Scalability trade-offs\n- Real-world case studies\n- Interactive diagrams\n\nStay tuned!`;
+        content = `# ${question.title}\n\n${question.description || "The URL Preview Service is designed to provide a preview of the content contained within a given URL, allowing users to quickly understand the topic and relevance of the page without having to visit it."}\n\nExcellent system design content for this topic is currently being crafted. \n\n### What to expect:\n- Architectural blueprints\n- Scalability trade-offs\n- Real-world case studies\n- Interactive diagrams\n\nStay tuned!`;
       }
     }
   } catch (error) {
     console.warn(`Error reading markdown for system design ${numericId}:`, error);
-    content = `# ${question.title}\n\nContent not available yet.`;
+    content = `# ${question.title}\n\n${question.description || ""}\n\nContent not available yet.`;
   }
 
   return (

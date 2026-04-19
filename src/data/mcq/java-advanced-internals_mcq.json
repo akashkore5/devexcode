@@ -1,0 +1,702 @@
+[
+    {
+      "id": 1,
+      "category": "Java",
+      "question": "What are the different memory areas in the JVM?",
+      "code": null,
+      "options": [
+        "Heap, Stack, Method Area, PC Register",
+        "Heap, Stack, Cache, Buffer",
+        "RAM, ROM, Stack, Heap",
+        "Class Area, Object Area, Thread Area"
+      ],
+      "correctAnswer": "Heap, Stack, Method Area, PC Register",
+      "explanation": "The JVM memory includes the Heap (objects), Stack (method frames), Method Area (class metadata), and Program Counter Register (instruction pointer)."
+    },
+    {
+      "id": 2,
+      "category": "Java",
+      "question": "What is the output of the following reflection code?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    private String field = \"Secret\";\n    public static void main(String[] args) throws Exception {\n        Field f = Main.class.getDeclaredField(\"field\");\n        f.setAccessible(true);\n        Main m = new Main();\n        System.out.println(f.get(m));\n    }\n}",
+      "options": [
+        "Prints 'Secret'",
+        "Throws an exception",
+        "No output",
+        "Prints 'null'"
+      ],
+      "correctAnswer": "Prints 'Secret'",
+      "explanation": "Reflection accesses the private field 'field' by setting it accessible, retrieving the value 'Secret'."
+    },
+    {
+      "id": 3,
+      "category": "Java",
+      "question": "What is the role of the JIT compiler in the JVM?",
+      "code": null,
+      "options": [
+        "Converts Java code to bytecode",
+        "Optimizes bytecode to machine code at runtime",
+        "Manages garbage collection",
+        "Loads classes"
+      ],
+      "correctAnswer": "Optimizes bytecode to machine code at runtime",
+      "explanation": "The Just-In-Time (JIT) compiler optimizes bytecode into native machine code during execution, improving performance."
+    },
+    {
+      "id": 4,
+      "category": "Java",
+      "question": "What is a drawback of using JNI?",
+      "code": null,
+      "options": [
+        "It improves performance",
+        "It introduces platform dependency",
+        "It simplifies threading",
+        "It enhances security"
+      ],
+      "correctAnswer": "It introduces platform dependency",
+      "explanation": "JNI allows Java to call native C/C++ code but ties the application to specific platforms, reducing portability."
+    },
+    {
+      "id": 5,
+      "category": "Java",
+      "question": "What is the output of the following code monitoring memory usage?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Runtime runtime = Runtime.getRuntime();\n        long freeMemory = runtime.freeMemory();\n        System.out.println(freeMemory > 0);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "Runtime.freeMemory() returns the available memory in the JVM, which is always positive, so the condition is true."
+    },
+    {
+      "id": 6,
+      "category": "Java",
+      "question": "How can you reduce memory leaks in Java?",
+      "code": null,
+      "options": [
+        "Use synchronized blocks",
+        "Close resources with try-with-resources",
+        "Increase heap size",
+        "Use static methods"
+      ],
+      "correctAnswer": "Close resources with try-with-resources",
+      "explanation": "Using try-with-resources ensures resources like streams are closed, preventing memory leaks from unclosed handles."
+    },
+    {
+      "id": 7,
+      "category": "Java",
+      "question": "What is the output of the following code using JNI (assuming native method is implemented)?",
+      "code": "public class Main {\n    native void printNative();\n    static { System.loadLibrary(\"native\"); }\n    public static void main(String[] args) {\n        new Main().printNative();\n    }\n}",
+      "options": [
+        "Depends on native implementation",
+        "Throws an exception",
+        "No output",
+        "Prints 'null'"
+      ],
+      "correctAnswer": "Depends on native implementation",
+      "explanation": "The output depends on the native C/C++ function implementation loaded via System.loadLibrary."
+    },
+    {
+      "id": 8,
+      "category": "Java",
+      "question": "What is method inlining in the JVM?",
+      "code": null,
+      "options": [
+        "Replacing method calls with their body",
+        "Loading classes dynamically",
+        "Synchronizing threads",
+        "Managing memory allocation"
+      ],
+      "correctAnswer": "Replacing method calls with their body",
+      "explanation": "Method inlining replaces small method calls with their implementation, reducing call overhead and improving performance."
+    },
+    {
+      "id": 9,
+      "category": "Java",
+      "question": "What is the output of the following code using reflection to invoke a method?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    public String greet() { return \"Hello\"; }\n    public static void main(String[] args) throws Exception {\n        Method m = Main.class.getMethod(\"greet\");\n        System.out.println(m.invoke(new Main()));\n    }\n}",
+      "options": [
+        "Prints 'Hello'",
+        "Throws an exception",
+        "No output",
+        "Prints 'null'"
+      ],
+      "correctAnswer": "Prints 'Hello'",
+      "explanation": "Reflection invokes the greet() method on a Main instance, returning 'Hello'."
+    },
+    {
+      "id": 10,
+      "category": "Java",
+      "question": "How do you profile a Java application for performance?",
+      "code": null,
+      "options": [
+        "Use VisualVM or JProfiler",
+        "Increase thread pool size",
+        "Use synchronized blocks",
+        "Modify module-info.java"
+      ],
+      "correctAnswer": "Use VisualVM or JProfiler",
+      "explanation": "Tools like VisualVM and JProfiler analyze CPU, memory, and thread usage to identify performance bottlenecks."
+    },
+    {
+      "id": 11,
+      "category": "Java",
+      "question": "What is the purpose of the Java Memory Model (JMM)?",
+      "code": null,
+      "options": [
+        "To manage garbage collection",
+        "To define how threads interact with memory",
+        "To optimize bytecode",
+        "To load native libraries"
+      ],
+      "correctAnswer": "To define how threads interact with memory",
+      "explanation": "The JMM specifies how threads access shared memory, ensuring visibility and ordering of operations in a multithreaded environment."
+    },
+    {
+      "id": 12,
+      "category": "Java",
+      "question": "What is the output of the following reflection code accessing a private constructor?",
+      "code": "import java.lang.reflect.*;\nclass Main {\n    private Main() { System.out.println(\"Private\"); }\n    public static void main(String[] args) throws Exception {\n        Constructor<Main> c = Main.class.getDeclaredConstructor();\n        c.setAccessible(true);\n        c.newInstance();\n    }\n}",
+      "options": [
+        "Prints 'Private'",
+        "Throws an exception",
+        "No output",
+        "Prints 'null'"
+      ],
+      "correctAnswer": "Prints 'Private'",
+      "explanation": "Reflection accesses the private constructor, sets it accessible, and creates an instance, triggering the print statement."
+    },
+    {
+      "id": 13,
+      "category": "Java",
+      "question": "What is the role of the ClassLoader in the JVM?",
+      "code": null,
+      "options": [
+        "Compiles Java code",
+        "Loads class files into memory",
+        "Manages thread scheduling",
+        "Performs garbage collection"
+      ],
+      "correctAnswer": "Loads class files into memory",
+      "explanation": "The ClassLoader loads class files into the JVM, enabling dynamic loading of classes during runtime."
+    },
+    {
+      "id": 14,
+      "category": "Java",
+      "question": "What is the output of the following JNI code assuming a native method returns an int?",
+      "code": "public class Main {\n    native int getValue();\n    static { System.loadLibrary(\"native\"); }\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.getValue() == 42);\n    }\n}",
+      "options": [
+        "Depends on native implementation",
+        "Prints 'true'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Depends on native implementation",
+      "explanation": "The output depends on the value returned by the native method implemented in C/C++."
+    },
+    {
+      "id": 15,
+      "category": "Java",
+      "question": "What is the output of the following code checking garbage collection?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Runtime runtime = Runtime.getRuntime();\n        System.out.println(runtime.totalMemory() >= runtime.freeMemory());\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "totalMemory() returns the total allocated memory, which is always greater than or equal to freeMemory(), the unused portion."
+    },
+    {
+      "id": 16,
+      "category": "Java",
+      "question": "What is escape analysis in JVM optimization?",
+      "code": null,
+      "options": [
+        "Determining if objects can be allocated on the stack",
+        "Managing thread synchronization",
+        "Loading native libraries",
+        "Optimizing garbage collection"
+      ],
+      "correctAnswer": "Determining if objects can be allocated on the stack",
+      "explanation": "Escape analysis identifies objects that don’t escape a method’s scope, allowing stack allocation to reduce heap usage."
+    },
+    {
+      "id": 17,
+      "category": "Java",
+      "question": "What is the output of the following reflection code modifying a final field?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    private final int value = 10;\n    public static void main(String[] args) throws Exception {\n        Field f = Main.class.getDeclaredField(\"value\");\n        f.setAccessible(true);\n        Main m = new Main();\n        f.setInt(m, 20);\n        System.out.println(f.getInt(m));\n    }\n}",
+      "options": [
+        "Prints '20'",
+        "Throws an exception",
+        "Prints '10'",
+        "No output"
+      ],
+      "correctAnswer": "Prints '20'",
+      "explanation": "Reflection can modify final fields by setting them accessible, changing the value from 10 to 20."
+    },
+    {
+      "id": 18,
+      "category": "Java",
+      "question": "What is the purpose of the volatile keyword in the Java Memory Model?",
+      "code": null,
+      "options": [
+        "Ensures thread safety for methods",
+        "Guarantees visibility of variable changes across threads",
+        "Prevents object creation",
+        "Optimizes method calls"
+      ],
+      "correctAnswer": "Guarantees visibility of variable changes across threads",
+      "explanation": "The volatile keyword ensures that a variable’s value is always read from and written to main memory, ensuring visibility across threads."
+    },
+    {
+      "id": 19,
+      "category": "Java",
+      "question": "What is the output of the following code triggering garbage collection?",
+      "code": "public class Main {\n    protected void finalize() { System.out.println(\"Finalized\"); }\n    public static void main(String[] args) {\n        Main m = new Main();\n        m = null;\n        System.gc();\n    }\n}",
+      "options": [
+        "May print 'Finalized'",
+        "Prints 'Finalized' always",
+        "Throws an exception",
+        "No output guaranteed"
+      ],
+      "correctAnswer": "No output guaranteed",
+      "explanation": "System.gc() suggests garbage collection, but it’s not guaranteed to run or call finalize() immediately, so no output is guaranteed."
+    },
+    {
+      "id": 20,
+      "category": "Java",
+      "question": "What is a potential risk of using JNI?",
+      "code": null,
+      "options": [
+        "Improved portability",
+        "Memory management errors",
+        "Simplified debugging",
+        "Enhanced performance"
+      ],
+      "correctAnswer": "Memory management errors",
+      "explanation": "JNI requires manual memory management in native code, increasing the risk of leaks or crashes."
+    },
+    {
+      "id": 21,
+      "category": "Java",
+      "question": "What is the output of the following reflection code listing methods?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    public void method1() {}\n    private void method2() {}\n    public static void main(String[] args) throws Exception {\n        Method[] methods = Main.class.getDeclaredMethods();\n        System.out.println(methods.length);\n    }\n}",
+      "options": [
+        "Prints '2'",
+        "Prints '1'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '2'",
+      "explanation": "getDeclaredMethods() returns all methods (public, private) declared in the class, including method1 and method2."
+    },
+    {
+      "id": 22,
+      "category": "Java",
+      "question": "What is the role of the Permanent Generation in JVM (pre-Java 8)?",
+      "code": null,
+      "options": [
+        "Stores temporary objects",
+        "Holds class metadata",
+        "Manages thread stacks",
+        "Optimizes bytecode"
+      ],
+      "correctAnswer": "Holds class metadata",
+      "explanation": "The Permanent Generation (PermGen) stored class metadata and interned strings before being replaced by Metaspace in Java 8."
+    },
+    {
+      "id": 23,
+      "category": "Java",
+      "question": "What is the output of the following code using Runtime to execute a command?",
+      "code": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Process p = Runtime.getRuntime().exec(\"echo Hello\");\n        System.out.println(p.isAlive());\n    }\n}",
+      "options": [
+        "Prints 'true' or 'false'",
+        "Throws an exception",
+        "No output",
+        "Prints 'Hello'"
+      ],
+      "correctAnswer": "Prints 'true' or 'false'",
+      "explanation": "isAlive() checks if the process is running. The result depends on the process’s state when checked."
+    },
+    {
+      "id": 24,
+      "category": "Java",
+      "question": "What is loop unrolling in JVM optimization?",
+      "code": null,
+      "options": [
+        "Reducing loop iterations by expanding them",
+        "Synchronizing loop execution",
+        "Allocating memory for loops",
+        "Collecting garbage in loops"
+      ],
+      "correctAnswer": "Reducing loop iterations by expanding them",
+      "explanation": "Loop unrolling expands small loops to reduce overhead, improving performance by minimizing branch instructions."
+    },
+    {
+      "id": 25,
+      "category": "Java",
+      "question": "What is the output of the following reflection code accessing annotations?",
+      "code": "import java.lang.annotation.*;\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnn {}\n@MyAnn\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(Main.class.isAnnotationPresent(MyAnn.class));\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "isAnnotationPresent checks for the runtime-retained @MyAnn, which is present, so it returns true."
+    },
+    {
+      "id": 26,
+      "category": "Java",
+      "question": "What is the happens-before relationship in the Java Memory Model?",
+      "code": null,
+      "options": [
+        "Guarantees memory allocation order",
+        "Ensures visibility of actions between threads",
+        "Optimizes method calls",
+        "Manages garbage collection"
+      ],
+      "correctAnswer": "Ensures visibility of actions between threads",
+      "explanation": "Happens-before establishes a partial ordering of actions, ensuring that certain operations are visible to other threads."
+    },
+    {
+      "id": 27,
+      "category": "Java",
+      "question": "What is the output of the following JNI code accessing a Java field?",
+      "code": "public class Main {\n    int value = 42;\n    native void modifyValue();\n    static { System.loadLibrary(\"native\"); }\n    public static void main(String[] args) {\n        Main m = new Main();\n        m.modifyValue();\n        System.out.println(m.value);\n    }\n}",
+      "options": [
+        "Depends on native implementation",
+        "Prints '42'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Depends on native implementation",
+      "explanation": "The native method modifyValue() can change the field value, so the output depends on its implementation."
+    },
+    {
+      "id": 28,
+      "category": "Java",
+      "question": "What is the purpose of the -Xmx JVM option?",
+      "code": null,
+      "options": [
+        "Sets maximum heap size",
+        "Enables JIT compilation",
+        "Configures thread count",
+        "Loads native libraries"
+      ],
+      "correctAnswer": "Sets maximum heap size",
+      "explanation": "-Xmx specifies the maximum memory allocated to the heap, controlling the JVM’s memory usage."
+    },
+    {
+      "id": 29,
+      "category": "Java",
+      "question": "What is the output of the following code using reflection to get class name?",
+      "code": "public class Main {\n    public static void main(String[] args) throws Exception {\n        Class<?> c = Class.forName(\"java.lang.String\");\n        System.out.println(c.getSimpleName());\n    }\n}",
+      "options": [
+        "Prints 'String'",
+        "Throws an exception",
+        "Prints 'java.lang.String'",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'String'",
+      "explanation": "getSimpleName() returns the class name without the package, so 'String' is printed."
+    },
+    {
+      "id": 30,
+      "category": "Java",
+      "question": "What is the role of the Metaspace in JVM (Java 8+)?",
+      "code": null,
+      "options": [
+        "Stores temporary objects",
+        "Holds class metadata",
+        "Manages stack frames",
+        "Optimizes bytecode"
+      ],
+      "correctAnswer": "Holds class metadata",
+      "explanation": "Metaspace, replacing PermGen, stores class metadata and grows dynamically, managed by the native memory."
+    },
+    {
+      "id": 31,
+      "category": "Java",
+      "question": "What is the output of the following code monitoring max memory?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Runtime runtime = Runtime.getRuntime();\n        System.out.println(runtime.maxMemory() > 0);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "maxMemory() returns the maximum memory the JVM can use, which is always positive."
+    },
+    {
+      "id": 32,
+      "category": "Java",
+      "question": "What is lock coarsening in JVM optimization?",
+      "code": null,
+      "options": [
+        "Combining multiple lock acquisitions into one",
+        "Splitting locks for better concurrency",
+        "Allocating memory for locks",
+        "Collecting garbage during locking"
+      ],
+      "correctAnswer": "Combining multiple lock acquisitions into one",
+      "explanation": "Lock coarsening merges adjacent synchronized blocks to reduce locking overhead, improving performance."
+    },
+    {
+      "id": 33,
+      "category": "Java",
+      "question": "What is the output of the following reflection code accessing a private method?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    private void secret() { System.out.println(\"Hidden\"); }\n    public static void main(String[] args) throws Exception {\n        Method m = Main.class.getDeclaredMethod(\"secret\");\n        m.setAccessible(true);\n        m.invoke(new Main());\n    }\n}",
+      "options": [
+        "Prints 'Hidden'",
+        "Throws an exception",
+        "No output",
+        "Prints 'null'"
+      ],
+      "correctAnswer": "Prints 'Hidden'",
+      "explanation": "Reflection accesses and invokes the private method secret(), printing 'Hidden'."
+    },
+    {
+      "id": 34,
+      "category": "Java",
+      "question": "What is the purpose of the synchronized keyword in the Java Memory Model?",
+      "code": null,
+      "options": [
+        "Ensures atomicity and visibility",
+        "Optimizes memory allocation",
+        "Loads native code",
+        "Manages garbage collection"
+      ],
+      "correctAnswer": "Ensures atomicity and visibility",
+      "explanation": "Synchronized ensures atomic access to a block or method and establishes a happens-before relationship for visibility."
+    },
+    {
+      "id": 35,
+      "category": "Java",
+      "question": "What is the output of the following JNI code calling a Java method?",
+      "code": "public class Main {\n    public void callback() { System.out.println(\"Callback\"); }\n    native void callJavaMethod();\n    static { System.loadLibrary(\"native\"); }\n    public static void main(String[] args) {\n        new Main().callJavaMethod();\n    }\n}",
+      "options": [
+        "Depends on native implementation",
+        "Prints 'Callback'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Depends on native implementation",
+      "explanation": "The native method may call the Java callback() method, but the output depends on its implementation."
+    },
+    {
+      "id": 36,
+      "category": "Java",
+      "question": "What is the -XX:+UseG1GC JVM option used for?",
+      "code": null,
+      "options": [
+        "Enables the G1 garbage collector",
+        "Increases thread priority",
+        "Optimizes JIT compilation",
+        "Sets heap size"
+      ],
+      "correctAnswer": "Enables the G1 garbage collector",
+      "explanation": "-XX:+UseG1GC enables the Garbage-First (G1) collector, designed for low-pause, high-throughput applications."
+    },
+    {
+      "id": 37,
+      "category": "Java",
+      "question": "What is the output of the following reflection code getting superclass?",
+      "code": "public class Main extends Object {\n    public static void main(String[] args) throws Exception {\n        Class<?> c = Main.class.getSuperclass();\n        System.out.println(c.getSimpleName());\n    }\n}",
+      "options": [
+        "Prints 'Object'",
+        "Throws an exception",
+        "Prints 'Main'",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'Object'",
+      "explanation": "getSuperclass() returns the superclass of Main, which is Object, and getSimpleName() returns 'Object'."
+    },
+    {
+      "id": 38,
+      "category": "Java",
+      "question": "What is the young generation in the JVM heap?",
+      "code": null,
+      "options": [
+        "Stores long-lived objects",
+        "Holds newly created objects",
+        "Manages class metadata",
+        "Optimizes thread stacks"
+      ],
+      "correctAnswer": "Holds newly created objects",
+      "explanation": "The young generation stores newly allocated objects, where most garbage collection occurs, using Eden and Survivor spaces."
+    },
+    {
+      "id": 39,
+      "category": "Java",
+      "question": "What is the output of the following code forcing garbage collection?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        System.gc();\n        System.out.println(\"GC Requested\");\n    }\n}",
+      "options": [
+        "Prints 'GC Requested'",
+        "Throws an exception",
+        "No output",
+        "Depends on GC"
+      ],
+      "correctAnswer": "Prints 'GC Requested'",
+      "explanation": "System.gc() requests garbage collection, but the program prints 'GC Requested' regardless of whether GC runs."
+    },
+    {
+      "id": 40,
+      "category": "Java",
+      "question": "What is a benefit of using JNI?",
+      "code": null,
+      "options": [
+        "Access to platform-specific features",
+        "Improved portability",
+        "Simplified memory management",
+        "Enhanced security"
+      ],
+      "correctAnswer": "Access to platform-specific features",
+      "explanation": "JNI allows Java to interact with platform-specific libraries and hardware, enabling features not available in pure Java."
+    },
+    {
+      "id": 41,
+      "category": "Java",
+      "question": "What is the output of the following reflection code checking interfaces?",
+      "code": "import java.io.Serializable;\npublic class Main implements Serializable {\n    public static void main(String[] args) {\n        System.out.println(Main.class.getInterfaces().length);\n    }\n}",
+      "options": [
+        "Prints '1'",
+        "Prints '0'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints '1'",
+      "explanation": "getInterfaces() returns an array of interfaces implemented by Main, which includes Serializable, so the length is 1."
+    },
+    {
+      "id": 42,
+      "category": "Java",
+      "question": "What is the old generation in the JVM heap?",
+      "code": null,
+      "options": [
+        "Stores short-lived objects",
+        "Holds long-lived objects",
+        "Manages class metadata",
+        "Optimizes thread stacks"
+      ],
+      "correctAnswer": "Holds long-lived objects",
+      "explanation": "The old generation stores objects that survive multiple garbage collections, typically long-lived objects."
+    },
+    {
+      "id": 43,
+      "category": "Java",
+      "question": "What is the output of the following code using Runtime to get CPU count?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        Runtime runtime = Runtime.getRuntime();\n        System.out.println(runtime.availableProcessors() > 0);\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "availableProcessors() returns the number of CPU cores, which is always positive."
+    },
+    {
+      "id": 44,
+      "category": "Java",
+      "question": "What is biased locking in JVM optimization?",
+      "code": null,
+      "options": [
+        "Favoring one thread for lock acquisition",
+        "Splitting locks for concurrency",
+        "Allocating memory for locks",
+        "Collecting garbage during locking"
+      ],
+      "correctAnswer": "Favoring one thread for lock acquisition",
+      "explanation": "Biased locking optimizes performance by favoring the same thread for repeated lock acquisitions, reducing overhead."
+    },
+    {
+      "id": 45,
+      "category": "Java",
+      "question": "What is the output of the following reflection code creating an array?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Object arr = Array.newInstance(Integer.TYPE, 3);\n        System.out.println(Array.getLength(arr));\n    }\n}",
+      "options": [
+        "Prints '3'",
+        "Throws an exception",
+        "Prints '0'",
+        "No output"
+      ],
+      "correctAnswer": "Prints '3'",
+      "explanation": "Array.newInstance creates an int array of length 3, and Array.getLength returns 3."
+    },
+    {
+      "id": 46,
+      "category": "Java",
+      "question": "What is the purpose of the atomic operations in the Java Memory Model?",
+      "code": null,
+      "options": [
+        "Ensure thread-safe updates",
+        "Optimize memory allocation",
+        "Load native libraries",
+        "Manage garbage collection"
+      ],
+      "correctAnswer": "Ensure thread-safe updates",
+      "explanation": "Atomic operations (e.g., via AtomicInteger) ensure thread-safe updates without explicit synchronization."
+    },
+    {
+      "id": 47,
+      "category": "Java",
+      "question": "What is the output of the following JNI code handling strings?",
+      "code": "public class Main {\n    native String getString();\n    static { System.loadLibrary(\"native\"); }\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.getString() != null);\n    }\n}",
+      "options": [
+        "Depends on native implementation",
+        "Prints 'true'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Depends on native implementation",
+      "explanation": "The native method getString() may return a string or null, so the output depends on its implementation."
+    },
+    {
+      "id": 48,
+      "category": "Java",
+      "question": "What is the -Xms JVM option used for?",
+      "code": null,
+      "options": [
+        "Sets initial heap size",
+        "Enables JIT compilation",
+        "Configures thread count",
+        "Loads native libraries"
+      ],
+      "correctAnswer": "Sets initial heap size",
+      "explanation": "-Xms specifies the initial memory allocated to the heap, influencing JVM startup behavior."
+    },
+    {
+      "id": 49,
+      "category": "Java",
+      "question": "What is the output of the following reflection code checking modifiers?",
+      "code": "import java.lang.reflect.*;\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Method m = Main.class.getMethod(\"main\", String[].class);\n        System.out.println(Modifier.isStatic(m.getModifiers()));\n    }\n}",
+      "options": [
+        "Prints 'true'",
+        "Prints 'false'",
+        "Throws an exception",
+        "No output"
+      ],
+      "correctAnswer": "Prints 'true'",
+      "explanation": "The main method is static, so Modifier.isStatic returns true."
+    },
+    {
+      "id": 50,
+      "category": "Java",
+      "question": "What is the purpose of the CMS garbage collector in JVM?",
+      "code": null,
+      "options": [
+        "Minimizes pause times",
+        "Maximizes memory usage",
+        "Optimizes thread scheduling",
+        "Loads native code"
+      ],
+      "correctAnswer": "Minimizes pause times",
+      "explanation": "The Concurrent Mark-Sweep (CMS) collector minimizes application pause times by performing most GC work concurrently."
+    }
+  ]

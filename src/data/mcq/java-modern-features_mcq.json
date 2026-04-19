@@ -1,0 +1,701 @@
+[
+  {
+    "id": 1,
+    "category": "Java",
+    "question": "What is the difference between java.util.Date and java.time.LocalDate?",
+    "code": null,
+    "options": [
+      "LocalDate is immutable, Date is mutable",
+      "Date supports time zones, LocalDate does not",
+      "LocalDate is thread-safe, Date is not",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "explanation": "LocalDate is immutable, does not support time zones, and is thread-safe, unlike the mutable, time-zone-aware java.util.Date."
+  },
+  {
+    "id": 2,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda expression?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        IntFunction<String> func = x -> \"Number: \" + x;\n        System.out.println(func.apply(5));\n    }\n}",
+    "options": [
+      "Prints 'Number: 5'",
+      "Throws an exception",
+      "No output",
+      "Prints '5'"
+    ],
+    "correctAnswer": "Prints 'Number: 5'",
+    "explanation": "The lambda expression defines an IntFunction that concatenates 'Number: ' with the input, producing 'Number: 5'."
+  },
+  {
+    "id": 3,
+    "category": "Java",
+    "question": "What is the purpose of the protected access modifier?",
+    "code": null,
+    "options": [
+      "Allows access only within the same class",
+      "Allows access within the same package and subclasses",
+      "Allows public access globally",
+      "Restricts access to static methods"
+    ],
+    "correctAnswer": "Allows access within the same package and subclasses",
+    "explanation": "The protected modifier allows access within the same package and in subclasses, even across packages."
+  },
+  {
+    "id": 4,
+    "category": "Java",
+    "question": "What is the output of the following Stream API code?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 3);\n        int sum = list.stream().mapToInt(x -> x * 2).sum();\n        System.out.println(sum);\n    }\n}",
+    "options": [
+      "Prints '6'",
+      "Prints '12'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '12'",
+    "explanation": "The stream maps each element (1, 2, 3) to (2, 4, 6) by doubling, then sums them to 12."
+  },
+  {
+    "id": 5,
+    "category": "Java",
+    "question": "What is the Singleton pattern in Java?",
+    "code": null,
+    "options": [
+      "Ensures a class has one instance",
+      "Creates multiple instances",
+      "Manages thread pools",
+      "Handles exceptions"
+    ],
+    "correctAnswer": "Ensures a class has one instance",
+    "explanation": "The Singleton pattern ensures a class has only one instance, providing a global point of access."
+  },
+  {
+    "id": 6,
+    "category": "Java",
+    "question": "What is the output of the following code using DateTimeFormatter?",
+    "code": "import java.time.*;\nimport java.time.format.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDate date = LocalDate.of(2025, 6, 8);\n        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"dd-MM-yyyy\");\n        System.out.println(date.format(formatter));\n    }\n}",
+    "options": [
+      "Prints '08-06-2025'",
+      "Prints '2025-06-08'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '08-06-2025'",
+    "explanation": "DateTimeFormatter formats the LocalDate (2025-06-08) to 'dd-MM-yyyy', producing '08-06-2025'."
+  },
+  {
+    "id": 7,
+    "category": "Java",
+    "question": "What is the output of the following code implementing the Factory pattern?",
+    "code": "interface Animal { String speak(); }\nclass Dog implements Animal { public String speak() { return \"Woof\"; } }\nclass Cat implements Animal { public String speak() { return \"Meow\"; } }\nclass Factory {\n    static Animal create(String type) {\n        return type.equals(\"Dog\") ? new Dog() : new Cat();\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Animal animal = Factory.create(\"Dog\");\n        System.out.println(animal.speak());\n    }\n}",
+    "options": [
+      "Prints 'Woof'",
+      "Prints 'Meow'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Woof'",
+    "explanation": "The Factory creates a Dog instance, which returns 'Woof' when speak() is called."
+  },
+  {
+    "id": 8,
+    "category": "Java",
+    "question": "What is the purpose of packages in Java?",
+    "code": null,
+    "options": [
+      "To handle exceptions",
+      "To organize code and control access",
+      "To optimize performance",
+      "To define lambda expressions"
+    ],
+    "correctAnswer": "To organize code and control access",
+    "explanation": "Packages organize classes into namespaces and control access via access modifiers, improving modularity."
+  },
+  {
+    "id": 9,
+    "category": "Java",
+    "question": "What is the output of the following code using flatMap in Streams?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<List<Integer>> lists = Arrays.asList(Arrays.asList(1, 2), Arrays.asList(3));\n        long count = lists.stream().flatMap(List::stream).count();\n        System.out.println(count);\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Prints' '3'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "flatMap flattens the nested lists ([1, 2], [3]) into a single stream of 1, 2, 3, with a count of 3."
+  },
+  {
+    "id": 10,
+    "category": "Java",
+    "question": "What is the Observer pattern in Java?",
+    "code": null,
+    "options": [
+      "Manages object creation",
+      "Notifies objects of state changes",
+      "Handles concurrent access",
+      "Optimizes memory usage"
+    ],
+    "correctAnswer": "Notifies objects of state changes",
+    "explanation": "The Observer pattern allows objects (observers) to be notified of changes in another object’s state, useful for event-driven systems."
+  },
+  {
+    "id": 11,
+    "category": "Java",
+    "question": "What is the output of the following code using a method reference?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = Arrays.asList(\"java\", \"python\");\n        list.forEach(System.out::println);\n    }\n}",
+    "options": [
+      "Prints 'java' and 'python' on separate lines",
+      "Throws an exception",
+      "No output",
+      "Prints '[java, python]'"
+    ],
+    "correctAnswer": "Prints 'java' and 'python' on separate lines",
+    "explanation": "The method reference System.out::println is used as a Consumer, printing each element on a new line."
+  },
+  {
+    "id": 12,
+    "category": "Java",
+    "question": "What is the output of the following code using ZonedDateTime?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        ZonedDateTime zdt = ZonedDateTime.of(2025, 6, 8, 12, 0, 0, 0, ZoneId.of(\"UTC\"));\n        System.out.println(zdt.getHour());\n    }\n}",
+    "options": [
+      "Prints '12'",
+      "Throws an exception",
+      "Prints '0'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '12'",
+    "explanation": "ZonedDateTime is created with hour 12 in UTC, and getHour() returns 12."
+  },
+  {
+    "id": 13,
+    "category": "Java",
+    "question": "What is the default access modifier for a class member if none is specified?",
+    "code": null,
+    "options": [
+      "public",
+      "protected",
+      "private",
+      "package-private"
+    ],
+    "correctAnswer": "package-private",
+    "explanation": "If no access modifier is specified, class members are package-private, accessible only within the same package."
+  },
+  {
+    "id": 14,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream filter?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 3, 4);\n        long count = list.stream().filter(x -> x % 2 == 0).count();\n        System.out.println(count);\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Prints '4'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '2'",
+    "explanation": "The filter keeps even numbers (2, 4), and count() returns 2."
+  },
+  {
+    "id": 15,
+    "category": "Java",
+    "question": "What is the Factory Method pattern?",
+    "code": null,
+    "options": [
+      "Defers instantiation to subclasses",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Decorates objects"
+    ],
+    "correctAnswer": "Defers instantiation to subclasses",
+    "explanation": "The Factory Method pattern defines an interface for creating objects, letting subclasses decide which class to instantiate."
+  },
+  {
+    "id": 16,
+    "category": "Java",
+    "question": "What is the output of the following code using Duration?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalTime start = LocalTime.of(10, 0);\n        LocalTime end = LocalTime.of(12, 30);\n        Duration duration = Duration.between(start, end);\n        System.out.println(duration.toHours());\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Prints '150'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '2'",
+    "explanation": "Duration.between calculates the time between 10:00 and 12:30 (2.5 hours), and toHours() returns 2 (integer part)."
+  },
+  {
+    "id": 17,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with Predicate?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        Predicate<Integer> isPositive = x -> x > 0;\n        System.out.println(isPositive.test(-5));\n    }\n}",
+    "options": [
+      "Prints 'false'",
+      "Prints 'true'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'false'",
+    "explanation": "The Predicate tests if -5 is positive, returning false."
+  },
+  {
+    "id": 18,
+    "category": "Java",
+    "question": "What is the purpose of the package-info.java file?",
+    "code": null,
+    "options": [
+      "Defines package-level annotations",
+      "Declares lambda expressions",
+      "Manages access modifiers",
+      "Handles exceptions"
+    ],
+    "correctAnswer": "Defines package-level annotations",
+    "explanation": "package-info.java is used to specify package-level annotations and documentation."
+  },
+  {
+    "id": 19,
+    "category": "Java",
+    "question": "What is the output of the following code implementing the Decorator pattern?",
+    "code": "interface Coffee { String getDescription(); }\nclass SimpleCoffee implements Coffee { public String getDescription() { return \"Coffee\"; } }\nclass MilkDecorator implements Coffee {\n    private Coffee coffee;\n    MilkDecorator(Coffee coffee) { this.coffee = coffee; }\n    public String getDescription() { return coffee.getDescription() + \", Milk\"; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Coffee coffee = new MilkDecorator(new SimpleCoffee());\n        System.out.println(coffee.getDescription());\n    }\n}",
+    "options": [
+      "Prints 'Coffee, Milk'",
+      "Prints 'Coffee'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Coffee, Milk'",
+    "explanation": "The Decorator pattern adds 'Milk' to the SimpleCoffee’s description, producing 'Coffee, Milk'."
+  },
+  {
+    "id": 20,
+    "category": "Java",
+    "question": "What is the output of the following code using parallelStream?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 3);\n        int sum = list.parallelStream().reduce(0, Integer::sum);\n        System.out.println(sum);\n    }\n}",
+    "options": [
+      "Prints '6'",
+      "Throws an exception",
+      "No output",
+      "Unpredictable output"
+    ],
+    "correctAnswer": "Prints '6'",
+    "explanation": "parallelStream sums the elements (1, 2, 3) to 6, with consistent results for associative operations like sum."
+  },
+  {
+    "id": 21,
+    "category": "Java",
+    "question": "What is the Adapter pattern in Java?",
+    "code": null,
+    "options": [
+      "Converts an interface to another",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Decorates objects"
+    ],
+    "correctAnswer": "Converts an interface to another",
+    "explanation": "The Adapter pattern converts the interface of a class into another interface that a client expects."
+  },
+  {
+    "id": 22,
+    "category": "Java",
+    "question": "What is the output of the following code using LocalDateTime?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDateTime ldt = LocalDateTime.of(2025, 6, 8, 12, 0);\n        LocalDateTime newLdt = ldt.plusDays(1);\n        System.out.println(newLdt.getDayOfMonth());\n    }\n}",
+    "options": [
+      "Prints '9'",
+      "Prints '8'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '9'",
+    "explanation": "plusDays(1) adds one day to June 8, 2025, resulting in June 9, 2025, and getDayOfMonth() returns 9."
+  },
+  {
+    "id": 23,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with BiFunction?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        BiFunction<Integer, Integer, Integer> add = (a, b) -> a + b;\n        System.out.println(add.apply(2, 3));\n    }\n}",
+    "options": [
+      "Prints '5'",
+      "Throws an exception",
+      "No output",
+      "Prints '6'"
+    ],
+    "correctAnswer": "Prints '5'",
+    "explanation": "The BiFunction lambda adds 2 and 3, returning 5."
+  },
+  {
+    "id": 24,
+    "category": "Java",
+    "question": "What is the output of the following code with package-private access?",
+    "code": "// com/example/MyClass.java\npackage com.example;\nclass MyClass {\n    String getName() { return \"Test\"; }\n}\n// com/example/Main.java\npackage com.example;\npublic class Main {\n    public static void main(String[] args) {\n        MyClass mc = new MyClass();\n        System.out.println(mc.getName());\n    }\n}",
+    "options": [
+      "Prints 'Test'",
+      "Throws a compilation error",
+      "No output",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Prints 'Test'",
+    "explanation": "The package-private class and method are accessible within the same package, printing 'Test'."
+  },
+  {
+    "id": 25,
+    "category": "Java",
+    "question": "What is the Builder pattern in Java?",
+    "code": null,
+    "options": [
+      "Constructs complex objects step-by-step",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Converts interfaces"
+    ],
+    "correctAnswer": "Constructs complex objects step-by-step",
+    "explanation": "The Builder pattern constructs complex objects by separating construction from representation."
+  },
+  {
+    "id": 26,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream collect?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = Arrays.asList(\"a\", \"b\", \"c\");\n        String result = list.stream().collect(Collectors.joining(\",\"));\n        System.out.println(result);\n    }\n}",
+    "options": [
+      "Prints 'a,b,c'",
+      "Prints '[a, b, c]'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'a,b,c'",
+    "explanation": "Collectors.joining(',') concatenates stream elements with a comma delimiter, producing 'a,b,c'."
+  },
+  {
+    "id": 27,
+    "category": "Java",
+    "question": "What is the output of the following code using Period?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDate start = LocalDate.of(2025, 6, 8);\n        LocalDate end = LocalDate.of(2025, 12, 8);\n        Period period = Period.between(start, end);\n        System.out.println(period.getMonths());\n    }\n}",
+    "options": [
+      "Prints '6'",
+      "Prints '12'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '6'",
+    "explanation": "Period.between calculates 6 months between June 8, 2025, and December 8, 2025."
+  },
+  {
+    "id": 28,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with Supplier?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        Supplier<String> supplier = () -> \"Hello\";\n        System.out.println(supplier.get());\n    }\n}",
+    "options": [
+      "Prints 'Hello'",
+      "Throws an exception",
+      "No output",
+      "Prints 'null'"
+    ],
+    "correctAnswer": "Prints 'Hello'",
+    "explanation": "The Supplier lambda returns 'Hello' when get() is called."
+  },
+  {
+    "id": 29,
+    "category": "Java",
+    "question": "What is the output of the following code with protected access across packages?",
+    "code": "// com/parent/Base.java\npackage com.parent;\npublic class Base {\n    protected String name = \"Base\";\n}\n// com/child/Main.java\npackage com.child;\nimport com.parent.Base;\npublic class Main extends Base {\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.name);\n    }\n}",
+    "options": [
+      "Prints 'Base'",
+      "Throws a compilation error",
+      "No output",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Prints 'Base'",
+    "explanation": "The protected field is accessible in the subclass Main, printing 'Base'."
+  },
+  {
+    "id": 30,
+    "category": "Java",
+    "question": "What is the output of the following code implementing the Strategy pattern?",
+    "code": "interface Strategy { int execute(int a, int b); }\nclass Add implements Strategy { public int execute(int a, int b) { return a + b; } }\nclass Context {\n    private Strategy strategy;\n    Context(Strategy strategy) { this.strategy = strategy; }\n    int execute(int a, int b) { return strategy.execute(a, b); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Context context = new Context(new Add());\n        System.out.println(context.execute(2, 3));\n    }\n}",
+    "options": [
+      "Prints '5'",
+      "Prints '6'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '5'",
+    "explanation": "The Strategy pattern uses the Add strategy to compute 2 + 3, printing 5."
+  },
+  {
+    "id": 31,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream sorted?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(3, 1, 2);\n        String result = list.stream().sorted().map(String::valueOf).collect(Collectors.joining());\n        System.out.println(result);\n    }\n}",
+    "options": [
+      "Prints '123'",
+      "Prints '321'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '123'",
+    "explanation": "The stream sorts (3, 1, 2) to (1, 2, 3), converts to strings, and joins them to '123'."
+  },
+  {
+    "id": 32,
+    "category": "Java",
+    "question": "What is the output of the following code using ZoneOffset?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDateTime ldt = LocalDateTime.of(2025, 6, 8, 12, 0);\n        OffsetDateTime odt = ldt.atOffset(ZoneOffset.UTC);\n        System.out.println(odt.getOffset().getTotalSeconds());\n    }\n}",
+    "options": [
+      "Prints '0'",
+      "Throws an exception",
+      "Prints '3600'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '0'",
+    "explanation": "ZoneOffset.UTC has a zero offset (0 seconds) from UTC."
+  },
+  {
+    "id": 33,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with Consumer?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        Consumer<String> consumer = s -> System.out.print(s);\n        consumer.accept(\"Hello\");\n    }\n}",
+    "options": [
+      "Prints 'Hello'",
+      "Throws an exception",
+      "No output",
+      "Prints 'null'"
+    ],
+    "correctAnswer": "Prints 'Hello'",
+    "explanation": "The Consumer lambda prints the input string 'Hello'."
+  },
+  {
+    "id": 34,
+    "category": "Java",
+    "question": "What is the output of the following code with private access?",
+    "code": "public class Main {\n    private String name = \"Secret\";\n    public String getName() { return name; }\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.getName());\n    }\n}",
+    "options": [
+      "Prints 'Secret'",
+      "Throws a compilation error",
+      "No output",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Prints 'Secret'",
+    "explanation": "The private field is accessed via a public getter, printing 'Secret'."
+  },
+  {
+    "id": 35,
+    "category": "Java",
+    "question": "What is the Proxy pattern in Java?",
+    "code": null,
+    "options": [
+      "Controls access to an object",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Constructs objects"
+    ],
+    "correctAnswer": "Controls access to an object",
+    "explanation": "The Proxy pattern provides a surrogate to control access to another object, often for lazy initialization or security."
+  },
+  {
+    "id": 36,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream distinct?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 2, 3);\n        long count = list.stream().distinct().count();\n        System.out.println(count);\n    }\n}",
+    "options": [
+      "Prints '3'",
+      "Prints '4'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '3'",
+    "explanation": "distinct() removes duplicates, leaving (1, 2, 3), and count() returns 3."
+  },
+  {
+    "id": 37,
+    "category": "Java",
+    "question": "What is the output of the following code using Instant?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        Instant start = Instant.parse(\"2025-06-08T12:00:00Z\");\n        Instant end = start.plusSeconds(3600);\n        System.out.println(end.getEpochSecond() - start.getEpochSecond());\n    }\n}",
+    "options": [
+      "Prints '3600'",
+      "Throws an exception",
+      "Prints '0'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '3600'",
+    "explanation": "plusSeconds(3600) adds 1 hour, and the epoch second difference is 3600."
+  },
+  {
+    "id": 38,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with Function?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        Function<String, Integer> length = String::length;\n        System.out.println(length.apply(\"Java\"));\n    }\n}",
+    "options": [
+      "Prints '4'",
+      "Throws an exception",
+      "No output",
+      "Prints '0'"
+    ],
+    "correctAnswer": "Prints '4'",
+    "explanation": "The method reference String::length returns the length of 'Java', which is 4."
+  },
+  {
+    "id": 39,
+    "category": "Java",
+    "question": "What is the output of the following code with package access across packages?",
+    "code": "// com/parent/Base.java\npackage com.parent;\npublic class Base {\n    String name = \"Base\"; // package-private\n}\n// com/child/Main.java\npackage com.child;\nimport com.parent.Base;\npublic class Main extends Base {\n    public static void main(String[] args) {\n        Main m = new Main();\n        System.out.println(m.name);\n    }\n}",
+    "options": [
+      "Throws a compilation error",
+      "Prints 'Base'",
+      "No output",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Throws a compilation error",
+    "explanation": "The package-private field is not accessible in a different package, even in a subclass."
+  },
+  {
+    "id": 40,
+    "category": "Java",
+    "question": "What is the output of the following code implementing the Command pattern?",
+    "code": "interface Command { void execute(); }\nclass LightOn implements Command {\n    public void execute() { System.out.println(\"Light On\"); }\n}\nclass Invoker {\n    private Command command;\n    Invoker(Command command) { this.command = command; }\n    void execute() { command.execute(); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Invoker invoker = new Invoker(new LightOn());\n        invoker.execute();\n    }\n}",
+    "options": [
+      "Prints 'Light On'",
+      "Throws an exception",
+      "No output",
+      "Prints 'Light Off'"
+    ],
+    "correctAnswer": "Prints 'Light On'",
+    "explanation": "The Command pattern encapsulates the LightOn action, executed via the Invoker, printing 'Light On'."
+  },
+  {
+    "id": 41,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream peek?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 3);\n        long count = list.stream().peek(System.out::println).count();\n        System.out.println(count);\n    }\n}",
+    "options": [
+      "Prints '1 2 3 3'",
+      "Prints '3'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '1 2 3 3'",
+    "explanation": "peek() prints each element (1, 2, 3), and count() returns 3, resulting in '1 2 3 3'."
+  },
+  {
+    "id": 42,
+    "category": "Java",
+    "question": "What is the output of the following code using DateTimeFormatter with locale?",
+    "code": "import java.time.*;\nimport java.time.format.*;\nimport java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDate date = LocalDate.of(2025, 6, 8);\n        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"MMMM d, yyyy\", Locale.US);\n        System.out.println(date.format(formatter));\n    }\n}",
+    "options": [
+      "Prints 'June 8, 2025'",
+      "Prints '08 June 2025'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'June 8, 2025'",
+    "explanation": "The formatter with Locale.US formats June 8, 2025, as 'June 8, 2025'."
+  },
+  {
+    "id": 43,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with BinaryOperator?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        BinaryOperator<Integer> multiply = (a, b) -> a * b;\n        System.out.println(multiply.apply(2, 3));\n    }\n}",
+    "options": [
+      "Prints '6'",
+      "Throws an exception",
+      "No output",
+      "Prints '5'"
+    ],
+    "correctAnswer": "Prints '6'",
+    "explanation": "The BinaryOperator lambda multiplies 2 and 3, returning 6."
+  },
+  {
+    "id": 44,
+    "category": "Java",
+    "question": "What is the purpose of the public access modifier?",
+    "code": null,
+    "options": [
+      "Restricts access to the same class",
+      "Allows access from anywhere",
+      "Limits access to the same package",
+      "Applies only to static members"
+    ],
+    "correctAnswer": "Allows access from anywhere",
+    "explanation": "The public modifier allows access to a member from any class or package."
+  },
+  {
+    "id": 45,
+    "category": "Java",
+    "question": "What is the Chain of Responsibility pattern?",
+    "code": null,
+    "options": [
+      "Passes requests along a chain",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Constructs objects"
+    ],
+    "correctAnswer": "Passes requests along a chain",
+    "explanation": "The Chain of Responsibility pattern passes a request along a chain of handlers until one processes it."
+  },
+  {
+    "id": 46,
+    "category": "Java",
+    "question": "What is the output of the following code using Stream anyMatch?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(1, 2, 3);\n        boolean hasEven = list.stream().anyMatch(x -> x % 2 == 0);\n        System.out.println(hasEven);\n    }\n}",
+    "options": [
+      "Prints 'true'",
+      "Prints 'false'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'true'",
+    "explanation": "anyMatch returns true if any element (e.g., 2) satisfies the predicate x % 2 == 0."
+  },
+  {
+    "id": 47,
+    "category": "Java",
+    "question": "What is the output of the following code using ChronoUnit?",
+    "code": "import java.time.*;\npublic class Main {\n    public static void main(String[] args) {\n        LocalDate start = LocalDate.of(2025, 6, 8);\n        LocalDate end = LocalDate.of(2025, 6, 10);\n        long days = ChronoUnit.DAYS.between(start, end);\n        System.out.println(days);\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Throws an exception",
+      "Prints '1'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '2'",
+    "explanation": "ChronoUnit.DAYS.between calculates 2 days between June 8 and June 10, 2025."
+  },
+  {
+    "id": 48,
+    "category": "Java",
+    "question": "What is the output of the following code using a lambda with UnaryOperator?",
+    "code": "import java.util.function.*;\npublic class Main {\n    public static void main(String[] args) {\n        UnaryOperator<Integer> square = x -> x * x;\n        System.out.println(square.apply(4));\n    }\n}",
+    "options": [
+      "Prints '16'",
+      "Throws an exception",
+      "No output",
+      "Prints '4'"
+    ],
+    "correctAnswer": "Prints '16'",
+    "explanation": "The UnaryOperator lambda squares 4, returning 16."
+  },
+  {
+    "id": 49,
+    "category": "Java",
+    "question": "What is the output of the following code with import statements?",
+    "code": "// com/example/Main.java\npackage com.example;\nimport java.util.List;\nimport java.util.ArrayList;\npublic class Main {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"Java\");\n        System.out.println(list.get(0));\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "No output",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "The imports allow List and ArrayList usage, and the code adds and retrieves 'Java'."
+  },
+  {
+    "id": 50,
+    "category": "Java",
+    "question": "What is the Template Method pattern?",
+    "code": null,
+    "options": [
+      "Defines algorithm skeleton with customizable steps",
+      "Ensures a single instance",
+      "Notifies state changes",
+      "Controls object access"
+    ],
+    "correctAnswer": "Defines algorithm skeleton with customizable steps",
+    "explanation": "The Template Method pattern defines an algorithm’s skeleton in a superclass, allowing subclasses to customize specific steps."
+  }
+]

@@ -4,7 +4,8 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import { 
   CheckCircleIcon,
-  TagIcon
+  TagIcon,
+  CodeBracketIcon
 } from "@heroicons/react/24/outline";
 import { CheckCircleIcon as CheckCircleSolid, TagIcon as TagIconSolid } from "@heroicons/react/24/solid";
 import { Badge } from "../../../../components/ui/badge";
@@ -94,6 +95,20 @@ export default async function JavaInterviewListingPage() {
                 Revision
               </div>
             </div>
+          </div>
+          <div className="mt-8 flex gap-4">
+            <Link 
+              href="/practice/java"
+              className="flex items-center gap-3 px-6 py-3 bg-primary/5 border border-primary/10 rounded-2xl text-primary hover:bg-primary/10 transition-all group"
+            >
+              <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <CodeBracketIcon className="w-4 h-4" />
+              </div>
+              <div>
+                <div className="text-[10px] font-black uppercase tracking-widest opacity-60">Practice Mode</div>
+                <div className="text-sm font-bold">Java Code Practice</div>
+              </div>
+            </Link>
           </div>
         </div>
 

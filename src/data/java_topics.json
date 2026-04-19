@@ -6,12 +6,7 @@
       "slug": "core-java",
       "description": "Master fundamental Java concepts essential for all developers, forming the foundation for building robust applications.",
       "difficulty": "Beginner",
-      "tags": [
-        "Java",
-        "Basics",
-        "Programming",
-        "Interview"
-      ],
+      "tags": ["Java", "Basics", "Programming", "Interview"],
       "subtopics": [
         {
           "id": "core-java-basics",
@@ -19,12 +14,7 @@
           "slug": "core-java-basics",
           "description": "Understand Java syntax, data types, variables, operators, and control flow (if-else, loops).",
           "difficulty": "Beginner",
-          "tags": [
-            "Java",
-            "Basics",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Java", "Basics", "Beginner", "Interview"],
           "related_questions": [
             "What is the difference between JDK, JRE, and JVM?",
             "Explain the significance of the 'public static void main' method in Java.",
@@ -37,16 +27,24 @@
           "slug": "core-java-oops",
           "description": "Learn Object-Oriented Programming principles like inheritance, polymorphism, encapsulation, and abstraction.",
           "difficulty": "Beginner",
-          "tags": [
-            "OOPs",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["OOPs", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What are the four pillars of OOP in Java?",
             "Explain the difference between method overloading and method overriding.",
             "How does abstraction differ from encapsulation?"
+          ]
+        },
+        {
+          "id": "core-java-collections",
+          "title": "Collections Framework",
+          "slug": "core-java-collections",
+          "description": "Utilize Java's built-in data structures like List, Set, Map, and their implementations (ArrayList, HashSet, HashMap).",
+          "difficulty": "Beginner",
+          "tags": ["Collections", "Java", "Beginner", "Interview"],
+          "related_questions": [
+            "What is the difference between ArrayList and LinkedList?",
+            "How does HashMap work internally in Java?",
+            "Explain the difference between Set and List interfaces."
           ]
         },
         {
@@ -55,16 +53,24 @@
           "slug": "core-java-exceptions",
           "description": "Manage errors using try-catch, throw, throws, and custom exceptions.",
           "difficulty": "Beginner",
-          "tags": [
-            "Exceptions",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Exceptions", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What is the difference between checked and unchecked exceptions?",
             "Explain the hierarchy of exception classes in Java.",
             "How do you create a custom exception in Java?"
+          ]
+        },
+        {
+          "id": "core-java-collections-internal-working",
+          "title": "Core Java Collections: Internal Working of List, Set, Map, and Queue",
+          "slug": "core-java-collections-internal-working",
+          "description": "Utilize Java's built-in data structures like List, Set, Map, and their implementations (ArrayList, HashSet, HashMap).",
+          "difficulty": "Beginner",
+          "tags": ["Collections", "Java", "Beginner", "Interview"],
+          "related_questions": [
+            "What is the difference between ArrayList and LinkedList?",
+            "How does HashMap work internally in Java?",
+            "Explain the difference between Set and List interfaces."
           ]
         },
         {
@@ -73,11 +79,7 @@
           "slug": "core-java-io",
           "description": "Work with file handling and I/O operations using streams, readers, and writers.",
           "difficulty": "Intermediate",
-          "tags": [
-            "IO",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["IO", "Java", "Intermediate"],
           "related_questions": [
             "What is the difference between InputStream and Reader classes?",
             "How do you read a file using BufferedReader in Java?",
@@ -90,12 +92,7 @@
           "slug": "core-java-strings",
           "description": "Master String manipulation, StringBuilder, StringBuffer, and immutability concepts.",
           "difficulty": "Beginner",
-          "tags": [
-            "Strings",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Strings", "Java", "Beginner", "Interview"],
           "related_questions": [
             "Why are Strings immutable in Java?",
             "What is the difference between StringBuilder and StringBuffer?",
@@ -108,11 +105,7 @@
           "slug": "core-java-annotations",
           "description": "Use built-in and custom annotations for metadata and code processing.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Annotations",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Annotations", "Java", "Intermediate"],
           "related_questions": [
             "What are annotations in Java and their use cases?",
             "Explain the @Override annotation and its purpose.",
@@ -125,12 +118,7 @@
           "slug": "core-java-generics",
           "description": "Implement type-safe collections and methods using generics and bounded types.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Generics",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Generics", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What are generics in Java and why are they used?",
             "Explain bounded type parameters in generics.",
@@ -143,11 +131,7 @@
           "slug": "core-java-inner-classes",
           "description": "Understand nested, static, and anonymous inner classes and their use cases.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Inner Classes",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Inner Classes", "Java", "Intermediate"],
           "related_questions": [
             "What is the difference between a static and non-static inner class?",
             "Explain the use of anonymous inner classes in Java.",
@@ -160,11 +144,7 @@
           "slug": "core-java-serialization",
           "description": "Persist and reconstruct objects using Java's serialization mechanism.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Serialization",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Serialization", "Java", "Intermediate"],
           "related_questions": [
             "What is serialization and why is it used in Java?",
             "Explain the role of the transient keyword in serialization.",
@@ -177,12 +157,7 @@
           "slug": "core-java-multithreading",
           "description": "Learn the fundamentals of creating and managing threads in Java for concurrent programming.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Multithreading",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Multithreading", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is the difference between a thread and a process in Java?",
             "How do you create a thread using the Thread class and Runnable interface?",
@@ -195,12 +170,7 @@
           "slug": "core-java-packages",
           "description": "Organize code using packages and control access with public, private, protected, and default modifiers.",
           "difficulty": "Beginner",
-          "tags": [
-            "Packages",
-            "Java",
-            "Access Modifiers",
-            "Beginner"
-          ],
+          "tags": ["Packages", "Java", "Access Modifiers", "Beginner"],
           "related_questions": [
             "What is the purpose of packages in Java?",
             "How do access modifiers affect class, method, and variable visibility?",
@@ -213,11 +183,7 @@
           "slug": "core-java-date-time",
           "description": "Work with modern date and time handling using Java's java.time package (LocalDate, LocalTime, etc.).",
           "difficulty": "Intermediate",
-          "tags": [
-            "Date and Time",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Date and Time", "Java", "Intermediate"],
           "related_questions": [
             "What is the difference between java.util.Date and java.time.LocalDate?",
             "How do you format a date using DateTimeFormatter in Java?",
@@ -227,41 +193,12 @@
       ]
     },
     {
-      "id": "collections",
-      "title": "Java Collections Framework",
-      "slug": "collections",
-      "description": "Expert-level deep dive into HashMap, Concurrent Collections, Sorting, and Generics pitfalls.",
-      "difficulty": "Intermediate",
-      "tags": ["Collections", "Data Structures", "Java"],
-      "subtopics": [
-        { "id": "hashmap-internals", "title": "HashMap Internals (RB-Trees)", "slug": "hashmap-internals", "difficulty": "Advanced", "tags": ["HashMap", "Internal", "Interview"] },
-        { "id": "concurrenthashmap-locking", "title": "ConcurrentHashMap Locking", "slug": "concurrenthashmap-locking", "difficulty": "Advanced", "tags": ["Concurrent", "HashMap", "Locking"] },
-        { "id": "arraylist-vs-linkedlist", "title": "ArrayList vs LinkedList", "slug": "arraylist-vs-linkedlist", "difficulty": "Beginner", "tags": ["List", "Collection"] },
-        { "id": "comparator-vs-comparable", "title": "Comparator vs Comparable", "slug": "comparator-vs-comparable", "difficulty": "Intermediate", "tags": ["Sorting", "Comparator"] },
-        { "id": "copyonwritearraylist", "title": "CopyOnWriteArrayList", "slug": "copyonwritearraylist", "difficulty": "Advanced", "tags": ["Concurrent", "List"] },
-        { "id": "weakhashmap-and-references", "title": "WeakHashMap & References", "slug": "weakhashmap-and-references", "difficulty": "Advanced", "tags": ["HashMap", "Reference"] },
-        { "id": "priority-queue", "title": "PriorityQueue Guide", "slug": "priority-queue", "difficulty": "Intermediate", "tags": ["Queue", "Collection"] },
-        { "id": "generic-array-pitfalls", "title": "Generic Array Pitfalls", "slug": "generic-array-pitfalls", "difficulty": "Advanced", "tags": ["Generics", "Array"] },
-        { "id": "collections-utility-puzzles", "title": "Utility Puzzles & Conversions", "slug": "collections-utility-puzzles", "difficulty": "Intermediate", "tags": ["Collections", "Utility"] },
-        { "id": "sorting-custom-objects", "title": "Sorting Custom Objects", "slug": "sorting-custom-objects", "difficulty": "Intermediate", "tags": ["Sorting", "Comparator"] },
-        { "id": "iterator-vs-listiterator", "title": "Iterator vs ListIterator", "slug": "iterator-vs-listiterator", "difficulty": "Beginner", "tags": ["Iterator", "List"] },
-        { "id": "synchronized-vs-concurrent-collections", "title": "Synchronized vs Concurrent", "slug": "synchronized-vs-concurrent-collections", "difficulty": "Advanced", "tags": ["Concurrent", "Collections"] },
-        { "id": "immutable-class-guide", "title": "Immutable Class Guide", "slug": "immutable-class-guide", "difficulty": "Intermediate", "tags": ["Immutability", "Best Practice"] },
-        { "id": "cloning-shallow-vs-deep", "title": "Shallow vs Deep Cloning", "slug": "cloning-shallow-vs-deep", "difficulty": "Intermediate", "tags": ["Cloning", "Object"] }
-      ]
-    },
-    {
       "id": "advanced-java",
       "title": "Advanced Java",
       "slug": "advanced-java",
       "description": "Explore in-depth Java features for building scalable, performant, and complex systems.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Java",
-        "Advanced",
-        "Concurrency",
-        "Interview"
-      ],
+      "tags": ["Java", "Advanced", "Concurrency", "Interview"],
       "subtopics": [
         {
           "id": "advanced-java-multithreading",
@@ -269,12 +206,7 @@
           "slug": "advanced-java-multithreading",
           "description": "Master concurrent programming with threads, executors, and synchronization mechanisms.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Multithreading",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Multithreading", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is the difference between a thread and a process?",
             "Explain the use of the synchronized keyword in Java.",
@@ -287,12 +219,7 @@
           "slug": "advanced-java-concurrency",
           "description": "Use java.util.concurrent package for locks, semaphores, and thread pools.",
           "difficulty": "Advanced",
-          "tags": [
-            "Concurrency",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Concurrency", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is a ReentrantLock and how does it differ from synchronized?",
             "Explain the purpose of the Fork/Join framework.",
@@ -305,13 +232,7 @@
           "slug": "advanced-java-memory",
           "description": "Understand memory management, garbage collection, and JVM optimization techniques.",
           "difficulty": "Advanced",
-          "tags": [
-            "JVM",
-            "Memory",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["JVM", "Memory", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What are the different memory areas in the JVM?",
             "Explain the garbage collection process in Java.",
@@ -324,12 +245,7 @@
           "slug": "advanced-java-patterns",
           "description": "Apply creational, structural, and behavioral patterns like Singleton, Factory, and Observer.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Design Patterns",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Design Patterns", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is the Singleton pattern and how is it implemented in Java?",
             "Explain the Factory Method pattern with an example.",
@@ -342,11 +258,7 @@
           "slug": "advanced-java-reflection",
           "description": "Use Java's reflection API for dynamic class and method manipulation.",
           "difficulty": "Advanced",
-          "tags": [
-            "Reflection",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Reflection", "Java", "Advanced"],
           "related_questions": [
             "What is reflection in Java and when should it be used?",
             "How do you access private fields using reflection?",
@@ -359,13 +271,7 @@
           "slug": "advanced-java-lambda",
           "description": "Leverage functional programming with lambda expressions and the Stream API.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Lambda",
-            "Streams",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Lambda", "Streams", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is a lambda expression and how is it used in Java?",
             "Explain the difference between map() and flatMap() in Streams.",
@@ -378,11 +284,7 @@
           "slug": "advanced-java-modules",
           "description": "Organize code using the Java Platform Module System for modularity.",
           "difficulty": "Advanced",
-          "tags": [
-            "Modules",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Modules", "Java", "Advanced"],
           "related_questions": [
             "What is the Java Platform Module System (JPMS)?",
             "How do you define a module in Java?",
@@ -395,11 +297,7 @@
           "slug": "advanced-java-jni",
           "description": "Integrate Java with native code (C/C++) using JNI.",
           "difficulty": "Advanced",
-          "tags": [
-            "JNI",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["JNI", "Java", "Advanced"],
           "related_questions": [
             "What is JNI and why is it used?",
             "How do you call a C function from Java using JNI?",
@@ -412,11 +310,7 @@
           "slug": "advanced-java-performance",
           "description": "Optimize Java applications for speed and memory efficiency.",
           "difficulty": "Advanced",
-          "tags": [
-            "Performance",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Performance", "Java", "Advanced"],
           "related_questions": [
             "How do you profile a Java application for performance?",
             "What are some common performance bottlenecks in Java?",
@@ -429,12 +323,7 @@
           "slug": "advanced-java-jvm-internals",
           "description": "Dive into JVM architecture, class loading, and runtime optimizations.",
           "difficulty": "Advanced",
-          "tags": [
-            "JVM",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["JVM", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is the role of the ClassLoader in the JVM?",
             "Explain the JIT compiler in the JVM.",
@@ -444,160 +333,204 @@
       ]
     },
     {
-      "id": "spring",
-      "title": "Spring & Spring Boot",
-      "slug": "spring",
-      "description": "Deep dive into IoC, Dependency Injection, Spring Boot Magic, and Security.",
+      "id": "spring-framework",
+      "title": "Spring Framework",
+      "slug": "spring-framework",
+      "description": "Core framework for building modern Java enterprise applications with dependency injection and modularity.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Spring",
-        "Spring Boot",
-        "Java",
-        "Microservices"
-      ],
+      "tags": ["Spring", "Enterprise", "Java", "Interview"],
       "subtopics": [
         {
-          "id": "ioc-and-di",
-          "title": "IoC and Dependency Injection",
-          "slug": "ioc-and-di",
-          "description": "The fundamental principles of the Spring Framework.",
+          "id": "spring-core",
+          "title": "Spring Core",
+          "slug": "spring-core",
+          "description": "Understand dependency injection, IoC container, and bean lifecycle in Spring.",
           "difficulty": "Intermediate",
-          "tags": ["Core", "DI"]
+          "tags": ["Spring", "Core", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What is Inversion of Control (IoC) in Spring?",
+            "Explain the lifecycle of a Spring bean.",
+            "What is the difference between @Component and @Bean annotations?"
+          ]
         },
         {
-          "id": "bean-lifecycle",
-          "title": "Spring Bean Lifecycle",
-          "slug": "bean-lifecycle",
-          "description": "Manage the lifecycle and scopes of Spring-managed beans.",
+          "id": "spring-boot",
+          "title": "Spring Boot",
+          "slug": "spring-boot",
+          "description": "Build production-ready applications with minimal configuration and embedded servers.",
           "difficulty": "Intermediate",
-          "tags": ["Core"]
+          "tags": ["Spring Boot", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What are the advantages of Spring Boot over Spring?",
+            "How does Spring Boot auto-configuration work?",
+            "What is the role of the @SpringBootApplication annotation?"
+          ]
         },
         {
-          "id": "springbootapplication-annotations",
-          "title": "@SpringBootApplication & Magic",
-          "slug": "springbootapplication-annotations",
-          "description": "Component scanning, auto-configuration, and configuration.",
+          "id": "spring-mvc",
+          "title": "Spring MVC",
+          "slug": "spring-mvc",
+          "description": "Develop web applications using Spring's Model-View-Controller framework.",
           "difficulty": "Intermediate",
-          "tags": ["Boot"]
+          "tags": ["Spring MVC", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What is the DispatcherServlet in Spring MVC?",
+            "Explain the flow of a request in Spring MVC.",
+            "How do you handle form submissions in Spring MVC?"
+          ]
         },
         {
-          "id": "singleton-spring-vs-java",
-          "title": "Singleton: Spring vs Java",
-          "slug": "singleton-spring-vs-java",
-          "description": "Comparing Spring singleton scope with the GOF pattern.",
+          "id": "spring-security",
+          "title": "Spring Security",
+          "slug": "spring-security",
+          "description": "Implement authentication, authorization, and secure APIs with Spring Security.",
+          "difficulty": "Intermediate",
+          "tags": ["Security", "Spring", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "How does Spring Security handle authentication?",
+            "What is the purpose of the @PreAuthorize annotation?",
+            "How do you configure Spring Security for JWT-based authentication?"
+          ]
+        },
+        {
+          "id": "spring-webflux",
+          "title": "Spring WebFlux",
+          "slug": "spring-webflux",
+          "description": "Develop reactive, non-blocking web applications using Spring WebFlux.",
           "difficulty": "Advanced",
-          "tags": ["Design Patterns"]
+          "tags": ["Reactive", "Spring", "Java", "Advanced"],
+          "related_questions": [
+            "What is the difference between Spring MVC and Spring WebFlux?",
+            "How does reactive programming work in Spring WebFlux?",
+            "What are the benefits of using Project Reactor in WebFlux?"
+          ]
         },
         {
-          "id": "spring-security-jwt",
-          "title": "Spring Security & JWT",
-          "slug": "spring-security-jwt",
-          "description": "Secure your REST APIs with stateless JWT authentication.",
+          "id": "spring-cloud",
+          "title": "Spring Cloud",
+          "slug": "spring-cloud",
+          "description": "Create distributed systems with microservices and cloud-native patterns.",
           "difficulty": "Advanced",
-          "tags": ["Security"]
+          "tags": ["Microservices", "Spring", "Java", "Advanced", "Interview"],
+          "related_questions": [
+            "What is Spring Cloud Config and how is it used?",
+            "How does Spring Cloud Gateway work as an API gateway?",
+            "Explain service discovery with Eureka in Spring Cloud."
+          ]
         },
         {
-          "id": "restcontroller-vs-controller",
-          "title": "Controller vs RestController",
-          "slug": "restcontroller-vs-controller",
-          "description": "When to use @Controller vs @RestController.",
-          "difficulty": "Beginner",
-          "tags": ["Web"]
-        },
-        {
-          "id": "exception-handling-advice",
-          "title": "Global Exception Handling",
-          "slug": "exception-handling-advice",
-          "description": "Implementing @ControllerAdvice and @ExceptionHandler.",
+          "id": "spring-data",
+          "title": "Spring Data",
+          "slug": "spring-data",
+          "description": "Simplify database access with Spring Data JPA, MongoDB, and Redis integrations.",
           "difficulty": "Intermediate",
-          "tags": ["Web", "Best Practices"]
+          "tags": ["Spring Data", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What is Spring Data JPA and how does it simplify database access?",
+            "How do you define a repository in Spring Data?",
+            "What is the difference between CrudRepository and JpaRepository?"
+          ]
         },
         {
-          "id": "caching-cacheable-evict",
-          "title": "Spring Boot Caching",
-          "slug": "caching-cacheable-evict",
-          "description": "Optimize performance with @Cacheable, @CachePut and @CacheEvict.",
-          "difficulty": "Intermediate",
-          "tags": ["Performance"]
+          "id": "spring-batch",
+          "title": "Spring Batch",
+          "slug": "spring-batch",
+          "description": "Process large volumes of data with Spring Batch for ETL jobs.",
+          "difficulty": "Advanced",
+          "tags": ["Spring Batch", "Java", "Advanced"],
+          "related_questions": [
+            "What is the architecture of Spring Batch?",
+            "How do you configure a job in Spring Batch?",
+            "What are the differences between ItemReader, ItemProcessor, and ItemWriter?"
+          ]
+        },
+        {
+          "id": "spring-integration",
+          "title": "Spring Integration",
+          "slug": "spring-integration",
+          "description": "Build messaging-driven integrations with Spring Integration.",
+          "difficulty": "Advanced",
+          "tags": ["Spring Integration", "Java", "Advanced"],
+          "related_questions": [
+            "What is Spring Integration and its use cases?",
+            "How do you configure a message channel in Spring Integration?",
+            "What is the role of the IntegrationFlow in Spring Integration?"
+          ]
         }
       ]
     },
     {
-      "id": "jpa",
+      "id": "hibernate-jpa",
       "title": "Hibernate & JPA",
-      "slug": "jpa",
+      "slug": "hibernate-jpa",
       "description": "Object-Relational Mapping for seamless database interactions in Java applications.",
       "difficulty": "Intermediate",
-      "tags": [
-        "ORM",
-        "Hibernate",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["ORM", "Hibernate", "Java", "Interview"],
       "subtopics": [
         {
           "id": "hibernate-jpa-core",
-          "title": "JPA & Hibernate Foundations",
+          "title": "JPA Basics",
           "slug": "hibernate-jpa-core",
-          "description": "Understand the relationship between JPA, Hibernate, and Spring Data JPA.",
+          "description": "Understand JPA entities, persistence context, and EntityManager.",
           "difficulty": "Intermediate",
-          "tags": ["Basics", "Architecture"]
+          "tags": ["JPA", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What is the role of the EntityManager in JPA?",
+            "How do you define a JPA entity in Java?",
+            "What is the persistence context in JPA?"
+          ]
         },
         {
-          "id": "n-plus-one-query-problem",
-          "title": "Solving N+1 Query Problem",
-          "slug": "n-plus-one-query-problem",
-          "description": "Identify and fix the common N+1 performance bottleneck.",
+          "id": "hibernate-jpa-orm",
+          "title": "Real-world ORM Usage",
+          "slug": "hibernate-jpa-orm",
+          "description": "Master entity mapping, relationships, and query optimization with Hibernate and JPA.",
+          "difficulty": "Intermediate",
+          "tags": ["Hibernate", "JPA", "Java", "Intermediate", "Interview"],
+          "related_questions": [
+            "What are the different types of relationships in JPA?",
+            "How do you map a one-to-many relationship in Hibernate?",
+            "What is the N+1 query problem in Hibernate?"
+          ]
+        },
+        {
+          "id": "hibernate-jpa-advanced",
+          "title": "Advanced Hibernate Features",
+          "slug": "hibernate-jpa-advanced",
+          "description": "Explore caching, lazy loading, and performance tuning in Hibernate.",
           "difficulty": "Advanced",
-          "tags": ["Performance", "Optimization"]
+          "tags": ["Hibernate", "JPA", "Java", "Advanced"],
+          "related_questions": [
+            "What is the difference between lazy and eager loading in Hibernate?",
+            "How does the second-level cache work in Hibernate?",
+            "What are some ways to optimize Hibernate performance?"
+          ]
         },
         {
-          "id": "lazy-vs-eager-fetch",
-          "title": "Lazy vs Eager Fetching",
-          "slug": "lazy-vs-eager-fetch",
-          "description": "Master fetching strategies for optimal performance.",
+          "id": "hibernate-jpa-queries",
+          "title": "JPQL and Criteria API",
+          "slug": "hibernate-jpa-queries",
+          "description": "Write complex database queries using JPQL and the Criteria API.",
           "difficulty": "Intermediate",
-          "tags": ["Performance"]
+          "tags": ["JPQL", "Criteria", "Java", "Intermediate"],
+          "related_questions": [
+            "What is JPQL and how does it differ from SQL?",
+            "How do you write a query using the Criteria API?",
+            "What are the advantages of using named queries in JPA?"
+          ]
         },
         {
-          "id": "jpa-locking-strategies",
-          "title": "JPA Locking Strategies",
-          "slug": "jpa-locking-strategies",
-          "description": "Optimistic and Pessimistic locking for data consistency.",
-          "difficulty": "Advanced",
-          "tags": ["Transactions", "Concurrency"]
-        },
-        {
-          "id": "entity-manager-role",
-          "title": "Role of EntityManager",
-          "slug": "entity-manager-role",
-          "description": "Deep dive into Persistence Context and EntityManager lifecycle.",
+          "id": "hibernate-jpa-transactions",
+          "title": "Transaction Management",
+          "slug": "hibernate-jpa-transactions",
+          "description": "Manage transactions in Hibernate and JPA for data consistency.",
           "difficulty": "Intermediate",
-          "tags": ["Core"]
-        },
-        {
-          "id": "named-queries",
-          "title": "Named Queries in JPA",
-          "slug": "named-queries",
-          "description": "Using @NamedQuery and @NamedNativeQuery efficiently.",
-          "difficulty": "Intermediate",
-          "tags": ["Querying"]
-        },
-        {
-          "id": "auditing-jpa",
-          "title": "Auditing with Spring Data JPA",
-          "slug": "auditing-jpa",
-          "description": "Automatically track createdBy and lastModifiedDate.",
-          "difficulty": "Intermediate",
-          "tags": ["Auditing"]
-        },
-        {
-          "id": "pagination-and-sorting",
-          "title": "Pagination and Sorting",
-          "slug": "pagination-and-sorting",
-          "description": "Handling large datasets with standard Pageable and Sort.",
-          "difficulty": "Intermediate",
-          "tags": ["Core"]
+          "tags": ["Transactions", "Hibernate", "Java", "Intermediate"],
+          "related_questions": [
+            "What is a transaction in the context of Hibernate?",
+            "How do you manage transactions in JPA?",
+            "What is the difference between programmatic and declarative transaction management?"
+          ]
         }
       ]
     },
@@ -607,12 +540,7 @@
       "slug": "testing",
       "description": "Ensure code quality with comprehensive testing frameworks and methodologies.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Testing",
-        "Java",
-        "Quality",
-        "Interview"
-      ],
+      "tags": ["Testing", "Java", "Quality", "Interview"],
       "subtopics": [
         {
           "id": "testing-junit",
@@ -620,13 +548,7 @@
           "slug": "testing-junit",
           "description": "Write unit tests for Java applications using JUnit 5.",
           "difficulty": "Beginner",
-          "tags": [
-            "JUnit",
-            "Testing",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["JUnit", "Testing", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What are the key features of JUnit 5?",
             "How do you write a parameterized test in JUnit?",
@@ -639,13 +561,7 @@
           "slug": "testing-mockito",
           "description": "Mock dependencies for isolated unit testing with Mockito.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Mockito",
-            "Testing",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Mockito", "Testing", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is mocking and why is it useful in testing?",
             "How do you mock a method in Mockito?",
@@ -658,12 +574,7 @@
           "slug": "testing-testng",
           "description": "Use TestNG for advanced testing features like parallel execution and data-driven tests.",
           "difficulty": "Intermediate",
-          "tags": [
-            "TestNG",
-            "Testing",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["TestNG", "Testing", "Java", "Intermediate"],
           "related_questions": [
             "What are the advantages of TestNG over JUnit?",
             "How do you run tests in parallel using TestNG?",
@@ -676,12 +587,7 @@
           "slug": "testing-integration",
           "description": "Test application components together using tools like Spring Test.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Integration",
-            "Testing",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Integration", "Testing", "Java", "Intermediate"],
           "related_questions": [
             "What is the difference between unit and integration testing?",
             "How do you write an integration test using Spring Test?",
@@ -694,12 +600,7 @@
           "slug": "testing-performance",
           "description": "Measure application performance under load using JMeter or Gatling.",
           "difficulty": "Advanced",
-          "tags": [
-            "Performance",
-            "Testing",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Performance", "Testing", "Java", "Advanced"],
           "related_questions": [
             "What is performance testing and why is it important?",
             "How do you set up a JMeter test for a Java application?",
@@ -712,13 +613,7 @@
           "slug": "testing-bdd",
           "description": "Write tests using BDD frameworks like Cucumber for better collaboration.",
           "difficulty": "Intermediate",
-          "tags": [
-            "BDD",
-            "Cucumber",
-            "Testing",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["BDD", "Cucumber", "Testing", "Java", "Intermediate"],
           "related_questions": [
             "What is BDD and how does it differ from TDD?",
             "How do you write a feature file in Cucumber?",
@@ -733,12 +628,7 @@
       "slug": "build-tools",
       "description": "Automate and manage project builds efficiently with industry-standard tools.",
       "difficulty": "Beginner",
-      "tags": [
-        "Build",
-        "Java",
-        "Automation",
-        "Interview"
-      ],
+      "tags": ["Build", "Java", "Automation", "Interview"],
       "subtopics": [
         {
           "id": "build-tools-maven",
@@ -746,13 +636,7 @@
           "slug": "build-tools-maven",
           "description": "Manage dependencies and build Java projects with Maven's POM files.",
           "difficulty": "Beginner",
-          "tags": [
-            "Maven",
-            "Build",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Maven", "Build", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What is the purpose of the POM file in Maven?",
             "How do you add a dependency in Maven?",
@@ -765,13 +649,7 @@
           "slug": "build-tools-gradle",
           "description": "Use Gradle for flexible and performant build automation with Groovy or Kotlin scripts.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Gradle",
-            "Build",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Gradle", "Build", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What are the advantages of Gradle over Maven?",
             "How do you define a task in Gradle?",
@@ -784,12 +662,7 @@
           "slug": "build-tools-ant",
           "description": "Understand legacy build automation with Apache Ant for Java projects.",
           "difficulty": "Beginner",
-          "tags": [
-            "Ant",
-            "Build",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Ant", "Build", "Java", "Beginner"],
           "related_questions": [
             "What is Apache Ant and how does it work?",
             "How do you define a target in an Ant build file?",
@@ -804,12 +677,7 @@
       "slug": "logging",
       "description": "Implement effective logging for debugging and monitoring Java applications.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Logging",
-        "Java",
-        "Monitoring",
-        "Interview"
-      ],
+      "tags": ["Logging", "Java", "Monitoring", "Interview"],
       "subtopics": [
         {
           "id": "logging-logback",
@@ -817,12 +685,7 @@
           "slug": "logging-logback",
           "description": "Configure advanced logging with Logback for performance and flexibility.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Logback",
-            "Logging",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Logback", "Logging", "Java", "Intermediate"],
           "related_questions": [
             "What is Logback and how does it differ from Log4j?",
             "How do you configure an appender in Logback?",
@@ -835,13 +698,7 @@
           "slug": "logging-slf4j",
           "description": "Use SLF4J as a logging facade to integrate with various logging frameworks.",
           "difficulty": "Intermediate",
-          "tags": [
-            "SLF4J",
-            "Logging",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["SLF4J", "Logging", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is SLF4J and why is it used?",
             "How does SLF4J integrate with Logback?",
@@ -854,12 +711,7 @@
           "slug": "logging-log4j",
           "description": "Implement logging with Apache Log4j for detailed application insights.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Log4j",
-            "Logging",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Log4j", "Logging", "Java", "Intermediate"],
           "related_questions": [
             "What are the main components of Log4j?",
             "How do you configure Log4j using properties or XML?",
@@ -874,12 +726,7 @@
       "slug": "databases",
       "description": "Work with relational and non-relational databases for data persistence.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Databases",
-        "Java",
-        "Persistence",
-        "Interview"
-      ],
+      "tags": ["Databases", "Java", "Persistence", "Interview"],
       "subtopics": [
         {
           "id": "databases-jdbc",
@@ -887,13 +734,7 @@
           "slug": "databases-jdbc",
           "description": "Connect and query databases using Java Database Connectivity (JDBC).",
           "difficulty": "Beginner",
-          "tags": [
-            "JDBC",
-            "Databases",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["JDBC", "Databases", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What is JDBC and how does it work?",
             "Explain the steps to connect to a database using JDBC.",
@@ -906,12 +747,7 @@
           "slug": "databases-rdbms",
           "description": "Design and query relational databases like MySQL, PostgreSQL, and Oracle.",
           "difficulty": "Intermediate",
-          "tags": [
-            "RDBMS",
-            "Databases",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["RDBMS", "Databases", "Java", "Intermediate"],
           "related_questions": [
             "What is normalization in relational databases?",
             "How do you write a JOIN query in SQL?",
@@ -924,12 +760,7 @@
           "slug": "databases-nosql",
           "description": "Use NoSQL databases like MongoDB, Cassandra, and DynamoDB for scalability.",
           "difficulty": "Advanced",
-          "tags": [
-            "NoSQL",
-            "MongoDB",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["NoSQL", "MongoDB", "Java", "Advanced"],
           "related_questions": [
             "What are the key differences between SQL and NoSQL databases?",
             "How do you query MongoDB from a Java application?",
@@ -942,12 +773,7 @@
           "slug": "databases-orm",
           "description": "Explore ORM frameworks like MyBatis for lightweight database access.",
           "difficulty": "Intermediate",
-          "tags": [
-            "MyBatis",
-            "ORM",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["MyBatis", "ORM", "Java", "Intermediate"],
           "related_questions": [
             "What is MyBatis and how does it differ from Hibernate?",
             "How do you configure a mapper in MyBatis?",
@@ -962,12 +788,7 @@
       "slug": "web-security",
       "description": "Secure Java applications against common vulnerabilities and threats.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Security",
-        "Java",
-        "Web",
-        "Interview"
-      ],
+      "tags": ["Security", "Java", "Web", "Interview"],
       "subtopics": [
         {
           "id": "web-security-owasp",
@@ -975,13 +796,7 @@
           "slug": "web-security-owasp",
           "description": "Implement OWASP top 10 security practices, including CSRF and XSS prevention.",
           "difficulty": "Intermediate",
-          "tags": [
-            "OWASP",
-            "Security",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["OWASP", "Security", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What are the OWASP Top 10 vulnerabilities?",
             "How do you prevent Cross-Site Scripting (XSS) in a Java application?",
@@ -994,13 +809,7 @@
           "slug": "web-security-auth",
           "description": "Secure applications with OAuth2, JWT, and role-based access control.",
           "difficulty": "Advanced",
-          "tags": [
-            "Authentication",
-            "Security",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Authentication", "Security", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is the difference between OAuth2 and OpenID Connect?",
             "How do you implement JWT-based authentication in Java?",
@@ -1013,12 +822,7 @@
           "slug": "web-security-encryption",
           "description": "Use encryption (AES) and hashing (SHA, bcrypt) for data security.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Encryption",
-            "Security",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Encryption", "Security", "Java", "Intermediate"],
           "related_questions": [
             "What is the difference between encryption and hashing?",
             "How do you implement AES encryption in Java?",
@@ -1031,12 +835,7 @@
           "slug": "web-security-secure-coding",
           "description": "Write secure Java code to prevent SQL injection and other vulnerabilities.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Secure Coding",
-            "Security",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Secure Coding", "Security", "Java", "Intermediate"],
           "related_questions": [
             "How do you prevent SQL injection in a Java application?",
             "What are some secure coding practices for Java?",
@@ -1051,12 +850,7 @@
       "slug": "rest-apis",
       "description": "Design and build scalable RESTful services for web applications.",
       "difficulty": "Intermediate",
-      "tags": [
-        "REST",
-        "APIs",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["REST", "APIs", "Java", "Interview"],
       "subtopics": [
         {
           "id": "rest-apis-development",
@@ -1064,13 +858,7 @@
           "slug": "rest-apis-development",
           "description": "Create REST APIs with Spring Boot, including versioning and documentation.",
           "difficulty": "Intermediate",
-          "tags": [
-            "REST",
-            "Spring Boot",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["REST", "Spring Boot", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What are the key principles of RESTful APIs?",
             "How do you version a REST API in Spring Boot?",
@@ -1083,12 +871,7 @@
           "slug": "rest-apis-advanced",
           "description": "Implement HATEOAS, pagination, and rate limiting in REST APIs.",
           "difficulty": "Advanced",
-          "tags": [
-            "REST",
-            "HATEOAS",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["REST", "HATEOAS", "Java", "Advanced"],
           "related_questions": [
             "What is HATEOAS and how is it implemented in REST?",
             "How do you implement pagination in a REST API?",
@@ -1101,12 +884,7 @@
           "slug": "rest-apis-testing",
           "description": "Test REST APIs using tools like Postman, RestAssured, and Swagger.",
           "difficulty": "Intermediate",
-          "tags": [
-            "API Testing",
-            "REST",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["API Testing", "REST", "Java", "Intermediate"],
           "related_questions": [
             "How do you test a REST API using Postman?",
             "What is RestAssured and how is it used for API testing?",
@@ -1119,12 +897,7 @@
           "slug": "rest-apis-graphql",
           "description": "Explore GraphQL as an alternative to REST for flexible API design.",
           "difficulty": "Advanced",
-          "tags": [
-            "GraphQL",
-            "APIs",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["GraphQL", "APIs", "Java", "Advanced"],
           "related_questions": [
             "What are the advantages of GraphQL over REST?",
             "How do you implement a GraphQL server in Java?",
@@ -1139,12 +912,7 @@
       "slug": "ci-cd",
       "description": "Automate software delivery with continuous integration and deployment pipelines.",
       "difficulty": "Intermediate",
-      "tags": [
-        "CI/CD",
-        "Java",
-        "DevOps",
-        "Interview"
-      ],
+      "tags": ["CI/CD", "Java", "DevOps", "Interview"],
       "subtopics": [
         {
           "id": "ci-cd-jenkins",
@@ -1152,12 +920,7 @@
           "slug": "ci-cd-jenkins",
           "description": "Set up CI/CD pipelines with Jenkins for Java projects.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Jenkins",
-            "CI/CD",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Jenkins", "CI/CD", "Java", "Intermediate"],
           "related_questions": [
             "What is a Jenkins pipeline and how is it defined?",
             "How do you configure a Maven build in Jenkins?",
@@ -1170,12 +933,7 @@
           "slug": "ci-cd-github-actions",
           "description": "Automate workflows with GitHub Actions for building and deploying Java apps.",
           "difficulty": "Intermediate",
-          "tags": [
-            "GitHub Actions",
-            "CI/CD",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["GitHub Actions", "CI/CD", "Java", "Intermediate"],
           "related_questions": [
             "What is a GitHub Actions workflow?",
             "How do you set up a Java build in GitHub Actions?",
@@ -1188,12 +946,7 @@
           "slug": "ci-cd-gitlab",
           "description": "Use GitLab pipelines for continuous integration and deployment.",
           "difficulty": "Intermediate",
-          "tags": [
-            "GitLab",
-            "CI/CD",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["GitLab", "CI/CD", "Java", "Intermediate"],
           "related_questions": [
             "What is the .gitlab-ci.yml file used for?",
             "How do you configure a pipeline in GitLab CI/CD?",
@@ -1206,12 +959,7 @@
           "slug": "ci-cd-circleci",
           "description": "Configure CircleCI for automated Java builds and deployments.",
           "difficulty": "Intermediate",
-          "tags": [
-            "CircleCI",
-            "CI/CD",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["CircleCI", "CI/CD", "Java", "Intermediate"],
           "related_questions": [
             "What is the structure of a CircleCI configuration file?",
             "How do you set up a Java build in CircleCI?",
@@ -1226,12 +974,7 @@
       "slug": "containerization",
       "description": "Deploy Java applications in containers for portability and scalability.",
       "difficulty": "Advanced",
-      "tags": [
-        "Docker",
-        "Kubernetes",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Docker", "Kubernetes", "Java", "Interview"],
       "subtopics": [
         {
           "id": "containerization-docker",
@@ -1239,12 +982,7 @@
           "slug": "containerization-docker",
           "description": "Containerize Java applications with Docker for consistent environments.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Docker",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Docker", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is Docker and how does it work with Java applications?",
             "How do you write a Dockerfile for a Java application?",
@@ -1257,12 +995,7 @@
           "slug": "containerization-kubernetes",
           "description": "Orchestrate containers with Kubernetes for scalability and resilience.",
           "difficulty": "Advanced",
-          "tags": [
-            "Kubernetes",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Kubernetes", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What are the main components of Kubernetes?",
             "How do you deploy a Java application to Kubernetes?",
@@ -1275,11 +1008,7 @@
           "slug": "containerization-podman",
           "description": "Use Podman as a Docker alternative for container management.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Podman",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Podman", "Java", "Intermediate"],
           "related_questions": [
             "What is Podman and how does it differ from Docker?",
             "How do you run a Java application in Podman?",
@@ -1294,12 +1023,7 @@
       "slug": "monitoring",
       "description": "Monitor and analyze Java application performance in production.",
       "difficulty": "Advanced",
-      "tags": [
-        "Monitoring",
-        "Java",
-        "Ops",
-        "Interview"
-      ],
+      "tags": ["Monitoring", "Java", "Ops", "Interview"],
       "subtopics": [
         {
           "id": "monitoring-grafana",
@@ -1307,12 +1031,7 @@
           "slug": "monitoring-grafana",
           "description": "Visualize metrics with Grafana dashboards for Java applications.",
           "difficulty": "Advanced",
-          "tags": [
-            "Grafana",
-            "Monitoring",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Grafana", "Monitoring", "Java", "Advanced"],
           "related_questions": [
             "What is Grafana and how is it used for monitoring?",
             "How do you integrate Grafana with a Java application?",
@@ -1325,12 +1044,7 @@
           "slug": "monitoring-elk",
           "description": "Analyze logs with Elasticsearch, Logstash, and Kibana for Java apps.",
           "difficulty": "Advanced",
-          "tags": [
-            "ELK",
-            "Monitoring",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["ELK", "Monitoring", "Java", "Advanced"],
           "related_questions": [
             "What is the ELK Stack and its components?",
             "How do you configure Logstash for Java application logs?",
@@ -1343,12 +1057,7 @@
           "slug": "monitoring-prometheus",
           "description": "Monitor Java applications with Prometheus for metrics collection.",
           "difficulty": "Advanced",
-          "tags": [
-            "Prometheus",
-            "Monitoring",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Prometheus", "Monitoring", "Java", "Advanced"],
           "related_questions": [
             "What is Prometheus and how does it work?",
             "How do you expose metrics from a Java application to Prometheus?",
@@ -1361,12 +1070,7 @@
           "slug": "monitoring-apm",
           "description": "Use tools like New Relic or Dynatrace for deep application insights.",
           "difficulty": "Advanced",
-          "tags": [
-            "APM",
-            "Monitoring",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["APM", "Monitoring", "Java", "Advanced"],
           "related_questions": [
             "What is APM and why is it important for Java applications?",
             "How does New Relic monitor Java application performance?",
@@ -1381,13 +1085,7 @@
       "slug": "cloud",
       "description": "Deploy and manage Java applications in cloud environments.",
       "difficulty": "Advanced",
-      "tags": [
-        "Cloud",
-        "AWS",
-        "Azure",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Cloud", "AWS", "Azure", "Java", "Interview"],
       "subtopics": [
         {
           "id": "cloud-aws",
@@ -1395,13 +1093,7 @@
           "slug": "cloud-aws",
           "description": "Use AWS services like EC2, S3, Lambda, and ECS for Java applications.",
           "difficulty": "Advanced",
-          "tags": [
-            "AWS",
-            "Cloud",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["AWS", "Cloud", "Java", "Advanced", "Interview"],
           "related_questions": [
             "How do you deploy a Java application to AWS EC2?",
             "What is the role of S3 in AWS for Java applications?",
@@ -1414,12 +1106,7 @@
           "slug": "cloud-azure",
           "description": "Leverage Azure for cloud-native Java applications and services.",
           "difficulty": "Advanced",
-          "tags": [
-            "Azure",
-            "Cloud",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Azure", "Cloud", "Java", "Advanced"],
           "related_questions": [
             "How do you deploy a Java application to Azure App Service?",
             "What are Azure Functions and how do they work with Java?",
@@ -1432,12 +1119,7 @@
           "slug": "cloud-gcp",
           "description": "Deploy Java apps on GCP using App Engine, Cloud Functions, and Kubernetes Engine.",
           "difficulty": "Advanced",
-          "tags": [
-            "GCP",
-            "Cloud",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["GCP", "Cloud", "Java", "Advanced"],
           "related_questions": [
             "How do you deploy a Java application to GCP App Engine?",
             "What is the role of Cloud Functions in GCP for Java?",
@@ -1450,12 +1132,7 @@
           "slug": "cloud-serverless",
           "description": "Build serverless Java applications using AWS Lambda or Azure Functions.",
           "difficulty": "Advanced",
-          "tags": [
-            "Serverless",
-            "Cloud",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Serverless", "Cloud", "Java", "Advanced"],
           "related_questions": [
             "What is serverless computing and its benefits?",
             "How do you write a Java function for AWS Lambda?",
@@ -1470,12 +1147,7 @@
       "slug": "microservices",
       "description": "Build scalable and modular microservices with Spring Boot.",
       "difficulty": "Advanced",
-      "tags": [
-        "Microservices",
-        "Spring Boot",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Microservices", "Spring Boot", "Java", "Interview"],
       "subtopics": [
         {
           "id": "microservices-architecture",
@@ -1483,13 +1155,7 @@
           "slug": "microservices-architecture",
           "description": "Design and implement microservices with Spring Boot and best practices.",
           "difficulty": "Advanced",
-          "tags": [
-            "Microservices",
-            "Spring Boot",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Microservices", "Spring Boot", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What are the key characteristics of a microservices architecture?",
             "How do you design a microservice with Spring Boot?",
@@ -1502,13 +1168,7 @@
           "slug": "microservices-patterns",
           "description": "Apply patterns like Circuit Breaker, Service Discovery, and API Gateway.",
           "difficulty": "Advanced",
-          "tags": [
-            "Microservices",
-            "Patterns",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Microservices", "Patterns", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is the Circuit Breaker pattern and how is it implemented?",
             "How does Service Discovery work in microservices?",
@@ -1521,12 +1181,7 @@
           "slug": "microservices-testing",
           "description": "Test microservices using contract testing and integration testing.",
           "difficulty": "Advanced",
-          "tags": [
-            "Microservices",
-            "Testing",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Microservices", "Testing", "Java", "Advanced"],
           "related_questions": [
             "What is contract testing in microservices?",
             "How do you perform integration testing for microservices?",
@@ -1539,12 +1194,7 @@
           "slug": "microservices-deployment",
           "description": "Deploy microservices using Docker, Kubernetes, and CI/CD pipelines.",
           "difficulty": "Advanced",
-          "tags": [
-            "Microservices",
-            "Deployment",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Microservices", "Deployment", "Java", "Advanced"],
           "related_questions": [
             "How do you deploy microservices using Docker?",
             "What is the role of Kubernetes in microservices deployment?",
@@ -1559,13 +1209,7 @@
       "slug": "messaging",
       "description": "Enable asynchronous communication in Java applications.",
       "difficulty": "Advanced",
-      "tags": [
-        "Messaging",
-        "Kafka",
-        "RabbitMQ",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Messaging", "Kafka", "RabbitMQ", "Java", "Interview"],
       "subtopics": [
         {
           "id": "messaging-kafka",
@@ -1573,13 +1217,7 @@
           "slug": "messaging-kafka",
           "description": "Use Kafka for high-throughput messaging and event streaming.",
           "difficulty": "Advanced",
-          "tags": [
-            "Kafka",
-            "Messaging",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Kafka", "Messaging", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is Apache Kafka and its key components?",
             "How do you produce and consume messages in Kafka using Java?",
@@ -1592,12 +1230,7 @@
           "slug": "messaging-rabbitmq",
           "description": "Implement message queues with RabbitMQ for reliable communication.",
           "difficulty": "Advanced",
-          "tags": [
-            "RabbitMQ",
-            "Messaging",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["RabbitMQ", "Messaging", "Java", "Advanced"],
           "related_questions": [
             "What is RabbitMQ and how does it work?",
             "How do you configure a queue in RabbitMQ with Java?",
@@ -1610,12 +1243,7 @@
           "slug": "messaging-activemq",
           "description": "Use ActiveMQ for JMS-based messaging in Java applications.",
           "difficulty": "Advanced",
-          "tags": [
-            "ActiveMQ",
-            "Messaging",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["ActiveMQ", "Messaging", "Java", "Advanced"],
           "related_questions": [
             "What is ActiveMQ and its use cases?",
             "How do you send a message using JMS in ActiveMQ?",
@@ -1628,12 +1256,7 @@
           "slug": "messaging-jms",
           "description": "Implement messaging using JMS with providers like ActiveMQ or IBM MQ.",
           "difficulty": "Advanced",
-          "tags": [
-            "JMS",
-            "Messaging",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["JMS", "Messaging", "Java", "Advanced"],
           "related_questions": [
             "What is JMS and how does it work in Java?",
             "What is the difference between a queue and a topic in JMS?",
@@ -1648,12 +1271,7 @@
       "slug": "caching",
       "description": "Improve Java application performance with caching strategies.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Caching",
-        "Redis",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Caching", "Redis", "Java", "Interview"],
       "subtopics": [
         {
           "id": "caching-redis",
@@ -1661,13 +1279,7 @@
           "slug": "caching-redis",
           "description": "Use Redis for fast, in-memory caching in Java applications.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Redis",
-            "Caching",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Redis", "Caching", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is Redis and how is it used for caching?",
             "How do you connect to Redis from a Java application?",
@@ -1680,13 +1292,7 @@
           "slug": "caching-inmemory",
           "description": "Implement caching with Ehcache or Caffeine for low-latency access.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Ehcache",
-            "Caffeine",
-            "Caching",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["Ehcache", "Caffeine", "Caching", "Java", "Intermediate"],
           "related_questions": [
             "What is Ehcache and how does it work?",
             "How do you configure a cache in Caffeine?",
@@ -1699,12 +1305,7 @@
           "slug": "caching-distributed",
           "description": "Use distributed caching solutions like Hazelcast for scalability.",
           "difficulty": "Advanced",
-          "tags": [
-            "Hazelcast",
-            "Caching",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Hazelcast", "Caching", "Java", "Advanced"],
           "related_questions": [
             "What is distributed caching and its benefits?",
             "How do you implement a Hazelcast cache in Java?",
@@ -1719,12 +1320,7 @@
       "slug": "system-design",
       "description": "Design scalable and reliable systems for Java-based applications.",
       "difficulty": "Advanced",
-      "tags": [
-        "System Design",
-        "Java",
-        "Architecture",
-        "Interview"
-      ],
+      "tags": ["System Design", "Java", "Architecture", "Interview"],
       "subtopics": [
         {
           "id": "system-design-principles",
@@ -1732,12 +1328,7 @@
           "slug": "system-design-principles",
           "description": "Learn to design systems like URL shorteners, messaging apps, or e-commerce platforms.",
           "difficulty": "Advanced",
-          "tags": [
-            "System Design",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["System Design", "Java", "Advanced", "Interview"],
           "related_questions": [
             "How would you design a URL shortening service?",
             "What are the key considerations for designing a messaging app?",
@@ -1750,13 +1341,7 @@
           "slug": "system-design-scalability",
           "description": "Apply load balancing, sharding, and replication for scalability.",
           "difficulty": "Advanced",
-          "tags": [
-            "Scalability",
-            "System Design",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Scalability", "System Design", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is load balancing and how does it work?",
             "How do you implement database sharding?",
@@ -1769,12 +1354,7 @@
           "slug": "system-design-caching",
           "description": "Implement caching at various layers for performance optimization.",
           "difficulty": "Advanced",
-          "tags": [
-            "Caching",
-            "System Design",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Caching", "System Design", "Java", "Advanced"],
           "related_questions": [
             "What are the different caching strategies in system design?",
             "How does a Content Delivery Network (CDN) work?",
@@ -1787,12 +1367,7 @@
           "slug": "system-design-databases",
           "description": "Choose and design databases for scalability and performance.",
           "difficulty": "Advanced",
-          "tags": [
-            "Databases",
-            "System Design",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Databases", "System Design", "Java", "Advanced"],
           "related_questions": [
             "How do you choose between SQL and NoSQL for a system?",
             "What is database partitioning and how is it implemented?",
@@ -1805,12 +1380,7 @@
           "slug": "system-design-messaging",
           "description": "Design asynchronous systems using Kafka or RabbitMQ.",
           "difficulty": "Advanced",
-          "tags": [
-            "Messaging",
-            "System Design",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["Messaging", "System Design", "Java", "Advanced"],
           "related_questions": [
             "How would you design a messaging system using Kafka?",
             "What are the considerations for ensuring message delivery?",
@@ -1825,12 +1395,7 @@
       "slug": "data-structures-algorithms",
       "description": "Master coding interview essentials with data structures and algorithms in Java.",
       "difficulty": "Beginner",
-      "tags": [
-        "DSA",
-        "Java",
-        "Algorithms",
-        "Interview"
-      ],
+      "tags": ["DSA", "Java", "Algorithms", "Interview"],
       "subtopics": [
         {
           "id": "dsa-arrays",
@@ -1838,13 +1403,7 @@
           "slug": "dsa-arrays",
           "description": "Solve problems using arrays and string manipulation techniques.",
           "difficulty": "Beginner",
-          "tags": [
-            "Arrays",
-            "Strings",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Arrays", "Strings", "Java", "Beginner", "Interview"],
           "related_questions": [
             "How do you find the two-sum problem in an array?",
             "What is the best way to reverse a string in Java?",
@@ -1857,12 +1416,7 @@
           "slug": "dsa-linkedlists",
           "description": "Implement and manipulate singly and doubly linked lists.",
           "difficulty": "Beginner",
-          "tags": [
-            "Linked Lists",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Linked Lists", "Java", "Beginner", "Interview"],
           "related_questions": [
             "How do you reverse a singly linked list?",
             "How do you detect a cycle in a linked list?",
@@ -1875,13 +1429,7 @@
           "slug": "dsa-stacks-queues",
           "description": "Use stacks and queues for problems like expression evaluation and task scheduling.",
           "difficulty": "Beginner",
-          "tags": [
-            "Stacks",
-            "Queues",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Stacks", "Queues", "Java", "Beginner", "Interview"],
           "related_questions": [
             "How do you implement a stack using an array?",
             "What is a deque and how is it used?",
@@ -1894,12 +1442,7 @@
           "slug": "dsa-trees",
           "description": "Implement binary trees, BSTs, and tree traversal algorithms.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Trees",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Trees", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What are the different tree traversal methods?",
             "How do you implement a binary search tree in Java?",
@@ -1912,12 +1455,7 @@
           "slug": "dsa-graphs",
           "description": "Solve graph problems using DFS, BFS, and shortest path algorithms.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Graphs",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Graphs", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is the difference between DFS and BFS?",
             "How do you implement Dijkstra’s algorithm in Java?",
@@ -1930,12 +1468,7 @@
           "slug": "dsa-hashing",
           "description": "Use hash tables and hash maps for efficient data retrieval.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Hashing",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Hashing", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "How does a hash table handle collisions?",
             "What is the time complexity of operations in a HashMap?",
@@ -1948,12 +1481,7 @@
           "slug": "dsa-sorting",
           "description": "Implement and analyze sorting algorithms like QuickSort, MergeSort, and HeapSort.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Sorting",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Sorting", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is the difference between QuickSort and MergeSort?",
             "How does HeapSort work?",
@@ -1966,12 +1494,7 @@
           "slug": "dsa-searching",
           "description": "Use binary search and other techniques for efficient searching.",
           "difficulty": "Beginner",
-          "tags": [
-            "Searching",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Searching", "Java", "Beginner", "Interview"],
           "related_questions": [
             "How does binary search work and what is its time complexity?",
             "What is exponential search and when is it used?",
@@ -1984,12 +1507,7 @@
           "slug": "dsa-dynamic-programming",
           "description": "Solve complex problems using memoization and tabulation.",
           "difficulty": "Advanced",
-          "tags": [
-            "Dynamic Programming",
-            "Java",
-            "Advanced",
-            "Interview"
-          ],
+          "tags": ["Dynamic Programming", "Java", "Advanced", "Interview"],
           "related_questions": [
             "What is the difference between memoization and tabulation?",
             "How do you solve the knapsack problem using dynamic programming?",
@@ -2002,12 +1520,7 @@
           "slug": "dsa-greedy",
           "description": "Apply greedy techniques for optimization problems.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Greedy",
-            "Java",
-            "Intermediate",
-            "Interview"
-          ],
+          "tags": ["Greedy", "Java", "Intermediate", "Interview"],
           "related_questions": [
             "What is a greedy algorithm and when is it used?",
             "How do you solve the activity selection problem?",
@@ -2022,11 +1535,7 @@
       "slug": "interview-coding",
       "description": "Prepare for Java-specific coding questions commonly asked in interviews.",
       "difficulty": "Intermediate",
-      "tags": [
-        "Coding",
-        "Java",
-        "Interview"
-      ],
+      "tags": ["Coding", "Java", "Interview"],
       "subtopics": [
         {
           "id": "interview-coding-strings",
@@ -2034,12 +1543,7 @@
           "slug": "interview-coding-strings",
           "description": "Solve common string manipulation problems like palindrome and anagram checks.",
           "difficulty": "Beginner",
-          "tags": [
-            "Strings",
-            "Java",
-            "Interview",
-            "Beginner"
-          ],
+          "tags": ["Strings", "Java", "Interview", "Beginner"],
           "related_questions": [
             "How do you check if a string is an anagram of another string?",
             "How do you find the longest palindromic substring?",
@@ -2052,12 +1556,7 @@
           "slug": "interview-coding-arrays",
           "description": "Tackle array-based problems like two-sum and maximum subarray.",
           "difficulty": "Beginner",
-          "tags": [
-            "Arrays",
-            "Java",
-            "Interview",
-            "Beginner"
-          ],
+          "tags": ["Arrays", "Java", "Interview", "Beginner"],
           "related_questions": [
             "How do you solve the two-sum problem in an array?",
             "What is Kadane’s algorithm for maximum subarray sum?",
@@ -2070,12 +1569,7 @@
           "slug": "interview-coding-collections",
           "description": "Solve problems using Java collections like HashMap and PriorityQueue.",
           "difficulty": "Intermediate",
-          "tags": [
-            "Collections",
-            "Java",
-            "Interview",
-            "Intermediate"
-          ],
+          "tags": ["Collections", "Java", "Interview", "Intermediate"],
           "related_questions": [
             "How do you find the top k frequent elements using a HashMap?",
             "How do you implement a LRU cache using collections?",
@@ -2088,12 +1582,7 @@
           "slug": "interview-coding-oop",
           "description": "Design systems using OOP principles, like a parking lot or library system.",
           "difficulty": "Intermediate",
-          "tags": [
-            "OOP",
-            "Java",
-            "Interview",
-            "Intermediate"
-          ],
+          "tags": ["OOP", "Java", "Interview", "Intermediate"],
           "related_questions": [
             "How would you design a parking lot system using OOP?",
             "What classes would you create for a library management system?",
@@ -2106,12 +1595,7 @@
           "slug": "interview-coding-multithreading",
           "description": "Solve concurrency problems like producer-consumer or dining philosophers.",
           "difficulty": "Advanced",
-          "tags": [
-            "Multithreading",
-            "Java",
-            "Interview",
-            "Advanced"
-          ],
+          "tags": ["Multithreading", "Java", "Interview", "Advanced"],
           "related_questions": [
             "How do you implement the producer-consumer problem in Java?",
             "What is the dining philosophers problem and its solution?",
@@ -2126,12 +1610,7 @@
       "slug": "agile-methodologies",
       "description": "Work effectively in agile development teams using modern methodologies.",
       "difficulty": "Beginner",
-      "tags": [
-        "Agile",
-        "Java",
-        "Teamwork",
-        "Interview"
-      ],
+      "tags": ["Agile", "Java", "Teamwork", "Interview"],
       "subtopics": [
         {
           "id": "agile-scrum",
@@ -2139,13 +1618,7 @@
           "slug": "agile-scrum",
           "description": "Understand Scrum roles, ceremonies, and artifacts for Java projects.",
           "difficulty": "Beginner",
-          "tags": [
-            "Scrum",
-            "Agile",
-            "Java",
-            "Beginner",
-            "Interview"
-          ],
+          "tags": ["Scrum", "Agile", "Java", "Beginner", "Interview"],
           "related_questions": [
             "What are the key roles in a Scrum team?",
             "What is the purpose of a sprint retrospective?",
@@ -2158,12 +1631,7 @@
           "slug": "agile-kanban",
           "description": "Use Kanban boards for workflow visualization and continuous delivery.",
           "difficulty": "Beginner",
-          "tags": [
-            "Kanban",
-            "Agile",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Kanban", "Agile", "Java", "Beginner"],
           "related_questions": [
             "What is a Kanban board and how is it used?",
             "How do you limit work in progress (WIP) in Kanban?",
@@ -2176,12 +1644,7 @@
           "slug": "agile-xp",
           "description": "Apply XP practices like pair programming and TDD in Java development.",
           "difficulty": "Intermediate",
-          "tags": [
-            "XP",
-            "Agile",
-            "Java",
-            "Intermediate"
-          ],
+          "tags": ["XP", "Agile", "Java", "Intermediate"],
           "related_questions": [
             "What is pair programming and its benefits?",
             "How does Test-Driven Development (TDD) work in XP?",
@@ -2196,11 +1659,7 @@
       "slug": "behavioral-questions",
       "description": "Prepare for non-technical interview questions to showcase soft skills.",
       "difficulty": "Beginner",
-      "tags": [
-        "Behavioral",
-        "Interview",
-        "Java"
-      ],
+      "tags": ["Behavioral", "Interview", "Java"],
       "subtopics": [
         {
           "id": "behavioral-leadership",
@@ -2208,12 +1667,7 @@
           "slug": "behavioral-leadership",
           "description": "Answer questions about leading teams and collaborating effectively.",
           "difficulty": "Beginner",
-          "tags": [
-            "Behavioral",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Behavioral", "Interview", "Java", "Beginner"],
           "related_questions": [
             "Can you describe a time you led a team to success?",
             "How do you handle disagreements within a team?",
@@ -2226,12 +1680,7 @@
           "slug": "behavioral-conflict",
           "description": "Handle questions about resolving disagreements and challenges.",
           "difficulty": "Beginner",
-          "tags": [
-            "Behavioral",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Behavioral", "Interview", "Java", "Beginner"],
           "related_questions": [
             "Describe a situation where you resolved a conflict with a colleague.",
             "How do you approach difficult conversations?",
@@ -2244,12 +1693,7 @@
           "slug": "behavioral-failure",
           "description": "Discuss past failures and lessons learned in a professional context.",
           "difficulty": "Beginner",
-          "tags": [
-            "Behavioral",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Behavioral", "Interview", "Java", "Beginner"],
           "related_questions": [
             "Can you share a time when a project failed and what you learned?",
             "How do you recover from setbacks in a project?",
@@ -2262,12 +1706,7 @@
           "slug": "behavioral-career",
           "description": "Explain your career goals and passion for Java development.",
           "difficulty": "Beginner",
-          "tags": [
-            "Behavioral",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Behavioral", "Interview", "Java", "Beginner"],
           "related_questions": [
             "Why did you choose a career in Java development?",
             "What are your long-term career goals?",
@@ -2282,11 +1721,7 @@
       "slug": "java-interview-tips",
       "description": "Strategies and tips for excelling in Java technical interviews.",
       "difficulty": "Beginner",
-      "tags": [
-        "Interview",
-        "Java",
-        "Preparation"
-      ],
+      "tags": ["Interview", "Java", "Preparation"],
       "subtopics": [
         {
           "id": "interview-tips-resume",
@@ -2294,12 +1729,7 @@
           "slug": "interview-tips-resume",
           "description": "Craft a Java-focused resume highlighting projects and skills.",
           "difficulty": "Beginner",
-          "tags": [
-            "Resume",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Resume", "Interview", "Java", "Beginner"],
           "related_questions": [
             "What key elements should be included in a Java developer resume?",
             "How do you highlight Java projects on a resume?",
@@ -2312,12 +1742,7 @@
           "slug": "interview-tips-coding",
           "description": "Approach coding interviews with problem-solving and communication skills.",
           "difficulty": "Beginner",
-          "tags": [
-            "Coding",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Coding", "Interview", "Java", "Beginner"],
           "related_questions": [
             "How do you approach a coding problem in an interview?",
             "What is the importance of explaining your thought process?",
@@ -2330,12 +1755,7 @@
           "slug": "interview-tips-system-design",
           "description": "Prepare for system design interviews with a focus on Java-based systems.",
           "difficulty": "Advanced",
-          "tags": [
-            "System Design",
-            "Interview",
-            "Java",
-            "Advanced"
-          ],
+          "tags": ["System Design", "Interview", "Java", "Advanced"],
           "related_questions": [
             "What are the key steps in a system design interview?",
             "How do you approach designing a scalable Java system?",
@@ -2348,12 +1768,7 @@
           "slug": "interview-tips-mock",
           "description": "Practice mock interviews to simulate real Java interview scenarios.",
           "difficulty": "Beginner",
-          "tags": [
-            "Mock Interview",
-            "Interview",
-            "Java",
-            "Beginner"
-          ],
+          "tags": ["Mock Interview", "Interview", "Java", "Beginner"],
           "related_questions": [
             "How do mock interviews help in preparation?",
             "What are some good platforms for practicing mock interviews?",

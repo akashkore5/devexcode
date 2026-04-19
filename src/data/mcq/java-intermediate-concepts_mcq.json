@@ -1,0 +1,701 @@
+[
+  {
+    "id": 1,
+    "category": "Java",
+    "question": "What is the difference between InputStream and Reader classes in Java?",
+    "code": null,
+    "options": [
+      "InputStream handles characters, Reader handles bytes",
+      "InputStream is for binary data, Reader is for character data",
+      "InputStream is thread-safe, Reader is not",
+      "No difference"
+    ],
+    "correctAnswer": "InputStream is for binary data, Reader is for character data",
+    "explanation": "InputStream handles raw binary data (bytes), while Reader handles character data, supporting Unicode and encoding conversions."
+  },
+  {
+    "id": 2,
+    "category": "Java",
+    "question": "What is the output of the following code using BufferedReader?",
+    "code": "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Hello\\nWorld\";\n        FileWriter fw = new FileWriter(\"test.txt\");\n        fw.write(content);\n        fw.close();\n        BufferedReader br = new BufferedReader(new FileReader(\"test.txt\"));\n        System.out.println(br.readLine());\n        br.close();\n    }\n}",
+    "options": [
+      "Prints 'Hello'",
+      "Prints 'World'",
+      "Throws an exception",
+      "Prints 'Hello World'"
+    ],
+    "correctAnswer": "Prints 'Hello'",
+    "explanation": "BufferedReader.readLine() reads the first line until a newline character, printing 'Hello' from the file content."
+  },
+  {
+    "id": 3,
+    "category": "Java",
+    "question": "What is the purpose of the @Override annotation?",
+    "code": null,
+    "options": [
+      "To mark a method as deprecated",
+      "To ensure a method overrides a superclass method",
+      "To enable serialization",
+      "To define a custom annotation"
+    ],
+    "correctAnswer": "To ensure a method overrides a superclass method",
+    "explanation": "@Override indicates that a method overrides a superclass method, helping catch errors during compilation if the method signature doesn’t match."
+  },
+  {
+    "id": 4,
+    "category": "Java",
+    "question": "What is the output of the following code using generics?",
+    "code": "import java.util.*;\npublic class Main {\n    public static <T> void print(List<T> list) {\n        System.out.println(list.size());\n    }\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"Java\");\n        list.add(\"Python\");\n        print(list);\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Prints '1'",
+      "Throws a compilation error",
+      "Throws a runtime exception"
+    ],
+    "correctAnswer": "Prints '2'",
+    "explanation": "The generic method print accepts any List<T>. The list contains two elements ('Java', 'Python'), so size() returns 2."
+  },
+  {
+    "id": 5,
+    "category": "Java",
+    "question": "What is the output of the following code using an anonymous inner class?",
+    "code": "public class Main {\n    interface Action { void execute(); }\n    public static void main(String[] args) {\n        Action action = new Action() {\n            public void execute() { System.out.println(\"Action!\"); }\n        };\n        action.execute();\n    }\n}",
+    "options": [
+      "Prints 'Action!'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Action!'",
+    "explanation": "The anonymous inner class implements the Action interface, defining execute() to print 'Action!'."
+  },
+  {
+    "id": 6,
+    "category": "Java",
+    "question": "What is the role of the transient keyword in serialization?",
+    "code": null,
+    "options": [
+      "Marks a field as final",
+      "Excludes a field from serialization",
+      "Ensures thread safety",
+      "Enables encryption"
+    ],
+    "correctAnswer": "Excludes a field from serialization",
+    "explanation": "The transient keyword prevents a field from being serialized, useful for sensitive data or non-serializable objects."
+  },
+  {
+    "id": 7,
+    "category": "Java",
+    "question": "What is the output of the following serialization code?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private int x = 42;\n    public static void main(String[] args) throws Exception {\n        Main m = new Main();\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeObject(m);\n        oos.close();\n        System.out.println(baos.size() > 0);\n    }\n}",
+    "options": [
+      "Prints 'true'",
+      "Prints 'false'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'true'",
+    "explanation": "The object is serialized to the ByteArrayOutputStream, resulting in a non-empty stream, so size() > 0 returns true."
+  },
+  {
+    "id": 8,
+    "category": "Java",
+    "question": "What is type erasure in Java generics?",
+    "code": null,
+    "options": [
+      "Removing type parameters at runtime",
+      "Converting types to Object at compile-time",
+      "Ensuring type safety at runtime",
+      "Creating bounded types"
+    ],
+    "correctAnswer": "Removing type parameters at runtime",
+    "explanation": "Type erasure removes generic type information at runtime, replacing type parameters with their bounds or Object, ensuring backward compatibility."
+  },
+  {
+    "id": 9,
+    "category": "Java",
+    "question": "What is the output of the following code using a static inner class?",
+    "code": "public class Main {\n    static class Inner {\n        void show() { System.out.println(\"Inner\"); }\n    }\n    public static void main(String[] args) {\n        Inner inner = new Inner();\n        inner.show();\n    }\n}",
+    "options": [
+      "Prints 'Inner'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Inner'",
+    "explanation": "A static inner class can be instantiated without an outer class instance. The show() method prints 'Inner'."
+  },
+  {
+    "id": 10,
+    "category": "Java",
+    "question": "What is the purpose of the @Retention annotation in Java?",
+    "code": null,
+    "options": [
+      "Specifies when an annotation is discarded",
+      "Marks a method as thread-safe",
+      "Defines a custom exception",
+      "Enables serialization"
+    ],
+    "correctAnswer": "Specifies when an annotation is discarded",
+    "explanation": "@Retention determines whether an annotation is retained at compile-time, runtime, or source level, controlling its availability."
+  },
+  {
+    "id": 11,
+    "category": "Java",
+    "question": "What is the output of the following code using FileOutputStream?",
+    "code": "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileOutputStream fos = new FileOutputStream(\"out.txt\");\n        fos.write(65);\n        fos.close();\n        FileInputStream fis = new FileInputStream(\"out.txt\");\n        System.out.println(fis.read());\n        fis.close();\n    }\n}",
+    "options": [
+      "Prints '65'",
+      "Prints 'A'",
+      "Throws an exception",
+      "Prints '0'"
+    ],
+    "correctAnswer": "Prints '65'",
+    "explanation": "FileOutputStream writes the byte 65, which is read by FileInputStream. read() returns the integer value 65."
+  },
+  {
+    "id": 12,
+    "category": "Java",
+    "question": "What is the purpose of the @Deprecated annotation?",
+    "code": null,
+    "options": [
+      "Marks a method for removal in future versions",
+      "Ensures thread safety",
+      "Enables serialization",
+      "Defines a custom annotation"
+    ],
+    "correctAnswer": "Marks a method for removal in future versions",
+    "explanation": "@Deprecated indicates that a method or class is obsolete and may be removed, warning developers against its use."
+  },
+  {
+    "id": 13,
+    "category": "Java",
+    "question": "What is the output of the following code using bounded generics?",
+    "code": "import java.util.*;\npublic class Main {\n    public static <T extends Number> void print(T value) {\n        System.out.println(value.intValue());\n    }\n    public static void main(String[] args) {\n        print(42);\n    }\n}",
+    "options": [
+      "Prints '42'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '42'",
+    "explanation": "The generic method accepts a Number subclass. The integer 42 is autoboxed to Integer, and intValue() returns 42."
+  },
+  {
+    "id": 14,
+    "category": "Java",
+    "question": "What is the output of the following code using a non-static inner class?",
+    "code": "public class Main {\n    class Inner {\n        void show() { System.out.println(\"Inner\"); }\n    }\n    public static void main(String[] args) {\n        Main m = new Main();\n        Inner inner = m.new Inner();\n        inner.show();\n    }\n}",
+    "options": [
+      "Prints 'Inner'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Inner'",
+    "explanation": "A non-static inner class requires an outer class instance. The instance is created correctly, and show() prints 'Inner'."
+  },
+  {
+    "id": 15,
+    "category": "Java",
+    "question": "What is the output of the following deserialization code?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private int x = 10;\n    public static void main(String[] args) throws Exception {\n        Main m = new Main();\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeObject(m);\n        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());\n        ObjectInputStream ois = new ObjectInputStream(bais);\n        Main deserialized = (Main) ois.readObject();\n        System.out.println(deserialized.x);\n    }\n}",
+    "options": [
+      "Prints '10'",
+      "Throws an exception",
+      "Prints '0'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '10'",
+    "explanation": "The object is serialized and deserialized, preserving the field x with value 10."
+  },
+  {
+    "id": 16,
+    "category": "Java",
+    "question": "What is the purpose of BufferedInputStream?",
+    "code": null,
+    "options": [
+      "Encrypts input data",
+      "Reduces direct access to underlying streams",
+      "Converts bytes to characters",
+      "Ensures thread safety"
+    ],
+    "correctAnswer": "Reduces direct access to underlying streams",
+    "explanation": "BufferedInputStream buffers data to minimize direct calls to the underlying stream, improving performance."
+  },
+  {
+    "id": 17,
+    "category": "Java",
+    "question": "What is the output of the following code using a custom annotation?",
+    "code": "import java.lang.annotation.*;\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnn { String value(); }\n@MyAnn(value = \"Test\")\npublic class Main {\n    public static void main(String[] args) {\n        MyAnn ann = Main.class.getAnnotation(MyAnn.class);\n        System.out.println(ann.value());\n    }\n}",
+    "options": [
+      "Prints 'Test'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Test'",
+    "explanation": "The runtime-retained annotation is retrieved, and its value 'Test' is printed."
+  },
+  {
+    "id": 18,
+    "category": "Java",
+    "question": "What is the output of the following code using wildcard generics?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void print(List<? extends Number> list) {\n        System.out.println(list.get(0).intValue());\n    }\n    public static void main(String[] args) {\n        List<Integer> list = Arrays.asList(42);\n        print(list);\n    }\n}",
+    "options": [
+      "Prints '42'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '42'",
+    "explanation": "The wildcard ? extends Number allows reading Number subclasses. The first element (42) is retrieved and printed."
+  },
+  {
+    "id": 19,
+    "category": "Java",
+    "question": "What is the output of the following code using a local inner class?",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        class Local {\n            void show() { System.out.println(\"Local\"); }\n        }\n        Local local = new Local();\n        local.show();\n    }\n}",
+    "options": [
+      "Prints 'Local'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Local'",
+    "explanation": "A local inner class defined in a method can be instantiated within that method, and show() prints 'Local'."
+  },
+  {
+    "id": 20,
+    "category": "Java",
+    "question": "What is the role of the serialVersionUID in serialization?",
+    "code": null,
+    "options": [
+      "Ensures thread safety",
+      "Identifies the class version for serialization",
+      "Encrypts serialized data",
+      "Marks fields as transient"
+    ],
+    "correctAnswer": "Identifies the class version for serialization",
+    "explanation": "serialVersionUID ensures compatibility between serialized and deserialized class versions, preventing InvalidClassException."
+  },
+  {
+    "id": 21,
+    "category": "Java",
+    "question": "What is the output of the following code using PrintWriter?",
+    "code": "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        PrintWriter pw = new PrintWriter(\"out.txt\");\n        pw.println(\"Hello\");\n        pw.close();\n        BufferedReader br = new BufferedReader(new FileReader(\"out.txt\"));\n        System.out.println(br.readLine());\n        br.close();\n    }\n}",
+    "options": [
+      "Prints 'Hello'",
+      "Throws an exception",
+      "No output",
+      "Prints 'null'"
+    ],
+    "correctAnswer": "Prints 'Hello'",
+    "explanation": "PrintWriter writes 'Hello' with a newline to the file, which BufferedReader reads and prints."
+  },
+  {
+    "id": 22,
+    "category": "Java",
+    "question": "What is the purpose of the @Target annotation?",
+    "code": null,
+    "options": [
+      "Specifies where an annotation can be applied",
+      "Marks a method as deprecated",
+      "Enables serialization",
+      "Defines retention policy"
+    ],
+    "correctAnswer": "Specifies where an annotation can be applied",
+    "explanation": "@Target restricts the elements (e.g., METHOD, CLASS) where a custom annotation can be used."
+  },
+  {
+    "id": 23,
+    "category": "Java",
+    "question": "What is the output of the following code using generic methods?",
+    "code": "public class Main {\n    public static <T> T getFirst(T[] array) {\n        return array[0];\n    }\n    public static void main(String[] args) {\n        String[] arr = {\"Java\", \"Python\"};\n        System.out.println(getFirst(arr));\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "The generic method returns the first element of the array, which is 'Java'."
+  },
+  {
+    "id": 24,
+    "category": "Java",
+    "question": "What is the output of the following code using a method-local anonymous class?",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        Runnable r = new Runnable() {\n            public void run() { System.out.println(\"Run\"); }\n        };\n        r.run();\n    }\n}",
+    "options": [
+      "Prints 'Run'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Run'",
+    "explanation": "The anonymous class implements Runnable, and run() prints 'Run' when called."
+  },
+  {
+    "id": 25,
+    "category": "Java",
+    "question": "What is the output of the following serialization code with transient?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private transient int x = 42;\n    private int y = 10;\n    public static void main(String[] args) throws Exception {\n        Main m = new Main();\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeObject(m);\n        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());\n        ObjectInputStream ois = new ObjectInputStream(bais);\n        Main deserialized = (Main) ois.readObject();\n        System.out.println(deserialized.x);\n    }\n}",
+    "options": [
+      "Prints '0'",
+      "Prints '42'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '0'",
+    "explanation": "The transient field x is not serialized, so it gets the default value (0) upon deserialization."
+  },
+  {
+    "id": 26,
+    "category": "Java",
+    "question": "What is the purpose of DataInputStream?",
+    "code": null,
+    "options": [
+      "Reads primitive data types",
+      "Converts characters to bytes",
+      "Buffers output data",
+      "Encrypts input data"
+    ],
+    "correctAnswer": "Reads primitive data types",
+    "explanation": "DataInputStream reads Java primitive types (e.g., int, double) from an underlying InputStream in a platform-independent way."
+  },
+  {
+    "id": 27,
+    "category": "Java",
+    "question": "What is the output of the following code using a repeating annotation?",
+    "code": "import java.lang.annotation.*;\n@Repeatable(MyAnns.class)\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnn { String value(); }\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnns { MyAnn[] value(); }\n@MyAnn(\"A\") @MyAnn(\"B\")\npublic class Main {\n    public static void main(String[] args) {\n        MyAnn[] anns = Main.class.getAnnotationsByType(MyAnn.class);\n        System.out.println(anns.length);\n    }\n}",
+    "options": [
+      "Prints '2'",
+      "Throws an exception",
+      "Prints '1'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '2'",
+    "explanation": "The repeating annotation @MyAnn is applied twice, and getAnnotationsByType retrieves both instances."
+  },
+  {
+    "id": 28,
+    "category": "Java",
+    "question": "What is the output of the following code using super wildcard generics?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void add(List<? super Integer> list) {\n        list.add(42);\n    }\n    public static void main(String[] args) {\n        List<Number> list = new ArrayList<>();\n        add(list);\n        System.out.println(list.get(0));\n    }\n}",
+    "options": [
+      "Prints '42'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '42'",
+    "explanation": "? super Integer allows adding Integer objects to a List of Integer or its supertype (Number). The added 42 is printed."
+  },
+  {
+    "id": 29,
+    "category": "Java",
+    "question": "What is the output of the following code using a static inner class with outer access?",
+    "code": "public class Main {\n    private static String name = \"Outer\";\n    static class Inner {\n        void show() { System.out.println(name); }\n    }\n    public static void main(String[] args) {\n        Inner inner = new Inner();\n        inner.show();\n    }\n}",
+    "options": [
+      "Prints 'Outer'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Outer'",
+    "explanation": "The static inner class can access static fields of the outer class, printing 'Outer'."
+  },
+  {
+    "id": 30,
+    "category": "Java",
+    "question": "What is the output of the following serialization code with writeObject?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private int x = 42;\n    private void writeObject(ObjectOutputStream oos) throws IOException {\n        oos.defaultWriteObject();\n        oos.writeInt(100);\n    }\n    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {\n        ois.defaultReadObject();\n        ois.readInt();\n    }\n    public static void main(String[] args) throws Exception {\n        Main m = new Main();\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeObject(m);\n        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());\n        ObjectInputStream ois = new ObjectInputStream(bais);\n        Main deserialized = (Main) ois.readObject();\n        System.out.println(deserialized.x);\n    }\n}",
+    "options": [
+      "Prints '42'",
+      "Throws an exception",
+      "Prints '100'",
+      "No output"
+    ],
+    "correctAnswer": "Prints '42'",
+    "explanation": "The custom writeObject and readObject handle the field x (42) via defaultWriteObject, and the extra int (100) is ignored."
+  },
+  {
+    "id": 31,
+    "category": "Java",
+    "question": "What is the output of the following code using ObjectInputStream?",
+    "code": "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeInt(42);\n        oos.close();\n        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());\n        ObjectInputStream ois = new ObjectInputStream(bais);\n        try {\n            ois.readInt();\n            System.out.println(\"Success\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n        ois.close();\n    }\n}",
+    "options": [
+      "Prints 'Success'",
+      "Prints 'Error'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Error'",
+    "explanation": "ObjectInputStream expects a serialized object header, but only an int was written, causing a StreamCorruptedException."
+  },
+  {
+    "id": 32,
+    "category": "Java",
+    "question": "What is the purpose of the @Documented annotation?",
+    "code": null,
+    "options": [
+      "Includes annotation in Javadoc",
+      "Marks a method as deprecated",
+      "Enables serialization",
+      "Defines retention policy"
+    ],
+    "correctAnswer": "Includes annotation in Javadoc",
+    "explanation": "@Documented ensures that a custom annotation appears in the generated Javadoc for annotated elements."
+  },
+  {
+    "id": 33,
+    "category": "Java",
+    "question": "What is the output of the following code using generic classes?",
+    "code": "public class Main<T> {\n    private T value;\n    public Main(T value) { this.value = value; }\n    public T getValue() { return value; }\n    public static void main(String[] args) {\n        Main<String> m = new Main<>(\"Java\");\n        System.out.println(m.getValue());\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "The generic class stores and retrieves the String 'Java' using the type parameter T."
+  },
+  {
+    "id": 34,
+    "category": "Java",
+    "question": "What is the output of the following code using a non-static inner class with outer access?",
+    "code": "public class Main {\n    private String name = \"Outer\";\n    class Inner {\n        void show() { System.out.println(name); }\n    }\n    public static void main(String[] args) {\n        Main m = new Main();\n        Inner inner = m.new Inner();\n        inner.show();\n    }\n}",
+    "options": [
+      "Prints 'Outer'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints 'Outer'",
+    "explanation": "The non-static inner class has access to the outer class’s instance fields, printing 'Outer'."
+  },
+  {
+    "id": 35,
+    "category": "Java",
+    "question": "What is the output of the following serialization code with static fields?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private static int x = 42;\n    public static void main(String[] args) throws Exception {\n        Main m = new Main();\n        ByteArrayOutputStream baos = new ByteArrayOutputStream();\n        ObjectOutputStream oos = new ObjectOutputStream(baos);\n        oos.writeObject(m);\n        x = 100;\n        ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());\n        ObjectInputStream ois = new ObjectInputStream(bais);\n        Main deserialized = (Main) ois.readObject();\n        System.out.println(x);\n    }\n}",
+    "options": [
+      "Prints '100'",
+      "Prints '42'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints '100'",
+    "explanation": "Static fields are not serialized; the class’s static x is modified to 100 before deserialization, so 100 is printed."
+  },
+  {
+    "id": 36,
+    "category": "Java",
+    "question": "What is the purpose of PushbackInputStream?",
+    "code": null,
+    "options": [
+      "Allows bytes to be unread",
+      "Converts characters to bytes",
+      "Buffers output data",
+      "Encrypts input data"
+    ],
+    "correctAnswer": "Allows bytes to be unread",
+    "explanation": "PushbackInputStream allows bytes to be pushed back to the stream, useful for parsing or lookahead operations."
+  },
+  {
+    "id": 37,
+    "category": "Java",
+    "question": "What is the output of the following code using annotation with default values?",
+    "code": "import java.lang.annotation.*;\n@Retention(RetentionPolicy.RUNTIME)\n@interface MyAnn { String value() default \"Default\"; }\n@MyAnn\npublic class Main {\n    public static void main(String[] args) {\n        MyAnn ann = Main.class.getAnnotation(MyAnn.class);\n        System.out.println(ann.value());\n    }\n}",
+    "options": [
+      "Prints 'Default'",
+      "Throws an exception",
+      "No output",
+      "Prints 'null'"
+    ],
+    "correctAnswer": "Prints 'Default'",
+    "explanation": "The annotation uses its default value 'Default' since no value was specified."
+  },
+  {
+    "id": "Java",
+    "question": "What is the output of the following code using generic interfaces?",
+    "code": "interface Printer<T> {\n    void print(T value);\n}\npublic class Main implements Printer<String> {\n    public void print(String value) {\n        System.out.println(value);\n    }\n    public static void main(String[] args) {\n        Main m = new Main();\n        m.print(\"Java\");\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "The class implements the generic interface with String, and print() outputs 'Java'."
+  },
+  {
+    "id": 39,
+    "category": "Java",
+    "question": "What is the output of the following code using a local inner class with local variables?",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        final int x = 42;\n        class Local {\n            void show() { System.out.println(x); }\n        }\n        Local local = new Local();\n        local.show();\n    }\n}",
+    "options": [
+      "Prints '42'",
+      "Throws an exception",
+      "No output",
+      "Compiles but fails at runtime"
+    ],
+    "correctAnswer": "Prints '42'",
+    "explanation": "The local inner class can access final or effectively final local variables, printing '42'."
+  },
+  {
+    "id": 40,
+    "category": "Java",
+    "question": "What is the purpose of Externalizable in Java?",
+    "code": null,
+    "options": [
+      "Provides full control over serialization",
+      "Ensures thread safety",
+      "Marks classes as final",
+      "Converts bytes to characters"
+    ],
+    "correctAnswer": "Provides full control over serialization",
+    "explanation": "Externalizable allows complete control over the serialization process by implementing readExternal and writeExternal methods."
+  },
+  {
+    "id": 41,
+    "category": "Java",
+    "question": "What is the output of the following code using FileWriter with append mode?",
+    "code": "import java.io.*;\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        FileWriter fw = new FileWriter(\"append.txt\", true);\n        fw.write(\"World\");\n        fw.close();\n        BufferedReader br = new BufferedReader(new FileReader(\"append.txt\"));\n        System.out.println(br.readLine());\n        br.close();\n    }\n}",
+    "options": [
+      "Prints 'World'",
+      "Throws an exception",
+      "No output",
+      "Depends on existing file content"
+    ],
+    "correctAnswer": "Depends on existing file content",
+    "explanation": "FileWriter in append mode (true) adds 'World' to the file. readLine() returns the first line, which depends on prior content."
+  },
+  {
+    "id": 42,
+    "category": "Java",
+    "question": "What is the purpose of the @FunctionalInterface annotation?",
+    "code": null,
+    "options": [
+      "Ensures an interface has one abstract method",
+      "Marks a method as deprecated",
+      "Enables serialization",
+      "Defines retention policy"
+    ],
+    "correctAnswer": "Ensures an interface has one abstract method",
+    "explanation": "@FunctionalInterface enforces that an interface is a functional interface, suitable for lambda expressions, with exactly one abstract method."
+  },
+  {
+    "id": 43,
+    "category": "Java",
+    "question": "What is the output of the following code using generic type inference?",
+    "code": "import java.util.*;\npublic class Main {\n    public static <T> List<T> createList(T item) {\n        return Arrays.asList(item);\n    }\n    public static void main(String[] args) {\n        List<String> list = createList(\"Java\");\n        System.out.println(list.get(0));\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "Type inference determines T as String, creating a List<String> containing 'Java'."
+  },
+  {
+    "id": 44,
+    "category": "Java",
+    "question": "What is the output of the following code using an anonymous class with a superclass?",
+    "code": "public class Main {\n    static class Parent {\n        void show() { System.out.println(\"Parent\"); }\n    }\n    public static void main(String[] args) {\n        Parent p = new Parent() {\n            void show() { System.out.println(\"Child\"); }\n        };\n        p.show();\n    }\n}",
+    "options": [
+      "Prints 'Child'",
+      "Prints 'Parent'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Child'",
+    "explanation": "The anonymous class overrides the show() method, printing 'Child'."
+  },
+  {
+    "id": 45,
+    "category": "Java",
+    "question": "What is the output of the following serialization code with non-serializable fields?",
+    "code": "import java.io.*;\npublic class Main implements Serializable {\n    private Object obj = new Object();\n    public static void main(String[] args) {\n        Main m = new Main();\n        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();\n            ObjectOutputStream oos = new ObjectOutputStream(baos)) {\n            oos.writeObject(m);\n            System.out.println(\"Success\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
+    "options": [
+      "Prints 'Error'",
+      "Prints 'Success'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Error'",
+    "explanation": "The non-serializable Object field causes a NotSerializableException during serialization."
+  },
+  {
+    "id": 46,
+    "category": "Java",
+    "question": "What is the purpose of SequenceInputStream?",
+    "code": null,
+    "options": [
+      "Combines multiple InputStreams",
+      "Converts bytes to characters",
+      "Buffers output data",
+      "Encrypts input data"
+    ],
+    "correctAnswer": "Combines multiple InputStreams",
+    "explanation": "SequenceInputStream concatenates multiple InputStreams into a single stream, reading them sequentially."
+  },
+  {
+    "id": 47,
+    "category": "Java",
+    "question": "What is the output of the following code using annotation inheritance?",
+    "code": "import java.lang.annotation.*;\n@Inherited @Retention(RetentionPolicy.RUNTIME)\n@interface MyParentAnn {}\n@MyParentAnn\nclass Parent {}\npublic class Main extends Parent {\n    public static void main(String[] args) {\n        System.out.println(Main.class.isAnnotationPresent(MyParentAnn.class));\n    }\n}",
+    "options": [
+      "Prints 'true'",
+      "Prints 'false'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'true'",
+    "explanation": "@Inherited allows the annotation to be inherited by subclasses, so Main has @MyParentAnn."
+  },
+  {
+    "id": 48,
+    "category": "Java",
+    "question": "What is the output of the following code using raw generic types?",
+    "code": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        List list = new ArrayList();\n        list.add(\"Java\");\n        list.add(42);\n        System.out.println(list.get(0));\n    }\n}",
+    "options": [
+      "Prints 'Java'",
+      "Throws a compilation error",
+      "Throws a runtime exception",
+      "No output"
+    ],
+    "correctAnswer": "Prints 'Java'",
+    "explanation": "Raw types disable type checking, allowing mixed types. The first element, 'Java', is printed."
+  },
+  {
+    "id": 49,
+    "category": "Java",
+    "question": "What is the output of the following code using a static inner class in a method?",
+    "code": "public class Main {\n    public static void main(String[] args) {\n        static class Local {\n            void show() { System.out.println(\"Local\"); }\n        }\n        Local local = new Local();\n        local.show();\n    }\n}",
+    "options": [
+      "Throws a compilation error",
+      "Prints 'Local'",
+      "Throws an exception",
+      "No output"
+    ],
+    "correctAnswer": "Throws a compilation error",
+    "explanation": "Static classes cannot be defined inside a method; only local classes can, and they cannot be static."
+  },
+  {
+    "id": 50,
+    "category": "Java",
+    "question": "What is the purpose of ObjectOutputStream?",
+    "code": null,
+    "options": [
+      "Writes objects to a stream",
+      "Reads primitive data types",
+      "Converts characters to bytes",
+      "Buffers input data"
+    ],
+    "correctAnswer": "Writes objects to a stream",
+    "explanation": "ObjectOutputStream serializes Java objects to an OutputStream, enabling object persistence."
+  }
+]

@@ -1,0 +1,1102 @@
+[
+    {
+      "id": 1,
+      "question": "What is the output of typeof null in JavaScript?",
+      "options": [
+        "null",
+        "undefined",
+        "object",
+        "string"
+      ],
+      "correctAnswer": "object"
+    },
+    {
+      "id": 2,
+      "question": "Which method is used to add an element to the end of an array?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": "push()"
+    },
+    {
+      "id": 3,
+      "question": "What does the 'this' keyword refer to in a regular function?",
+      "options": [
+        "The global object",
+        "The function itself",
+        "The parent object",
+        "The DOM element"
+      ],
+      "correctAnswer": "The global object"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is NOT a JavaScript data type?",
+      "options": [
+        "Undefined",
+        "Boolean",
+        "Float",
+        "Symbol"
+      ],
+      "correctAnswer": "Float"
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the async/await syntax in JavaScript?",
+      "options": [
+        "To handle synchronous code",
+        "To simplify working with promises",
+        "To create loops",
+        "To define classes"
+      ],
+      "correctAnswer": "To simplify working with promises"
+    },
+    {
+      "id": 6,
+      "question": "What is the output of console.log(0 == '0') in JavaScript?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 7,
+      "question": "Which method removes the last element from an array?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": "pop()"
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of the 'let' keyword in JavaScript?",
+      "options": [
+        "To declare a constant",
+        "To declare a block-scoped variable",
+        "To declare a global variable",
+        "To define a function"
+      ],
+      "correctAnswer": "To declare a block-scoped variable"
+    },
+    {
+      "id": 9,
+      "question": "What is the output of console.log(typeof undefined)?",
+      "options": [
+        "null",
+        "undefined",
+        "object",
+        "string"
+      ],
+      "correctAnswer": "undefined"
+    },
+    {
+      "id": 10,
+      "question": "Which operator is used for strict equality in JavaScript?",
+      "options": [
+        "==",
+        "===",
+        "=",
+        "!="
+      ],
+      "correctAnswer": "==="
+    },
+    {
+      "id": 11,
+      "question": "What does the Array.prototype.map() method do?",
+      "options": [
+        "Removes elements from an array",
+        "Creates a new array with transformed elements",
+        "Sorts the array",
+        "Joins elements into a string"
+      ],
+      "correctAnswer": "Creates a new array with transformed elements"
+    },
+    {
+      "id": 12,
+      "question": "What is the purpose of the 'const' keyword in JavaScript?",
+      "options": [
+        "To declare a block-scoped variable",
+        "To declare a constant",
+        "To declare a global variable",
+        "To define a function"
+      ],
+      "correctAnswer": "To declare a constant"
+    },
+    {
+      "id": 13,
+      "question": "What is the output of console.log(1 + '1') in JavaScript?",
+      "options": [
+        "2",
+        "11",
+        "1",
+        "undefined"
+      ],
+      "correctAnswer": "11"
+    },
+    {
+      "id": 14,
+      "question": "Which method is used to add an element to the beginning of an array?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": "unshift()"
+    },
+    {
+      "id": 15,
+      "question": "What does the 'this' keyword refer to in an arrow function?",
+      "options": [
+        "The global object",
+        "The function itself",
+        "The lexical context",
+        "The DOM element"
+      ],
+      "correctAnswer": "The lexical context"
+    },
+    {
+      "id": 16,
+      "question": "What is the purpose of the Promise object in JavaScript?",
+      "options": [
+        "To handle synchronous code",
+        "To represent an asynchronous operation",
+        "To create loops",
+        "To define classes"
+      ],
+      "correctAnswer": "To represent an asynchronous operation"
+    },
+    {
+      "id": 17,
+      "question": "What is the output of console.log([1, 2, 3].length)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "3"
+    },
+    {
+      "id": 18,
+      "question": "Which method is used to combine two or more arrays?",
+      "options": [
+        "concat()",
+        "join()",
+        "slice()",
+        "splice()"
+      ],
+      "correctAnswer": "concat()"
+    },
+    {
+      "id": 19,
+      "question": "What is the purpose of the 'var' keyword in JavaScript?",
+      "options": [
+        "To declare a block-scoped variable",
+        "To declare a function-scoped variable",
+        "To declare a constant",
+        "To define a class"
+      ],
+      "correctAnswer": "To declare a function-scoped variable"
+    },
+    {
+      "id": 20,
+      "question": "What is the output of console.log(!!'hello')?",
+      "options": [
+        "true",
+        "false",
+        "hello",
+        "undefined"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 21,
+      "question": "Which method is used to remove the first element from an array?",
+      "options": [
+        "push()",
+        "pop()",
+        "shift()",
+        "unshift()"
+      ],
+      "correctAnswer": "shift()"
+    },
+    {
+      "id": 22,
+      "question": "What is the purpose of the 'try...catch' statement in JavaScript?",
+      "options": [
+        "To define a loop",
+        "To handle exceptions",
+        "To declare variables",
+        "To create functions"
+      ],
+      "correctAnswer": "To handle exceptions"
+    },
+    {
+      "id": 23,
+      "question": "What is the output of console.log(typeof NaN)?",
+      "options": [
+        "number",
+        "undefined",
+        "object",
+        "string"
+      ],
+      "correctAnswer": "number"
+    },
+    {
+      "id": 24,
+      "question": "Which method is used to convert a string to an array of characters?",
+      "options": [
+        "split()",
+        "slice()",
+        "join()",
+        "substring()"
+      ],
+      "correctAnswer": "split()"
+    },
+    {
+      "id": 25,
+      "question": "What does the 'new' keyword do in JavaScript?",
+      "options": [
+        "Declares a variable",
+        "Creates a new object",
+        "Defines a function",
+        "Handles exceptions"
+      ],
+      "correctAnswer": "Creates a new object"
+    },
+    {
+      "id": 26,
+      "question": "What is the output of console.log(5 === '5')?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": 27,
+      "question": "Which method is used to find an element in an array?",
+      "options": [
+        "find()",
+        "filter()",
+        "map()",
+        "reduce()"
+      ],
+      "correctAnswer": "find()"
+    },
+    {
+      "id": 28,
+      "question": "What is the purpose of the 'class' keyword in JavaScript?",
+      "options": [
+        "To declare a variable",
+        "To define a class",
+        "To handle exceptions",
+        "To create a loop"
+      ],
+      "correctAnswer": "To define a class"
+    },
+    {
+      "id": 29,
+      "question": "What is the output of console.log([1, 2, 3].includes(2))?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 30,
+      "question": "Which operator is used for logical AND in JavaScript?",
+      "options": [
+        "&&",
+        "||",
+        "!",
+        "&"
+      ],
+      "correctAnswer": "&&"
+    },
+    {
+      "id": 31,
+      "question": "What does the Array.prototype.filter() method do?",
+      "options": [
+        "Creates a new array with elements that pass a test",
+        "Transforms elements in an array",
+        "Removes elements from an array",
+        "Joins elements into a string"
+      ],
+      "correctAnswer": "Creates a new array with elements that pass a test"
+    },
+    {
+      "id": 32,
+      "question": "What is the output of console.log('hello'.toUpperCase())?",
+      "options": [
+        "hello",
+        "HELLO",
+        "Hello",
+        "hELLO"
+      ],
+      "correctAnswer": "HELLO"
+    },
+    {
+      "id": 33,
+      "question": "Which method is used to join elements of an array into a string?",
+      "options": [
+        "join()",
+        "concat()",
+        "split()",
+        "slice()"
+      ],
+      "correctAnswer": "join()"
+    },
+    {
+      "id": 34,
+      "question": "What is the purpose of the 'setTimeout' function in JavaScript?",
+      "options": [
+        "To execute a function immediately",
+        "To delay execution of a function",
+        "To create a loop",
+        "To handle exceptions"
+      ],
+      "correctAnswer": "To delay execution of a function"
+    },
+    {
+      "id": 35,
+      "question": "What is the output of console.log(3 + 2 + '7')?",
+      "options": [
+        "57",
+        "12",
+        "327",
+        "undefined"
+      ],
+      "correctAnswer": "57"
+    },
+    {
+      "id": 36,
+      "question": "Which keyword is used to define an arrow function in JavaScript?",
+      "options": [
+        "function",
+        "=>",
+        "arrow",
+        "lambda"
+      ],
+      "correctAnswer": "=>"
+    },
+    {
+      "id": 37,
+      "question": "What does the Array.prototype.reduce() method do?",
+      "options": [
+        "Reduces an array to a single value",
+        "Creates a new array",
+        "Removes elements from an array",
+        "Sorts the array"
+      ],
+      "correctAnswer": "Reduces an array to a single value"
+    },
+    {
+      "id": 38,
+      "question": "What is the output of console.log(typeof [])?",
+      "options": [
+        "array",
+        "object",
+        "undefined",
+        "string"
+      ],
+      "correctAnswer": "object"
+    },
+    {
+      "id": 39,
+      "question": "Which method is used to parse a JSON string into an object?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.toObject()",
+        "JSON.convert()"
+      ],
+      "correctAnswer": "JSON.parse()"
+    },
+    {
+      "id": 40,
+      "question": "What is the purpose of the 'forEach' method in JavaScript?",
+      "options": [
+        "To create a new array",
+        "To execute a function for each array element",
+        "To remove elements",
+        "To sort the array"
+      ],
+      "correctAnswer": "To execute a function for each array element"
+    },
+    {
+      "id": 41,
+      "question": "What is the output of console.log(!!0)?",
+      "options": [
+        "true",
+        "false",
+        "0",
+        "undefined"
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": 42,
+      "question": "Which operator is used for logical OR in JavaScript?",
+      "options": [
+        "&&",
+        "||",
+        "!",
+        "|"
+      ],
+      "correctAnswer": "||"
+    },
+    {
+      "id": 43,
+      "question": "What is the purpose of the 'Object.keys()' method?",
+      "options": [
+        "To create a new object",
+        "To return an array of an object's keys",
+        "To delete object properties",
+        "To merge objects"
+      ],
+      "correctAnswer": "To return an array of an object's keys"
+    },
+    {
+      "id": 44,
+      "question": "What is the output of console.log('hello'.length)?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "undefined"
+      ],
+      "correctAnswer": "5"
+    },
+    {
+      "id": 45,
+      "question": "Which method is used to convert an object to a JSON string?",
+      "options": [
+        "JSON.parse()",
+        "JSON.stringify()",
+        "JSON.toString()",
+        "JSON.convert()"
+      ],
+      "correctAnswer": "JSON.stringify()"
+    },
+    {
+      "id": 46,
+      "question": "What is the purpose of the 'bind' method in JavaScript?",
+      "options": [
+        "To create a new function with a specific 'this' value",
+        "To execute a function immediately",
+        "To merge objects",
+        "To delete a function"
+      ],
+      "correctAnswer": "To create a new function with a specific 'this' value"
+    },
+    {
+      "id": 47,
+      "question": "What is the output of console.log(2 ** 3)?",
+      "options": [
+        "6",
+        "8",
+        "9",
+        "12"
+      ],
+      "correctAnswer": "8"
+    },
+    {
+      "id": 48,
+      "question": "Which method is used to sort an array in JavaScript?",
+      "options": [
+        "sort()",
+        "order()",
+        "arrange()",
+        "rank()"
+      ],
+      "correctAnswer": "sort()"
+    },
+    {
+      "id": 49,
+      "question": "What is the purpose of the 'setInterval' function in JavaScript?",
+      "options": [
+        "To execute a function once",
+        "To execute a function repeatedly",
+        "To create a loop",
+        "To handle exceptions"
+      ],
+      "correctAnswer": "To execute a function repeatedly"
+    },
+    {
+      "id": 50,
+      "question": "What is the output of console.log(typeof function(){})?",
+      "options": [
+        "function",
+        "object",
+        "undefined",
+        "string"
+      ],
+      "correctAnswer": "function"
+    },
+    {
+      "id": 51,
+      "question": "Which operator is used for logical NOT in JavaScript?",
+      "options": [
+        "&&",
+        "||",
+        "!",
+        "&"
+      ],
+      "correctAnswer": "!"
+    },
+    {
+      "id": 52,
+      "question": "What does the Array.prototype.slice() method do?",
+      "options": [
+        "Removes elements from an array",
+        "Creates a shallow copy of a portion of an array",
+        "Joins elements into a string",
+        "Sorts the array"
+      ],
+      "correctAnswer": "Creates a shallow copy of a portion of an array"
+    },
+    {
+      "id": 53,
+      "question": "What is the output of console.log(5 != '5')?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": 54,
+      "question": "Which method is used to add or remove elements from an array at a specific index?",
+      "options": [
+        "slice()",
+        "splice()",
+        "concat()",
+        "join()"
+      ],
+      "correctAnswer": "splice()"
+    },
+    {
+      "id": 55,
+      "question": "What is the purpose of the 'call' method in JavaScript?",
+      "options": [
+        "To execute a function with a specific 'this' value",
+        "To create a new function",
+        "To merge objects",
+        "To delete a function"
+      ],
+      "correctAnswer": "To execute a function with a specific 'this' value"
+    },
+    {
+      "id": 56,
+      "question": "What is the output of console.log(Number('123'))?",
+      "options": [
+        "123",
+        "'123'",
+        "undefined",
+        "NaN"
+      ],
+      "correctAnswer": "123"
+    },
+    {
+      "id": 57,
+      "question": "Which method is used to check if an array contains a specific element?",
+      "options": [
+        "includes()",
+        "contains()",
+        "has()",
+        "find()"
+      ],
+      "correctAnswer": "includes()"
+    },
+    {
+      "id": 58,
+      "question": "What is the purpose of the 'prototype' property in JavaScript?",
+      "options": [
+        "To define a class",
+        "To add methods and properties to objects",
+        "To handle exceptions",
+        "To create a loop"
+      ],
+      "correctAnswer": "To add methods and properties to objects"
+    },
+    {
+      "id": 59,
+      "question": "What is the output of console.log('hello'.indexOf('l'))?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correctAnswer": "2"
+    },
+    {
+      "id": 60,
+      "question": "Which keyword is used to export a module in JavaScript?",
+      "options": [
+        "export",
+        "module",
+        "require",
+        "import"
+      ],
+      "correctAnswer": "export"
+    },
+    {
+      "id": 61,
+      "question": "What is the output of console.log(!!null)?",
+      "options": [
+        "true",
+        "false",
+        "null",
+        "undefined"
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": 62,
+      "question": "Which method is used to create a shallow copy of an array?",
+      "options": [
+        "slice()",
+        "splice()",
+        "concat()",
+        "join()"
+      ],
+      "correctAnswer": "slice()"
+    },
+    {
+      "id": 63,
+      "question": "What is the purpose of the 'apply' method in JavaScript?",
+      "options": [
+        "To execute a function with a specific 'this' and arguments",
+        "To create a new function",
+        "To merge objects",
+        "To delete a function"
+      ],
+      "correctAnswer": "To execute a function with a specific 'this' and arguments"
+    },
+    {
+      "id": 64,
+      "question": "What is the output of console.log(10 / 0)?",
+      "options": [
+        "0",
+        "undefined",
+        "Infinity",
+        "NaN"
+      ],
+      "correctAnswer": "Infinity"
+    },
+    {
+      "id": 65,
+      "question": "Which method is used to reverse an array in place?",
+      "options": [
+        "reverse()",
+        "sort()",
+        "slice()",
+        "map()"
+      ],
+      "correctAnswer": "reverse()"
+    },
+    {
+      "id": 66,
+      "question": "What is the purpose of the 'Map' object in JavaScript?",
+      "options": [
+        "To store key-value pairs",
+        "To create arrays",
+        "To handle exceptions",
+        "To define functions"
+      ],
+      "correctAnswer": "To store key-value pairs"
+    },
+    {
+      "id": 67,
+      "question": "What is the output of console.log(typeof Symbol())?",
+      "options": [
+        "symbol",
+        "object",
+        "undefined",
+        "string"
+      ],
+      "correctAnswer": "symbol"
+    },
+    {
+      "id": 68,
+      "question": "Which operator is used for nullish coalescing in JavaScript?",
+      "options": [
+        "??",
+        "||",
+        "&&",
+        "!"
+      ],
+      "correctAnswer": "??"
+    },
+    {
+      "id": 69,
+      "question": "What is the output of console.log('hello'.substring(1, 3))?",
+      "options": [
+        "he",
+        "el",
+        "ll",
+        "lo"
+      ],
+      "correctAnswer": "el"
+    },
+    {
+      "id": 70,
+      "question": "Which keyword is used to import a module in JavaScript?",
+      "options": [
+        "export",
+        "module",
+        "require",
+        "import"
+      ],
+      "correctAnswer": "import"
+    },
+    {
+      "id": 71,
+      "question": "What is the output of console.log(5 > 3 && 2 < 4)?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 72,
+      "question": "Which method is used to check if an object has a specific property?",
+      "options": [
+        "hasOwnProperty()",
+        "contains()",
+        "includes()",
+        "exists()"
+      ],
+      "correctAnswer": "hasOwnProperty()"
+    },
+    {
+      "id": 73,
+      "question": "What is the output of console.log(Number.isNaN('NaN'))?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "false"
+    },
+    {
+      "id": 74,
+      "question": "Which method is used to create a new array with unique values?",
+      "options": [
+        "Set",
+        "filter()",
+        "map()",
+        "reduce()"
+      ],
+      "correctAnswer": "Set"
+    },
+    {
+      "id": 75,
+      "question": "What is the output of console.log(3 <= 5)?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 76,
+      "question": "What is the purpose of the 'WeakMap' object in JavaScript?",
+      "options": [
+        "To store key-value pairs with weak references",
+        "To create arrays",
+        "To handle exceptions",
+        "To define functions"
+      ],
+      "correctAnswer": "To store key-value pairs with weak references"
+    },
+    {
+      "id": 77,
+      "question": "What is the output of console.log('hello'.startsWith('he'))?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 78,
+      "question": "Which operator is used for optional chaining in JavaScript?",
+      "options": [
+        "?.",
+        "??",
+        "||",
+        "&&"
+      ],
+      "correctAnswer": "?."
+    },
+    {
+      "id": 79,
+      "question": "What is the output of console.log([1, 2, 3].at(1))?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "undefined"
+      ],
+      "correctAnswer": "2"
+    },
+    {
+      "id": 80,
+      "question": "What is the purpose of the 'Object.assign()' method?",
+      "options": [
+        "To copy properties from one object to another",
+        "To delete object properties",
+        "To create a new object",
+        "To merge arrays"
+      ],
+      "correctAnswer": "To copy properties from one object to another"
+    },
+    {
+      "id": 81,
+      "question": "What is the output of console.log(5 >= 5)?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 82,
+      "question": "Which method is used to freeze an object in JavaScript?",
+      "options": [
+        "Object.freeze()",
+        "Object.seal()",
+        "Object.lock()",
+        "Object.prevent()"
+      ],
+      "correctAnswer": "Object.freeze()"
+    },
+    {
+      "id": 83,
+      "question": "What is the output of console.log('hello'.endsWith('lo'))?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 84,
+      "question": "Which method is used to create a new array with the results of a callback?",
+      "options": [
+        "map()",
+        "filter()",
+        "reduce()",
+        "forEach()"
+      ],
+      "correctAnswer": "map()"
+    },
+    {
+      "id": 85,
+      "question": "What is the output of console.log(3 < 2 || 4 > 3)?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 86,
+      "question": "What is the purpose of the 'Set' object in JavaScript?",
+      "options": [
+        "To store unique values",
+        "To create arrays",
+        "To handle exceptions",
+        "To define functions"
+      ],
+      "correctAnswer": "To store unique values"
+    },
+    {
+      "id": 87,
+      "question": "What is the output of console.log(Number.parseInt('123abc'))?",
+      "options": [
+        "123",
+        "NaN",
+        "undefined",
+        "123abc"
+      ],
+      "correctAnswer": "123"
+    },
+    {
+      "id": 88,
+      "question": "Which method is used to seal an object in JavaScript?",
+      "options": [
+        "Object.seal()",
+        "Object.freeze()",
+        "Object.lock()",
+        "Object.prevent()"
+      ],
+      "correctAnswer": "Object.seal()"
+    },
+    {
+      "id": 89,
+      "question": "What is the output of console.log('hello'.toLowerCase())?",
+      "options": [
+        "HELLO",
+        "hello",
+        "Hello",
+        "hELLO"
+      ],
+      "correctAnswer": "hello"
+    },
+    {
+      "id": 90,
+      "question": "Which method is used to check if a value is an array?",
+      "options": [
+        "Array.isArray()",
+        "Array.check()",
+        "Array.type()",
+        "Array.validate()"
+      ],
+      "correctAnswer": "Array.isArray()"
+    },
+    {
+      "id": 91,
+      "question": "What is the output of console.log(4 % 3)?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "1"
+    },
+    {
+      "id": 92,
+      "question": "What is the purpose of the 'WeakSet' object in JavaScript?",
+      "options": [
+        "To store weak references to objects",
+        "To create arrays",
+        "To handle exceptions",
+        "To define functions"
+      ],
+      "correctAnswer": "To store weak references to objects"
+    },
+    {
+      "id": 93,
+      "question": "What is the output of console.log('123'.padStart(5, '0'))?",
+      "options": [
+        "00123",
+        "12300",
+        "123",
+        "00012"
+      ],
+      "correctAnswer": "00123"
+    },
+    {
+      "id": 94,
+      "question": "Which method is used to get the prototype of an object?",
+      "options": [
+        "Object.getPrototypeOf()",
+        "Object.prototype()",
+        "Object.getType()",
+        "Object.inherit()"
+      ],
+      "correctAnswer": "Object.getPrototypeOf()"
+    },
+    {
+      "id": 95,
+      "question": "What is the output of console.log(7 - 2 * 3)?",
+      "options": [
+        "1",
+        "5",
+        "3",
+        "-1"
+      ],
+      "correctAnswer": "1"
+    },
+    {
+      "id": 96,
+      "question": "Which method is used to create a new object with a specified prototype?",
+      "options": [
+        "Object.create()",
+        "Object.new()",
+        "Object.inherit()",
+        "Object.prototype()"
+      ],
+      "correctAnswer": "Object.create()"
+    },
+    {
+      "id": 97,
+      "question": "What is the output of console.log('abc'.charAt(1))?",
+      "options": [
+        "a",
+        "b",
+        "c",
+        "undefined"
+      ],
+      "correctAnswer": "b"
+    },
+    {
+      "id": 98,
+      "question": "Which operator is used for exponentiation in JavaScript?",
+      "options": [
+        "**",
+        "^",
+        "^^",
+        "//"
+      ],
+      "correctAnswer": "**"
+    },
+    {
+      "id": 99,
+      "question": "What is the output of console.log([1, 2, 3].every(x => x > 0))?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "null"
+      ],
+      "correctAnswer": "true"
+    },
+    {
+      "id": 100,
+      "question": "Which method is used to define a getter in an object?",
+      "options": [
+        "get",
+        "set",
+        "define",
+        "access"
+      ],
+      "correctAnswer": "get"
+    }
+  ]

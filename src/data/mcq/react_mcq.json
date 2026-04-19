@@ -1,0 +1,1102 @@
+[
+    {
+      "id": 1,
+      "question": "What is the primary purpose of React's useState hook?",
+      "options": [
+        "To manage side effects in a component",
+        "To manage state in a functional component",
+        "To fetch data from an API",
+        "To handle routing in React"
+      ],
+      "correctAnswer": "To manage state in a functional component"
+    },
+    {
+      "id": 2,
+      "question": "Which method is used to update the state in a React class component?",
+      "options": [
+        "setState",
+        "updateState",
+        "changeState",
+        "modifyState"
+      ],
+      "correctAnswer": "setState"
+    },
+    {
+      "id": 3,
+      "question": "What does the useEffect hook do by default if no dependencies are provided?",
+      "options": [
+        "Runs only once on component mount",
+        "Runs after every render",
+        "Never runs",
+        "Runs only on component unmount"
+      ],
+      "correctAnswer": "Runs after every render"
+    },
+    {
+      "id": 4,
+      "question": "In React, what is the correct way to pass a prop to a component?",
+      "options": [
+        "<MyComponent prop={value} />",
+        "<MyComponent prop:value />",
+        "<MyComponent prop=value />",
+        "<MyComponent {prop: value} />"
+      ],
+      "correctAnswer": "<MyComponent prop={value} />"
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of React's key prop in a list?",
+      "options": [
+        "To style list items",
+        "To uniquely identify elements for efficient updates",
+        "To sort the list",
+        "To filter the list"
+      ],
+      "correctAnswer": "To uniquely identify elements for efficient updates"
+    },
+    {
+      "id": 6,
+      "question": "Which hook is used to access the previous state or props in a functional component?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useRef",
+        "useMemo"
+      ],
+      "correctAnswer": "useRef"
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of React's useCallback hook?",
+      "options": [
+        "To memoize functions",
+        "To manage state",
+        "To handle side effects",
+        "To fetch data"
+      ],
+      "correctAnswer": "To memoize functions"
+    },
+    {
+      "id": 8,
+      "question": "How do you define a functional component in React?",
+      "options": [
+        "function MyComponent() {}",
+        "class MyComponent {}",
+        "const MyComponent = class {}",
+        "MyComponent = () => class {}"
+      ],
+      "correctAnswer": "function MyComponent() {}"
+    },
+    {
+      "id": 9,
+      "question": "What is the output of rendering an empty JSX element like <> </>?",
+      "options": [
+        "Throws an error",
+        "Renders nothing",
+        "Renders a div",
+        "Renders a span"
+      ],
+      "correctAnswer": "Renders nothing"
+    },
+    {
+      "id": 10,
+      "question": "Which lifecycle method is called after a component is mounted in a class component?",
+      "options": [
+        "componentDidMount",
+        "componentWillMount",
+        "componentDidUpdate",
+        "componentWillUnmount"
+      ],
+      "correctAnswer": "componentDidMount"
+    },
+    {
+      "id": 11,
+      "question": "What does the useMemo hook do in React?",
+      "options": [
+        "Manages state",
+        "Memoizes expensive calculations",
+        "Handles side effects",
+        "Fetches data"
+      ],
+      "correctAnswer": "Memoizes expensive calculations"
+    },
+    {
+      "id": 12,
+      "question": "Which attribute is used to handle events in JSX?",
+      "options": [
+        "onEvent",
+        "event",
+        "handleEvent",
+        "bindEvent"
+      ],
+      "correctAnswer": "onEvent"
+    },
+    {
+      "id": 13,
+      "question": "What is the purpose of React.Fragment?",
+      "options": [
+        "To style components",
+        "To group multiple elements without adding extra nodes",
+        "To manage state",
+        "To handle routing"
+      ],
+      "correctAnswer": "To group multiple elements without adding extra nodes"
+    },
+    {
+      "id": 14,
+      "question": "Which hook is used to access context in a functional component?",
+      "options": [
+        "useState",
+        "useContext",
+        "useEffect",
+        "useReducer"
+      ],
+      "correctAnswer": "useContext"
+    },
+    {
+      "id": 15,
+      "question": "What is the correct syntax for a conditional rendering in JSX?",
+      "options": [
+        "{condition ? <Component /> : null}",
+        "{condition : <Component /> ? null}",
+        "<Component if={condition} />",
+        "{if condition then <Component />}"
+      ],
+      "correctAnswer": "{condition ? <Component /> : null}"
+    },
+    {
+      "id": 16,
+      "question": "Which method is used to prevent a component from re-rendering unnecessarily?",
+      "options": [
+        "shouldComponentUpdate",
+        "componentDidUpdate",
+        "componentWillMount",
+        "render"
+      ],
+      "correctAnswer": "shouldComponentUpdate"
+    },
+    {
+      "id": 17,
+      "question": "What is the purpose of the useReducer hook in React?",
+      "options": [
+        "To manage complex state logic",
+        "To handle side effects",
+        "To memoize functions",
+        "To fetch data"
+      ],
+      "correctAnswer": "To manage complex state logic"
+    },
+    {
+      "id": 18,
+      "question": "How do you access props in a functional component?",
+      "options": [
+        "this.props",
+        "props",
+        "super.props",
+        "state.props"
+      ],
+      "correctAnswer": "props"
+    },
+    {
+      "id": 19,
+      "question": "What does the ReactDOM.render() method do?",
+      "options": [
+        "Updates the state",
+        "Renders a React element into the DOM",
+        "Fetches data",
+        "Handles events"
+      ],
+      "correctAnswer": "Renders a React element into the DOM"
+    },
+    {
+      "id": 20,
+      "question": "Which lifecycle method is called before a component is removed from the DOM?",
+      "options": [
+        "componentDidMount",
+        "componentWillUnmount",
+        "componentDidUpdate",
+        "componentWillMount"
+      ],
+      "correctAnswer": "componentWillUnmount"
+    },
+    {
+      "id": 21,
+      "question": "What is the purpose of the defaultProps property in a React component?",
+      "options": [
+        "To set default values for props",
+        "To manage state",
+        "To handle events",
+        "To define styles"
+      ],
+      "correctAnswer": "To set default values for props"
+    },
+    {
+      "id": 22,
+      "question": "Which hook is used to handle side effects in a functional component?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useMemo",
+        "useCallback"
+      ],
+      "correctAnswer": "useEffect"
+    },
+    {
+      "id": 23,
+      "question": "What is the correct way to define a prop type in a React component using PropTypes?",
+      "options": [
+        "static propTypes = { prop: PropTypes.string }",
+        "propTypes = { prop: string }",
+        "props = { prop: PropTypes.string }",
+        "define propTypes(prop: string)"
+      ],
+      "correctAnswer": "static propTypes = { prop: PropTypes.string }"
+    },
+    {
+      "id": 24,
+      "question": "What is the purpose of the React.StrictMode component?",
+      "options": [
+        "To optimize performance",
+        "To identify unsafe lifecycle methods",
+        "To manage state",
+        "To handle routing"
+      ],
+      "correctAnswer": "To identify unsafe lifecycle methods"
+    },
+    {
+      "id": 25,
+      "question": "Which method is used to bind event handlers in a class component?",
+      "options": [
+        "bind",
+        "attach",
+        "connect",
+        "link"
+      ],
+      "correctAnswer": "bind"
+    },
+    {
+      "id": 26,
+      "question": "What is the output if a component renders null?",
+      "options": [
+        "Throws an error",
+        "Renders nothing",
+        "Renders a div",
+        "Renders a span"
+      ],
+      "correctAnswer": "Renders nothing"
+    },
+    {
+      "id": 27,
+      "question": "Which hook is used to create a reference to a DOM element?",
+      "options": [
+        "useState",
+        "useRef",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useRef"
+    },
+    {
+      "id": 28,
+      "question": "What is the purpose of the children prop in React?",
+      "options": [
+        "To pass data to parent components",
+        "To render content passed between component tags",
+        "To manage state",
+        "To handle events"
+      ],
+      "correctAnswer": "To render content passed between component tags"
+    },
+    {
+      "id": 29,
+      "question": "Which method is used to update the DOM in React?",
+      "options": [
+        "ReactDOM.render",
+        "setState",
+        "useEffect",
+        "forceUpdate"
+      ],
+      "correctAnswer": "ReactDOM.render"
+    },
+    {
+      "id": 30,
+      "question": "What is the purpose of the useImperativeHandle hook?",
+      "options": [
+        "To manage state",
+        "To customize the instance value exposed to parent components",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To customize the instance value exposed to parent components"
+    },
+    {
+      "id": 31,
+      "question": "Which component lifecycle method is called after a component updates?",
+      "options": [
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillUnmount",
+        "componentWillMount"
+      ],
+      "correctAnswer": "componentDidUpdate"
+    },
+    {
+      "id": 32,
+      "question": "What is the correct way to handle a click event in JSX?",
+      "options": [
+        "<button onClick={handleClick}>Click</button>",
+        "<button click={handleClick}>Click</button>",
+        "<button onClick: handleClick>Click</button>",
+        "<button handleClick>Click</button>"
+      ],
+      "correctAnswer": "<button onClick={handleClick}>Click</button>"
+    },
+    {
+      "id": 33,
+      "question": "What is the purpose of the React.memo function?",
+      "options": [
+        "To manage state",
+        "To prevent unnecessary re-renders of components",
+        "To handle side effects",
+        "To fetch data"
+      ],
+      "correctAnswer": "To prevent unnecessary re-renders of components"
+    },
+    {
+      "id": 34,
+      "question": "Which hook is used to manage complex state logic similar to Redux?",
+      "options": [
+        "useState",
+        "useReducer",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useReducer"
+    },
+    {
+      "id": 35,
+      "question": "What is the purpose of the dangerouslySetInnerHTML attribute in React?",
+      "options": [
+        "To style components",
+        "To set raw HTML content",
+        "To manage state",
+        "To handle events"
+      ],
+      "correctAnswer": "To set raw HTML content"
+    },
+    {
+      "id": 36,
+      "question": "Which method is used to force a re-render in a class component?",
+      "options": [
+        "forceUpdate",
+        "setState",
+        "render",
+        "update"
+      ],
+      "correctAnswer": "forceUpdate"
+    },
+    {
+      "id": 37,
+      "question": "What is the correct way to loop over an array in JSX?",
+      "options": [
+        "{array.map(item => <div>{item}</div>)}",
+        "{array.forEach(item => <div>{item}</div>)}",
+        "{for item in array <div>{item}</div>}",
+        "{array.loop(item => <div>{item}</div>)}"
+      ],
+      "correctAnswer": "{array.map(item => <div>{item}</div>)}"
+    },
+    {
+      "id": 38,
+      "question": "What is the purpose of the useLayoutEffect hook?",
+      "options": [
+        "To manage state",
+        "To handle side effects before the browser paints",
+        "To memoize functions",
+        "To fetch data"
+      ],
+      "correctAnswer": "To handle side effects before the browser paints"
+    },
+    {
+      "id": 39,
+      "question": "Which attribute is used to specify a CSS class in JSX?",
+      "options": [
+        "class",
+        "className",
+        "style",
+        "css"
+      ],
+      "correctAnswer": "className"
+    },
+    {
+      "id": 40,
+      "question": "What is the purpose of the React.createContext function?",
+      "options": [
+        "To manage state",
+        "To create a context for sharing data",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To create a context for sharing data"
+    },
+    {
+      "id": 41,
+      "question": "Which lifecycle method is deprecated in newer versions of React?",
+      "options": [
+        "componentDidMount",
+        "componentWillMount",
+        "componentDidUpdate",
+        "componentWillUnmount"
+      ],
+      "correctAnswer": "componentWillMount"
+    },
+    {
+      "id": 42,
+      "question": "What is the purpose of the forwardRef function in React?",
+      "options": [
+        "To pass refs to child components",
+        "To manage state",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To pass refs to child components"
+    },
+    {
+      "id": 43,
+      "question": "Which hook is used to optimize performance by memoizing values?",
+      "options": [
+        "useState",
+        "useMemo",
+        "useEffect",
+        "useCallback"
+      ],
+      "correctAnswer": "useMemo"
+    },
+    {
+      "id": 44,
+      "question": "What is the correct way to define inline styles in JSX?",
+      "options": [
+        "<div style={{ color: 'red' }}></div>",
+        "<div style='color: red'></div>",
+        "<div style={color: 'red'}></div>",
+        "<div style={{'color': red}}></div>"
+      ],
+      "correctAnswer": "<div style={{ color: 'red' }}></div>"
+    },
+    {
+      "id": 45,
+      "question": "What is the purpose of the React.Children API?",
+      "options": [
+        "To manage state",
+        "To manipulate and traverse children props",
+        "To handle side effects",
+        "To fetch data"
+      ],
+      "correctAnswer": "To manipulate and traverse children props"
+    },
+    {
+      "id": 46,
+      "question": "Which method is used to access the state in a class component?",
+      "options": [
+        "this.state",
+        "state",
+        "props.state",
+        "this.props.state"
+      ],
+      "correctAnswer": "this.state"
+    },
+    {
+      "id": 47,
+      "question": "What is the purpose of the useDebugValue hook?",
+      "options": [
+        "To manage state",
+        "To display custom labels in React DevTools",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To display custom labels in React DevTools"
+    },
+    {
+      "id": 48,
+      "question": "Which attribute is used to prevent default browser behavior in JSX events?",
+      "options": [
+        "preventDefault",
+        "stopPropagation",
+        "defaultPrevent",
+        "blockDefault"
+      ],
+      "correctAnswer": "preventDefault"
+    },
+    {
+      "id": 49,
+      "question": "What is the purpose of the React.PureComponent class?",
+      "options": [
+        "To manage state",
+        "To optimize performance with shallow prop and state comparison",
+        "To handle side effects",
+        "To fetch data"
+      ],
+      "correctAnswer": "To optimize performance with shallow prop and state comparison"
+    },
+    {
+      "id": 50,
+      "question": "Which hook is used to manage state with a reducer-like approach?",
+      "options": [
+        "useState",
+        "useReducer",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useReducer"
+    },
+    {
+      "id": 51,
+      "question": "What is the correct way to import React in a file?",
+      "options": [
+        "import React from 'react'",
+        "import { React } from 'react'",
+        "require('react')",
+        "import * as React from 'react'"
+      ],
+      "correctAnswer": "import React from 'react'"
+    },
+    {
+      "id": 52,
+      "question": "What is the purpose of the getDerivedStateFromProps static method?",
+      "options": [
+        "To manage state",
+        "To update state based on props changes",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To update state based on props changes"
+    },
+    {
+      "id": 53,
+      "question": "Which attribute is used to stop event bubbling in JSX?",
+      "options": [
+        "preventDefault",
+        "stopPropagation",
+        "blockEvent",
+        "cancelEvent"
+      ],
+      "correctAnswer": "stopPropagation"
+    },
+    {
+      "id": 54,
+      "question": "What is the purpose of the React.createRef function?",
+      "options": [
+        "To manage state",
+        "To create a reference to a DOM element or component",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To create a reference to a DOM element or component"
+    },
+    {
+      "id": 55,
+      "question": "Which lifecycle method is used to clean up resources in a class component?",
+      "options": [
+        "componentDidMount",
+        "componentWillUnmount",
+        "componentDidUpdate",
+        "componentWillMount"
+      ],
+      "correctAnswer": "componentWillUnmount"
+    },
+    {
+      "id": 56,
+      "question": "What is the correct way to define a state in a functional component?",
+      "options": [
+        "const [state, setState] = useState(initialState)",
+        "this.state = initialState",
+        "state = useState(initialState)",
+        "useState(state, initialState)"
+      ],
+      "correctAnswer": "const [state, setState] = useState(initialState)"
+    },
+    {
+      "id": 57,
+      "question": "What is the purpose of the React.Suspense component?",
+      "options": [
+        "To manage state",
+        "To handle lazy-loaded components",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To handle lazy-loaded components"
+    },
+    {
+      "id": 58,
+      "question": "Which hook is used to memoize a callback function?",
+      "options": [
+        "useState",
+        "useCallback",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useCallback"
+    },
+    {
+      "id": 59,
+      "question": "What is the purpose of the React.lazy function?",
+      "options": [
+        "To manage state",
+        "To dynamically import components",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To dynamically import components"
+    },
+    {
+      "id": 60,
+      "question": "Which method is used to access props in a class component?",
+      "options": [
+        "this.props",
+        "props",
+        "state.props",
+        "this.state.props"
+      ],
+      "correctAnswer": "this.props"
+    },
+    {
+      "id": 61,
+      "question": "What is the purpose of the useTransition hook in React?",
+      "options": [
+        "To manage state",
+        "To handle non-urgent UI updates",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To handle non-urgent UI updates"
+    },
+    {
+      "id": 62,
+      "question": "Which attribute is used to specify an HTML id in JSX?",
+      "options": [
+        "id",
+        "htmlId",
+        "elementId",
+        "jsxId"
+      ],
+      "correctAnswer": "id"
+    },
+    {
+      "id": 63,
+      "question": "What is the purpose of the React.cloneElement function?",
+      "options": [
+        "To manage state",
+        "To create a copy of an element with new props",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To create a copy of an element with new props"
+    },
+    {
+      "id": 64,
+      "question": "Which hook is used to manage multiple state transitions?",
+      "options": [
+        "useState",
+        "useTransition",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useTransition"
+    },
+    {
+      "id": 65,
+      "question": "What is the correct way to use a ref in a functional component?",
+      "options": [
+        "const myRef = useRef(null)",
+        "const myRef = createRef(null)",
+        "const myRef = ref(null)",
+        "const myRef = useState(null)"
+      ],
+      "correctAnswer": "const myRef = useRef(null)"
+    },
+    {
+      "id": 66,
+      "question": "What is the purpose of the React.isValidElement function?",
+      "options": [
+        "To manage state",
+        "To check if an object is a valid React element",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To check if an object is a valid React element"
+    },
+    {
+      "id": 67,
+      "question": "Which lifecycle method is called before a component re-renders?",
+      "options": [
+        "componentDidMount",
+        "componentWillUpdate",
+        "componentDidUpdate",
+        "componentWillMount"
+      ],
+      "correctAnswer": "componentWillUpdate"
+    },
+    {
+      "id": 68,
+      "question": "What is the purpose of the useId hook in React?",
+      "options": [
+        "To manage state",
+        "To generate unique IDs for accessibility",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To generate unique IDs for accessibility"
+    },
+    {
+      "id": 69,
+      "question": "Which attribute is used to specify a form input value in JSX?",
+      "options": [
+        "value",
+        "inputValue",
+        "dataValue",
+        "formValue"
+      ],
+      "correctAnswer": "value"
+    },
+    {
+      "id": 70,
+      "question": "What is the purpose of the React.createElement function?",
+      "options": [
+        "To manage state",
+        "To create a React element",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To create a React element"
+    },
+    {
+      "id": 71,
+      "question": "Which hook is used to handle cleanup in useEffect?",
+      "options": [
+        "useState",
+        "useEffect",
+        "useMemo",
+        "useCallback"
+      ],
+      "correctAnswer": "useEffect"
+    },
+    {
+      "id": 72,
+      "question": "What is the correct way to define a default prop in a functional component?",
+      "options": [
+        "MyComponent.defaultProps = { prop: value }",
+        "MyComponent.props = { prop: value }",
+        "defaultProps = { prop: value }",
+        "MyComponent.propTypes = { prop: value }"
+      ],
+      "correctAnswer": "MyComponent.defaultProps = { prop: value }"
+    },
+    {
+      "id": 73,
+      "question": "What is the purpose of the React.useDeferredValue hook?",
+      "options": [
+        "To manage state",
+        "To defer rendering of non-critical updates",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To defer rendering of non-critical updates"
+    },
+    {
+      "id": 74,
+      "question": "Which method is used to initialize state in a class component?",
+      "options": [
+        "constructor",
+        "setState",
+        "render",
+        "componentDidMount"
+      ],
+      "correctAnswer": "constructor"
+    },
+    {
+      "id": 75,
+      "question": "What is the purpose of the React.forwardRef function?",
+      "options": [
+        "To manage state",
+        "To forward refs to child components",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To forward refs to child components"
+    },
+    {
+      "id": 76,
+      "question": "Which attribute is used to specify an image source in JSX?",
+      "options": [
+        "src",
+        "source",
+        "imgSrc",
+        "image"
+      ],
+      "correctAnswer": "src"
+    },
+    {
+      "id": 77,
+      "question": "What is the purpose of the React.Component class?",
+      "options": [
+        "To manage state",
+        "To define class-based components",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To define class-based components"
+    },
+    {
+      "id": 78,
+      "question": "Which hook is used to access the current state or props snapshot?",
+      "options": [
+        "useState",
+        "useRef",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useRef"
+    },
+    {
+      "id": 79,
+      "question": "What is the correct way to use a context in a functional component?",
+      "options": [
+        "const value = useContext(MyContext)",
+        "const value = MyContext.use()",
+        "const value = context(MyContext)",
+        "const value = useState(MyContext)"
+      ],
+      "correctAnswer": "const value = useContext(MyContext)"
+    },
+    {
+      "id": 80,
+      "question": "Which method is used to handle errors in a class component?",
+      "options": [
+        "componentDidCatch",
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillUnmount"
+      ],
+      "correctAnswer": "componentDidCatch"
+    },
+    {
+      "id": 81,
+      "question": "What is the purpose of the ReactDOM.createPortal function?",
+      "options": [
+        "To manage state",
+        "To render children into a different DOM node",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To render children into a different DOM node"
+    },
+    {
+      "id": 82,
+      "question": "Which attribute is used to specify a checkbox state in JSX?",
+      "options": [
+        "checked",
+        "selected",
+        "active",
+        "ticked"
+      ],
+      "correctAnswer": "checked"
+    },
+    {
+      "id": 83,
+      "question": "What is the purpose of the React.useSyncExternalStore hook?",
+      "options": [
+        "To manage state",
+        "To subscribe to external stores",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To subscribe to external stores"
+    },
+    {
+      "id": 84,
+      "question": "Which method is used to define static properties in a class component?",
+      "options": [
+        "static",
+        "class",
+        "props",
+        "state"
+      ],
+      "correctAnswer": "static"
+    },
+    {
+      "id": 85,
+      "question": "What is the correct way to conditionally apply a class in JSX?",
+      "options": [
+        "className={condition ? 'class1' : 'class2'}",
+        "class={condition ? 'class1' : 'class2'}",
+        "className={condition : 'class1' ? 'class2'}",
+        "className={if condition then 'class1' else 'class2'}"
+      ],
+      "correctAnswer": "className={condition ? 'class1' : 'class2'}"
+    },
+    {
+      "id": 86,
+      "question": "What is the purpose of the React.Children.map function?",
+      "options": [
+        "To manage state",
+        "To iterate over children props",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To iterate over children props"
+    },
+    {
+      "id": 87,
+      "question": "Which hook is used to handle imperative animations?",
+      "options": [
+        "useState",
+        "useImperativeHandle",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useImperativeHandle"
+    },
+    {
+      "id": 88,
+      "question": "Which attribute is used to specify a link URL in JSX?",
+      "options": [
+        "href",
+        "link",
+        "url",
+        "src"
+      ],
+      "correctAnswer": "href"
+    },
+    {
+      "id": 89,
+      "question": "What is the purpose of the React.useCallback hook?",
+      "options": [
+        "To manage state",
+        "To memoize callback functions",
+        "To handle side effects",
+        "To fetch data"
+      ],
+      "correctAnswer": "To memoize callback functions"
+    },
+    {
+      "id": 90,
+      "question": "Which lifecycle method is used to optimize rendering in a class component?",
+      "options": [
+        "shouldComponentUpdate",
+        "componentDidMount",
+        "componentDidUpdate",
+        "componentWillUnmount"
+      ],
+      "correctAnswer": "shouldComponentUpdate"
+    },
+    {
+      "id": 91,
+      "question": "What is the correct way to import PropTypes in a React file?",
+      "options": [
+        "import PropTypes from 'prop-types'",
+        "import { PropTypes } from 'react'",
+        "import PropTypes from 'react'",
+        "import * as PropTypes from 'prop-types'"
+      ],
+      "correctAnswer": "import PropTypes from 'prop-types'"
+    },
+    {
+      "id": 92,
+      "question": "What is the purpose of the React.Children.count function?",
+      "options": [
+        "To manage state",
+        "To count the number of children",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To count the number of children"
+    },
+    {
+      "id": 93,
+      "question": "Which hook is used to handle layout-related side effects?",
+      "options": [
+        "useState",
+        "useLayoutEffect",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useLayoutEffect"
+    },
+    {
+      "id": 94,
+      "question": "Which attribute is used to specify a placeholder in an input in JSX?",
+      "options": [
+        "placeholder",
+        "hint",
+        "text",
+        "default"
+      ],
+      "correctAnswer": "placeholder"
+    },
+    {
+      "id": 95,
+      "question": "What is the purpose of the React.Children.toArray function?",
+      "options": [
+        "To manage state",
+        "To convert children to an array",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To convert children to an array"
+    },
+    {
+      "id": 96,
+      "question": "Which method is used to set initial state in a class component?",
+      "options": [
+        "constructor",
+        "setState",
+        "render",
+        "componentDidMount"
+      ],
+      "correctAnswer": "constructor"
+    },
+    {
+      "id": 97,
+      "question": "What is the correct way to use a memoized component?",
+      "options": [
+        "const MyComponent = React.memo(Component)",
+        "const MyComponent = memo(Component)",
+        "const MyComponent = Component.memo()",
+        "const MyComponent = useMemo(Component)"
+      ],
+      "correctAnswer": "const MyComponent = React.memo(Component)"
+    },
+    {
+      "id": 98,
+      "question": "Which hook is used to debug custom hooks in React DevTools?",
+      "options": [
+        "useState",
+        "useDebugValue",
+        "useEffect",
+        "useMemo"
+      ],
+      "correctAnswer": "useDebugValue"
+    },
+    {
+      "id": 99,
+      "question": "Which attribute is used to specify a disabled state in JSX?",
+      "options": [
+        "disabled",
+        "inactive",
+        "off",
+        "disable"
+      ],
+      "correctAnswer": "disabled"
+    },
+    {
+      "id": 100,
+      "question": "What is the purpose of the React.Children.only function?",
+      "options": [
+        "To manage state",
+        "To ensure only one child is provided",
+        "To handle side effects",
+        "To memoize functions"
+      ],
+      "correctAnswer": "To ensure only one child is provided"
+    }
+  ]

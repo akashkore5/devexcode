@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth";
 import ProfileClient from "./ProfileClient";
 import problems from "../../data/problems.json";
 import systemDesignQuestions from "../../data/system_design_questions.json";
