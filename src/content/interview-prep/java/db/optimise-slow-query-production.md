@@ -1,8 +1,14 @@
 ---
-title: "How to Optimize a Slow SQL Query in Production: Step-by-Step"
+title: "How to Optimize a Slow SQL Query in Production"
 category: "db"
 order: 36
+status: "not-started"
+tags: ["SQL", "Optimization", "Indexes", "Performance"]
 ---
+
+# 🔹 Optimizing a Slow Query in Production (Deep Dive, Interview-Ready)
+
+"Walk me through how you would optimize a slow query in production" is the ultimate architectural interview question. The interviewer is looking for a systematic, step-by-step approach rather than a random guess.
 
 ### Step 1: Identify the Slow Query
 Before optimizing, find what's actually slow:
@@ -184,3 +190,9 @@ public List<Product> getTopProducts(String category) {
 | 10 | Cache hot queries (Redis / Spring Cache) | ⚡ Eliminates DB hit |
 
 > **Golden Rule**: Always measure before and after with `EXPLAIN ANALYZE`. An optimization without measurement is just a guess.
+
+---
+
+## 🔥 Interview Gold Statement
+
+> *"When optimizing a slow production query, my first step is always to measure using `EXPLAIN ANALYZE` rather than guessing. I look for 'Full Table Scans' or 'Using filesort' as immediate red flags. The highest impact fix is almost always indexing—specifically adding Covering Indexes to satisfy the `WHERE`, `JOIN`, and `ORDER BY` clauses to eliminate disk I/O entirely. Once indexes are optimized, I review the query syntax: replacing correlated subqueries with `JOIN`s or `EXISTS`, removing functions from indexed columns to prevent index invalidation, and ensuring we use Keyset Pagination instead of `OFFSET` for large data reads. If the query is still slow after algorithmic and index optimization, I look to architectural solutions like Table Partitioning or introducing a Redis caching layer."*
