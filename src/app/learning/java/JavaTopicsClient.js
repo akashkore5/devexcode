@@ -324,8 +324,7 @@ export default function JavaTopicsDashboard() {
         </div>
       </main>
 
-      {/* Decorative Gradient */}
-      <div className="fixed bottom-0 left-0 right-0 h-[40vh] bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-10" />
+
     </div>
   );
 }

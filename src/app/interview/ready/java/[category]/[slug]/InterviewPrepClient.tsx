@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { 
   ChevronLeftIcon, 
@@ -54,6 +56,42 @@ export default function InterviewPrepClient({ content: initialContent, frontmatt
     damping: 30,
     restDelta: 0.001
   });
+
+  const components = {
+    pre: ({ node, ...props }) => (
+      <div className="relative group my-8">
+        <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-[40px] blur-xl opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+        <pre {...props} className="relative bg-[#1E1E1E] backdrop-blur-xl border border-white/5 rounded-[32px] shadow-2xl overflow-x-auto m-0 p-0" />
+      </div>
+    ),
+    code: ({ node, inline, className, children, ...props }: any) => {
+      const match = /language-(\w+)/.exec(className || '');
+      if (match) {
+        return (
+          <SyntaxHighlighter
+            {...props}
+            style={vscDarkPlus}
+            language={match[1]}
+            PreTag="div"
+            customStyle={{
+              margin: 0,
+              padding: '2rem',
+              background: 'transparent',
+              fontSize: '0.875rem',
+              lineHeight: '1.7',
+            }}
+          >
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        );
+      }
+      return (
+        <code className={`${className || ''} bg-primary/10 text-primary px-1.5 py-0.5 rounded-md text-sm font-semibold`} {...props}>
+          {children}
+        </code>
+      );
+    }
+  };
 
   // Fetch Progress from DB
   useEffect(() => {
@@ -295,8 +333,6 @@ export default function InterviewPrepClient({ content: initialContent, frontmatt
                 prose-h3:text-xl prose-h3:font-bold prose-h3:mt-12
                 prose-p:text-lg prose-p:leading-[1.8] prose-p:text-muted-foreground/80 prose-p:mb-8
                 prose-strong:text-foreground prose-strong:font-black
-                prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-                prose-pre:bg-slate-900 prose-pre:rounded-[40px] prose-pre:p-10 prose-pre:shadow-2xl prose-pre:my-12
                 prose-li:text-muted-foreground/80 prose-li:mb-3
                 prose-blockquote:border-l-4 prose-blockquote:border-primary/20 prose-blockquote:pl-10 prose-blockquote:italic prose-blockquote:text-muted-foreground prose-blockquote:my-10
                 prose-img:rounded-[40px] prose-img:my-12
@@ -306,6 +342,7 @@ export default function InterviewPrepClient({ content: initialContent, frontmatt
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
+                components={components}
               >
                 {isEditing ? tempContent : content}
               </ReactMarkdown>

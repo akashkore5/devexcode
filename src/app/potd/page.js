@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Head from "next/head";
 import { useSession } from "next-auth/react";
-import Layout from "../../components/Layout";
 import gfgPotdData from "../../data/gfg_potd.json";
 import leetcodePotdData from "../../data/leetcode_potd.json";
 import DOMPurify from "isomorphic-dompurify";
@@ -322,7 +321,7 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
 
     if (error) {
         return (
-            <Layout isLoggedIn={status === "authenticated"} userName={session?.user?.name || ""}>
+            <>
                 <Head>
                     <title>Problem of the Day - DevExCode</title>
                     <meta name="description" content="Explore daily coding problems from GeeksforGeeks and LeetCode to boost your coding skills with DevExCode." />
@@ -359,12 +358,12 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
                         <ErrorMessage message={error} />
                     </div>
                 </section>
-            </Layout>
+            </>
         );
     }
 
     return (
-        <Layout isLoggedIn={status === "authenticated"} userName={session?.user?.name || ""}>
+        <>
             <Head>
                 <title>
                     Problem of the Day - DevExCode | {gfgPotd ? `GFG: ${gfgPotd.title}` : "No GFG POTD"}{gfgPotd && leetcodePotd ? " | " : ""}{leetcodePotd ? `LeetCode: ${leetcodePotd.title}` : "No LeetCode POTD"}
@@ -804,6 +803,6 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
                     </div>
                 </div>
             </section>
-        </Layout>
+        </>
     );
 }

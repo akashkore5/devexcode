@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { 
   ChevronLeftIcon, 
   CodeBracketIcon,
@@ -83,11 +85,38 @@ export default function PracticeClient({ content, frontmatter, category }: Props
       );
     },
     pre: ({ node, ...props }) => (
-      <div className="relative group">
+      <div className="relative group my-8">
         <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-[40px] blur-xl opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-        <pre {...props} className="relative bg-slate-950/90 backdrop-blur-xl border border-white/5 rounded-[32px] p-8 sm:p-10 shadow-2xl overflow-x-auto my-8" />
+        <pre {...props} className="relative bg-[#1E1E1E] backdrop-blur-xl border border-white/5 rounded-[32px] shadow-2xl overflow-x-auto m-0 p-0" />
       </div>
     ),
+    code: ({ node, inline, className, children, ...props }: any) => {
+      const match = /language-(\w+)/.exec(className || '');
+      if (match) {
+        return (
+          <SyntaxHighlighter
+            {...props}
+            style={vscDarkPlus}
+            language={match[1]}
+            PreTag="div"
+            customStyle={{
+              margin: 0,
+              padding: '2rem',
+              background: 'transparent',
+              fontSize: '0.875rem',
+              lineHeight: '1.7',
+            }}
+          >
+            {String(children).replace(/\n$/, '')}
+          </SyntaxHighlighter>
+        );
+      }
+      return (
+        <code className={`${className || ''} bg-primary/10 text-primary px-1.5 py-0.5 rounded-md text-sm font-semibold`} {...props}>
+          {children}
+        </code>
+      );
+    },
     ol: ({ node, ...props }) => <ol {...props} className="space-y-4 my-8" />,
     li: ({ node, ...props }) => (
       <li className="flex gap-4 group">
@@ -147,7 +176,6 @@ export default function PracticeClient({ content, frontmatter, category }: Props
         <div className="prose dark:prose-invert max-w-none 
             prose-p:text-lg prose-p:leading-[1.8] prose-p:text-muted-foreground/80
             prose-strong:text-foreground prose-strong:font-black
-            prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
         ">
           {/* 1. Render content before "Expected Output" */}
           <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
