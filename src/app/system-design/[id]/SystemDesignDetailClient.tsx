@@ -4,9 +4,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
-import { toast } from "react-hot-toast";
+import { toast, Toaster } from "react-hot-toast";
 import { Button } from "../../../components/ui/button";
 import { 
   ChevronLeftIcon, 
@@ -86,8 +88,96 @@ export default function SystemDesignDetailClient({ question, content, frontmatte
     Advanced: "bg-rose-500/10 text-rose-500 border-rose-500/20",
   };
 
+  const components = {
+    pre: ({ node, children, ...props }: any) => {
+      return (
+        <div className="relative group my-8">
+          <div className="absolute -inset-2 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-[32px] blur-xl opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+          <div className="relative bg-[#0D0E12] backdrop-blur-xl border border-white/5 rounded-[24px] shadow-2xl overflow-hidden m-0 p-0">
+            {children}
+          </div>
+        </div>
+      );
+    },
+    code: ({ node, inline, className, children, ...props }: any) => {
+      const match = /language-(\w+)/.exec(className || '');
+      const codeString = String(children).replace(/\n$/, '');
+      const [copied, setCopied] = useState(false);
+
+      const handleCopy = () => {
+        navigator.clipboard.writeText(codeString);
+        setCopied(true);
+        toast.success("Code copied to clipboard!");
+        setTimeout(() => setCopied(false), 2000);
+      };
+
+      if (inline) {
+        return (
+          <code className="bg-primary/10 text-primary px-1.5 py-0.5 rounded-md text-sm font-semibold">
+            {children}
+          </code>
+        );
+      }
+
+      const displayLang = match ? match[1] : 'code';
+
+      return (
+        <div>
+          <div className="flex items-center justify-between px-6 py-3 bg-[#13141C] border-b border-white/5 select-none">
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/50">
+              {displayLang}
+            </span>
+            <button
+              onClick={handleCopy}
+              className="flex items-center gap-1.5 text-xs font-bold text-muted-foreground/60 hover:text-primary transition-colors bg-white/5 hover:bg-white/10 px-2.5 py-1.5 rounded-xl border border-white/5"
+            >
+              {copied ? (
+                <>
+                  <svg className="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span className="text-emerald-500 uppercase text-[9px] tracking-wider font-black">Copied</span>
+                </>
+              ) : (
+                <>
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                  </svg>
+                  <span className="uppercase text-[9px] tracking-wider font-black">Copy</span>
+                </>
+              )}
+            </button>
+          </div>
+          <div className="overflow-x-auto">
+            {match ? (
+              <SyntaxHighlighter
+                style={vscDarkPlus}
+                language={match[1]}
+                PreTag="div"
+                customStyle={{
+                  margin: 0,
+                  padding: '1.5rem 2rem',
+                  background: 'transparent',
+                  fontSize: '0.875rem',
+                  lineHeight: '1.7',
+                }}
+              >
+                {codeString}
+              </SyntaxHighlighter>
+            ) : (
+              <pre className="p-6 m-0 text-sm leading-relaxed text-muted-foreground/90 font-mono">
+                <code>{children}</code>
+              </pre>
+            )}
+          </div>
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
+      <Toaster position="top-right" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Navigation & Actions */}
@@ -139,7 +229,11 @@ export default function SystemDesignDetailClient({ question, content, frontmatte
               </h1>
 
               <div className="prose dark:prose-invert max-w-none prose-headings:font-black prose-p:text-muted-foreground prose-p:leading-relaxed prose-pre:bg-muted prose-pre:rounded-3xl prose-pre:border prose-pre:border-border">
-                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw]}
+                  components={components}
+                >
                   {content}
                 </ReactMarkdown>
               </div>
