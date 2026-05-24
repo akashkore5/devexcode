@@ -4,8 +4,17 @@ import { Providers } from './providers';
 import { Toaster } from 'react-hot-toast';
 import { AppLayout } from '../components/AppLayout';
 import { Outfit } from 'next/font/google';
+import { Viewport } from 'next';
 
 const outfit = Outfit({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  themeColor: '#4f46e5',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: 'DevExCode - Your Ultimate Guide to Acing Tech Interviews',

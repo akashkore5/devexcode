@@ -287,86 +287,127 @@ export function AppLayout({ children }: AppLayoutProps) {
 
       <main className="flex-grow pt-8">{children}</main>
 
-      <footer className="bg-card dark:bg-card/30 border-t border-border pt-20 pb-10">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            <div className="col-span-1 lg:col-span-1">
-              <Link href="/" className="flex items-center space-x-2 mb-6 group">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-black text-sm">D</span>
+      <footer className="relative bg-card dark:bg-card/20 border-t border-border pt-24 pb-12 overflow-hidden">
+        {/* Subtle glow effect behind the footer */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+            
+            {/* Brand Column */}
+            <div className="col-span-1 md:col-span-2 lg:col-span-4 flex flex-col items-start">
+              <Link href="/" className="flex items-center space-x-3 mb-6 group">
+                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
+                  <span className="text-white font-black text-xl">D</span>
                 </div>
-                <span className="text-xl font-black gradient-text tracking-tighter">DevExCode</span>
+                <span className="text-2xl font-black gradient-text tracking-tight">DevExCode</span>
               </Link>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                The ultimate platform for modern engineers to master technical interviews and system design at scale.
+              <p className="text-muted-foreground text-sm leading-relaxed mb-8 max-w-xs">
+                The ultimate platform for modern engineers to master technical interviews and system design at scale. Built by developers, for developers.
               </p>
               <div className="flex space-x-4">
-                {[{ icon: "GitHub", href: "#" }, { icon: "Twitter", href: "#" }, { icon: "LinkedIn", href: "#" }].map((social) => (
-                  <a key={social.icon} href={social.href} className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                    <span className="sr-only">{social.icon}</span>
+                {[
+                  { icon: "GitHub", href: "#", color: "hover:bg-[#333] hover:border-[#333]" },
+                  { icon: "Twitter", href: "#", color: "hover:bg-[#1DA1F2] hover:border-[#1DA1F2]" },
+                  { icon: "LinkedIn", href: "#", color: "hover:bg-[#0077B5] hover:border-[#0077B5]" }
+                ].map((social) => (
+                  <a 
+                    key={social.icon} 
+                    href={social.href} 
+                    className={`w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-white transition-all duration-300 ${social.color}`}
+                    aria-label={social.icon}
+                  >
                     <i className={`fab fa-${social.icon.toLowerCase()}`} />
                   </a>
                 ))}
               </div>
             </div>
 
-            <div>
-              <h3 className="text-sm font-black uppercase tracking-widest text-foreground mb-6">Learning Paths</h3>
+            {/* Links Column 1 */}
+            <div className="col-span-1 lg:col-span-2 lg:ml-8">
+              <h3 className="text-xs font-black uppercase tracking-widest text-foreground mb-6">Learning Paths</h3>
               <ul className="space-y-4">
                 {navLinks.slice(0, 4).map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-muted-foreground hover:text-primary transition-colors flex items-center group">
-                      <ChevronRightIcon className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                      {link.label}
+                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                      <ChevronRightIcon className="w-3.5 h-3.5 mr-2 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div>
-              <h3 className="text-sm font-black uppercase tracking-widest text-foreground mb-6">Quick Links</h3>
+            {/* Links Column 2 */}
+            <div className="col-span-1 lg:col-span-2">
+              <h3 className="text-xs font-black uppercase tracking-widest text-foreground mb-6">Quick Links</h3>
               <ul className="space-y-4">
                 {[
                   { label: "About Us", href: "/about" },
                   { label: "Contact Support", href: "/contact" },
-                  { label: "Terms of Service", href: "/about" },
-                  { label: "Privacy Policy", href: "/about" }
+                  { label: "Terms of Service", href: "/terms" },
+                  { label: "Privacy Policy", href: "/privacy" }
                 ].map((item) => (
                   <li key={item.label}>
-                    <Link href={item.href} className="text-muted-foreground hover:text-primary transition-colors flex items-center group">
-                      <ChevronRightIcon className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                      {item.label}
+                    <Link href={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                      <ChevronRightIcon className="w-3.5 h-3.5 mr-2 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">{item.label}</span>
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div>
-              <div className="p-6 rounded-3xl bg-primary/5 border border-primary/10">
-                <h3 className="text-sm font-black text-primary uppercase tracking-widest mb-4">Weekly Insights</h3>
-                <p className="text-xs text-muted-foreground mb-6 leading-relaxed">
-                  Join 15,000+ developers receiving the best tech interview tips every Tuesday.
+            {/* Newsletter Column */}
+            <div className="col-span-1 md:col-span-2 lg:col-span-4">
+              <div className="p-6 sm:p-8 rounded-3xl glass dark:glass-dark border border-primary/10 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors duration-500" />
+                <h3 className="text-sm font-black text-foreground mb-3 flex items-center gap-2">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                  </span>
+                  Weekly Insights
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed relative z-10">
+                  Join 15,000+ developers receiving the best system design and interview tips every Tuesday. No spam, ever.
                 </p>
-                <div className="flex space-x-2">
-                  <input type="email" placeholder="Email" className="bg-background border border-border rounded-xl px-4 py-2 text-xs flex-grow focus:outline-none focus:ring-2 focus:ring-primary/20" />
-                  <button className="bg-primary text-white px-4 py-2 rounded-xl text-xs font-bold">Join</button>
+                <div className="relative z-10 flex flex-col sm:flex-row gap-3">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    className="bg-background border border-border rounded-xl px-4 py-3 text-sm flex-grow focus:outline-none focus:ring-2 focus:ring-primary/50 transition-shadow" 
+                  />
+                  <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl text-sm font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 whitespace-nowrap">
+                    Subscribe
+                  </button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-border pt-10 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>© {new Date().getFullYear()} DevExCode Inc. Built for the future of engineering.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <span className="flex items-center"><div className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" /> All Systems Operational</span>
+          {/* Bottom Bar */}
+          <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex flex-col items-center md:items-start">
+              <p className="text-sm text-muted-foreground font-medium mb-1">
+                © {new Date().getFullYear()} DevExCode Inc. All rights reserved.
+              </p>
+              <p className="text-xs text-muted-foreground/60 flex items-center gap-1.5">
+                Made with <span className="text-red-500 animate-pulse">❤️</span> for developers
+              </p>
+            </div>
+            
+            <div className="flex items-center gap-3 px-4 py-2 bg-card border border-border rounded-full shadow-sm">
+              <div className="relative flex items-center justify-center">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" />
+                <div className="absolute w-2 h-2 rounded-full bg-emerald-500 animate-ping opacity-75" />
+              </div>
+              <span className="text-xs font-black uppercase tracking-wider text-muted-foreground">All Systems Operational</span>
             </div>
           </div>
         </div>
       </footer>
 
-      
       <AnimatePresence>
         {internalIsLoginModalOpen && (
             <LoginModal isOpen={internalIsLoginModalOpen} onClose={() => setInternalIsLoginModalOpen(false)} initialMode={initialModalMode} onLoginSuccess={() => { setInternalIsLoginModalOpen(false); toast.success("Logged in successfully"); }} />
