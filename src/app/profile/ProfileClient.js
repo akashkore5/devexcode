@@ -246,6 +246,7 @@ export default function Profile({ totalLeetcodeQuestions, totalSystemDesignQuest
   const [isLoadingProgress, setIsLoadingProgress] = useState(false);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Memoized totals with validation
   const totals = useMemo(
@@ -645,7 +646,6 @@ export default function Profile({ totalLeetcodeQuestions, totalSystemDesignQuest
   }
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://devexcode.com";
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   const scrollToCard = (index) => {
     const container = document.querySelector(".progress-container");

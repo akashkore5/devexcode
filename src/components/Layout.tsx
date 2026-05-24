@@ -164,12 +164,10 @@ export default function Layout({
           if (response.ok) {
             setDailyTerm(data);
           } else {
-            console.error("[Layout] fetchDailyTerm Failed:", data.message);
-            toast.error(data.message || "Failed to fetch daily term");
+            console.warn("[Layout] fetchDailyTerm Failed:", data.message);
           }
         } catch (error: any) {
           console.error("[Layout] fetchDailyTerm Error:", error.message);
-          toast.error("Error loading daily term");
         } finally {
           setIsLoadingTerm(false);
         }

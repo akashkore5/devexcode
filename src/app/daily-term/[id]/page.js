@@ -16,7 +16,19 @@ export async function generateMetadata({ params }) {
   
   if (date > today) return { title: "Daily Term | DevExCode" };
 
-  const term = dailyTerms.find((t) => t.date === date);
+  let term = dailyTerms.find((t) => t.date === date);
+  if (!term && dailyTerms.length > 0) {
+    let hash = 0;
+    for (let i = 0; i < date.length; i++) {
+      hash = date.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const index = Math.abs(hash) % dailyTerms.length;
+    term = {
+      ...dailyTerms[index],
+      date: date,
+    };
+  }
+
   if (!term) return { title: "Daily Term | DevExCode" };
 
   return {
@@ -39,7 +51,19 @@ export default async function DailyTermPage({ params }) {
   }
 
   const validTerms = dailyTerms.filter((t) => t.date <= today);
-  const term = validTerms.find((t) => t.date === date);
+  let term = validTerms.find((t) => t.date === date);
+
+  if (!term && dailyTerms.length > 0) {
+    let hash = 0;
+    for (let i = 0; i < date.length; i++) {
+      hash = date.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    const index = Math.abs(hash) % dailyTerms.length;
+    term = {
+      ...dailyTerms[index],
+      date: date,
+    };
+  }
 
   if (!term) {
     notFound();
@@ -52,7 +76,18 @@ export default async function DailyTermPage({ params }) {
     prevDate.setDate(currentDate.getDate() - i);
     const prevDateString = formatLocalDate(prevDate);
     if (prevDateString <= today) {
-      const prevTerm = validTerms.find((t) => t.date === prevDateString);
+      let prevTerm = validTerms.find((t) => t.date === prevDateString);
+      if (!prevTerm && dailyTerms.length > 0) {
+        let hash = 0;
+        for (let j = 0; j < prevDateString.length; j++) {
+          hash = prevDateString.charCodeAt(j) + ((hash << 5) - hash);
+        }
+        const index = Math.abs(hash) % dailyTerms.length;
+        prevTerm = {
+          ...dailyTerms[index],
+          date: prevDateString,
+        };
+      }
       if (prevTerm) {
         previousTerms.push(prevTerm);
       }

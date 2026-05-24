@@ -23,7 +23,8 @@ import {
   UsersIcon,
   BriefcaseIcon,
   ChevronRightIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  CommandLineIcon
 } from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
 import { LoginModal } from "./LoginModal";
@@ -112,6 +113,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
       { href: "/potd", label: "POTD", icon: StarIcon },
       { href: "/community", label: "Community", icon: UsersIcon },
+      { href: "/system-design/flows", label: "System Flows", icon: CommandLineIcon },
   ];
 
   return (
@@ -325,11 +327,16 @@ export function AppLayout({ children }: AppLayoutProps) {
             <div>
               <h3 className="text-sm font-black uppercase tracking-widest text-foreground mb-6">Quick Links</h3>
               <ul className="space-y-4">
-                {["About Us", "Contact Support", "Terms of Service", "Privacy Policy"].map((item) => (
-                  <li key={item}>
-                    <Link href={`/${item.toLowerCase().replace(/ /g, "-")}`} className="text-muted-foreground hover:text-primary transition-colors flex items-center group">
+                {[
+                  { label: "About Us", href: "/about" },
+                  { label: "Contact Support", href: "/contact" },
+                  { label: "Terms of Service", href: "/about" },
+                  { label: "Privacy Policy", href: "/about" }
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-muted-foreground hover:text-primary transition-colors flex items-center group">
                       <ChevronRightIcon className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                      {item}
+                      {item.label}
                     </Link>
                   </li>
                 ))}

@@ -32,3 +32,8 @@ self.addEventListener("notificationclick", (event) => {
     })
   );
 });
+
+// Pass-through fetch event handler to satisfy PWA high-trust requirements
+self.addEventListener("fetch", (event) => {
+  event.respondWith(fetch(event.request));
+});

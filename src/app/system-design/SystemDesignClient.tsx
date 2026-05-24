@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { DataService, Problem } from "../../lib/data-service";
 import Link from "next/link";
+import { Workflow, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
@@ -167,6 +168,39 @@ export default function SystemDesignClient() {
           </Button>
         </div>
       </div>
+
+      {/* Premium Interactive Flows Promotion Banner */}
+      <motion.div 
+        initial={{ opacity: 0, y: -15 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="glass dark:glass-dark rounded-3xl p-6 border border-indigo-500/20 shadow-[0_0_30px_rgba(99,102,241,0.06)] mb-10 flex flex-col md:flex-row items-center justify-between gap-6"
+      >
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 bg-indigo-600/10 rounded-2xl flex items-center justify-center text-indigo-400 flex-shrink-0">
+            <Workflow className="w-6 h-6 animate-pulse" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-0.5 rounded-full bg-indigo-600/10 text-indigo-400 text-[9px] font-black uppercase tracking-widest border border-indigo-500/20 flex items-center gap-1">
+                <Sparkles className="w-3 h-3 fill-indigo-400 text-indigo-400" />
+                Interactive Sandbox
+              </span>
+            </div>
+            <h2 className="font-extrabold text-base text-white mt-1.5 leading-tight">
+              Master Systems with Real-time Flow Simulations
+            </h2>
+            <p className="text-xs text-muted-foreground mt-1">
+              Visualize CI/CD pipelines, autoscale pods under spikes, test OAuth JWT authorizations, and inject failure states interactively.
+            </p>
+          </div>
+        </div>
+        <Link href="/system-design/flows" className="w-full md:w-auto flex-shrink-0">
+          <Button className="w-full md:w-auto rounded-2xl bg-indigo-600 hover:bg-indigo-500 font-extrabold text-xs uppercase tracking-widest py-6 px-6 shadow-lg shadow-indigo-600/15">
+            Launch Flows Sandbox ➔
+          </Button>
+        </Link>
+      </motion.div>
+
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <aside className="lg:col-span-1 space-y-8">
