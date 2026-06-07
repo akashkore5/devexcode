@@ -1,9 +1,15 @@
-# *
 User-agent: *
 Allow: /
+
+# Disallow private/user routes
+Disallow: /api/
+Disallow: /profile
+Disallow: /auth/
+Disallow: /community/notes/my-notes
 
 # Host
 Host: https://devexcode.com
 
 # Sitemaps
+Sitemap: https://devexcode.com/sitemap.xml
 Sitemap: https://devexcode.com/sitemaps.xml

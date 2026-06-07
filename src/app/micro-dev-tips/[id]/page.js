@@ -2,26 +2,48 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import MicroDevTipsDetailClient from "./MicroDevTipsDetailClient";
 import devTips from "../../../data/micro_dev_tips.json";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const filePath = path.join(process.cwd(), "dailyblogtips", `${id}.md`);
-  
+
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContent);
+    const title = data.title || "Dev Tip";
+    const description = data.description || `Learn ${title} with actionable tips and examples on DevExCode.`;
+    const tags = Array.isArray(data.tags) ? data.tags : [];
     return {
-      title: `${data.title || "Dev Tip"} | DevExCode`,
-      description: data.description || "Learn actionable development tips with DevExCode.",
+      title: `${title} | DevExCode`,
+      description,
+      keywords: ['devexcode', 'devex code', 'dev tips', ...tags].join(', '),
+      alternates: { canonical: `https://devexcode.com/micro-dev-tips/${id}` },
+      openGraph: {
+        title: `${title} | DevExCode`,
+        description,
+        url: `https://devexcode.com/micro-dev-tips/${id}`,
+        type: 'article',
+      },
     };
   } catch (e) {
     const currentTip = devTips.find((t) => String(t.id) === id);
     if (currentTip) {
+      const description = currentTip.description || `Learn ${currentTip.title} with actionable tips and examples on DevExCode.`;
+      const tags = Array.isArray(currentTip.tags) ? currentTip.tags : [];
       return {
         title: `${currentTip.title} | DevExCode`,
-        description: currentTip.description || "Learn actionable development tips with DevExCode.",
+        description,
+        keywords: ['devexcode', 'devex code', 'dev tips', ...tags].join(', '),
+        alternates: { canonical: `https://devexcode.com/micro-dev-tips/${id}` },
+        openGraph: {
+          title: `${currentTip.title} | DevExCode`,
+          description,
+          url: `https://devexcode.com/micro-dev-tips/${id}`,
+          type: 'article',
+        },
       };
     }
     return { title: "Micro Dev Tip | DevExCode" };
@@ -68,5 +90,31 @@ export default async function MicroDevTipsDetailPage({ params }) {
     .slice(0, 5)
     .map((t) => ({ id: t.id, title: t.title }));
 
-  return <MicroDevTipsDetailClient frontmatter={frontmatter} content={content} relatedTips={relatedTips} />;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: frontmatter.title,
+    description: frontmatter.description,
+    datePublished: frontmatter.date,
+    dateModified: frontmatter.date,
+    keywords: Array.isArray(frontmatter.tags) ? frontmatter.tags.join(', ') : '',
+    author: { "@type": "Organization", name: "DevExCode" },
+    publisher: {
+      "@type": "Organization",
+      name: "DevExCode",
+      logo: { "@type": "ImageObject", url: "https://devexcode.com/favicon.png" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://devexcode.com/micro-dev-tips/${id}` },
+  };
+
+  return (
+    <>
+      <Script
+        id={`blog-schema-${id}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <MicroDevTipsDetailClient frontmatter={frontmatter} content={content} relatedTips={relatedTips} />
+    </>
+  );
 }

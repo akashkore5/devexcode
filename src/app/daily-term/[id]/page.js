@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import DailyTermClient from "./DailyTermClient";
 import dailyTerms from "../../../data/daily_terms.json";
 
@@ -31,12 +32,28 @@ export async function generateMetadata({ params }) {
 
   if (!term) return { title: "Daily Term | DevExCode" };
 
+  const description = `${term.shortExplanation} Learn the definition, usage, and examples of ${term.term} on DevExCode.`;
+
   return {
-    title: `Daily Term: ${term.term} | DevExCode`,
-    description: `${term.shortExplanation} Learn more about ${term.term} on DevExCode.`,
+    title: `${term.term} - Daily Tech Term | DevExCode`,
+    description,
+    keywords: [
+      term.term, 'devexcode', 'devex code', 'daily tech term', 'technical term',
+      'coding vocabulary', 'software development', 'programming concepts',
+      term.category || 'tech education',
+    ].filter(Boolean).join(', '),
+    alternates: { canonical: `https://devexcode.com/daily-term/${date}` },
     openGraph: {
-      title: `Daily Term: ${term.term}`,
-      description: term.shortExplanation,
+      title: `${term.term} - Daily Tech Term | DevExCode`,
+      description,
+      url: `https://devexcode.com/daily-term/${date}`,
+      type: 'article',
+      images: [`/api/generate-term-image?date=${date}`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${term.term} | DevExCode Daily Term`,
+      description,
       images: [`/api/generate-term-image?date=${date}`],
     },
   };
@@ -94,5 +111,30 @@ export default async function DailyTermPage({ params }) {
     }
   }
 
-  return <DailyTermClient initialTerm={term} previousTerms={previousTerms} />;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${term.term} - Daily Tech Term`,
+    description: term.shortExplanation,
+    datePublished: date,
+    dateModified: date,
+    author: { "@type": "Organization", name: "DevExCode" },
+    publisher: {
+      "@type": "Organization",
+      name: "DevExCode",
+      logo: { "@type": "ImageObject", url: "https://devexcode.com/favicon.png" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://devexcode.com/daily-term/${date}` },
+  };
+
+  return (
+    <>
+      <Script
+        id={`article-schema-${date}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <DailyTermClient initialTerm={term} previousTerms={previousTerms} />
+    </>
+  );
 }

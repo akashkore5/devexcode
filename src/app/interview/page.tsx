@@ -4,8 +4,21 @@ import fs from "fs";
 import path from "path";
 
 export const metadata = {
-  title: "Interview Prep Hub | DevExCode",
-  description: "Master tech interviews with curated Leetcode sets, system design blueprints, and specialized technology deep-dives.",
+  title: "Interview Prep Hub - FAANG & Tech Interview Preparation | DevExCode",
+  description: "Master your tech interview on DevExCode (DevEx Code). Curated Leetcode problems, Java interview questions, system design blueprints, MCQ tests, and mock interviews for FAANG, MAANG, and top tech companies.",
+  keywords: [
+    'devexcode interview', 'devex code interview prep', 'FAANG interview preparation',
+    'tech interview prep', 'Leetcode solutions', 'Java interview questions',
+    'system design interview', 'MCQ test', 'mock interview', 'coding interview',
+    'software engineer interview', 'MAANG interview',
+  ],
+  alternates: { canonical: 'https://devexcode.com/interview' },
+  openGraph: {
+    title: 'Interview Prep Hub | DevExCode',
+    description: 'Everything you need to ace FAANG interviews — on DevExCode.',
+    url: 'https://devexcode.com/interview',
+    type: 'website',
+  },
 };
 
 async function getCount(filename: string) {

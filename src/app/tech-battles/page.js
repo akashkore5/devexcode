@@ -2,9 +2,16 @@ import { headers } from "next/headers";
 import TechBattlesClient from "./TechBattlesClient";
 
 export const metadata = {
-  title: "Tech Battles | DevCodeEx",
-  description: "Explore tech battles with detailed comparisons, features, and use cases. Master technology comparisons with DevCodeEx.",
-  keywords: "tech battles, technology comparison, software comparison, technology stack",
+  title: "Tech Battles - Technology Comparisons | DevExCode",
+  description: "Compare technologies head-to-head on DevExCode (DevEx Code). In-depth comparisons of frameworks, databases, languages, and tools to help you make the right tech decisions.",
+  keywords: "tech battles, devexcode, devex code, technology comparison, software comparison, technology stack, framework comparison",
+  alternates: { canonical: "https://devexcode.com/tech-battles" },
+  openGraph: {
+    title: "Tech Battles - Technology Comparisons | DevExCode",
+    description: "Head-to-head technology comparisons on DevExCode. Make informed tech decisions.",
+    url: "https://devexcode.com/tech-battles",
+    type: "website",
+  },
 };
 
 export default async function TechBattlesPage() {

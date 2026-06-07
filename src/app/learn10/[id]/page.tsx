@@ -1,11 +1,35 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import Script from "next/script";
 import { DataService } from "../../../lib/data-service";
 import Learn10DetailClient from "./Learn10DetailClient";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
-export default async function Learn10DetailPage({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const topic = await DataService.getLearn10TopicById(id);
+  if (!topic) return { title: 'Engineering Brief | DevExCode' };
+
+  return {
+    title: `${topic.title} - 10-Minute Engineering Brief | DevExCode`,
+    description: `Master ${topic.title} in 10 minutes on DevExCode. High-density engineering brief covering core mechanisms, trade-offs, implementation strategies, and key interview takeaways.`,
+    keywords: [
+      topic.title, 'devexcode', 'devex code', '10 minute brief', 'engineering concepts',
+      'tech interview', 'system design', topic.category || 'software engineering',
+    ].filter(Boolean),
+    alternates: { canonical: `https://devexcode.com/learn10/${id}` },
+    openGraph: {
+      title: `${topic.title} | DevExCode`,
+      description: `Learn ${topic.title} in 10 minutes. High-density engineering brief on DevExCode.`,
+      url: `https://devexcode.com/learn10/${id}`,
+      type: 'article',
+    },
+  };
+}
+
+export default async function Learn10DetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const topic = await DataService.getLearn10TopicById(id);
   
@@ -64,11 +88,32 @@ This 10-minute engineering brief is currently being optimized for high-density l
     content = `# ${topic.title}\n\nTechnical brief not available yet. Our high-density learning modules are updated weekly.`;
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${topic.title} - 10-Minute Engineering Brief`,
+    description: `Master ${topic.title} in 10 minutes. High-density engineering brief on DevExCode.`,
+    author: { "@type": "Organization", name: "DevExCode" },
+    publisher: {
+      "@type": "Organization",
+      name: "DevExCode",
+      logo: { "@type": "ImageObject", url: "https://devexcode.com/favicon.png" },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://devexcode.com/learn10/${id}` },
+  };
+
   return (
-    <Learn10DetailClient 
-      topic={topic}
-      content={content}
-      frontmatter={frontmatter}
-    />
+    <>
+      <Script
+        id={`learn10-schema-${id}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <Learn10DetailClient
+        topic={topic}
+        content={content}
+        frontmatter={frontmatter}
+      />
+    </>
   );
 }
