@@ -5,8 +5,9 @@ import { SYSTEM_FLOWS } from '../flows-data';
 
 const VALID_FLOW_IDS = ['deployment', 'auth', 'scaling', 'cache', 'balancer', 'dns'];
 
-export async function generateMetadata({ params }: { params: { flowId: string } }) {
-  const flow = SYSTEM_FLOWS.find(f => f.id === params.flowId);
+export async function generateMetadata({ params }: { params: Promise<{ flowId: string }> }) {
+  const { flowId } = await params;
+  const flow = SYSTEM_FLOWS.find(f => f.id === flowId);
   if (!flow) return { title: 'Flow Not Found' };
   return {
     title: `${flow.title} | System Flow Sandbox | DevExCode`,
@@ -18,8 +19,9 @@ export async function generateStaticParams() {
   return VALID_FLOW_IDS.map(id => ({ flowId: id }));
 }
 
-export default function FlowPage({ params }: { params: { flowId: string } }) {
-  if (!VALID_FLOW_IDS.includes(params.flowId)) {
+export default async function FlowPage({ params }: { params: Promise<{ flowId: string }> }) {
+  const { flowId } = await params;
+  if (!VALID_FLOW_IDS.includes(flowId)) {
     notFound();
   }
   return (
@@ -31,7 +33,7 @@ export default function FlowPage({ params }: { params: { flowId: string } }) {
         </div>
       </div>
     }>
-      <FlowSimulatorClient flowId={params.flowId} />
+      <FlowSimulatorClient flowId={flowId} />
     </Suspense>
   );
 }

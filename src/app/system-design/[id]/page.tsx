@@ -5,7 +5,7 @@ import { DataService } from "../../../lib/data-service";
 import SystemDesignDetailClient from "./SystemDesignDetailClient";
 import { notFound } from "next/navigation";
 
-export default async function SystemDesignDetailPage({ params }: { params: { id: string } }) {
+export default async function SystemDesignDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const numericIdMatch = id.match(/^(\d+)/);
   if (!numericIdMatch) notFound();
