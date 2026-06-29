@@ -30,6 +30,13 @@ interface Props {
     leetcode150: number;
     mcq: number;
   };
+  frontend: {
+    topics: number;
+    parts: number;
+    questions: number;
+    liveDemos: number;
+    partNames: string[];
+  };
 }
 
 const SYSTEM_FLOWS_PREVIEW = [
@@ -119,7 +126,7 @@ const SYSTEM_FLOWS_PREVIEW = [
   }
 ];
 
-export default function InterviewClient({ stats }: Props) {
+export default function InterviewClient({ stats, frontend }: Props) {
   const [activeFlowIdx, setActiveFlowIdx] = useState(0);
   const currentFlow = SYSTEM_FLOWS_PREVIEW[activeFlowIdx];
 
@@ -327,6 +334,84 @@ export default function InterviewClient({ stats }: Props) {
                 ))}
              </div>
           </div>
+        </div>
+
+        {/* ==========================================
+            Front End Prep — Frontend Engineering Handbook
+           ========================================== */}
+        <div className="mb-20">
+          <div className="mb-8">
+            <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white mb-2">Front End Prep</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">The complete Frontend Engineering Handbook — worked code, live runnable demos, and interview-ready answers.</p>
+          </div>
+
+          <Link href="/interview/frontend">
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="glass dark:glass-dark group relative overflow-hidden p-8 sm:p-12 rounded-[44px] border border-slate-200 dark:border-indigo-500/20 bg-slate-50/30 dark:bg-indigo-950/5 shadow-lg dark:shadow-2xl cursor-pointer"
+            >
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-indigo-500 to-purple-500 opacity-5 group-hover:opacity-10 blur-3xl transition-opacity duration-700 pointer-events-none" />
+
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                {/* Left: pitch */}
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white shadow-xl">
+                      <CodeBracketIcon className="w-7 h-7" />
+                    </div>
+                    <span className="px-3 py-1 bg-indigo-500/10 rounded-full text-[10px] font-black uppercase tracking-widest border border-indigo-500/20 text-indigo-600 dark:text-indigo-300 flex items-center gap-1.5">
+                      <SparklesIcon className="w-3 h-3" />
+                      New · {frontend.topics} Topics
+                    </span>
+                  </div>
+
+                  <h4 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">
+                    Learn Frontend, Perfectly.
+                  </h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed mb-8 max-w-lg">
+                    From the browser rendering pipeline to React, state management, security, performance, testing, and micro-frontends. Every topic includes a backend analogy, key insights, worked code, an in-built code runner, interview Q&amp;A, and things to remember.
+                  </p>
+
+                  <div className="grid grid-cols-3 gap-4 mb-8 max-w-md">
+                    <div>
+                      <div className="text-2xl font-black text-slate-900 dark:text-white">{frontend.topics}</div>
+                      <div className="text-[9px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Topics</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-black text-slate-900 dark:text-white">{frontend.questions}</div>
+                      <div className="text-[9px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Interview Q&amp;A</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-black text-slate-900 dark:text-white">{frontend.liveDemos}</div>
+                      <div className="text-[9px] font-black uppercase tracking-widest text-indigo-600 dark:text-indigo-400">Live Demos</div>
+                    </div>
+                  </div>
+
+                  <Button className="rounded-2xl font-black py-6 px-8 bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-600/10 text-xs uppercase tracking-wider flex items-center gap-2">
+                    Open Handbook
+                    <ArrowRightIcon className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+
+                {/* Right: parts grid */}
+                <div className="grid grid-cols-2 gap-2.5">
+                  {frontend.partNames.map((name, i) => (
+                    <div
+                      key={name}
+                      className="flex items-center gap-2.5 p-3 rounded-xl bg-white dark:bg-slate-900/40 border border-slate-200 dark:border-white/5 group-hover:border-indigo-500/20 transition-colors"
+                    >
+                      <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-[10px] font-black flex-shrink-0">
+                        {String.fromCharCode(65 + i)}
+                      </span>
+                      <span className="text-[11px] font-bold text-slate-600 dark:text-slate-300 leading-tight truncate">
+                        {name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </Link>
         </div>
 
         {/* ==========================================

@@ -1,5 +1,6 @@
 import { DataService } from "../../lib/data-service";
 import InterviewClient from "./InterviewClient";
+import { ALL_TOPICS, getTopicsByPart } from "./frontend/data";
 import fs from "fs";
 import path from "path";
 
@@ -61,5 +62,14 @@ export default async function InterviewPage() {
     mcq: mcqCount
   };
 
-  return <InterviewClient stats={stats} />;
+  const frontendGroups = getTopicsByPart();
+  const frontend = {
+    topics: ALL_TOPICS.length,
+    parts: frontendGroups.length,
+    questions: ALL_TOPICS.reduce((n, t) => n + t.interviewQA.length, 0),
+    liveDemos: ALL_TOPICS.filter((t) => t.runnable).length,
+    partNames: frontendGroups.map((g) => g.name),
+  };
+
+  return <InterviewClient stats={stats} frontend={frontend} />;
 }

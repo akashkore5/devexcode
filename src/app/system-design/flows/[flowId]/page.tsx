@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import FlowSimulatorClient from './FlowSimulatorClient';
 import { SYSTEM_FLOWS } from '../flows-data';
 
-const VALID_FLOW_IDS = ['deployment', 'auth', 'scaling', 'cache', 'balancer', 'dns'];
+const VALID_FLOW_IDS = ['deployment', 'auth', 'scaling', 'cache', 'balancer', 'dns', 'payment'];
 
 export async function generateMetadata({ params }: { params: Promise<{ flowId: string }> }) {
   const { flowId } = await params;
