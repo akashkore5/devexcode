@@ -2,6 +2,169 @@ import type { FrontendTopic } from "../types";
 
 export const partA: FrontendTopic[] = [
   {
+    id: "frontend-basics-html-and-the-dom",
+    num: 0,
+    title: "Frontend Basics: HTML & the DOM",
+    part: "Web Foundations",
+    partId: "a",
+    difficulty: "Foundational",
+    summary:
+      "Start here: what the frontend is, how a page loads, HTML tags & attributes, and the DOM — the live tree the browser builds from your HTML.",
+    readingTime: 8,
+    explanation: [
+      "**What is the frontend?** The frontend is everything a person sees and touches in the browser — text, buttons, images, motion. Your code runs in the *user's* browser (the part you can see); the **backend** runs on a server you can't see (databases, logic, APIs). The frontend is built from three layers, each with exactly one job.",
+      "**The three layers.** **HTML** = *structure* — the content and its meaning, the skeleton of the page. **CSS** = *style* — how it looks: color, spacing, layout, type (the skin). **JavaScript** = *behaviour* — what happens when you interact (the muscles and brain). Keep them separate and pages stay maintainable.",
+      "**How a page loads (5 steps).** (1) **Request** — you enter a URL and the browser asks a server for the page. (2) **Response** — the server sends back files: HTML, CSS, JS. (3) **Parse** — the browser reads the HTML top to bottom and builds the **DOM**, a tree of objects for every element. (4) **Render** — using the DOM + CSS it paints actual pixels on screen. (5) **Run & react** — JavaScript runs, changes the DOM in response to clicks and typing, and the page updates live.",
+      "**HTML basics.** HTML (HyperText Markup Language) describes structure using **tags** (also called elements). A page is just nested tags inside a fixed skeleton: `<!DOCTYPE html>`, then `<html>` containing a `<head>` (metadata like `<title>`) and a `<body>` (everything visible).",
+      "**Anatomy of an element.** Almost every element has the same shape: an **opening tag**, some **content**, and a **closing tag** — e.g. `<a href=\"/home\">Go home</a>`. **Attributes** (`name=\"value\"`) sit in the opening tag and configure the element. A few elements are **self-closing** / void with no content: `<img>`, `<br>`, `<input>`.",
+      "**Attributes you'll use most.** `id` is a *unique* name for one element; `class` is a *shared* name for styling/JS. Others: `src` (file an image/script loads), `alt` (fallback text), `href` (where a link goes), `type` (kind of input/button), `placeholder`, `value`, boolean ones like `disabled`/`checked`, and `data-*` for your own custom data. **`id` and `class` matter most** — they're the handles JavaScript uses to find an element.",
+      "**Semantic HTML.** Prefer tags that describe their *meaning* over generic `<div>`s: `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<footer>`. Semantic markup is easier to read, better for accessibility, and friendlier to search engines.",
+      "**The DOM — your page as a live tree.** DOM = **Document Object Model**. When the browser parses your HTML, it builds a *tree of objects* — one **node** per tag and per piece of text. That live tree is the DOM. Useful image: **HTML is the blueprint; the DOM is the building** the browser constructs from it. You renovate the building, not the blueprint.",
+      "**HTML vs DOM.** HTML is the *text you write* in a `.html` file on disk — always there, unchanging, and JS cannot change it. The DOM is a *tree of live objects* in the browser's memory, built when the page loads, and JavaScript **can** change it instantly.",
+      "**Family-tree vocabulary.** Nodes relate exactly like a family tree, and these are the words you use in code: **parent / child** (a `<body>` is the parent of the `<h1>` and `<p>` inside it), **siblings** (two tags sharing a parent), **ancestor / descendant** (an `<a>` deep inside `<body>`), and the **root** (the `document` node at the very top). Note: words become their own **text nodes** (`\"Hi \"` and `\"link\"` are separate children), and attributes hang off their element.",
+      "**Making it interactive.** JavaScript reaches into the DOM to find elements, change them, and listen for what the user does. Three lines cover most of it: find a node (`document.querySelector(\"#like\")`), listen for an event (`btn.addEventListener(\"click\", ...)`), and change the DOM inside the handler (`btn.textContent = \"Liked!\"`).",
+      "**Events — reacting to the user.** An event is something that happens: a `click`, `input` (value changes as you type), `change` (value committed), `submit` (a form is submitted), `keydown`, `mouseover`, `load`, `DOMContentLoaded`. You attach a function with `addEventListener` and the browser runs it every time the event fires.",
+      "**The mental model (memorise this).** HTML → structure (what's on the page). CSS → style (how it looks). JS → behaviour (what it does). DOM → the live tree the browser builds from HTML, and the thing JavaScript changes to make the page come alive.",
+    ],
+    backendAnalogy:
+      "Think of HTML as your schema/DTO definition (the static shape), and the DOM as the deserialized object graph loaded into memory at runtime — the live tree your code actually mutates. The .html file is like a JSON payload on disk; the DOM is the parsed in-memory object you call getters/setters on. `addEventListener` is your event listener / message handler, and updating `textContent` is like mutating a field on a managed entity — the framework (browser) flushes the change on the next cycle.",
+    keyInsights: [
+      "Three layers, one job each: HTML = structure, CSS = style, JavaScript = behaviour.",
+      "Page-load pipeline: Request → Response → Parse (build DOM) → Render (paint pixels) → Run & react (JS mutates DOM).",
+      "HTML is the text on disk (unchanging, JS can't touch it); the DOM is the live in-memory tree (JS changes it instantly).",
+      "Every tag becomes an element node; every piece of text becomes its own text node; attributes hang off their element.",
+      "`id` (unique) and `class` (shared) are the handles JS uses to find elements in the DOM.",
+      "Interactivity is three steps: find an element → listen for an event → change the DOM.",
+      "Prefer semantic tags (`<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`) over generic `<div>`s for accessibility and SEO.",
+    ],
+    codeSamples: [
+      {
+        label: "The page skeleton + anatomy of an element",
+        language: "html",
+        code: `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My first page</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <p>This is my first web page.</p>
+
+    <!-- anatomy: opening tag + attribute + content + closing tag -->
+    <a href="/home">Go home</a>
+
+    <!-- self-closing (void) elements have no content -->
+    <img src="cat.jpg" alt="A sleeping cat">
+    <input type="email" placeholder="you@mail.com" required>
+  </body>
+</html>`,
+      },
+      {
+        label: "How HTML becomes a DOM tree (nodes & relationships)",
+        language: "html",
+        code: `<html>          <!-- root element -->
+  <body>        <!-- parent of <h1> and <p> -->
+    <h1>Hello</h1>              <!-- element node -> text node "Hello" -->
+    <p>Hi <a href="/">link</a></p>
+    <!-- "Hi " is a text node; <a> is a sibling-less child;        -->
+    <!-- href="/" is an attribute hanging off <a>; "link" is text  -->
+  </body>
+</html>`,
+      },
+      {
+        label: "The DOM verbs you'll actually use",
+        language: "js",
+        code: `// 1. FIND an element in the DOM
+const btn = document.querySelector("#like");   // first match
+const all = document.querySelectorAll(".item"); // every match
+
+// 2. LISTEN for an event
+btn.addEventListener("click", () => {
+  // 3. CHANGE the DOM
+  btn.textContent = "Liked!";       // read / set text
+  btn.style.color = "tomato";       // change one style
+  btn.classList.toggle("active");   // add / remove a class
+});
+
+// build a new node and add it to the tree
+const li = document.createElement("li");
+li.textContent = "New item";
+document.querySelector("ul").appendChild(li);
+
+// read what a user typed
+const name = document.querySelector("#name").value;`,
+      },
+    ],
+    runnable: {
+      title: "Event → change the DOM: a live counter and input",
+      html: `<button id="like">Liked 0 times</button>
+<hr />
+<label for="name">Type your name</label>
+<input id="name" placeholder="your name" />
+<h2 id="greet">Hello there 👋</h2>`,
+      css: `body { font-family: system-ui, sans-serif; padding: 12px; }
+button { font-size: 16px; padding: 8px 14px; cursor: pointer; }
+input { font-size: 16px; padding: 6px; margin-top: 6px; }
+h2 { color: tomato; }`,
+      js: `// find -> listen -> change the DOM
+let count = 0;
+const btn = document.querySelector("#like");
+btn.addEventListener("click", () => {
+  count++;
+  btn.textContent = "Liked " + count + " times";
+  console.log("click -> rewrote textContent, count =", count);
+});
+
+const input = document.querySelector("#name");
+const greet = document.querySelector("#greet");
+input.addEventListener("input", () => {
+  greet.textContent = input.value ? "Hello " + input.value + " 👋" : "Hello there 👋";
+  console.log("input event -> updated heading");
+});`,
+    },
+    interviewQA: [
+      {
+        question: "What is the difference between HTML and the DOM?",
+        answer:
+          "HTML is the static text you write in a .html file on disk — it never changes on its own and JavaScript can't modify it. The DOM (Document Object Model) is the live tree of objects the browser builds in memory when it parses that HTML. JavaScript reads and mutates the DOM, not the HTML. Analogy: HTML is the blueprint, the DOM is the building.",
+      },
+      {
+        question: "What happens between entering a URL and seeing an interactive page?",
+        answer:
+          "Five steps: Request (browser asks the server for the page), Response (server returns HTML/CSS/JS), Parse (browser reads HTML top-to-bottom and builds the DOM tree), Render (DOM + CSS are painted to pixels), and Run & react (JavaScript executes, attaches event listeners, and mutates the DOM as the user interacts).",
+      },
+      {
+        question: "How does JavaScript make a page interactive?",
+        answer:
+          "In three steps: find an element in the DOM (e.g. document.querySelector), listen for an event with addEventListener (click, input, submit…), and inside the handler change the DOM — set textContent, toggle a class, update a style, or create/append/remove nodes.",
+      },
+      {
+        question: "What is the difference between id and class?",
+        answer:
+          "An id is a unique identifier for a single element on the page; a class is a shared name that can apply to many elements. id is typically used to grab one specific element (getElementById / #id), while class is used for styling groups of elements and selecting collections. Both are the main handles JS uses to find elements.",
+      },
+      {
+        question: "Why use semantic HTML instead of div everywhere?",
+        answer:
+          "Semantic tags (header, nav, main, article, section, footer) describe the meaning of each region. That makes the document easier to read, gives screen readers and assistive tech real structure to navigate, and helps search engines understand the page — all for free, versus a soup of generic divs.",
+      },
+    ],
+    thingsToRemember: [
+      "HTML = structure, CSS = style, JS = behaviour — one job each.",
+      "Page load: Request → Response → Parse (DOM) → Render (paint) → Run & react.",
+      "The DOM is a live tree of nodes; tags become element nodes, text becomes text nodes, attributes hang off elements.",
+      "JS changes the DOM (the building), never the HTML file (the blueprint).",
+      "Interactivity = find an element → addEventListener → change the DOM.",
+      "Common events: click, input, change, submit, keydown, load, DOMContentLoaded.",
+    ],
+    references: [
+      { label: "MDN — Introduction to the DOM", url: "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" },
+      { label: "MDN — HTML basics", url: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics" },
+      { label: "web.dev — How browsers work", url: "https://web.dev/articles/howbrowserswork" },
+    ],
+    tags: ["html", "dom", "basics", "events", "fundamentals"],
+  },
+  {
     id: "browser-rendering-pipeline",
     num: 1,
     title: "Browser Rendering Pipeline",
@@ -11,15 +174,29 @@ export const partA: FrontendTopic[] = [
     summary: "How a URL becomes pixels: DNS, DOM/CSSOM, render tree, layout, and paint.",
     readingTime: 6,
     explanation: [
-      "When a user opens a URL, a precise pipeline runs. DNS resolves the domain to an IP address; a TCP+TLS handshake opens a secure connection; an HTTP request fetches the HTML. The browser then parses HTML into the **DOM** (Document Object Model) and CSS into the **CSSOM** (CSS Object Model).",
-      "It combines the DOM and CSSOM into a **render tree**, computes **layout** (where everything goes on the page), and **paints** pixels to the screen. JavaScript can then mutate the DOM, potentially triggering expensive re-layout (reflow) and re-paint cycles.",
-      "The three languages of the web each have a distinct role. **HTML** is structure and content (like your data model / schema). **CSS** is presentation and layout (a view/formatting layer). **JavaScript** is behaviour and interactivity (your business logic / controller layer).",
+      "**The big picture (read this first).** A browser's only real job is to turn text files (HTML, CSS, JS) into colored pixels on your screen, and to keep those pixels updated as things change. Everything below is just the step-by-step recipe it follows to do that. Think of it like a kitchen: ingredients arrive (download), get prepped into structured bowls (DOM/CSSOM), combined into a dish plan (render tree), arranged on the plate (layout), and finally colored/plated (paint).",
+      "**Step 1 — Get the files (network).** When you type a URL: **DNS** translates the human name (`google.com`) into a numeric IP address (like looking up a contact's phone number). A **TCP + TLS handshake** opens a secure phone line to that server. An **HTTP request** asks for the page, and the server sends back the HTML text. At this point the browser has just a wall of text — no boxes, no colors yet.",
+      "**Step 2 — Build the DOM (structure).** The browser reads the HTML top to bottom and builds the **DOM** (Document Object Model) — a tree of objects, one node per tag. `<body>` is a node, the `<h1>` inside it is a child node, and so on. The DOM is the browser's *live, in-memory model* of your page that JavaScript can later read and change.",
+      "**Step 3 — Build the CSSOM (styling).** In parallel it reads all the CSS and builds the **CSSOM** (CSS Object Model) — a tree of *which style rules apply to which elements*. This is why CSS is called **render-blocking**: the browser refuses to paint anything until the CSSOM is complete, otherwise you'd see an ugly unstyled flash.",
+      "**Step 4 — Render tree (what's actually visible).** It merges DOM + CSSOM into the **render tree**: only the things that will actually be drawn. Elements with `display: none` are *skipped* (they're in the DOM but not the render tree). Each render-tree node knows its content **and** its computed styles.",
+      "**Step 5 — Layout / reflow (where & how big).** Now the browser does the math: for every node it calculates exact position and size in pixels — x, y, width, height — given the screen size. This is called **layout** (or **reflow**). Example: `width: 50%` only becomes `640px` here, once the browser knows the window is 1280px wide.",
+      "**Step 6 — Paint (the actual coloring).** This is the 'how painting happens' part. The browser walks the render tree and produces a list of **draw commands** — 'fill this rectangle blue', 'draw this text here', 'round this corner', 'drop this shadow'. These commands fill in pixels onto layers (think transparent sheets stacked on top of each other).",
+      "**Step 7 — Compositing (gluing layers together).** Heavy/animated elements get their own layer. The **compositor** stacks all the layers in the right order and hands the final image to the GPU to show on screen. This is the secret behind smooth animations: moving a layer (with `transform`/`opacity`) only re-glues layers — it skips layout and paint entirely, so it stays at 60fps.",
+      "**The full order, in one line:** DNS → TCP/TLS → HTTP → DOM + CSSOM → Render Tree → Layout → Paint → Composite.",
+      "**Then JavaScript can change things.** Once the page is shown, JS can mutate the DOM (add a row, change a color). Depending on *what* changed, the browser re-runs part of the pipeline: change geometry → re-do Layout + Paint + Composite (expensive); change only color → skip Layout, just Paint + Composite (cheaper); change only `transform`/`opacity` → skip both, just Composite (cheapest).",
+      "**The three languages, each with one job.** **HTML** = structure and content (like your data model / schema). **CSS** = presentation and layout (a view / formatting layer). **JavaScript** = behaviour and interactivity (your business logic / controller layer). Keeping them separated is what makes pages maintainable.",
     ],
     backendAnalogy:
       "Think of the DOM as a live data structure (a mutable tree in memory) and the render pipeline as a continuous build–deploy loop. Every DOM change is like recompiling and redeploying — expensive. React's Virtual DOM is a diff engine that batches changes to minimize these costly cycles, just like you'd batch DB writes instead of committing after every row.",
     keyInsights: [
+      "Pipeline in 8 words: download → DOM → CSSOM → render tree → layout → paint → composite.",
+      "Cost ladder (cheapest → most expensive): Composite-only (transform/opacity) < Paint-only (color, visibility) < Layout/reflow (size, position, DOM structure).",
+      "Animate with `transform` and `opacity`, NOT `top`/`left`/`width` — the former skips layout & paint and runs on the GPU at 60fps.",
       "Layout (reflow) and paint are the expensive stages — minimize the number of times you trigger them.",
-      "Reading layout properties (offsetHeight, getBoundingClientRect) right after writing them forces a synchronous reflow ('layout thrashing'). Batch reads and writes.",
+      "Reflow cascades: changing one element's size can force the browser to recompute its parents, siblings, and children.",
+      "Reading layout properties (offsetHeight, getBoundingClientRect) right after writing them forces a synchronous reflow ('layout thrashing'). Batch reads, then batch writes.",
+      "CSS is render-blocking (no paint until CSSOM is ready); a `<script>` without `defer`/`async` blocks DOM parsing too.",
+      "`display: none` elements are in the DOM but excluded from the render tree, so they cost nothing to lay out or paint.",
       "The Virtual DOM exists to batch and minimize real DOM mutations, not because the real DOM is 'slow' by itself.",
     ],
     codeSamples: [
@@ -57,8 +234,10 @@ items.forEach((el, i) => {
       },
     ],
     thingsToRemember: [
-      "Pipeline order: DNS → TCP/TLS → HTTP → DOM + CSSOM → Render Tree → Layout → Paint.",
+      "Pipeline order: DNS → TCP/TLS → HTTP → DOM + CSSOM → Render Tree → Layout → Paint → Composite.",
+      "Layout = where/how big (geometry). Paint = filling pixels/colors. Composite = stacking layers onto the screen.",
       "CSS is render-blocking; the browser won't paint until the CSSOM is ready.",
+      "Prefer animating `transform`/`opacity` to keep changes on the composite-only (cheapest) path.",
       "Avoid layout thrashing: group DOM reads together, then group writes.",
     ],
     references: [
