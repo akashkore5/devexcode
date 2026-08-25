@@ -24,7 +24,8 @@ import {
   BriefcaseIcon,
   ChevronRightIcon,
   ChevronDownIcon,
-  CommandLineIcon
+  CommandLineIcon,
+  CircleStackIcon
 } from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
 import { LoginModal } from "./LoginModal";
@@ -53,6 +54,7 @@ type AppLayoutProps = {
 export function AppLayout({ children }: AppLayoutProps) {
   const { data: session, status } = useSession();
   const pathname = usePathname();
+  const isPlayground = pathname?.startsWith('/db-design');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [isMoreDropdownOpen, setIsMoreDropdownOpen] = useState(false);
@@ -114,11 +116,12 @@ export function AppLayout({ children }: AppLayoutProps) {
       { href: "/potd", label: "POTD", icon: StarIcon },
       { href: "/community", label: "Community", icon: UsersIcon },
       { href: "/system-design/flows", label: "System Flows", icon: CommandLineIcon },
+      { href: "/db-design", label: "DB Design", icon: CircleStackIcon },
   ];
 
   return (
     <div className="min-h-screen flex flex-col font-sans bg-background selection:bg-primary/20 selection:text-primary">
-      <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {!isPlayground && <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div className="mx-1 sm:mx-4 my-2 sm:my-4">
             <div className="glass dark:glass-dark rounded-2xl sm:rounded-3xl px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center border border-white/10 shadow-2xl">
               <Link href="/" className="flex items-center space-x-2 group" aria-label="DevExCode Home">
@@ -283,11 +286,11 @@ export function AppLayout({ children }: AppLayoutProps) {
             </motion.div>
           )}
         </AnimatePresence>
-      </header>
+      </header>}
 
-      <main className="flex-grow pt-8">{children}</main>
+      <main className={isPlayground ? 'flex-1 overflow-hidden' : 'flex-grow pt-8'}>{children}</main>
 
-      <footer className="relative bg-card dark:bg-card/20 border-t border-border pt-24 pb-12 overflow-hidden">
+      {!isPlayground && <footer className="relative bg-card dark:bg-card/20 border-t border-border pt-24 pb-12 overflow-hidden">
         {/* Subtle glow effect behind the footer */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[300px] bg-primary/5 dark:bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
         
@@ -406,7 +409,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             </div>
           </div>
         </div>
-      </footer>
+      </footer>}
 
       <AnimatePresence>
         {internalIsLoginModalOpen && (
