@@ -285,7 +285,7 @@ export default function Layout({
           <Link
             href="/"
             className="text-2xl sm:text-3xl font-extrabold text-indigo-600 dark:text-indigo-400 hover:scale-105 transition-transform duration-200"
-            aria-label="DevExCode Home"
+            aria-label="DevExCode"
           >
             DevExCode
           </Link>

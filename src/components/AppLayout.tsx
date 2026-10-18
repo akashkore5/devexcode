@@ -124,7 +124,7 @@ export function AppLayout({ children }: AppLayoutProps) {
       {!isPlayground && <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div className="mx-1 sm:mx-4 my-2 sm:my-4">
             <div className="glass dark:glass-dark rounded-2xl sm:rounded-3xl px-3 sm:px-6 py-2.5 sm:py-4 flex justify-between items-center border border-white/10 shadow-2xl">
-              <Link href="/" className="flex items-center space-x-2 group" aria-label="DevExCode Home">
+              <Link href="/" className="flex items-center space-x-2 group" aria-label="DevExCode">
                 <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/30 group-hover:rotate-6 transition-transform">
                   <span className="text-white font-black text-xl">D</span>
                 </div>
@@ -230,7 +230,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               </nav>
 
               <div className="lg:hidden flex items-center space-x-2">
-                <button onClick={toggleTheme} className="p-2 rounded-xl hover:bg-primary/10 transition-colors">
+                <button onClick={toggleTheme} className="p-2 rounded-xl hover:bg-primary/10 transition-colors" aria-label="Toggle theme">
                   {theme === "light" ? <MoonIcon className="w-6 h-6" /> : <SunIcon className="w-6 h-6" />}
                 </button>
                 <button className="p-2 rounded-xl bg-primary/10 text-primary" onClick={toggleMenu} aria-label="Toggle menu">
