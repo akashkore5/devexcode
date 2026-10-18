@@ -2,22 +2,17 @@ import type { Metadata } from 'next';
 import { DataService } from "../../lib/data-service";
 import Learn10Client from "./Learn10Client";
 
-export const metadata: Metadata = {
-  title: 'Learn in 10 Minutes - Quick Engineering Briefs | DevExCode',
-  description: 'Master 300+ engineering concepts in 10 minutes each on DevExCode. High-density technical briefs on Kafka, Kubernetes, Redis, databases, system design, and more.',
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
+  title: 'Learn in 10 Minutes - High-Density Engineering Briefs | DevExCode',
+  description: 'Master core engineering concepts in 10-minute deep dives on DevExCode. High-density technical briefs covering Kafka, Kubernetes, Redis, distributed databases, and system architecture.',
+  canonicalPath: '/learn10',
   keywords: [
-    'learn10', 'devexcode', 'devex code', '10 minute learning', 'quick tech briefs',
-    'engineering concepts', 'Kafka tutorial', 'Kubernetes guide', 'Redis tutorial',
-    'system design concepts', 'quick learning', 'tech education',
+    'learn10', 'devexcode', '10 minute learning', 'engineering briefs',
+    'Kafka tutorial', 'Kubernetes guide', 'Redis tutorial', 'system design concepts',
   ],
-  alternates: { canonical: 'https://devexcode.com/learn10' },
-  openGraph: {
-    title: 'Learn in 10 Minutes - Quick Engineering Briefs | DevExCode',
-    description: '300+ engineering concepts explained in 10 minutes. Level up your technical knowledge on DevExCode.',
-    url: 'https://devexcode.com/learn10',
-    type: 'website',
-  },
-};
+});
 
 export default async function Learn10Page() {
   const topics = await DataService.getLearn10Topics();

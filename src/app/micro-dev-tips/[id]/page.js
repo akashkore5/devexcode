@@ -6,6 +6,8 @@ import Script from "next/script";
 import MicroDevTipsDetailClient from "./MicroDevTipsDetailClient";
 import devTips from "../../../data/micro_dev_tips.json";
 
+import { constructMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const filePath = path.join(process.cwd(), "dailyblogtips", `${id}.md`);
@@ -13,40 +15,34 @@ export async function generateMetadata({ params }) {
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContent);
-    const title = data.title || "Dev Tip";
-    const description = data.description || `Learn ${title} with actionable tips and examples on DevExCode.`;
+    const title = `${data.title || "Dev Tip"} | DevExCode`;
+    const description = data.description || `Learn ${data.title || "this tip"} with actionable examples on DevExCode.`;
     const tags = Array.isArray(data.tags) ? data.tags : [];
-    return {
-      title: `${title} | DevExCode`,
+    return constructMetadata({
+      title,
       description,
-      keywords: ['devexcode', 'devex code', 'dev tips', ...tags].join(', '),
-      alternates: { canonical: `https://devexcode.com/micro-dev-tips/${id}` },
-      openGraph: {
-        title: `${title} | DevExCode`,
-        description,
-        url: `https://devexcode.com/micro-dev-tips/${id}`,
-        type: 'article',
-      },
-    };
+      canonicalPath: `/micro-dev-tips/${id}`,
+      keywords: ['devexcode', 'dev tips', ...tags],
+      ogType: 'article',
+    });
   } catch (e) {
     const currentTip = devTips.find((t) => String(t.id) === id);
     if (currentTip) {
       const description = currentTip.description || `Learn ${currentTip.title} with actionable tips and examples on DevExCode.`;
       const tags = Array.isArray(currentTip.tags) ? currentTip.tags : [];
-      return {
+      return constructMetadata({
         title: `${currentTip.title} | DevExCode`,
         description,
-        keywords: ['devexcode', 'devex code', 'dev tips', ...tags].join(', '),
-        alternates: { canonical: `https://devexcode.com/micro-dev-tips/${id}` },
-        openGraph: {
-          title: `${currentTip.title} | DevExCode`,
-          description,
-          url: `https://devexcode.com/micro-dev-tips/${id}`,
-          type: 'article',
-        },
-      };
+        canonicalPath: `/micro-dev-tips/${id}`,
+        keywords: ['devexcode', 'dev tips', ...tags],
+        ogType: 'article',
+      });
     }
-    return { title: "Micro Dev Tip | DevExCode" };
+    return constructMetadata({
+      title: "Micro Dev Tip | DevExCode",
+      description: "Actionable engineering tip on DevExCode.",
+      canonicalPath: `/micro-dev-tips/${id}`,
+    });
   }
 }
 

@@ -46,32 +46,39 @@ export async function generateStaticParams() {
   return uniqueParams;
 }
 
+import { constructMetadata, constructTechArticleSchema } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id: slug } = await params;
   const id = slug.split("-")[0];
   const filePath = path.join(process.cwd(), "src", "posts", "leetcode", `${id}.md`);
   
+  let title = `LeetCode ${id} Solution`;
+  let description = `Master LeetCode problem ${id} with optimized Java, C++, and Python solutions, complexity analysis, and interview takeaways on DevExCode.`;
+  let tags = ['leetcode', 'algorithms', 'coding interview'];
+
   if (fs.existsSync(filePath)) {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent);
-    return {
-      title: `LeetCode ${data.id}: ${data.title} Solution - DevExCode`,
-      description: `Master LeetCode problem ${data.id} (${data.title}) with specialized Java, C++, and Python solutions.`,
-      keywords: `LeetCode ${data.id}, ${data.title}, algorithm, coding interview`,
-    };
+    title = `LeetCode ${data.id}: ${data.title} Solution | DevExCode`;
+    description = `Master LeetCode problem ${data.id} (${data.title}) with specialized Java, C++, and Python solutions, time & space complexity, and interview patterns.`;
+    if (data.tags) tags = [...tags, ...data.tags];
+  } else {
+    const problem = await DataService.getProblemById(id);
+    if (problem) {
+      title = `LeetCode ${problem.id}: ${problem.title} Solution | DevExCode`;
+      description = `Practice and solve LeetCode ${problem.id} (${problem.title}) in Java, Python, and C++. Optimized algorithm walkthrough and interview prep on DevExCode.`;
+      if (problem.tags) tags = [...tags, ...problem.tags];
+    }
   }
 
-  // Fallback to JSON data
-  const problem = await DataService.getProblemById(id);
-  if (problem) {
-    return {
-      title: `LeetCode ${problem.id}: ${problem.title} - DevExCode`,
-      description: `Practice LeetCode problem ${problem.id} (${problem.title}). Prepare for coding interviews with DevExCode.`,
-      keywords: `LeetCode ${problem.id}, ${problem.title}, practice, coding interview`,
-    };
-  }
-
-  return { title: "Problem Not Found - DevExCode" };
+  return constructMetadata({
+    title,
+    description,
+    canonicalPath: `/leetcode/${slug}`,
+    keywords: tags,
+    ogType: 'article',
+  });
 }
 
 export default async function Page({ params }) {
@@ -129,12 +136,26 @@ export default async function Page({ params }) {
     const processedContent = await remark().use(html).process(explanationContent);
     const contentHtml = processedContent.toString();
 
+    const techArticleJsonLd = constructTechArticleSchema({
+      title: `LeetCode ${data.id}: ${data.title} Solution`,
+      description: `Master LeetCode problem ${data.id} (${data.title}) with optimized Java, C++, and Python solutions.`,
+      url: `https://devexcode.com/leetcode/${slug}`,
+      proficiencyLevel: data.difficulty === 'Easy' ? 'Beginner' : data.difficulty === 'Medium' ? 'Intermediate' : 'Advanced',
+    });
+
     return (
-      <ProblemPageClient 
-        frontMatter={data} 
-        contentHtml={contentHtml} 
-        codeBlocks={codeBlocks} 
-      />
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleJsonLd) }}
+        />
+        <ProblemPageClient 
+          frontMatter={data} 
+          contentHtml={contentHtml} 
+          codeBlocks={codeBlocks}
+          slug={slug}
+        />
+      </>
     );
   } catch (error) {
     console.error("Error in Page:", error);

@@ -17,13 +17,20 @@ export async function generateStaticParams() {
     }));
 }
 
+import { constructMetadata, constructTechArticleSchema } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const problem = gfgProblems.find((p) => p.id === id);
-  return {
-    title: `${id}. ${problem?.title || "GFG Solution"} | DevExCode`,
-    description: `Optimized solution and explanation for GeeksforGeeks problem ${id}.`,
-  };
+  const title = `${id}. ${problem?.title || "Problem Solution"} - GeeksforGeeks Solution | DevExCode`;
+  const description = `Optimized solution, complexity analysis, and approach for GeeksforGeeks problem ${id} (${problem?.title || "Problem"}) in Java, Python, and C++ on DevExCode.`;
+  return constructMetadata({
+    title,
+    description,
+    canonicalPath: `/gfg/${id}`,
+    keywords: [problem?.title || '', `GFG ${id}`, 'geeksforgeeks solution', 'coding interview', 'devexcode'],
+    ogType: 'article',
+  });
 }
 
 export default async function Page({ params }) {
@@ -55,13 +62,25 @@ export default async function Page({ params }) {
     const problem = gfgProblems.find((p) => p.id === id);
     const gfgUrl = problem?.url || `https://www.geeksforgeeks.org/problems/problem-${id}/1`;
 
+    const techArticleJsonLd = constructTechArticleSchema({
+      title: `${id}. ${problem?.title || "Problem Solution"} - GeeksforGeeks Solution`,
+      description: `Optimized solution and explanation for GeeksforGeeks problem ${id} on DevExCode.`,
+      url: `https://devexcode.com/gfg/${id}`,
+    });
+
     return (
-      <GfgDetailClient 
-        id={id}
-        frontMatter={{ ...data, gfgUrl, id }}
-        contentHtml={contentHtml}
-        codeBlocks={codeBlocks}
-      />
+      <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleJsonLd) }}
+        />
+        <GfgDetailClient 
+          id={id}
+          frontMatter={{ ...data, gfgUrl, id }}
+          contentHtml={contentHtml}
+          codeBlocks={codeBlocks}
+        />
+      </>
     );
   } catch (error) {
     console.error(`Error loading GFG problem ${id}:`, error);

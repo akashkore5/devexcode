@@ -1,10 +1,14 @@
 import { Suspense } from 'react';
 import SystemFlowsClient from './SystemFlowsClient';
 
-export const metadata = {
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
   title: 'Interactive System Flows Playground | DevExCode',
-  description: 'Visualize backend and DevOps architectures in real time. Run step-by-step deployments, trigger CPU traffic spikes, scale Kubernetes pods, test OAuth auth sequences, and inject chaos engineering failures.',
-};
+  description: 'Visualize backend and DevOps architectures in real time. Run step-by-step deployments, trigger CPU traffic spikes, scale Kubernetes pods, test OAuth auth sequences, and inject chaos engineering failures on DevExCode.',
+  canonicalPath: '/system-design/flows',
+  keywords: ['system flows', 'architecture simulator', 'devops playground', 'kubernetes scaling', 'oauth flow', 'devexcode'],
+});
 
 export default function SystemFlowsPage() {
   return (

@@ -11,6 +11,7 @@ import { ChevronLeftIcon, CheckCircleIcon, ClipboardDocumentIcon, PencilSquareIc
 import { Toaster, toast } from "react-hot-toast";
 import { useSession } from "next-auth/react";
 import Mermaid from "react-mermaid2";
+import { Breadcrumbs } from "../../../components/Breadcrumb";
 
 export default function DatabaseDetailClient({ id, frontmatter, content, relatedTopics }) {
   const { data: session, status } = useSession();
@@ -78,11 +79,13 @@ export default function DatabaseDetailClient({ id, frontmatter, content, related
       <Toaster />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-          <nav className="mb-6">
-            <Link href="/databases" className="flex items-center text-indigo-600 hover:underline text-sm font-medium">
-              <ChevronLeftIcon className="w-4 h-4 mr-1" /> Back to Learning Path
-            </Link>
-          </nav>
+          <Breadcrumbs
+            items={[
+              { name: 'Databases', path: '/databases' },
+              { name: frontmatter.title, path: `/databases/${id}` },
+            ]}
+            className="mb-4"
+          />
 
           <header className="mb-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 sm:p-8">
             <h1 className="text-3xl font-bold mb-6">{frontmatter.title}</h1>

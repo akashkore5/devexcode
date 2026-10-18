@@ -11,7 +11,14 @@ import { CheckCircleIcon as CheckCircleSolid, TagIcon as TagIconSolid } from "@h
 import { Badge } from "../../../../components/ui/badge";
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../../../../lib/auth';
-import { getDb } from '../../../../lib/mongodb';
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
+  title: "Java Interview Preparation Hub - Concepts & Questions | DevExCode",
+  description: "Master Java interview concepts, multithreading, JVM internals, collections framework, and design patterns on DevExCode.",
+  canonicalPath: "/interview/ready/java",
+  keywords: ["java interview", "java interview questions", "multithreading", "jvm internals", "collections", "devexcode"],
+});
 
 async function getInterviewQuestionsWithProgress() {
   const session = await getServerSession(authOptions);

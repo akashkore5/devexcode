@@ -1,11 +1,14 @@
 import { Suspense } from 'react';
 import DSAPlaygroundClient from './DSAPlaygroundClient';
 
-export const metadata = {
-  title: 'Core DSA Practice & Telemetry Visualizer - DevExCode',
-  description: 'Master 100 core Data Structures and Algorithms through dynamic, 60fps real-time animated visualizations, first-principles blueprints, and FAANG interview masterclasses.',
-  keywords: 'DSA, Data Structures, Algorithms, Visualizer, Coding, Coding Interview, Permutations, Binary Search, Dijkstra, LeetCode, DevExCode',
-};
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
+  title: 'Core DSA Practice & Telemetry Visualizer | DevExCode',
+  description: 'Master core Data Structures and Algorithms through dynamic real-time visualizations, step-by-step state tracking, and FAANG interview masterclasses on DevExCode.',
+  canonicalPath: '/practice/dsa',
+  keywords: ['DSA', 'Data Structures', 'Algorithms', 'Visualizer', 'Coding Interview', 'LeetCode', 'DevExCode'],
+});
 
 export default function DSAPracticePage() {
   return (

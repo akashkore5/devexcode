@@ -19,6 +19,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Problem } from "../../../lib/data-service";
+import { Breadcrumbs } from "@/components/Breadcrumb";
 
 interface Props {
   topic: Problem;
@@ -82,6 +83,13 @@ export default function Learn10DetailClient({ topic, content, frontmatter }: Pro
   return (
     <div className="min-h-screen bg-background pt-32 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { name: '10-Minute Briefs', path: '/learn10' },
+            { name: topic.title, path: `/learn10/${topic.id}` },
+          ]}
+          className="mb-6"
+        />
         
         {/* Navigation */}
         <div className="flex items-center justify-between mb-12">

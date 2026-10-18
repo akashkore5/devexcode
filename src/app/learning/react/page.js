@@ -1,10 +1,14 @@
 import { Suspense } from 'react';
 import ReactTopicsClient from './ReactTopicsClient';
 
-export const metadata = {
-  title: 'React Learning - DevExCode',
-  description: 'Master React.js with our comprehensive learning path. Cover basics, hooks, state management, and more.',
-};
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
+  title: 'React.js Learning Path & Architecture Guide | DevExCode',
+  description: 'Master modern React.js from fundamentals to advanced patterns. Deep dives into hooks, state management, Server Components, performance, and best practices on DevExCode.',
+  canonicalPath: '/learning/react',
+  keywords: ['react learning', 'react tutorial', 'react hooks', 'next.js', 'frontend architecture', 'devexcode'],
+});
 
 export default function ReactLearningPage() {
   return (

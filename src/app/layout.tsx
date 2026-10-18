@@ -86,9 +86,6 @@ export const metadata: Metadata = {
     title: 'DevExCode',
     statusBarStyle: 'default',
   },
-  alternates: {
-    canonical: BASE_URL,
-  },
   openGraph: {
     type: 'website',
     url: BASE_URL,
@@ -109,7 +106,7 @@ export const metadata: Metadata = {
     creator: '@devexcode',
     title: 'DevExCode - Developer Experience & Coding Interview Prep',
     description: 'DevExCode (DevEx Code) — master Leetcode, system design, and dev tips. The #1 DevEx platform for engineers.',
-    images: [`${BASE_URL}/twitter-image.jpg`],
+    images: [`${BASE_URL}/og-image.jpg`],
   },
   robots: {
     index: true,

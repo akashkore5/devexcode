@@ -12,4 +12,3 @@ Host: https://devexcode.com
 
 # Sitemaps
 Sitemap: https://devexcode.com/sitemap.xml
-Sitemap: https://devexcode.com/sitemaps.xml

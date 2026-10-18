@@ -5,22 +5,18 @@ import systemDesignQuestions from "../data/system_design_questions.json";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 
-export const metadata: Metadata = {
+import { constructMetadata, constructWebSiteSchema, constructOrganizationSchema } from "@/lib/seo";
+
+export const metadata: Metadata = constructMetadata({
   title: 'DevExCode - #1 DevEx & Coding Interview Prep Platform',
-  description: 'DevExCode (also known as DevEx Code, DevEx, Dev Ex Code) — master Leetcode, system design interviews, daily tech terms, micro dev tips, and coding practice. Join 15,000+ developers on the #1 DevEx platform.',
+  description: 'Master LeetCode solutions in Java, Python, and C++, system design architecture blueprints, daily technical terms, and FAANG interview preparation on DevExCode.',
+  canonicalPath: '',
   keywords: [
-    'devexcode', 'devex code', 'devex', 'dev ex code', 'dev ex', 'devexcode.com',
-    'leetcode', 'system design', 'coding interview', 'developer experience platform',
-    'tech interview prep', 'algorithms', 'data structures', 'FAANG interview',
+    'devexcode', 'devex code', 'devex', 'dev ex code', 'leetcode solutions',
+    'system design interview', 'coding interview prep', 'developer experience platform',
+    'algorithms', 'data structures', 'FAANG interview preparation'
   ],
-  alternates: { canonical: 'https://devexcode.com' },
-  openGraph: {
-    title: 'DevExCode - #1 DevEx & Coding Interview Prep Platform',
-    description: 'Master Leetcode, system design, and daily tech challenges on DevExCode. Join 15,000+ developers.',
-    url: 'https://devexcode.com',
-    type: 'website',
-  },
-};
+});
 
 export default async function Home() {
   let session = null;
@@ -32,14 +28,27 @@ export default async function Home() {
     console.error("Home Page: Failed to fetch session:", (error as Error).message);
     serverError = true;
   }
+
+  const websiteSchema = constructWebSiteSchema();
+  const organizationSchema = constructOrganizationSchema();
   
   return (
-    <HomePage 
-      initialLoggedIn={!!session}
-      initialName={session?.user?.name || ""}
-      totalLeetcodeQuestions={problems.length}
-      totalSystemDesignQuestions={systemDesignQuestions.length}
-      serverError={serverError}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <HomePage 
+        initialLoggedIn={!!session}
+        initialName={session?.user?.name || ""}
+        totalLeetcodeQuestions={problems.length}
+        totalSystemDesignQuestions={systemDesignQuestions.length}
+        serverError={serverError}
+      />
+    </>
   );
 }

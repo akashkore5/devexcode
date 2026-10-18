@@ -13,6 +13,7 @@ import { CheckCircleIcon, HeartIcon, PencilSquareIcon, ArrowsPointingInIcon, Arr
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { Breadcrumbs } from "@/components/Breadcrumb";
 
 // Cache problems.json to avoid repeated require calls
 const problemsData = require("../../../data/problems.json");
@@ -37,7 +38,7 @@ class ErrorBoundary extends Component {
   }
 }
 
-const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, contentHtml, codeBlocks }) {
+const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, contentHtml, codeBlocks, slug }) {
   const [activeTab, setActiveTab] = useState("java");
   const [copyIcon, setCopyIcon] = useState("copy");
   const [isSolving, setIsSolving] = useState(false);
@@ -531,6 +532,13 @@ const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, content
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-slate-900">
       <Toaster />
       <main className="flex-grow max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-8">
+        <Breadcrumbs
+          items={[
+            { name: 'LeetCode', path: '/leetcode' },
+            { name: `${frontMatter.id}. ${frontMatter.title}`, path: `/leetcode/${slug || frontMatter.id}` },
+          ]}
+          className="mb-4"
+        />
         <section className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             LeetCode {frontMatter.id}: {frontMatter.title} Solution

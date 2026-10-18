@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import databaseTopics from "../../../data/database_topics.json";
+import databaseTopics from "@/data/database_topics.json";
 import DatabaseDetailClient from "./DatabaseDetailClient";
+import { constructMetadata } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const paths = [];
@@ -31,10 +32,13 @@ export async function generateMetadata({ params }) {
     }
   }
 
-  return {
-    title: `${title} | DevExCode`,
-    description: `Learn about ${title} in our comprehensive database learning path.`,
-  };
+  return constructMetadata({
+    title: `${title} - Database Architecture Guide | DevExCode`,
+    description: `Learn ${title} in our comprehensive database engineering and query optimization guide on DevExCode.`,
+    canonicalPath: `/databases/${id}`,
+    keywords: [title, 'database architecture', 'SQL', 'NoSQL', 'query optimization', 'devexcode'],
+    ogType: 'article',
+  });
 }
 
 export default async function Page({ params }) {

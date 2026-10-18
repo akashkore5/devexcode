@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import JavaArticleClient from "./JavaArticleClient";
 import javaTopics from "../../../../data/java_topics.json";
 
+import { constructMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   
@@ -14,13 +16,14 @@ export async function generateMetadata({ params }) {
   // If not there, search src/content/interview-prep/java recursively
   if (!fs.existsSync(filePath)) {
     const interviewBase = path.join(process.cwd(), "src/content/interview-prep/java");
-    const categories = fs.readdirSync(interviewBase);
-    
-    for (const cat of categories) {
-      const potentialPath = path.join(interviewBase, cat, `${id}.md`);
-      if (fs.existsSync(potentialPath)) {
-        filePath = potentialPath;
-        break;
+    if (fs.existsSync(interviewBase)) {
+      const categories = fs.readdirSync(interviewBase);
+      for (const cat of categories) {
+        const potentialPath = path.join(interviewBase, cat, `${id}.md`);
+        if (fs.existsSync(potentialPath)) {
+          filePath = potentialPath;
+          break;
+        }
       }
     }
   }
@@ -28,20 +31,31 @@ export async function generateMetadata({ params }) {
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContent);
-    return {
-      title: `${data.title || "Java Guide"} | DevExCode`,
-      description: data.description || "Learn Java with DevExCode.",
-    };
+    const title = `${data.title || "Java Guide"} - Java Tutorial | DevExCode`;
+    const description = data.description || `In-depth Java tutorial on ${data.title || id}. Learn mechanics, code examples, and best practices on DevExCode.`;
+    return constructMetadata({
+      title,
+      description,
+      canonicalPath: `/learning/java/${id}`,
+      keywords: [data.title || id, 'java tutorial', 'java programming', 'devexcode'],
+      ogType: 'article',
+    });
   } catch (e) {
     const allTopics = javaTopics.topics.flatMap((t) => [t, ...t.subtopics]);
     const currentTopic = allTopics.find((t) => t.id === id);
     if (currentTopic) {
-      return {
-        title: `${currentTopic.title} | DevExCode`,
-        description: currentTopic.description || "Learn Java with DevExCode.",
-      };
+      return constructMetadata({
+        title: `${currentTopic.title} - Java Tutorial | DevExCode`,
+        description: currentTopic.description || `Learn ${currentTopic.title} in Java with code examples on DevExCode.`,
+        canonicalPath: `/learning/java/${id}`,
+        ogType: 'article',
+      });
     }
-    return { title: "Java Learning | DevExCode" };
+    return constructMetadata({
+      title: "Java Learning Guide | DevExCode",
+      description: "Comprehensive Java guide on DevExCode.",
+      canonicalPath: `/learning/java/${id}`,
+    });
   }
 }
 

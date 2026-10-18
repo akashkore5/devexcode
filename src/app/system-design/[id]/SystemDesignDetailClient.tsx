@@ -21,14 +21,16 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Problem } from "../../../lib/data-service";
+import { Breadcrumbs } from "@/components/Breadcrumb";
 
 interface Props {
   question: Problem;
   content: string;
   frontmatter: any;
+  slug?: string;
 }
 
-export default function SystemDesignDetailClient({ question, content, frontmatter }: Props) {
+export default function SystemDesignDetailClient({ question, content, frontmatter, slug }: Props) {
   const { data: session, status } = useSession();
   const [isSolved, setIsSolved] = useState(false);
   const [isTagged, setIsTagged] = useState(false);
@@ -179,6 +181,13 @@ export default function SystemDesignDetailClient({ question, content, frontmatte
     <div className="min-h-screen bg-background pt-32 pb-20">
       <Toaster position="top-right" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Breadcrumbs
+          items={[
+            { name: 'System Design', path: '/system-design' },
+            { name: question.title, path: `/system-design/${slug || question.id}` },
+          ]}
+          className="mb-4"
+        />
         
         {/* Navigation & Actions */}
         <div className="flex items-center justify-between mb-12">

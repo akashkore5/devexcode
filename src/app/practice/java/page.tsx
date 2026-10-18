@@ -2,11 +2,16 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import { 
-  CodeBracketIcon,
-  ChevronRightIcon
-} from "@heroicons/react/24/outline";
 import { Badge } from "@/components/ui/badge";
+import { CodeBracketIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { constructMetadata } from "@/lib/seo";
+
+export const metadata = constructMetadata({
+  title: "Java Code Practice & Exercises | DevExCode",
+  description: "Interactive Java programming practice exercises. Master concurrency, streams, memory management, and OOP on DevExCode.",
+  canonicalPath: "/practice/java",
+  keywords: ["java practice", "java exercises", "coding practice", "java streams", "devexcode"],
+});
 
 async function getPracticeItems() {
   const contentDir = path.join(process.cwd(), 'src/content/practice/java');

@@ -10,14 +10,21 @@ export async function generateStaticParams() {
   }));
 }
 
+import { constructMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const battle = techBattles.find((b) => b.id.toString() === id);
+  const title = `${battle?.title || "Tech Battle"} Comparison: Benchmarks & Architecture | DevExCode`;
+  const description = `In-depth head-to-head comparison of ${battle?.title || "technologies"}. Performance benchmarks, trade-offs, architecture decisions, and real-world recommendations on DevExCode.`;
   
-  return {
-    title: `${battle?.title || "Tech Battle"} | DevExCode`,
-    description: `Compare ${battle?.title || "technology"} with a detailed analysis of features, performance, and use cases.`,
-  };
+  return constructMetadata({
+    title,
+    description,
+    canonicalPath: `/tech-battles/${id}`,
+    keywords: [battle?.title || '', 'tech battle', 'technology comparison', 'software architecture', 'devexcode'],
+    ogType: 'article',
+  });
 }
 
 export default async function Page({ params }) {

@@ -1,10 +1,14 @@
 import { Suspense } from 'react';
 import JavaTopicsClient from './JavaTopicsClient';
 
-export const metadata = {
-  title: 'Java Learning - DevExCode',
-  description: 'Master Java with our comprehensive learning path. Cover basics, OOP, core concepts, and more.',
-};
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata = constructMetadata({
+  title: 'Java Developer Learning Path & Core Concepts | DevExCode',
+  description: 'Comprehensive Java learning curriculum. Master Core Java, OOP, collections, multithreading, JVM architecture, and Spring Boot on DevExCode.',
+  canonicalPath: '/learning/java',
+  keywords: ['java learning', 'java tutorial', 'core java', 'multithreading', 'jvm', 'devexcode'],
+});
 
 export default function JavaLearningPage() {
   return (

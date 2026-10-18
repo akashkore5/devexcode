@@ -4,18 +4,30 @@ import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
 import PracticeClient from './PracticeClient';
 
-export async function generateMetadata({ params }) {
+import { constructMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ category: string; slug: string }> }) {
   const { category, slug } = await params;
   const filePath = path.join(process.cwd(), 'src/content/practice/java', category, `${slug}.md`);
 
   try {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContent);
-    return {
-      title: `${data.title || 'Code Practice'} | DevExCode`,
-    };
+    const title = `${data.title || slug} - Java Practice Exercise | DevExCode`;
+    const description = `Practice ${data.title || slug} in Java on DevExCode. Hands-on coding exercise with test cases and solution walkthrough.`;
+    return constructMetadata({
+      title,
+      description,
+      canonicalPath: `/practice/java/${category}/${slug}`,
+      keywords: [data.title || slug, category, 'java practice', 'coding exercise', 'devexcode'],
+      ogType: 'article',
+    });
   } catch (e) {
-    return { title: 'Code Practice | DevExCode' };
+    return constructMetadata({
+      title: 'Java Practice Exercise | DevExCode',
+      description: 'Hands-on Java programming exercise on DevExCode.',
+      canonicalPath: `/practice/java/${category}/${slug}`,
+    });
   }
 }
 

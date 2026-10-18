@@ -1,7 +1,6 @@
 'use client';
 import Link from "next/link";
 import Layout from "../../../components/Layout";
-import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
@@ -12,6 +11,7 @@ import { useState, useCallback, useEffect } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { Breadcrumbs } from "../../../components/Breadcrumb";
 
 export default function TechBattleDetailClient({ id, frontmatter, content, relatedBattles }) {
   const router = useRouter();
@@ -304,12 +304,13 @@ export default function TechBattleDetailClient({ id, frontmatter, content, relat
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.nav variants={sectionVariants} initial="hidden" animate="visible" className="mb-6">
-            <Link href="/tech-battles" className="flex items-center text-indigo-600 dark:text-indigo-400 hover:underline text-sm font-medium">
-              <ChevronLeftIcon className="w-4 h-4 mr-1" />
-              Back to Tech Battles
-            </Link>
-          </motion.nav>
+          <Breadcrumbs
+            items={[
+              { name: 'Tech Battles', path: '/tech-battles' },
+              { name: frontmatter.title, path: `/tech-battles/${id}` },
+            ]}
+            className="mb-4"
+          />
 
           <motion.header variants={sectionVariants} initial="hidden" animate="visible" className="mb-8 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 sm:p-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">

@@ -5,7 +5,6 @@ import techBattles from "../../data/tech_battles.json";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Layout from "../../components/Layout";
-import Head from "next/head";
 import DOMPurify from "isomorphic-dompurify";
 import { useSession } from "next-auth/react";
 import { toast, Toaster } from "react-hot-toast";

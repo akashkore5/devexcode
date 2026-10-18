@@ -5,6 +5,39 @@ import { DataService } from "../../../lib/data-service";
 import SystemDesignDetailClient from "./SystemDesignDetailClient";
 import { notFound } from "next/navigation";
 
+import { constructMetadata, constructTechArticleSchema } from "@/lib/seo";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const numericIdMatch = id.match(/^(\d+)/);
+  if (!numericIdMatch) return { title: 'System Design Guide | DevExCode' };
+  
+  const numericId = numericIdMatch[1];
+  const question = await DataService.getSystemDesignQuestionById(numericId);
+  if (!question) return { title: 'System Design Guide | DevExCode' };
+
+  const title = `${question.title} System Design: Architecture & Trade-offs | DevExCode`;
+  const description = question.description
+    ? `Master ${question.title} system design. Complete architecture blueprint, scalability trade-offs, database choices, and interview takeaways on DevExCode.`
+    : `Learn how to design ${question.title} at scale. High-availability architecture, caching, microservices, and failure scenarios on DevExCode.`;
+
+  return constructMetadata({
+    title,
+    description,
+    canonicalPath: `/system-design/${id}`,
+    keywords: [
+      question.title,
+      'system design',
+      'architecture blueprint',
+      'scalability',
+      'distributed systems',
+      'tech interview',
+      'devexcode'
+    ],
+    ogType: 'article',
+  });
+}
+
 export default async function SystemDesignDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const numericIdMatch = id.match(/^(\d+)/);
@@ -44,11 +77,25 @@ export default async function SystemDesignDetailPage({ params }: { params: Promi
     content = `# ${question.title}\n\n${question.description || ""}\n\nContent not available yet.`;
   }
 
+  const techArticleJsonLd = constructTechArticleSchema({
+    title: `${question.title} System Design: Architecture & Trade-offs`,
+    description: question.description || `In-depth architecture and design for ${question.title}.`,
+    url: `https://devexcode.com/system-design/${id}`,
+    proficiencyLevel: question.difficulty === 'Easy' ? 'Beginner' : question.difficulty === 'Medium' ? 'Intermediate' : 'Advanced',
+  });
+
   return (
-    <SystemDesignDetailClient 
-      question={question}
-      content={content}
-      frontmatter={frontmatter}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleJsonLd) }}
+      />
+      <SystemDesignDetailClient 
+        question={question}
+        content={content}
+        frontmatter={frontmatter}
+        slug={id}
+      />
+    </>
   );
 }

@@ -2,7 +2,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Head from "next/head";
 import { useSession } from "next-auth/react";
 import gfgPotdData from "../../data/gfg_potd.json";
 import leetcodePotdData from "../../data/leetcode_potd.json";
@@ -322,37 +321,12 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
     if (error) {
         return (
             <>
-                <Head>
-                    <title>Problem of the Day - DevExCode</title>
-                    <meta name="description" content="Explore daily coding problems from GeeksforGeeks and LeetCode to boost your coding skills with DevExCode." />
-                    <meta name="keywords" content="problem of the day, POTD, GeeksforGeeks, LeetCode, coding, programming, DevExCode, interview preparation, algorithms, data structures" />
-                    <meta name="author" content="DevExCode Team" />
-                    <meta name="robots" content="index, follow" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                    <meta property="og:title" content="Problem of the Day - DevExCode" />
-                    <meta property="og:description" content="Explore daily coding problems from GeeksforGeeks and LeetCode to boost your coding skills with DevExCode." />
-                    <meta property="og:type" content="website" />
-                    <meta property="og:url" content="https://devexcode.com/potd" />
-                    <meta property="og:image" content="https://devexcode.com/potd-og-image.jpg" />
-                    <meta property="og:image:alt" content="Problem of the Day - DevExCode" />
-                    <meta property="og:site_name" content="DevExCode" />
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:title" content="Problem of the Day - DevExCode" />
-                    <meta name="twitter:description" content="Explore daily coding problems from GeeksforGeeks and LeetCode to boost your coding skills with DevExCode." />
-                    <meta name="twitter:image" content="https://devexcode.com/potd-og-image.jpg" />
-                    <meta name="twitter:image:alt" content="Problem of the Day - DevExCode" />
-                    <meta name="twitter:creator" content="@DevExCode" />
-                    <link rel="canonical" href="https://devexcode.com/potd" />
-                    <link rel="sitemap" href="/sitemap.xml" />
-                    <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
-                    <meta name="theme-color" content="#4f46e5" />
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(JSON.stringify(structuredData)),
-                        }}
-                    />
-                </Head>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(JSON.stringify(structuredData)),
+                    }}
+                />
                 <section className="py-12 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-slate-900 dark:to-slate-800 min-h-screen">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ErrorMessage message={error} />
@@ -364,57 +338,12 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
 
     return (
         <>
-            <Head>
-                <title>
-                    Problem of the Day - DevExCode | {gfgPotd ? `GFG: ${gfgPotd.title}` : "No GFG POTD"}{gfgPotd && leetcodePotd ? " | " : ""}{leetcodePotd ? `LeetCode: ${leetcodePotd.title}` : "No LeetCode POTD"}
-                </title>
-                <meta
-                    name="description"
-                    content={`Tackle daily coding challenges from GeeksforGeeks and LeetCode with DevExCode. Today's POTD: ${gfgPotd ? `GFG - ${gfgPotd.title} (ID: ${gfgPotd.problem_id}, ${gfgPotd.difficulty})` : "No GFG POTD available"}${leetcodePotd ? `, LeetCode - ${leetcodePotd.title} (ID: ${leetcodePotd.problem_id}, ${leetcodePotd.difficulty})` : ", No LeetCode POTD available"}. Explore solutions, difficulty levels, and company tags.`}
-                />
-                <meta
-                    name="keywords"
-                    content={`problem of the day, POTD, GFG POTD, LeetCode POTD, GeeksforGeeks, LeetCode, coding challenges, programming, DevExCode, interview preparation, algorithms, data structures${gfgPotd ? `, ${gfgPotd.title}, ${gfgPotd.problem_id}, ${gfgPotd.difficulty}` : ""}${leetcodePotd ? `, ${leetcodePotd.title}, ${leetcodePotd.problem_id}, ${leetcodePotd.difficulty}` : ""}${gfgPotd && gfgPotd.companies ? `, ${gfgPotd.companies.join(", ")}` : ""}${leetcodePotd && leetcodePotd.companies ? `, ${leetcodePotd.companies.join(", ")}` : ""}`}
-                />
-                <meta name="author" content="DevExCode Team" />
-                <meta name="robots" content="index, follow" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta
-                    property="og:title"
-                    content={`Problem of the Day - DevExCode | ${gfgPotd ? `GFG: ${gfgPotd.title}` : "No GFG POTD"}${gfgPotd && leetcodePotd ? " | " : ""}${leetcodePotd ? `LeetCode: ${leetcodePotd.title}` : "No LeetCode POTD"}`}
-                />
-                <meta
-                    property="og:description"
-                    content={`Tackle daily coding challenges from GeeksforGeeks and LeetCode with DevExCode. Today's POTD: ${gfgPotd ? `GFG - ${gfgPotd.title} (ID: ${gfgPotd.problem_id}, ${gfgPotd.difficulty})` : "No GFG POTD available"}${leetcodePotd ? `, LeetCode - ${leetcodePotd.title} (ID: ${leetcodePotd.problem_id}, ${leetcodePotd.difficulty})` : ", No LeetCode POTD available"}. Explore solutions, difficulty levels, and company tags.`}
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://devexcode.com/potd" />
-                <meta property="og:image" content={gfgPotd ? `https://devexcode.com/potd-gfg-${gfgPotd.problem_id}.png` : leetcodePotd ? `https://devexcode.com/potd-leetcode-${leetcodePotd.problem_id}.png` : "https://devexcode.com/potd-og-image.jpg"} />
-                <meta property="og:image:alt" content="Problem of the Day - DevExCode" />
-                <meta property="og:site_name" content="DevExCode" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta
-                    name="twitter:title"
-                    content={`Problem of the Day - DevExCode | ${gfgPotd ? `GFG: ${gfgPotd.title}` : "No GFG POTD"}${gfgPotd && leetcodePotd ? " | " : ""}${leetcodePotd ? `LeetCode: ${leetcodePotd.title}` : "No LeetCode POTD"}`}
-                />
-                <meta
-                    name="twitter:description"
-                    content={`Tackle daily coding challenges from GeeksforGeeks and LeetCode with DevExCode. Today's POTD: ${gfgPotd ? `GFG - ${gfgPotd.title} (ID: ${gfgPotd.problem_id}, ${gfgPotd.difficulty})` : "No GFG POTD available"}${leetcodePotd ? `, LeetCode - ${leetcodePotd.title} (ID: ${leetcodePotd.problem_id}, ${leetcodePotd.difficulty})` : ", No LeetCode POTD available"}. Explore solutions, difficulty levels, and company tags.`}
-                />
-                <meta name="twitter:image" content={gfgPotd ? `https://devexcode.com/potd-gfg-${gfgPotd.problem_id}.png` : leetcodePotd ? `https://devexcode.com/potd-leetcode-${leetcodePotd.problem_id}.png` : "https://devexcode.com/potd-og-image.jpg"} />
-                <meta name="twitter:image:alt" content="Problem of the Day - DevExCode" />
-                <meta name="twitter:creator" content="@DevExCode" />
-                <link rel="canonical" href="https://devexcode.com/potd" />
-                <link rel="sitemap" href="/sitemap.xml" />
-                <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
-                <meta name="theme-color" content="#4f46e5" />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: DOMPurify.sanitize(JSON.stringify(structuredData)),
-                    }}
-                />
-            </Head>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: DOMPurify.sanitize(JSON.stringify(structuredData)),
+                }}
+            />
 
             <section className="py-0 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-slate-900 dark:to-slate-800 min-h-screen">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

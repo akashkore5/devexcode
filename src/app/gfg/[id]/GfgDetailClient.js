@@ -10,6 +10,7 @@ import { useSession } from "next-auth/react";
 import { CheckCircleIcon, HeartIcon } from "@heroicons/react/24/solid";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import { Breadcrumbs } from "../../../components/Breadcrumb";
 
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
@@ -141,6 +142,13 @@ const GfgDetailClient = memo(function GfgDetailClient({ id, frontMatter, content
       <Toaster />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-8">
         <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <Breadcrumbs
+            items={[
+              { name: 'GFG Solutions', path: '/gfg' },
+              { name: `${id}. ${frontMatter.title || 'Solution'}`, path: `/gfg/${id}` },
+            ]}
+            className="mb-4"
+          />
           <header className="bg-white dark:bg-slate-800 rounded-xl shadow-lg p-6 mb-6">
             <h1 className="text-3xl font-bold mb-6">{id}. {frontMatter.title}</h1>
             <div className="flex flex-wrap gap-4 items-center">

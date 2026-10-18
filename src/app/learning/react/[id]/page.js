@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import ReactArticleClient from "./ReactArticleClient";
 import reactTopics from "../../../../data/react_topics.json";
 
+import { constructMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const filePath = path.join(process.cwd(), "dailyblogsreact", `${id}.md`);
@@ -12,20 +14,31 @@ export async function generateMetadata({ params }) {
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContent);
-    return {
-      title: `${data.title || "React Guide"} | DevExCode`,
-      description: data.description || "Learn React with DevExCode.",
-    };
+    const title = `${data.title || "React Guide"} - React Tutorial | DevExCode`;
+    const description = data.description || `In-depth React guide on ${data.title || id}. Learn components, hooks, performance, and best practices on DevExCode.`;
+    return constructMetadata({
+      title,
+      description,
+      canonicalPath: `/learning/react/${id}`,
+      keywords: [data.title || id, 'react tutorial', 'reactjs', 'web development', 'devexcode'],
+      ogType: 'article',
+    });
   } catch (e) {
     const allTopics = reactTopics.topics.flatMap((t) => [t, ...t.subtopics]);
     const currentTopic = allTopics.find((t) => t.id === id);
     if (currentTopic) {
-      return {
-        title: `${currentTopic.title} | DevExCode`,
-        description: currentTopic.description || "Learn React with DevExCode.",
-      };
+      return constructMetadata({
+        title: `${currentTopic.title} - React Tutorial | DevExCode`,
+        description: currentTopic.description || `Learn ${currentTopic.title} with practical React code examples on DevExCode.`,
+        canonicalPath: `/learning/react/${id}`,
+        ogType: 'article',
+      });
     }
-    return { title: "React Learning | DevExCode" };
+    return constructMetadata({
+      title: "React Learning Guide | DevExCode",
+      description: "Comprehensive React tutorial on DevExCode.",
+      canonicalPath: `/learning/react/${id}`,
+    });
   }
 }
 

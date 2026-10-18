@@ -9,8 +9,14 @@ import {
   ChevronRightIcon
 } from "@heroicons/react/24/outline";
 import LearningPathsClient from "./LearningPathsClient";
+import { constructMetadata } from "@/lib/seo";
 
-// Import configurations (simulating what was in index.js)
+export const metadata = constructMetadata({
+  title: 'Engineering Learning Paths & Career Roadmaps | DevExCode',
+  description: 'Structured developer learning paths for Java, System Design, React, Databases, Go, Node.js, and Algorithms to accelerate your software engineering career on DevExCode.',
+  canonicalPath: '/learning-paths',
+});
+
 const paths = [
   { title: "Java Path", slug: "java", desc: "Master core Java, JVM, and Spring ecosystem.", topics: 24, difficulty: "Beginner" },
   { title: "Database Path", slug: "databases", desc: "Relational, NoSQL, and Query Optimization.", topics: 18, difficulty: "Advanced" },

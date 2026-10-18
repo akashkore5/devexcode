@@ -207,7 +207,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                   <div className="relative ml-2">
                     <button onClick={toggleProfileDropdown} className="flex items-center space-x-2 p-1 pr-3 rounded-full bg-secondary/20 hover:bg-secondary/30 transition-all border border-secondary/10">
                       {session.user?.image ? (
-                        <img src={session.user.image} alt="profile" className="w-8 h-8 rounded-full border-2 border-primary/20" />
+                        <img src={session.user.image} alt={session.user?.name ? `${session.user.name}'s profile avatar` : "User profile avatar"} className="w-8 h-8 rounded-full border-2 border-primary/20" width={32} height={32} />
                       ) : (
                         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">
                           {session.user?.name?.[0] || "U"}

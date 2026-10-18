@@ -1,22 +1,17 @@
 import type { Metadata } from 'next';
 import CommunityClient from "./CommunityClient";
 
-export const metadata: Metadata = {
-  title: 'Developer Community - DevExCode',
-  description: 'Join the DevExCode community of 15,000+ engineers. Share knowledge, discuss Leetcode solutions, system design patterns, and connect with peers preparing for FAANG interviews.',
+import { constructMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = constructMetadata({
+  title: 'Developer Community - Connect & Share Solutions | DevExCode',
+  description: 'Join the DevExCode engineering community. Discuss LeetCode approaches, system design architecture questions, career growth, and FAANG interview prep.',
+  canonicalPath: '/community',
   keywords: [
-    'devexcode community', 'devex community', 'developer community', 'coding community',
-    'leetcode community', 'tech interview community', 'software engineers community',
-    'devexcode forum', 'developer forum',
+    'devexcode community', 'developer community', 'coding forum',
+    'leetcode community', 'tech interview community', 'software engineering discussion'
   ],
-  alternates: { canonical: 'https://devexcode.com/community' },
-  openGraph: {
-    title: 'Developer Community - DevExCode',
-    description: 'Join 15,000+ engineers on DevExCode. Discuss coding problems, system design, and ace your next tech interview.',
-    url: 'https://devexcode.com/community',
-    type: 'website',
-  },
-};
+});
 
 export default async function CommunityPage() {
   return <CommunityClient />;

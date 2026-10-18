@@ -7,26 +7,20 @@ import Learn10DetailClient from "./Learn10DetailClient";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+import { constructMetadata } from "@/lib/seo";
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const topic = await DataService.getLearn10TopicById(id);
   if (!topic) return { title: 'Engineering Brief | DevExCode' };
 
-  return {
+  return constructMetadata({
     title: `${topic.title} - 10-Minute Engineering Brief | DevExCode`,
     description: `Master ${topic.title} in 10 minutes on DevExCode. High-density engineering brief covering core mechanisms, trade-offs, implementation strategies, and key interview takeaways.`,
-    keywords: [
-      topic.title, 'devexcode', 'devex code', '10 minute brief', 'engineering concepts',
-      'tech interview', 'system design', topic.category || 'software engineering',
-    ].filter(Boolean),
-    alternates: { canonical: `https://devexcode.com/learn10/${id}` },
-    openGraph: {
-      title: `${topic.title} | DevExCode`,
-      description: `Learn ${topic.title} in 10 minutes. High-density engineering brief on DevExCode.`,
-      url: `https://devexcode.com/learn10/${id}`,
-      type: 'article',
-    },
-  };
+    canonicalPath: `/learn10/${id}`,
+    keywords: [topic.title, 'learn10', 'engineering brief', topic.category || 'software engineering', 'devexcode'],
+    ogType: 'article',
+  });
 }
 
 export default async function Learn10DetailPage({ params }: { params: Promise<{ id: string }> }) {

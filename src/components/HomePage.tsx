@@ -1,7 +1,6 @@
 'use client';
 
 import Link from "next/link";
-import Head from "next/head";
 import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -67,10 +66,6 @@ export function HomePage({ initialLoggedIn, initialName, totalLeetcodeQuestions,
 
   return (
     <>
-      <Head>
-        <title>DevExCode - Leetcode, System Design & Daily Terms</title>
-        <meta name="description" content="Ace coding interviews with DevExCode’s expert Leetcode solutions, system design tutorials, daily technical terms, and comprehensive interview prep resources." />
-      </Head>
 
       <HeroSection showViewProfile={status === "authenticated"} quickStart={fetchQuickStart()} fetchQuickStart={fetchQuickStart} className="bg-background" />
       
