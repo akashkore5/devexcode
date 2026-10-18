@@ -5,9 +5,12 @@ import { Toaster } from 'react-hot-toast';
 import { AppLayout } from '../components/AppLayout';
 import { Outfit } from 'next/font/google';
 import { Viewport } from 'next';
-import Script from 'next/script';
 
-const outfit = Outfit({ subsets: ['latin'] });
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+});
 
 const BASE_URL = 'https://devexcode.com';
 
@@ -136,13 +139,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={outfit.className}>
-        <Script
-          id="org-schema"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <Script
-          id="website-schema"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />

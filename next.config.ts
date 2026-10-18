@@ -8,7 +8,18 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  compress: true,
+  poweredByHeader: false,
+  trailingSlash: false,
+  experimental: {
+    optimizePackageImports: [
+      '@heroicons/react',
+      'lucide-react',
+      'framer-motion',
+    ],
+  },
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -18,7 +29,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  trailingSlash: false,
   async headers() {
     return [
       {
@@ -39,6 +49,15 @@ const nextConfig: NextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
