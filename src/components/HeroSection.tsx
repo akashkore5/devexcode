@@ -43,26 +43,20 @@ export const HeroSection = ({ showViewProfile, quickStart, fetchQuickStart, clas
                 </motion.div>
 
                 {/* Primary Title */}
-                <motion.h1 
-                    initial={{ opacity: 0, y: -25 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[1.02]"
+                <h1 
+                    className="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 tracking-tighter leading-[1.02] text-foreground"
                 >
                     Master the <span className="gradient-text">Future</span> of <br />
                     Technical Interviews
-                </motion.h1>
+                </h1>
 
                 {/* Description */}
-                <motion.p 
-                    initial={{ opacity: 0, y: 25 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+                <p 
                     className="text-lg sm:text-xl sm:text-2xl max-w-3xl mx-auto mb-12 text-muted-foreground leading-relaxed font-medium"
                 >
                     Join 15,000+ developers acing their interviews with high-quality Leetcode solutions, 
                     interactive system design sandboxes, and real-time backend telemetry playgrounds.
-                </motion.p>
+                </p>
 
                 {/* Actions */}
                 <motion.div

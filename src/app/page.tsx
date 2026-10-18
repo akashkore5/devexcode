@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import { HomePage } from "../components/HomePage";
 import problems from "../data/problems.json";
 import systemDesignQuestions from "../data/system_design_questions.json";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
 
 import { constructMetadata, constructWebSiteSchema, constructOrganizationSchema } from "@/lib/seo";
+
+export const dynamic = 'force-static';
 
 export const metadata: Metadata = constructMetadata({
   title: 'DevExCode - #1 DevEx & Coding Interview Prep Platform',
@@ -18,17 +18,7 @@ export const metadata: Metadata = constructMetadata({
   ],
 });
 
-export default async function Home() {
-  let session = null;
-  let serverError = false;
-
-  try {
-    session = await getServerSession(authOptions);
-  } catch (error) {
-    console.error("Home Page: Failed to fetch session:", (error as Error).message);
-    serverError = true;
-  }
-
+export default function Home() {
   const websiteSchema = constructWebSiteSchema();
   const organizationSchema = constructOrganizationSchema();
   
@@ -43,11 +33,11 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <HomePage 
-        initialLoggedIn={!!session}
-        initialName={session?.user?.name || ""}
+        initialLoggedIn={false}
+        initialName=""
         totalLeetcodeQuestions={problems.length}
         totalSystemDesignQuestions={systemDesignQuestions.length}
-        serverError={serverError}
+        serverError={false}
       />
     </>
   );
