@@ -121,6 +121,10 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
+    yandex: '6f70f9b5def9a1c4',
+    other: {
+      'yandex-verification': '6f70f9b5def9a1c4',
+    },
   },
 };
 
