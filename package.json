@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "test:seo": "node scripts/seo-audit.mjs"
+    "test:seo": "node scripts/seo-audit.mjs",
+    "indexnow": "node scripts/hit-indexnow.mjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",
