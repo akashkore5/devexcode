@@ -63,3 +63,6 @@ export function Breadcrumbs({ items, className = '', showHome = true }: Breadcru
     </>
   );
 }
+
+export const Breadcrumb = Breadcrumbs;
+export default Breadcrumbs;

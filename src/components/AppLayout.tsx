@@ -25,7 +25,8 @@ import {
   ChevronRightIcon,
   ChevronDownIcon,
   CommandLineIcon,
-  CircleStackIcon
+  CircleStackIcon,
+  AcademicCapIcon
 } from "@heroicons/react/24/solid";
 import { toast } from "react-hot-toast";
 import { LoginModal } from "./LoginModal";
@@ -107,16 +108,17 @@ export function AppLayout({ children }: AppLayoutProps) {
   const navLinks = [
       { href: "/leetcode", label: "LeetCode", icon: CodeBracketIcon },
       { href: "/system-design", label: "System Design", icon: RocketLaunchIcon },
-      { href: "/interview", label: "Interview", icon: CodeBracketSquareIcon },
-      { href: "/services", label: "Services", icon: BriefcaseIcon },
+      { href: "/learning", label: "Learning Tracks", icon: AcademicCapIcon },
+      { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
       { href: "/learn10", label: "QuickLearn", icon: BookOpenIcon },
+      { href: "/system-design/flows", label: "System Flows", icon: CommandLineIcon },
+      { href: "/interview", label: "Interview", icon: CodeBracketSquareIcon },
+      { href: "/db-design", label: "DB Design", icon: CircleStackIcon },
       { href: "/daily-term", label: "TechBit", icon: PuzzlePieceIcon },
       { href: "/micro-dev-tips", label: "DevTips", icon: LightBulbIcon },
-      { href: "/tech-battles", label: "Tech Battles", icon: ScaleIcon },
       { href: "/potd", label: "POTD", icon: StarIcon },
       { href: "/community", label: "Community", icon: UsersIcon },
-      { href: "/system-design/flows", label: "System Flows", icon: CommandLineIcon },
-      { href: "/db-design", label: "DB Design", icon: CircleStackIcon },
+      { href: "/services", label: "Services", icon: BriefcaseIcon },
   ];
 
   return (
@@ -132,7 +134,7 @@ export function AppLayout({ children }: AppLayoutProps) {
               </Link>
               
               <nav role="navigation" aria-label="Main navigation" className="hidden lg:flex items-center space-x-1">
-                {navLinks.slice(0, 4).map((item) => (
+                {navLinks.slice(0, 5).map((item) => (
                   <Link 
                     key={item.href} 
                     href={item.href} 
@@ -151,7 +153,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                     onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)}
                     onMouseEnter={() => setIsMoreDropdownOpen(true)}
                     className={`px-4 py-2 rounded-xl text-sm font-bold transition-all duration-200 flex items-center space-x-1 ${
-                      navLinks.slice(4).some(link => pathname === link.href)
+                      navLinks.slice(5).some(link => pathname === link.href)
                         ? "bg-primary/10 text-primary" 
                         : "text-foreground/70 hover:bg-primary/10 hover:text-primary"
                     }`}
@@ -175,7 +177,7 @@ export function AppLayout({ children }: AppLayoutProps) {
                           className="absolute top-full right-0 mt-2 w-56 glass dark:glass-dark rounded-2xl p-2 border border-white/10 shadow-2xl z-50 overflow-hidden"
                         >
                           <div className="grid gap-1">
-                            {navLinks.slice(4).map((item) => (
+                            {navLinks.slice(5).map((item) => (
                               <Link 
                                 key={item.href} 
                                 href={item.href} 
@@ -359,7 +361,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             <div className="col-span-1 lg:col-span-2 lg:ml-8">
               <h3 className="text-xs font-black uppercase tracking-widest text-foreground mb-6">Learning Paths</h3>
               <ul className="space-y-4">
-                {navLinks.slice(0, 4).map((link) => (
+                {navLinks.slice(0, 5).map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
                       <ChevronRightIcon className="w-3.5 h-3.5 mr-2 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />

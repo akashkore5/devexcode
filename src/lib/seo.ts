@@ -213,3 +213,38 @@ export function constructOrganizationSchema() {
   };
 }
 
+
+export interface CourseSchemaProps {
+  name: string;
+  description: string;
+  url: string;
+  teaches?: string[];
+  courseCode?: string;
+  educationalLevel?: 'Beginner' | 'Intermediate' | 'Advanced';
+}
+
+export function constructCourseSchema({
+  name,
+  description,
+  url,
+  teaches,
+  courseCode,
+  educationalLevel = 'Intermediate',
+}: CourseSchemaProps) {
+  const fullUrl = url.startsWith('http') ? url : `${BASE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name,
+    description,
+    url: fullUrl,
+    courseCode: courseCode || name.toLowerCase().replace(/\s+/g, '-'),
+    educationalLevel,
+    provider: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      sameAs: BASE_URL,
+    },
+    ...(teaches && { teaches }),
+  };
+}

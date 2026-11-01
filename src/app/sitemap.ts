@@ -41,6 +41,7 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/potd`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.75 },
   { url: `${BASE_URL}/gfg`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.75 },
   { url: `${BASE_URL}/databases`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
+  { url: `${BASE_URL}/learning`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.9 },
   { url: `${BASE_URL}/learning-paths`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
   { url: `${BASE_URL}/learning/java`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
   { url: `${BASE_URL}/learning/react`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
