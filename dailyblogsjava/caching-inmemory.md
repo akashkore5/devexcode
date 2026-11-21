@@ -5,7 +5,7 @@ slug: "caching-inmemory"
 description: "Implement caching with Ehcache or Caffeine for low-latency access."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Ehcache", "Caffeine", "Caching", "Java", "Intermediate"]
 ---

@@ -5,7 +5,7 @@ slug: "core-java-collections-internal-working"
 description: "Master the internal workings of Java's List, Set, Map, and Queue interfaces, essential for building efficient and robust applications."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Java", "Collections", "Basics", "Programming", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "hibernate-jpa-orm"
 description: "Master entity mapping, relationships, and query optimization with Hibernate and JPA."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Hibernate", "JPA", "Java", "Intermediate", "Interview"]
 ---

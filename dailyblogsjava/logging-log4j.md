@@ -5,7 +5,7 @@ slug: "logging-log4j"
 description: "Implement logging with Apache Log4j for detailed application insights."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Log4j", "Logging", "Java", "Intermediate"]
 ---

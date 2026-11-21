@@ -5,7 +5,7 @@ slug: "core-java-oops"
 description: "Learn Object-Oriented Programming principles like inheritance, polymorphism, encapsulation, abstraction, and interfaces in Java."
 difficulty: "Beginner"
 date: "2025-05-20"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["OOPs", "Java", "Beginner", "Interview"]
 ---

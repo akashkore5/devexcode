@@ -5,7 +5,7 @@ slug: "backup-and-recovery"
 description: "Implement backup strategies and recovery plans to protect against data loss."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "administration", "backup"]
 related_questions: ["What is the difference between full and incremental backups?", "How do you test a backup strategy?", "What is point-in-time recovery?"]

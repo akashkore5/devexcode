@@ -5,7 +5,7 @@ slug: "data-structures-algorithms"
 description: "Master coding interview essentials with data structures and algorithms in Java."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["DSA", "Java", "Algorithms", "Interview"]
 ---

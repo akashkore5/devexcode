@@ -5,7 +5,7 @@ slug: "testing-integration"
 description: "Test application components together using tools like Spring Test."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Integration", "Testing", "Java", "Intermediate"]
 ---

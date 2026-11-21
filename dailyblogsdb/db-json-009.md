@@ -5,7 +5,7 @@ slug: "json-in-databases"
 description: "Learn how to store, query, and manage JSON data in both relational and NoSQL databases for flexible data handling."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "json", "sql", "nosql", "postgresql", "mongodb"]
 related_questions: ["Why is JSON useful in databases?", "How do relational databases handle JSON data?", "What are the advantages of JSON in NoSQL databases?", "How do you query JSON fields efficiently?"]

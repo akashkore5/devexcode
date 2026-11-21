@@ -5,7 +5,7 @@ slug: "messaging-kafka"
 description: "Use Kafka for high-throughput messaging and event streaming."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Kafka", "Messaging", "Java", "Advanced", "Interview"]
 ---

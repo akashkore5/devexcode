@@ -5,7 +5,7 @@ slug: "indexing-strategies"
 description: "Optimize query performance with effective indexing strategies for relational and NoSQL databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "design", "indexing"]
 related_questions: ["What is a database index?", "How do you choose columns for indexing?", "What are the trade-offs of over-indexing?"]

@@ -5,7 +5,7 @@ slug: "json-performance-optimization"
 description: "Optimize JSON storage and queries for large-scale applications."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "json", "performance"]
 related_questions: ["How do indexes improve JSON query performance?", "What is the impact of JSON size on database performance?", "How do you handle JSON updates efficiently?"]

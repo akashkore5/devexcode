@@ -5,7 +5,7 @@ slug: "cloud-gcp"
 description: "Deploy Java apps on GCP using App Engine, Cloud Functions, and Kubernetes Engine."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["GCP", "Cloud", "Java", "Advanced"]
 ---

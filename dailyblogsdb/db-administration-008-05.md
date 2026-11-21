@@ -5,7 +5,7 @@ slug: "high-availability-and-replication"
 description: "Set up replication and failover mechanisms for high-availability databases."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "administration", "replication"]
 related_questions: ["What is master-slave replication?", "How does failover work in high-availability systems?", "What are the challenges of multi-master replication?"]

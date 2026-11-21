@@ -5,7 +5,7 @@ slug: "caching-distributed"
 description: "Use distributed caching solutions like Hazelcast for scalability."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Hazelcast", "Caching", "Java", "Advanced"]
 ---

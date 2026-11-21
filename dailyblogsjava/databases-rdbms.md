@@ -5,7 +5,7 @@ slug: "databases-rdbms"
 description: "Design and query relational databases like MySQL, PostgreSQL, and Oracle."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["RDBMS", "Databases", "Java", "Intermediate"]
 ---

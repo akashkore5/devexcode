@@ -5,7 +5,7 @@ slug: "big-data-performance-optimization"
 description: "Optimize database and big data platform performance for large-scale analytics."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "big-data", "performance"]
 related_questions: ["How do you optimize Spark jobs?", "What is partitioning in big data systems?", "How do you handle data skew in big data processing?"]

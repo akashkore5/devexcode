@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { notFound } from "next/navigation";
 import techBattles from "../../../data/tech_battles.json";
 import TechBattleDetailClient from "./TechBattleDetailClient";
 
@@ -42,7 +43,8 @@ export default async function Page({ params }) {
     } else {
       const currentBattle = techBattles.find((battle) => battle.id.toString() === id);
       if (!currentBattle) {
-        return <div>Battle Not Found</div>;
+        // Was HTTP 200 with a generic indexable title; now a real 404.
+        notFound();
       }
       frontmatter = {
         title: currentBattle.title || "Untitled",
@@ -77,7 +79,9 @@ export default async function Page({ params }) {
       />
     );
   } catch (error) {
+    // See databases/[id]: a bare catch swallowed notFound()'s throw and turned
+    // real failures into HTTP 200 bodies.
     console.error(`Error loading tech battle ${id}:`, error);
-    return <div>Error loading tech battle.</div>;
+    throw error;
   }
 }

@@ -5,7 +5,7 @@ slug: "types-of-databases"
 description: "Explore various database types, including relational, NoSQL, in-memory, graph, and time-series databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "sql", "nosql", "graph", "time-series"]
 related_questions: ["What is the difference between SQL and NoSQL databases?", "When would you use a graph database over a relational one?", "What are the benefits of in-memory databases?"]

@@ -5,7 +5,7 @@ slug: "microservices-architecture"
 description: "Design and implement microservices with Spring Boot and best practices."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Microservices", "Spring Boot", "Java", "Advanced", "Interview"]
 ---

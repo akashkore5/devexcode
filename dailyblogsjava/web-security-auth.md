@@ -5,7 +5,7 @@ slug: "web-security-auth"
 description: "Secure applications with OAuth2, JWT, and role-based access control."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Authentication", "Security", "Java", "Advanced", "Interview"]
 ---

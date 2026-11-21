@@ -5,7 +5,7 @@ slug: "advanced-java-multithreading"
 description: "Master concurrent programming with threads, executors, and synchronization mechanisms."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Multithreading", "Java", "Intermediate", "Interview"]
 ---

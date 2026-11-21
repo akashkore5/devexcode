@@ -5,7 +5,7 @@ slug: "monitoring"
 description: "Monitor and analyze Java application performance in production."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Monitoring", "Java", "Ops", "Interview"]
 ---

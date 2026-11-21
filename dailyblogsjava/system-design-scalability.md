@@ -5,7 +5,7 @@ slug: "system-design-scalability"
 description: "Apply load balancing, sharding, and replication for scalability."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Scalability", "System Design", "Java", "Advanced", "Interview"]
 ---

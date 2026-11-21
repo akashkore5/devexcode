@@ -5,7 +5,7 @@ slug: "hibernate-jpa"
 description: "Object-Relational Mapping for seamless database interactions in Java applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["ORM", "Hibernate", "Java", "Interview"]
 ---

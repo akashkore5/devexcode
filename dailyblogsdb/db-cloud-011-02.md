@@ -5,7 +5,7 @@ slug: "aws-rds-and-aurora"
 description: "Explore AWS RDS and Aurora for managed relational databases in the cloud."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "cloud", "aws", "rds", "aurora"]
 related_questions: ["What is the difference between RDS and Aurora?", "How does Aurora improve performance?", "How do you set up an RDS instance?"]

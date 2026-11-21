@@ -5,7 +5,7 @@ slug: "databases"
 description: "Work with relational and non-relational databases for data persistence."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Databases", "Java", "Persistence", "Interview"]
 ---

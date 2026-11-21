@@ -5,7 +5,7 @@ slug: "databases-orm"
 description: "Explore ORM frameworks like MyBatis for lightweight database access."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["MyBatis", "ORM", "Java", "Intermediate"]
 ---

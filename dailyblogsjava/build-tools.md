@@ -5,7 +5,7 @@ slug: "build-tools"
 description: "Automate and manage project builds efficiently with industry-standard tools."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Build", "Java", "Automation", "Interview"]
 ---

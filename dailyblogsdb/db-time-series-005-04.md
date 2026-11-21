@@ -5,7 +5,7 @@ slug: "time-series-data-modeling"
 description: "Design efficient schemas for time-series data storage and retrieval."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "time-series", "data-modeling"]
 related_questions: ["What are the key components of a time-series schema?", "How do you handle high-frequency time-series data?", "What is downsampling in time-series databases?"]

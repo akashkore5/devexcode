@@ -5,7 +5,7 @@ slug: "nosql-databases"
 description: "Explore NoSQL databases for flexible, scalable storage of unstructured and semi-structured data in modern applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "nosql", "mongodb", "cassandra", "dynamodb"]
 related_questions: ["What are the main advantages of NoSQL databases?", "How do NoSQL databases handle scalability?", "What types of data are best suited for NoSQL?", "When should you choose NoSQL over SQL?"]

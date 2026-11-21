@@ -5,7 +5,7 @@ slug: "acid-transactions"
 description: "Understand ACID properties for reliable database transactions."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "sql", "acid"]
 related_questions: ["What does ACID stand for in databases?", "How does atomicity ensure transaction reliability?", "What is the role of isolation in transactions?"]

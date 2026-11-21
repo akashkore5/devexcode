@@ -5,7 +5,7 @@ slug: "microservices-deployment"
 description: "Deploy microservices using Docker, Kubernetes, and CI/CD pipelines."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Microservices", "Deployment", "Java", "Advanced"]
 ---

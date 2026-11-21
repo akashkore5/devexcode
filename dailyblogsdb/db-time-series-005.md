@@ -5,7 +5,7 @@ slug: "time-series-databases"
 description: "Learn about time-series databases for managing temporal data in IoT, financial analytics, and monitoring systems."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "time-series", "influxdb", "timescaledb"]
 related_questions: ["What defines a time-series database?", "How do time-series databases optimize temporal data?", "What are common use cases for time-series databases?", "How do time-series databases differ from relational databases?"]

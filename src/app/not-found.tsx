@@ -149,10 +149,8 @@ export default function NotFound() {
 
   // Particle configurations with variations
   const [particles, setParticles] = useState<any[]>([]);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const newParticles = Array.from({ length: 15 }, (_, i) => ({
       delay: i * 0.3,
       xStart: Math.random() * 800 - 400,
@@ -164,19 +162,9 @@ export default function NotFound() {
     setParticles(newParticles);
   }, []);
 
-  if (!mounted) {
-    return (
-        <section className="py-8 bg-gray-50 dark:bg-slate-900 min-h-[calc(100vh-300px)] flex items-center justify-center relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                <div className="animate-pulse space-y-8">
-                     <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full mx-auto"></div>
-                     <div className="h-12 w-32 bg-gray-200 dark:bg-gray-700 rounded mx-auto"></div>
-                     <div className="h-8 w-48 bg-gray-200 dark:bg-gray-700 rounded mx-auto"></div>
-                </div>
-            </div>
-        </section>
-    );
-  }
+  // No pre-hydration gate here: it made the server HTML of every 404 three grey
+  // rectangles with no heading or links. `particles` is empty until mounted, so
+  // the decorative layer simply renders nothing on the server.
 
   return (
     <section className="py-8 bg-gray-50 dark:bg-slate-900 min-h-[calc(100vh-300px)] flex items-center justify-center relative overflow-hidden">

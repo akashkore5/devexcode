@@ -5,7 +5,7 @@ slug: "monitoring-elk"
 description: "Analyze logs with Elasticsearch, Logstash, and Kibana for Java apps."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["ELK", "Monitoring", "Java", "Advanced"]
 ---

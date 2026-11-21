@@ -5,7 +5,7 @@ slug: "testing-mockito"
 description: "Mock dependencies for isolated unit testing with Mockito."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Mockito", "Testing", "Java", "Intermediate", "Interview"]
 ---

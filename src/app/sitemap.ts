@@ -11,48 +11,71 @@ import gfgProblems from '@/data/gfgproblems.json';
 import databaseTopics from '@/data/database_topics.json';
 import javaTopics from '@/data/java_topics.json';
 import reactTopics from '@/data/react_topics.json';
+import mcqTopics from '@/data/mcq_topics.json';
 import { getAllTopicIds } from './interview/frontend/data';
+import { hasGfgContent } from '@/lib/content-index';
+import { resolveTipFile } from '@/lib/dev-tips';
 
 const BASE_URL = 'https://www.devexcode.com';
 
 const STATIC_PAGES: MetadataRoute.Sitemap = [
-  { url: BASE_URL, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 1.0 },
-  { url: `${BASE_URL}/about`, lastModified: new Date('2024-10-01'), changeFrequency: 'monthly', priority: 0.7 },
-  { url: `${BASE_URL}/interview`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.9 },
-  { url: `${BASE_URL}/interview/mcq`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.7 },
-  { url: `${BASE_URL}/interview/mock`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.7 },
-  { url: `${BASE_URL}/interview/tests`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.7 },
-  { url: `${BASE_URL}/interview/tips`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.7 },
-  { url: `${BASE_URL}/interview/ready/java`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/interview/frontend`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/leetcode`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.9 },
-  { url: `${BASE_URL}/leetcode/leetcode150`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.85 },
-  { url: `${BASE_URL}/leetcode/leetcode75`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.85 },
-  { url: `${BASE_URL}/leetcode/sql50`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/leetcode/top100liked`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.85 },
-  { url: `${BASE_URL}/system-design`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.9 },
-  { url: `${BASE_URL}/system-design/flows`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/daily-term`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.85 },
-  { url: `${BASE_URL}/micro-dev-tips`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.85 },
-  { url: `${BASE_URL}/tech-battles`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/learn10`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/community`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.7 },
-  { url: `${BASE_URL}/community/notes`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.65 },
-  { url: `${BASE_URL}/potd`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.75 },
-  { url: `${BASE_URL}/gfg`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.75 },
-  { url: `${BASE_URL}/databases`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.8 },
-  { url: `${BASE_URL}/learning`, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 0.9 },
-  { url: `${BASE_URL}/learning-paths`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
-  { url: `${BASE_URL}/learning/java`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
-  { url: `${BASE_URL}/learning/react`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
-  { url: `${BASE_URL}/practice/dsa`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
-  { url: `${BASE_URL}/practice/java`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.75 },
-  { url: `${BASE_URL}/db-design`, lastModified: new Date('2024-10-01'), changeFrequency: 'weekly', priority: 0.7 },
-  { url: `${BASE_URL}/services`, lastModified: new Date('2024-10-01'), changeFrequency: 'monthly', priority: 0.6 },
-  { url: `${BASE_URL}/contact`, lastModified: new Date('2024-10-01'), changeFrequency: 'monthly', priority: 0.5 },
-  { url: `${BASE_URL}/terms`, lastModified: new Date('2024-10-01'), changeFrequency: 'yearly', priority: 0.3 },
-  { url: `${BASE_URL}/privacy`, lastModified: new Date('2024-10-01'), changeFrequency: 'yearly', priority: 0.3 },
+  { url: BASE_URL },
+  { url: `${BASE_URL}/about` },
+  { url: `${BASE_URL}/interview` },
+  { url: `${BASE_URL}/interview/mcq` },
+  { url: `${BASE_URL}/interview/mock` },
+  { url: `${BASE_URL}/interview/tests` },
+  { url: `${BASE_URL}/interview/tips` },
+  { url: `${BASE_URL}/interview/ready/java` },
+  { url: `${BASE_URL}/interview/frontend` },
+  { url: `${BASE_URL}/leetcode` },
+  { url: `${BASE_URL}/leetcode/leetcode150` },
+  { url: `${BASE_URL}/leetcode/leetcode75` },
+  { url: `${BASE_URL}/leetcode/sql50` },
+  { url: `${BASE_URL}/leetcode/top100liked` },
+  { url: `${BASE_URL}/system-design` },
+  { url: `${BASE_URL}/system-design/flows` },
+  { url: `${BASE_URL}/daily-term` },
+  { url: `${BASE_URL}/micro-dev-tips` },
+  { url: `${BASE_URL}/tech-battles` },
+  { url: `${BASE_URL}/learn10` },
+  { url: `${BASE_URL}/community` },
+  { url: `${BASE_URL}/community/notes` },
+  { url: `${BASE_URL}/potd` },
+  { url: `${BASE_URL}/gfg` },
+  { url: `${BASE_URL}/databases` },
+  { url: `${BASE_URL}/learning` },
+  { url: `${BASE_URL}/learning-paths` },
+  { url: `${BASE_URL}/learning/java` },
+  { url: `${BASE_URL}/learning/react` },
+  { url: `${BASE_URL}/practice/dsa` },
+  { url: `${BASE_URL}/practice/java` },
+  { url: `${BASE_URL}/db-design` },
+  { url: `${BASE_URL}/services` },
+  { url: `${BASE_URL}/contact` },
+  { url: `${BASE_URL}/terms` },
+  { url: `${BASE_URL}/privacy` },
 ];
+
+function getContentSlugs(relDir: string): Array<{ category: string; slug: string }> {
+  try {
+    const contentDir = path.join(process.cwd(), relDir);
+    if (!fs.existsSync(contentDir)) return [];
+    const categories = fs.readdirSync(contentDir, { withFileTypes: true })
+      .filter((dirent) => dirent.isDirectory())
+      .map((dirent) => dirent.name);
+
+    const results: Array<{ category: string; slug: string }> = [];
+    for (const cat of categories) {
+      for (const file of fs.readdirSync(path.join(contentDir, cat))) {
+        if (file.endsWith('.md')) results.push({ category: cat, slug: file.replace('.md', '') });
+      }
+    }
+    return results;
+  } catch {
+    return [];
+  }
+}
 
 function getJavaInterviewSlugs(): Array<{ category: string; slug: string }> {
   try {
@@ -78,16 +101,12 @@ function getJavaInterviewSlugs(): Array<{ category: string; slug: string }> {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const defaultDate = new Date('2024-10-01');
 
   // LeetCode problems (3,555 solutions)
   const leetcodeUrls: MetadataRoute.Sitemap = problems.map((p) => {
     const slug = `${p.id}-${p.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`;
     return {
       url: `${BASE_URL}/leetcode/${slug}`,
-      lastModified: defaultDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
     };
   });
 
@@ -96,9 +115,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const slug = `${q.id}-${q.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`;
     return {
       url: `${BASE_URL}/system-design/${slug}`,
-      lastModified: defaultDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
     };
   });
 
@@ -106,26 +122,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const flowIds = ['deployment', 'auth', 'scaling', 'cache', 'balancer', 'dns', 'payment'];
   const flowUrls: MetadataRoute.Sitemap = flowIds.map((flowId) => ({
     url: `${BASE_URL}/system-design/flows/${flowId}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.75,
   }));
 
-  // GFG problems (1,147 solutions)
-  const gfgUrls: MetadataRoute.Sitemap = (gfgProblems as Array<{ id: string }>).map((p) => ({
-    url: `${BASE_URL}/gfg/${p.id}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.75,
-  }));
+  // GFG problems. Only ids with a real markdown body: the catalogue lists 3,466
+  // but ~2,319 have no file and 87 more are failed-generation stubs. Submitting
+  // those produced soft 404s, which is a site-level quality signal.
+  const gfgUrls: MetadataRoute.Sitemap = (gfgProblems as Array<{ id: string }>)
+    .filter((p) => hasGfgContent(p.id))
+    .map((p) => ({
+      url: `${BASE_URL}/gfg/${p.id}`,
+    }));
 
   // Frontend Interview Handbook topics (60 topics)
   const frontendTopicIds = getAllTopicIds();
   const frontendUrls: MetadataRoute.Sitemap = frontendTopicIds.map((topicId) => ({
     url: `${BASE_URL}/interview/frontend/${topicId}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.75,
   }));
 
   // Database topics & subtopics (95 guides)
@@ -133,16 +144,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   databaseTopics.topics.forEach((t) => {
     databaseUrls.push({
       url: `${BASE_URL}/databases/${t.id}`,
-      lastModified: defaultDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
     });
     (t.subtopics || []).forEach((sub) => {
       databaseUrls.push({
         url: `${BASE_URL}/databases/${sub.id}`,
-        lastModified: defaultDate,
-        changeFrequency: 'monthly',
-        priority: 0.65,
       });
     });
   });
@@ -150,17 +155,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Tech Battles (415 battles)
   const techBattleUrls: MetadataRoute.Sitemap = (techBattles as Array<{ id: number | string }>).map((b) => ({
     url: `${BASE_URL}/tech-battles/${b.id}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.65,
   }));
 
   // Learn in 10 minutes topics
   const learn10Urls: MetadataRoute.Sitemap = (topics10min as Array<{ id: number | string }>).map((t) => ({
     url: `${BASE_URL}/learn10/${t.id}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.6,
   }));
 
   // Daily Terms
@@ -169,26 +168,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((t) => ({
       url: `${BASE_URL}/daily-term/${t.date}`,
       lastModified: new Date(t.date),
-      changeFrequency: 'monthly',
-      priority: 0.7,
     }));
 
   // Micro Dev Tips. The `dev_<n>` markdown filenames are deliberately NOT listed:
   // they serve the same tips under a second URL and now 301 onto the numeric form.
-  const microDevTipUrls: MetadataRoute.Sitemap = (microDevTips as Array<{ id: number | string }>).map((t) => ({
-    url: `${BASE_URL}/micro-dev-tips/${t.id}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.65,
+  const microDevTipUrls: MetadataRoute.Sitemap = (microDevTips as Array<{ id: number | string; date?: string }>)
+    .filter((t) => resolveTipFile(t.id) !== null)
+    .map((t) => ({
+      url: `${BASE_URL}/micro-dev-tips/${t.id}`,
+      ...(t.date ? { lastModified: new Date(t.date) } : {}),
+    }));
+
+  // MCQ topic pages and Java practice exercises: both have real content and
+  // real internal links, but were missing from the sitemap entirely.
+  const mcqUrls: MetadataRoute.Sitemap = (mcqTopics as Array<{ slug: string }>).map((t) => ({
+    url: `${BASE_URL}/mcq/${t.slug}`,
+  }));
+
+  const practiceJavaUrls: MetadataRoute.Sitemap = getContentSlugs('src/content/practice/java').map((q) => ({
+    url: `${BASE_URL}/practice/java/${q.category}/${q.slug}`,
   }));
 
   // Java Interview Prep guides
   const javaQuestions = getJavaInterviewSlugs();
   const javaInterviewUrls: MetadataRoute.Sitemap = javaQuestions.map((q) => ({
     url: `${BASE_URL}/interview/ready/java/${q.category}/${q.slug}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.7,
   }));
 
   // Java Learning path topics
@@ -196,16 +200,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   javaTopics.topics.forEach((t) => {
     javaLearningUrls.push({
       url: `${BASE_URL}/learning/java/${t.id}`,
-      lastModified: defaultDate,
-      changeFrequency: 'monthly',
-      priority: 0.65,
     });
     (t.subtopics || []).forEach((sub) => {
       javaLearningUrls.push({
         url: `${BASE_URL}/learning/java/${sub.id}`,
-        lastModified: defaultDate,
-        changeFrequency: 'monthly',
-        priority: 0.65,
       });
     });
   });
@@ -215,16 +213,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   reactTopics.topics.forEach((t) => {
     reactLearningUrls.push({
       url: `${BASE_URL}/learning/react/${t.id}`,
-      lastModified: defaultDate,
-      changeFrequency: 'monthly',
-      priority: 0.65,
     });
     (t.subtopics || []).forEach((sub) => {
       reactLearningUrls.push({
         url: `${BASE_URL}/learning/react/${sub.id}`,
-        lastModified: defaultDate,
-        changeFrequency: 'monthly',
-        priority: 0.65,
       });
     });
   });
@@ -242,6 +234,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...learn10Urls,
     ...dailyTermUrls,
     ...microDevTipUrls,
+    ...mcqUrls,
+    ...practiceJavaUrls,
     ...javaInterviewUrls,
     ...javaLearningUrls,
     ...reactLearningUrls,

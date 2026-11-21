@@ -5,7 +5,7 @@ slug: "graph-databases"
 description: "Master graph databases for modeling and querying complex relationships in social networks, recommendation systems, and more."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "graph", "neo4j", "cypher"]
 related_questions: ["What makes graph databases unique?", "How do graph databases improve relationship queries?", "What are some real-world applications of graph databases?", "How does a graph database differ from a relational database?"]

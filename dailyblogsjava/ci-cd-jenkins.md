@@ -5,7 +5,7 @@ slug: "ci-cd-jenkins"
 description: "Set up CI/CD pipelines with Jenkins for Java projects."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Jenkins", "CI/CD", "Java", "Intermediate"]
 ---

@@ -5,7 +5,7 @@ slug: "sql-basics"
 description: "Master SQL syntax for creating tables, inserting data, and querying relational databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "sql", "beginner"]
 related_questions: ["What is the purpose of the SELECT statement?", "How do you insert data into a table using SQL?", "What does the WHERE clause do in a query?"]

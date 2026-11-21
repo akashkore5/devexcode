@@ -33,10 +33,16 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
-export default function LeetcodePage() {
+export default function LeetcodePage({
+  initialProblems = [],
+  initialTags = [],
+}: {
+  initialProblems?: Problem[];
+  initialTags?: string[];
+}) {
   const router = useRouter();
   const { data: session, status } = useSession();
-  const [problems, setProblems] = useState<Problem[]>([]);
+  const [problems, setProblems] = useState<Problem[]>(initialProblems);
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState("All");
   const [tag, setTag] = useState("All");
@@ -45,10 +51,15 @@ export default function LeetcodePage() {
   const [viewMode, setViewMode] = useState("table");
   const [solvedProblems, setSolvedProblems] = useState<number[]>([]);
   const [taggedProblems, setTaggedProblems] = useState<number[]>([]);
-  const [allTags, setAllTags] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [allTags, setAllTags] = useState<string[]>(
+    initialTags.length ? ["All", ...initialTags] : []
+  );
+  // Seeded from server props so the first page of problems renders in the
+  // server HTML instead of a spinner.
+  const [isLoading, setIsLoading] = useState(initialProblems.length === 0);
 
   useEffect(() => {
+    if (initialProblems.length) return;
     const loadData = async () => {
       setIsLoading(true);
       const [probs, tags] = await Promise.all([
@@ -60,7 +71,7 @@ export default function LeetcodePage() {
       setIsLoading(false);
     };
     loadData();
-  }, []);
+  }, [initialProblems.length]);
 
   useEffect(() => {
     if (status === "authenticated") {

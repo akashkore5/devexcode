@@ -5,7 +5,7 @@ slug: "system-design-messaging"
 description: "Design asynchronous systems using Kafka or RabbitMQ."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Messaging", "System Design", "Java", "Advanced"]
 ---

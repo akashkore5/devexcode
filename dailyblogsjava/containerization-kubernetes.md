@@ -5,7 +5,7 @@ slug: "containerization-kubernetes"
 description: "Orchestrate containers with Kubernetes for scalability and resilience."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Kubernetes", "Java", "Advanced", "Interview"]
 ---

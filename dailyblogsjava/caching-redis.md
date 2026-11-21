@@ -5,7 +5,7 @@ slug: "caching-redis"
 description: "Use Redis for fast, in-memory caching in Java applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Redis", "Caching", "Java", "Intermediate", "Interview"]
 ---

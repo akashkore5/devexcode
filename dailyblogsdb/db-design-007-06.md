@@ -5,7 +5,7 @@ slug: "data-integrity-constraints"
 description: "Implement constraints like unique keys and foreign keys to ensure data integrity."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "design", "integrity"]
 related_questions: ["What are primary key constraints?", "How do foreign keys enforce relationships?", "What is a check constraint?"]

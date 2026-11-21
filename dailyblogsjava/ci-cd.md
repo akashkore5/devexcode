@@ -5,7 +5,7 @@ slug: "ci-cd"
 description: "Automate software delivery with continuous integration and deployment pipelines."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["CI/CD", "Java", "DevOps", "Interview"]
 ---

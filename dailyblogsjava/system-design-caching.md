@@ -5,7 +5,7 @@ slug: "system-design-caching"
 description: "Implement caching at various layers for performance optimization."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Caching", "System Design", "Java", "Advanced"]
 ---

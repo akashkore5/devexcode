@@ -5,7 +5,7 @@ slug: "dsa-graphs"
 description: "Solve graph problems using DFS, BFS, and shortest path algorithms."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Graphs", "Java", "Intermediate", "Interview"]
 ---

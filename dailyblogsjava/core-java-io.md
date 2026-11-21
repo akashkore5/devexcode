@@ -5,7 +5,7 @@ slug: "core-java-io"
 description: "Work with file handling and I/O operations using streams, readers, and writers."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["IO", "Java", "Intermediate"]
 ---

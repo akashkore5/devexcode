@@ -5,7 +5,7 @@ slug: "json-in-nosql-databases"
 description: "Work with JSON documents in MongoDB and Couchbase for schema-less storage."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "json", "nosql", "mongodb"]
 related_questions: ["How does MongoDB store JSON documents?", "What is the role of BSON in MongoDB?", "How do you query JSON in Couchbase?"]

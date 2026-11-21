@@ -5,7 +5,7 @@ slug: "spring-cloud"
 description: "Create distributed systems with microservices and cloud-native patterns."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Microservices", "Spring", "Java", "Advanced", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "key-database-terminology"
 description: "Master essential database terms such as tables, records, queries, schemas, and indexes."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "terminology"]
 related_questions: ["What is the difference between a table and a schema?", "What does a database query do?", "How does an index improve database performance?"]

@@ -5,7 +5,7 @@ slug: "interview-coding-multithreading"
 description: "Solve concurrency problems like producer-consumer or dining philosophers."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Multithreading", "Java", "Interview", "Advanced"]
 ---

@@ -5,7 +5,7 @@ slug: "pagination-performance-optimization"
 description: "Optimize pagination queries for large-scale and dynamic datasets."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "pagination", "performance"]
 related_questions: ["How do indexes improve pagination performance?", "What is the impact of sorting on pagination?", "How do you handle pagination with dynamic data?"]

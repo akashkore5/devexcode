@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import DailyTermClient from "./DailyTermClient";
 import dailyTerms from "../../../data/daily_terms.json";
 
@@ -17,19 +16,9 @@ export async function generateMetadata({ params }) {
   
   if (date > today) return { title: "Daily Term | DevExCode" };
 
-  let term = dailyTerms.find((t) => t.date === date);
-  if (!term && dailyTerms.length > 0) {
-    let hash = 0;
-    for (let i = 0; i < date.length; i++) {
-      hash = date.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    const index = Math.abs(hash) % dailyTerms.length;
-    term = {
-      ...dailyTerms[index],
-      date: date,
-    };
-  }
-
+  // No synthetic fallback: a date with no real term must 404, not recycle
+  // another term's body under a new self-canonical URL.
+  const term = dailyTerms.find((t) => t.date === date);
   if (!term) return { title: "Daily Term | DevExCode" };
 
   const description = `${term.shortExplanation} Learn the definition, usage, and examples of ${term.term} on DevExCode.`;
@@ -68,20 +57,11 @@ export default async function DailyTermPage({ params }) {
   }
 
   const validTerms = dailyTerms.filter((t) => t.date <= today);
-  let term = validTerms.find((t) => t.date === date);
+  const term = validTerms.find((t) => t.date === date);
 
-  if (!term && dailyTerms.length > 0) {
-    let hash = 0;
-    for (let i = 0; i < date.length; i++) {
-      hash = date.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    const index = Math.abs(hash) % dailyTerms.length;
-    term = {
-      ...dailyTerms[index],
-      date: date,
-    };
-  }
-
+  // Previously an unknown date hashed into an existing term and rendered it at
+  // a new indexable URL. Combined with the prev-date links below that produced
+  // an unbounded crawl of near-duplicates. Unknown dates now 404.
   if (!term) {
     notFound();
   }
@@ -93,18 +73,7 @@ export default async function DailyTermPage({ params }) {
     prevDate.setDate(currentDate.getDate() - i);
     const prevDateString = formatLocalDate(prevDate);
     if (prevDateString <= today) {
-      let prevTerm = validTerms.find((t) => t.date === prevDateString);
-      if (!prevTerm && dailyTerms.length > 0) {
-        let hash = 0;
-        for (let j = 0; j < prevDateString.length; j++) {
-          hash = prevDateString.charCodeAt(j) + ((hash << 5) - hash);
-        }
-        const index = Math.abs(hash) % dailyTerms.length;
-        prevTerm = {
-          ...dailyTerms[index],
-          date: prevDateString,
-        };
-      }
+      const prevTerm = validTerms.find((t) => t.date === prevDateString);
       if (prevTerm) {
         previousTerms.push(prevTerm);
       }
@@ -115,6 +84,7 @@ export default async function DailyTermPage({ params }) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: `${term.term} - Daily Tech Term`,
+    image: "https://www.devexcode.com/og-image.jpg",
     description: term.shortExplanation,
     datePublished: date,
     dateModified: date,
@@ -129,10 +99,12 @@ export default async function DailyTermPage({ params }) {
 
   return (
     <>
-      <Script
-        id={`article-schema-${date}`}
+      {/* Plain <script>, not next/script: for inline JSON-LD next/script
+          returns null during SSR and injects the tag from an effect, so the
+          schema was absent from the server HTML entirely. */}
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
       />
       <DailyTermClient initialTerm={term} previousTerms={previousTerms} />
     </>

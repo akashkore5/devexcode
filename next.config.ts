@@ -31,6 +31,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Apex -> www lived only in the hosting dashboard, invisible to this repo.
+      // Every canonical, sitemap entry and JSON-LD @id points at www, so if that
+      // dashboard setting is ever reset the apex would serve the whole site at
+      // 200 with canonicals pointing elsewhere. Keep it in version control.
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'devexcode.com' }],
+        destination: 'https://www.devexcode.com/:path*',
+        permanent: true,
+      },
       // Every micro dev tip was reachable at two URLs: the numeric id used by the
       // UI/sitemap and the `dev_<n>` markdown filename, which the sitemap also
       // emitted. Collapse the filename form onto the numeric one.

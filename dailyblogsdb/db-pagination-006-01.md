@@ -5,7 +5,7 @@ slug: "introduction-to-database-pagination"
 description: "Understand the need for pagination to improve performance and user experience with large datasets."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "pagination", "beginner"]
 related_questions: ["What is database pagination?", "How does pagination enhance user experience?", "What are common pagination challenges?"]

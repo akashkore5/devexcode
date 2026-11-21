@@ -84,8 +84,8 @@ export function constructMetadata({
       images: [
         {
           url: absoluteOgImage,
-          width: 1200,
-          height: 630,
+          width: 1600,
+          height: 840,
           alt: brandedTitle,
         },
       ],
@@ -147,7 +147,7 @@ export function constructTechArticleSchema({
   title,
   description,
   url,
-  datePublished = '2024-01-01T00:00:00.000Z',
+  datePublished,
   dateModified,
   authorName = 'DevExCode Team',
   dependencies,
@@ -161,8 +161,14 @@ export function constructTechArticleSchema({
     description,
     url: fullUrl,
     image: DEFAULT_OG_IMAGE,
-    datePublished,
-    dateModified: dateModified || datePublished,
+    // No hardcoded fallback. Every caller omitted these, so ~5,000 pages all
+    // claimed datePublished === dateModified === 2024-01-01: a uniform fake
+    // timestamp reads as templated content and Google discards a structured
+    // date that disagrees with its other signals. Omitting is honest.
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified || datePublished
+      ? { dateModified: dateModified || datePublished }
+      : {}),
     author: {
       '@type': 'Organization',
       name: authorName,

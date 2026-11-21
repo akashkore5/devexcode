@@ -5,7 +5,7 @@ slug: "graph-database-use-cases"
 description: "Discover applications like fraud detection, recommendation engines, and network analysis."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "graph", "use-cases"]
 related_questions: ["How do graph databases support recommendation systems?", "What role do graph databases play in fraud detection?", "How are graph databases used in social networks?"]

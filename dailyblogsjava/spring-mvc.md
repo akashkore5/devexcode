@@ -5,7 +5,7 @@ slug: "spring-mvc"
 description: "Develop web applications using Spring's Model-View-Controller framework."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Spring MVC", "Java", "Intermediate", "Interview"]
 ---

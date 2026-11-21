@@ -5,7 +5,7 @@ slug: "caching"
 description: "Improve Java application performance with caching strategies."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Caching", "Redis", "Java", "Interview"]
 ---

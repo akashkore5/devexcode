@@ -5,7 +5,7 @@ slug: "database-management-systems"
 description: "Understand the role of DBMS software in managing databases, including examples like MySQL and MongoDB."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "dbms", "mysql", "mongodb"]
 related_questions: ["What functions does a DBMS perform?", "How does a DBMS ensure data integrity?", "What are some popular DBMS tools?"]

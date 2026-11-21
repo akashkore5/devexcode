@@ -5,7 +5,7 @@ slug: "database-design"
 description: "Learn to design efficient, scalable database schemas for relational and NoSQL systems to support diverse applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "design", "sql", "nosql", "schema"]
 related_questions: ["What are the key principles of database design?", "How does schema design differ between SQL and NoSQL?", "Why is normalization important in relational databases?", "What is the role of indexing in database design?"]

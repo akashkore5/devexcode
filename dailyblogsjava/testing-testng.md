@@ -5,7 +5,7 @@ slug: "testing-testng"
 description: "Use TestNG for advanced testing features like parallel execution and data-driven tests."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["TestNG", "Testing", "Java", "Intermediate"]
 ---

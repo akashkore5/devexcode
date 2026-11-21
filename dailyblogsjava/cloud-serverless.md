@@ -5,7 +5,7 @@ slug: "cloud-serverless"
 description: "Build serverless Java applications using AWS Lambda or Azure Functions."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Serverless", "Cloud", "Java", "Advanced"]
 ---

@@ -5,7 +5,7 @@ slug: "pagination-in-nosql-databases"
 description: "Implement pagination in NoSQL databases like MongoDB and DynamoDB."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "pagination", "nosql", "mongodb", "dynamodb"]
 related_questions: ["How does pagination work in MongoDB?", "What is the skip method in NoSQL pagination?", "How does DynamoDB handle paginated queries?"]

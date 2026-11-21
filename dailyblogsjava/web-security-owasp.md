@@ -5,7 +5,7 @@ slug: "web-security-owasp"
 description: "Implement OWASP top 10 security practices, including CSRF and XSS prevention."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["OWASP", "Security", "Java", "Intermediate", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "system-design-databases"
 description: "Choose and design databases for scalability and performance."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Databases", "System Design", "Java", "Advanced"]
 ---

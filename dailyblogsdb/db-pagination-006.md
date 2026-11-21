@@ -5,7 +5,7 @@ slug: "database-pagination"
 description: "Master pagination techniques for efficient data retrieval, from offset to cursor-based methods in SQL and NoSQL databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "pagination", "sql", "nosql"]
 related_questions: ["Why is pagination important for large datasets?", "What are the drawbacks of offset-based pagination?", "How does cursor-based pagination improve performance?", "What role does pagination play in REST APIs?"]

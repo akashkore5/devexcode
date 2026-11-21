@@ -5,7 +5,7 @@ slug: "json-data-modeling"
 description: "Design efficient JSON schemas for optimal storage and querying."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "json", "data-modeling"]
 related_questions: ["How do you structure JSON data for performance?", "What are the trade-offs of deeply nested JSON?", "How do you validate JSON schemas in databases?"]

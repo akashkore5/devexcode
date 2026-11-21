@@ -5,7 +5,7 @@ slug: "system-design-principles"
 description: "Learn to design systems like URL shorteners, messaging apps, or e-commerce platforms."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["System Design", "Java", "Advanced", "Interview"]
 ---

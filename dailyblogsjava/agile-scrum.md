@@ -5,7 +5,7 @@ slug: "agile-scrum"
 description: "Understand Scrum roles, ceremonies, and artifacts for Java projects."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Scrum", "Agile", "Java", "Beginner", "Interview"]
 ---

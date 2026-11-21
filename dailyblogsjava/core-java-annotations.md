@@ -5,7 +5,7 @@ slug: "core-java-annotations"
 description: "Use built-in and custom annotations for metadata and code processing."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Annotations", "Java", "Intermediate"]
 ---

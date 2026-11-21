@@ -5,7 +5,7 @@ slug: "monitoring-prometheus"
 description: "Monitor Java applications with Prometheus for metrics collection."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Prometheus", "Monitoring", "Java", "Advanced"]
 ---

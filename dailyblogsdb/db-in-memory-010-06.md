@@ -5,7 +5,7 @@ slug: "use-cases-for-in-memory-databases"
 description: "Explore applications like real-time analytics, session stores, and leaderboards."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "in-memory", "use-cases"]
 related_questions: ["How are in-memory databases used in gaming?", "What role do in-memory databases play in real-time analytics?", "How do session stores benefit from in-memory databases?"]

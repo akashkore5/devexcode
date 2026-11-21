@@ -5,7 +5,7 @@ slug: "introduction-to-database-testing"
 description: "Understand the importance of testing database performance, integrity, and security."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "testing", "beginner"]
 related_questions: ["What is database testing?", "What types of tests are performed on databases?", "Why is data validation important in testing?"]

@@ -5,7 +5,7 @@ slug: "hibernate-jpa-queries"
 description: "Write complex database queries using JPQL and the Criteria API."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["JPQL", "Criteria", "Java", "Intermediate"]
 ---

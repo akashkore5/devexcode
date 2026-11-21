@@ -5,7 +5,7 @@ slug: "nosql-vs-sql"
 description: "Compare NoSQL and SQL databases to choose the right tool for your application."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "nosql", "sql"]
 related_questions: ["What are the trade-offs between NoSQL and SQL?", "When is SQL better than NoSQL?", "How do NoSQL databases handle schema changes?"]

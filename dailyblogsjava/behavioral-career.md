@@ -5,7 +5,7 @@ slug: "behavioral-career"
 description: "Explain your career goals and passion for Java development."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Behavioral", "Interview", "Java", "Beginner"]
 ---

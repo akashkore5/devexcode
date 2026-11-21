@@ -5,7 +5,7 @@ slug: "logging"
 description: "Implement effective logging for debugging and monitoring Java applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Logging", "Java", "Monitoring", "Interview"]
 ---

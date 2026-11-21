@@ -5,7 +5,7 @@ slug: "serverless-databases"
 description: "Use serverless databases like AWS DynamoDB and Aurora Serverless for auto-scaling."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "cloud", "serverless", "dynamodb"]
 related_questions: ["What is a serverless database?", "How does Aurora Serverless handle scaling?", "What are the cost benefits of serverless databases?"]

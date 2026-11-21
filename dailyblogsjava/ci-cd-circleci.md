@@ -5,7 +5,7 @@ slug: "ci-cd-circleci"
 description: "Configure CircleCI for automated Java builds and deployments."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["CircleCI", "CI/CD", "Java", "Intermediate"]
 ---

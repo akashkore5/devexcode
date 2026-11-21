@@ -5,7 +5,7 @@ slug: "keyset-pagination"
 description: "Explore keyset pagination for high-performance querying in large, sorted datasets."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "pagination", "keyset"]
 related_questions: ["How does keyset pagination work?", "What makes keyset pagination faster than offset?", "What are the limitations of keyset pagination?"]

@@ -5,7 +5,7 @@ slug: "databases-nosql"
 description: "Use NoSQL databases like MongoDB, Cassandra, and DynamoDB for scalability."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["NoSQL", "MongoDB", "Java", "Advanced"]
 ---

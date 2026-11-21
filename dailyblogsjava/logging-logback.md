@@ -5,7 +5,7 @@ slug: "logging-logback"
 description: "Configure advanced logging with Logback for performance and flexibility."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Logback", "Logging", "Java", "Intermediate"]
 ---

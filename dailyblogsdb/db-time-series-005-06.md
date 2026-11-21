@@ -5,7 +5,7 @@ slug: "time-series-analytics"
 description: "Perform analytics on time-series data for trends and predictions."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "time-series", "analytics"]
 related_questions: ["How do you calculate moving averages in time-series data?", "What is anomaly detection in time-series analytics?", "How do time-series databases support forecasting?"]

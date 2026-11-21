@@ -23,7 +23,11 @@ export default function JavaTopicsDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [difficultyFilter, setDifficultyFilter] = useState("All");
   const [tagFilter, setTagFilter] = useState("All");
-  const [isLoading, setIsLoading] = useState(true);
+  // Topic list comes from a static import, not a fetch. Starting this `true`
+  // made SSR render the skeleton instead of the topic links, so the server
+  // HTML contained none of the topic URLs. Only the authenticated progress
+  // fetch below needs a loading state, and it sets this itself.
+  const [isLoading, setIsLoading] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   useEffect(() => {

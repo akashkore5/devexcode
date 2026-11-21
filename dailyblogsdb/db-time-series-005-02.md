@@ -5,7 +5,7 @@ slug: "influxdb-for-time-series"
 description: "Learn how InfluxDB handles time-series data storage and querying."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "time-series", "influxdb"]
 related_questions: ["What is the structure of InfluxDB\u2019s data model?", "How do you query time-series data in InfluxDB?", "What are InfluxDB\u2019s retention policies?"]

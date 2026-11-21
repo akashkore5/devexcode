@@ -5,7 +5,7 @@ slug: "database-migration-strategies"
 description: "Learn strategies for migrating databases between platforms or versions."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "migration"]
 related_questions: ["What is zero-downtime migration?", "How do you migrate from SQL to NoSQL?", "What are schema migration tools?"]

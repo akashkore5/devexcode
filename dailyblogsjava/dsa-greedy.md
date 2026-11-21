@@ -5,7 +5,7 @@ slug: "dsa-greedy"
 description: "Apply greedy techniques for optimization problems."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Greedy", "Java", "Intermediate", "Interview"]
 ---

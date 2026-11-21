@@ -5,7 +5,7 @@ slug: "dsa-stacks-queues"
 description: "Use stacks and queues for problems like expression evaluation and task scheduling."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Stacks", "Queues", "Java", "Beginner", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "interview-coding-strings"
 description: "Solve common string manipulation problems like palindrome and anagram checks."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Strings", "Java", "Interview", "Beginner"]
 ---

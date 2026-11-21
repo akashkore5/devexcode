@@ -5,7 +5,7 @@ slug: "behavioral-conflict"
 description: "Handle questions about resolving disagreements and challenges."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Behavioral", "Interview", "Java", "Beginner"]
 ---

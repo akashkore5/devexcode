@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
 import LeetcodeClient from './LeetcodeClient';
+import { DataService } from '../../lib/data-service';
 
 import { constructMetadata } from '@/lib/seo';
 
@@ -14,14 +14,11 @@ export const metadata = constructMetadata({
   ],
 });
 
-export default function LeetcodePage() {
-  return (
-    <Suspense fallback={
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
-      </div>
-    }>
-      <LeetcodeClient />
-    </Suspense>
-  );
+export default async function LeetcodePage() {
+  const [problems, tags] = await Promise.all([
+    DataService.getProblems(),
+    DataService.getTags(),
+  ]);
+
+  return <LeetcodeClient initialProblems={problems} initialTags={tags} />;
 }

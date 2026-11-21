@@ -5,7 +5,7 @@ slug: "hadoop-and-hdfs"
 description: "Learn how Hadoop and HDFS integrate with databases for distributed storage."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "big-data", "hadoop", "hdfs"]
 related_questions: ["What is HDFS and how does it work?", "How do databases connect to Hadoop?", "What is MapReduce in Hadoop?"]

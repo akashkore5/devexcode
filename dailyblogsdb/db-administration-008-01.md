@@ -5,7 +5,7 @@ slug: "role-of-a-database-administrator"
 description: "Understand the key responsibilities of a DBA in managing and optimizing databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "administration", "dba"]
 related_questions: ["What does a DBA do daily?", "How does a DBA interact with developers?", "What skills are essential for a DBA?"]

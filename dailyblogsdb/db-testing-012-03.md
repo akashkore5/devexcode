@@ -5,7 +5,7 @@ slug: "performance-testing"
 description: "Test database performance under load and optimize slow queries."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "testing", "performance"]
 related_questions: ["What is load testing for databases?", "How do you identify bottlenecks in database performance?", "What is stress testing in databases?"]

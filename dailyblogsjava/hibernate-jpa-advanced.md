@@ -5,7 +5,7 @@ slug: "hibernate-jpa-advanced"
 description: "Explore caching, lazy loading, and performance tuning in Hibernate."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Hibernate", "JPA", "Java", "Advanced"]
 ---

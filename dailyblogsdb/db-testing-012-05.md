@@ -5,7 +5,7 @@ slug: "data-migration-tools"
 description: "Use tools like Flyway and Liquibase for automated database migrations."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "migration", "flyway", "liquibase"]
 related_questions: ["What is Flyway and how does it work?", "How does Liquibase manage schema changes?", "What are the benefits of automated migration tools?"]

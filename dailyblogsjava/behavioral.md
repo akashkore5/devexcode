@@ -5,7 +5,7 @@ slug: "behavioral-questions"
 description: "Prepare for non-technical interview questions to showcase soft skills."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Behavioral", "Interview", "Java"]
 ---

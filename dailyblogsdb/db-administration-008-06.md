@@ -5,7 +5,7 @@ slug: "database-monitoring"
 description: "Use monitoring tools to track database performance and detect issues."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "administration", "monitoring"]
 related_questions: ["What metrics should a DBA monitor?", "How do you set up alerts for database issues?", "What tools are used for database monitoring?"]

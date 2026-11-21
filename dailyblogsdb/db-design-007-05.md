@@ -5,7 +5,7 @@ slug: "distributed-database-design"
 description: "Design schemas for distributed databases to support scalability and fault tolerance."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "design", "distributed"]
 related_questions: ["What is sharding in distributed databases?", "How do you handle data partitioning?", "What are the challenges of distributed schema design?"]

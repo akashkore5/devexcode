@@ -5,7 +5,7 @@ slug: "introduction-to-nosql"
 description: "Learn the basics of NoSQL databases and their key differences from relational databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "nosql", "beginner"]
 related_questions: ["What defines a NoSQL database?", "What are the four main types of NoSQL databases?", "How does NoSQL support flexible schemas?"]

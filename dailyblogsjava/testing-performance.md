@@ -5,7 +5,7 @@ slug: "testing-performance"
 description: "Measure application performance under load using JMeter or Gatling."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Performance", "Testing", "Java", "Advanced"]
 ---

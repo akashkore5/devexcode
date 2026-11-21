@@ -27,7 +27,6 @@ export default function LearningPathsClient({ paths }: { paths: any[] }) {
         
         <Breadcrumb
           items={[
-            { name: "Home", path: "/" },
             { name: "Learning Paths", path: "/learning-paths" },
           ]}
         />

@@ -5,7 +5,7 @@ slug: "in-memory-databases"
 description: "Explore in-memory databases for ultra-fast data access in real-time applications like gaming and analytics."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "in-memory", "redis", "sqlite"]
 related_questions: ["What is an in-memory database?", "How do in-memory databases achieve low latency?", "What are the limitations of in-memory databases?", "When should you use an in-memory database?"]

@@ -5,7 +5,7 @@ slug: "hibernate-jpa-core"
 description: "Understand JPA entities, persistence context, and EntityManager."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["JPA", "Java", "Intermediate", "Interview"]
 ---

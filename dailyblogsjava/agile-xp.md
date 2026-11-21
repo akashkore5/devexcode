@@ -5,7 +5,7 @@ slug: "agile-xp"
 description: "Apply XP practices like pair programming and TDD in Java development."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["XP", "Agile", "Java", "Intermediate"]
 ---

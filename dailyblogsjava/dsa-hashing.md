@@ -5,7 +5,7 @@ slug: "dsa-hashing"
 description: "Use hash tables and hash maps for efficient data retrieval."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Hashing", "Java", "Intermediate", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "advanced-java-concurrency"
 description: "Use java.util.concurrent package for locks, semaphores, and thread pools."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Concurrency", "Java", "Advanced", "Interview"]
 ---

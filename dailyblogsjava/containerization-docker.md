@@ -5,7 +5,7 @@ slug: "containerization-docker"
 description: "Containerize Java applications with Docker for consistent environments."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Docker", "Java", "Intermediate", "Interview"]
 ---

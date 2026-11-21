@@ -5,7 +5,7 @@ slug: "database-testing-and-migration"
 description: "Learn how to test database performance and migrate data between systems with minimal downtime."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "testing", "migration", "sql", "nosql"]
 related_questions: ["Why is database testing important?", "What are the challenges of database migration?", "How do you ensure data integrity during migration?", "What tools are used for database testing?"]

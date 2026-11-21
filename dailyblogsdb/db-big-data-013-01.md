@@ -5,7 +5,7 @@ slug: "introduction-to-big-data-and-databases"
 description: "Understand how databases support big data processing and analytics."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "big-data", "beginner"]
 related_questions: ["What is big data in the context of databases?", "How do databases handle large-scale data?", "What are the key components of big data systems?"]

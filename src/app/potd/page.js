@@ -208,10 +208,9 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
             "@type": "WebPage",
             "@id": "https://www.devexcode.com/potd",
         },
-        image: [
-            gfgPotd ? `https://www.devexcode.com/potd-gfg-${gfgPotd.problem_id}.png` : "https://www.devexcode.com/potd-og-image.jpg",
-            leetcodePotd ? `https://www.devexcode.com/potd-leetcode-${leetcodePotd.problem_id}.png` : "https://www.devexcode.com/potd-og-image.jpg",
-        ],
+        // potd-og-image.jpg and the per-problem PNGs do not exist in public/.
+        // og-image.jpg is the only real image asset.
+        image: ["https://www.devexcode.com/og-image.jpg"],
         breadcrumb: {
             "@type": "BreadcrumbList",
             itemListElement: [

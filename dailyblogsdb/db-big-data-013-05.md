@@ -5,7 +5,7 @@ slug: "data-lakes-and-databases"
 description: "Integrate databases with data lakes for unified data storage and analytics."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "big-data", "data-lake"]
 related_questions: ["What is a data lake?", "How do data lakes differ from data warehouses?", "How do databases query data lakes?"]

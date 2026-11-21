@@ -29,9 +29,15 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
 
-export default function SystemDesignClient() {
+export default function SystemDesignClient({
+  initialQuestions = [],
+  initialTags = [],
+}: {
+  initialQuestions?: Problem[];
+  initialTags?: string[];
+}) {
   const { data: session, status } = useSession();
-  const [questions, setQuestions] = useState<Problem[]>([]);
+  const [questions, setQuestions] = useState<Problem[]>(initialQuestions);
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState("All");
   const [tag, setTag] = useState("All");
@@ -40,10 +46,16 @@ export default function SystemDesignClient() {
   const [viewMode, setViewMode] = useState("table");
   const [solvedQuestions, setSolvedQuestions] = useState<number[]>([]);
   const [taggedQuestions, setTaggedQuestions] = useState<number[]>([]);
-  const [allTags, setAllTags] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [allTags, setAllTags] = useState<string[]>(
+    initialTags.length ? ["All", ...initialTags] : []
+  );
+  // Seeded from server props so the 182 question links are in the server HTML.
+  // Previously this fetched in an effect, so SSR emitted only a spinner and the
+  // whole corpus was unreachable by crawlers.
+  const [isLoading, setIsLoading] = useState(initialQuestions.length === 0);
 
   useEffect(() => {
+    if (initialQuestions.length) return;
     const loadData = async () => {
       setIsLoading(true);
       const [probs, tags] = await Promise.all([
@@ -55,7 +67,7 @@ export default function SystemDesignClient() {
       setIsLoading(false);
     };
     loadData();
-  }, []);
+  }, [initialQuestions.length]);
 
   useEffect(() => {
     if (status === "authenticated") {

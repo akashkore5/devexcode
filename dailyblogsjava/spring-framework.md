@@ -5,7 +5,7 @@ slug: "spring-framework"
 description: "Core framework for building modern Java enterprise applications with dependency injection and modularity."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Spring", "Enterprise", "Java", "Interview"]
 ---

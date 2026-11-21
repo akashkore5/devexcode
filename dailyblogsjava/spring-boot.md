@@ -5,7 +5,7 @@ slug: "spring-boot"
 description: "Build production-ready applications with minimal configuration and embedded servers."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Spring Boot", "Java", "Intermediate", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "dsa-trees"
 description: "Implement binary trees, BSTs, and tree traversal algorithms."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Trees", "Java", "Intermediate", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "offset-based-pagination"
 description: "Implement offset-based pagination using LIMIT and OFFSET in SQL databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "pagination", "sql", "offset"]
 related_questions: ["How does LIMIT and OFFSET work in SQL?", "What are the performance issues with offset pagination?", "When is offset pagination suitable?"]

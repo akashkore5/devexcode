@@ -5,7 +5,7 @@ slug: "behavioral-leadership"
 description: "Answer questions about leading teams and collaborating effectively."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Behavioral", "Interview", "Java", "Beginner"]
 ---

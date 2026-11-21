@@ -5,7 +5,7 @@ slug: "advanced-java-reflection"
 description: "Use Java's reflection API for dynamic class and method manipulation."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Reflection", "Java", "Advanced"]
 ---

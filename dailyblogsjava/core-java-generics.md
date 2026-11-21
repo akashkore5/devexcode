@@ -5,7 +5,7 @@ slug: "core-java-generics"
 description: "Implement type-safe collections and methods using generics and bounded types."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Generics", "Java", "Intermediate", "Interview"]
 ---

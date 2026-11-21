@@ -5,7 +5,7 @@ slug: "build-tools-ant"
 description: "Understand legacy build automation with Apache Ant for Java projects."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Ant", "Build", "Java", "Beginner"]
 ---

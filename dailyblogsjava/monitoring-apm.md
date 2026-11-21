@@ -5,7 +5,7 @@ slug: "monitoring-apm"
 description: "Use tools like New Relic or Dynatrace for deep application insights."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["APM", "Monitoring", "Java", "Advanced"]
 ---

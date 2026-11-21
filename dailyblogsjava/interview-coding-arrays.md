@@ -5,7 +5,7 @@ slug: "interview-coding-arrays"
 description: "Tackle array-based problems like two-sum and maximum subarray."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Arrays", "Java", "Interview", "Beginner"]
 ---

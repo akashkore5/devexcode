@@ -5,7 +5,7 @@ slug: "spring-security"
 description: "Implement authentication, authorization, and secure APIs with Spring Security."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Security", "Spring", "Java", "Intermediate", "Interview"]
 ---

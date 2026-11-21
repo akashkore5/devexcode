@@ -5,7 +5,7 @@ slug: "core-java"
 description: "Master fundamental Java concepts essential for all developers, forming the foundation for building robust applications."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Java", "Basics", "Programming", "Interview"]
 ---

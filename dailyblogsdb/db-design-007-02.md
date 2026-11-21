@@ -5,7 +5,7 @@ slug: "entity-relationship-modeling"
 description: "Create ER diagrams to model relationships between entities in a database."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "design", "er-diagram"]
 related_questions: ["What is an ER diagram?", "How do you represent relationships in an ER diagram?", "What are cardinalities in ER modeling?"]

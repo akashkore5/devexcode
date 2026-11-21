@@ -5,7 +5,7 @@ slug: "graph-data-modeling"
 description: "Design effective graph schemas for complex relationships and queries."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "graph", "data-modeling"]
 related_questions: ["How do you model relationships in a graph database?", "What are the best practices for graph schema design?", "How do you handle dynamic relationships in graphs?"]

@@ -5,7 +5,7 @@ slug: "interview-coding-oop"
 description: "Design systems using OOP principles, like a parking lot or library system."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["OOP", "Java", "Interview", "Intermediate"]
 ---

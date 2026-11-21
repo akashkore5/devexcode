@@ -5,7 +5,7 @@ slug: "dsa-searching"
 description: "Use binary search and other techniques for efficient searching."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Searching", "Java", "Beginner", "Interview"]
 ---

@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { notFound } from "next/navigation";
 import databaseTopics from "@/data/database_topics.json";
 import DatabaseDetailClient from "./DatabaseDetailClient";
 import { constructMetadata } from "@/lib/seo";
@@ -54,8 +55,10 @@ export default async function Page({ params }) {
       frontmatter = data;
       content = markdownContent;
     } else {
-      content = `## Content Coming Soon\n\nWe are working on the content for this topic. Please stay tuned!`;
-      frontmatter = { title: id, difficulty: "Beginner", tags: [] };
+      // No markdown for this id. This used to serve ~15 words of "coming soon"
+      // at HTTP 200 with a self-canonical and an indexable title built from the
+      // raw id, so any arbitrary URL minted a thin indexable page.
+      notFound();
     }
 
     const relatedTopics = [];
@@ -81,7 +84,11 @@ export default async function Page({ params }) {
       />
     );
   } catch (error) {
+    // notFound() signals via a thrown error, so a bare catch here swallowed it
+    // and served the page anyway. Rethrow: Next turns control-flow errors into
+    // the right status, and a genuine failure becomes a 500 rather than a
+    // 200 that says "Error loading topic".
     console.error(`Error loading database topic ${id}:`, error);
-    return <div>Error loading topic.</div>;
+    throw error;
   }
 }

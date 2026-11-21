@@ -5,7 +5,7 @@ slug: "dsa-sorting"
 description: "Implement and analyze sorting algorithms like QuickSort, MergeSort, and HeapSort."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Sorting", "Java", "Intermediate", "Interview"]
 ---

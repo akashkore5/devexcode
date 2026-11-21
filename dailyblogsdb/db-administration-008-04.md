@@ -5,7 +5,7 @@ slug: "database-security"
 description: "Implement encryption, access controls, and auditing to secure databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "administration", "security"]
 related_questions: ["What is role-based access control (RBAC)?", "How do you encrypt sensitive data in a database?", "What is SQL injection and how do you prevent it?"]

@@ -5,7 +5,7 @@ slug: "messaging-activemq"
 description: "Use ActiveMQ for JMS-based messaging in Java applications."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["ActiveMQ", "Messaging", "Java", "Advanced"]
 ---

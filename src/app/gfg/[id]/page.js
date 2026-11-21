@@ -5,22 +5,22 @@ import { remark } from "remark";
 import html from "remark-html";
 import gfgProblems from "../../../data/gfgproblems.json";
 import GfgDetailClient from "./GfgDetailClient";
+import { notFound } from "next/navigation";
+import { getGfgContentIds, hasGfgContent } from "@/lib/content-index";
 
 export async function generateStaticParams() {
-  const postsDir = path.join(process.cwd(), "gfgblogs");
-  if (!fs.existsSync(postsDir)) return [];
-  const files = fs.readdirSync(postsDir);
-  return files
-    .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => ({
-      id: filename.replace(".md", ""),
-    }));
+  // Only ids with a real body — excludes the 87 failed-generation stubs.
+  return [...getGfgContentIds()].map((id) => ({ id }));
 }
+
+// Anything outside that set is a 404, not an on-demand render.
+export const dynamicParams = false;
 
 import { constructMetadata, constructTechArticleSchema } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
+  if (!hasGfgContent(id)) return { title: "Problem Not Found | DevExCode" };
   const problem = gfgProblems.find((p) => p.id === id);
   const title = `${id}. ${problem?.title || "Problem Solution"} - GeeksforGeeks Solution | DevExCode`;
   const description = `Optimized solution, complexity analysis, and approach for GeeksforGeeks problem ${id} (${problem?.title || "Problem"}) in Java, Python, and C++ on DevExCode.`;
@@ -36,11 +36,15 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { id } = await params;
   
+  // 2,319 catalogue ids have no markdown at all and 87 more are generation
+  // stubs. These used to render a bare div with HTTP 200, a self-canonical and
+  // full TechArticle JSON-LD — soft 404s submitted to the sitemap.
+  if (!hasGfgContent(id)) {
+    notFound();
+  }
+
   try {
     const filePath = path.join(process.cwd(), "gfgblogs", `${id}.md`);
-    if (!fs.existsSync(filePath)) {
-      return <div>Problem Not Found</div>;
-    }
     
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContent);
@@ -84,6 +88,7 @@ export default async function Page({ params }) {
     );
   } catch (error) {
     console.error(`Error loading GFG problem ${id}:`, error);
-    return <div>Error loading problem.</div>;
+    // Rethrow so notFound() still works and real failures return 500, not 200.
+    throw error;
   }
 }

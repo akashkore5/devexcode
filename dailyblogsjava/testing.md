@@ -5,7 +5,7 @@ slug: "testing"
 description: "Ensure code quality with comprehensive testing frameworks and methodologies."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Testing", "Java", "Quality", "Interview"]
 ---

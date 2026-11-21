@@ -5,7 +5,7 @@ slug: "schema-design-basics"
 description: "Understand the foundational principles of designing effective database schemas."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "design", "beginner", "schema"]
 related_questions: ["What is a database schema?", "How do you identify entities in schema design?", "What are the steps in schema design?"]

@@ -5,7 +5,7 @@ slug: "messaging-rabbitmq"
 description: "Implement message queues with RabbitMQ for reliable communication."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["RabbitMQ", "Messaging", "Java", "Advanced"]
 ---

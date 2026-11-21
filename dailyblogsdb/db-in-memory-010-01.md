@@ -5,7 +5,7 @@ slug: "introduction-to-in-memory-databases"
 description: "Understand the basics of in-memory databases and their use cases for high-speed data access."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "in-memory", "beginner"]
 related_questions: ["What defines an in-memory database?", "How does in-memory storage differ from disk-based?", "What are common applications of in-memory databases?"]

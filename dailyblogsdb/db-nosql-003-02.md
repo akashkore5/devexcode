@@ -5,7 +5,7 @@ slug: "document-databases-mongodb"
 description: "Understand document-based storage and querying using MongoDB’s JSON-like documents."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "nosql", "mongodb"]
 related_questions: ["How does MongoDB store data in documents?", "What is the role of collections in MongoDB?", "How do you query nested fields in MongoDB?"]

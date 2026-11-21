@@ -5,7 +5,7 @@ slug: "advanced-java-modules"
 description: "Organize code using the Java Platform Module System for modularity."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Modules", "Java", "Advanced"]
 ---

@@ -5,7 +5,7 @@ slug: "interview-tips-coding"
 description: "Approach coding interviews with problem-solving and communication skills."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Coding", "Interview", "Java", "Beginner"]
 ---

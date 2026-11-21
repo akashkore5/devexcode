@@ -21,7 +21,11 @@ export default function ReactTopicsDashboard() {
   const [searchQuery, setSearchQuery] = useState("");
   const [difficultyFilter, setDifficultyFilter] = useState("All");
   const [tagFilter, setTagFilter] = useState("All");
-  const [isLoading, setIsLoading] = useState(true);
+  // Topic list comes from a static import, not a fetch. Starting this `true`
+  // made SSR render the skeleton instead of the topic links, so the server
+  // HTML contained none of the topic URLs. Only the authenticated progress
+  // fetch below needs a loading state, and it sets this itself.
+  const [isLoading, setIsLoading] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   useEffect(() => {
@@ -172,22 +176,22 @@ export default function ReactTopicsDashboard() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    headline: "React Developer Learning Path | DevCodeEx",
+    headline: "React Developer Learning Path | DevExCode",
     description:
       "Master React development with our comprehensive learning path covering React fundamentals, hooks, state management, and more.",
     keywords:
       "React, React Hooks, State Management, Redux, Next.js, Component Design, Testing, Performance Optimization, Web Development",
-    author: { "@type": "Organization", name: "DevCodeEx" },
+    author: { "@type": "Organization", name: "DevExCode" },
     publisher: {
       "@type": "Organization",
-      name: "DevCodeEx",
+      name: "DevExCode",
       logo: { "@type": "ImageObject", url: "https://www.devexcode.com/logo.png" },
     },
     mainEntity: reactTopics.topics.map((topic) => ({
       "@type": "Course",
       name: topic.title,
       description: topic.description,
-      provider: { "@type": "Organization", name: "DevCodeEx" },
+      provider: { "@type": "Organization", name: "DevExCode" },
       hasPart: topic.subtopics.map((subtopic) => ({
         "@type": "Course",
         name: subtopic.title,

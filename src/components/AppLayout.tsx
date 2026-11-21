@@ -360,8 +360,12 @@ export function AppLayout({ children }: AppLayoutProps) {
             {/* Links Column 1 */}
             <div className="col-span-1 lg:col-span-2 lg:ml-8">
               <h3 className="text-xs font-black uppercase tracking-widest text-foreground mb-6">Learning Paths</h3>
+              {/* All nav links, not slice(0, 5): items 6-13 only exist inside the
+                  JS-gated header dropdown, so sections like /micro-dev-tips,
+                  /daily-term, /potd and /db-design had no crawlable link
+                  anywhere in the server HTML. */}
               <ul className="space-y-4">
-                {navLinks.slice(0, 5).map((link) => (
+                {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center group">
                       <ChevronRightIcon className="w-3.5 h-3.5 mr-2 opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
@@ -377,6 +381,11 @@ export function AppLayout({ children }: AppLayoutProps) {
               <h3 className="text-xs font-black uppercase tracking-widest text-foreground mb-6">Quick Links</h3>
               <ul className="space-y-4">
                 {[
+                  { label: "GeeksforGeeks Solutions", href: "/gfg" },
+                  { label: "Databases", href: "/databases" },
+                  { label: "DSA Practice", href: "/practice/dsa" },
+                  { label: "Java Practice", href: "/practice/java" },
+                  { label: "Learning Paths", href: "/learning-paths" },
                   { label: "About Us", href: "/about" },
                   { label: "Contact Support", href: "/contact" },
                   { label: "Terms of Service", href: "/terms" },

@@ -5,7 +5,7 @@ slug: "database-use-cases"
 description: "Learn how databases power applications in industries like e-commerce, healthcare, and social media."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "use-cases"]
 related_questions: ["How do e-commerce platforms use databases?", "What role do databases play in healthcare systems?", "Why are databases critical for social media apps?"]

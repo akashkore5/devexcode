@@ -5,7 +5,7 @@ slug: "cloud-aws"
 description: "Use AWS services like EC2, S3, Lambda, and ECS for Java applications."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["AWS", "Cloud", "Java", "Advanced", "Interview"]
 ---

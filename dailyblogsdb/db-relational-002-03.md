@@ -5,7 +5,7 @@ slug: "normalization"
 description: "Learn normalization techniques to eliminate redundancy and ensure data integrity."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "sql", "normalization"]
 related_questions: ["What is the purpose of normalization?", "What are the first three normal forms?", "How does normalization impact database performance?"]

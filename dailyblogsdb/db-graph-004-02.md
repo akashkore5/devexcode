@@ -5,7 +5,7 @@ slug: "neo4j-and-cypher"
 description: "Explore Neo4j and its Cypher query language for efficient graph data querying."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "graph", "neo4j", "cypher"]
 related_questions: ["What is the syntax of a basic Cypher query?", "How does Cypher handle pattern matching?", "What are some common Cypher clauses?"]

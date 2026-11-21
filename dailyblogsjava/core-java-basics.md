@@ -5,7 +5,7 @@ slug: "core-java-basics"
 description: "Master Java syntax, data types, variables, operators, control flow, and methods to build a strong programming foundation."
 difficulty: "Beginner"
 date: "2025-05-20"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Java", "Basics", "Beginner", "Interview"]
 ---

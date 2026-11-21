@@ -5,7 +5,7 @@ slug: "redis-as-in-memory-database"
 description: "Use Redis for in-memory storage, caching, and real-time analytics."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "in-memory", "redis"]
 related_questions: ["How does Redis handle in-memory data structures?", "What is Redis persistence?", "How do you scale Redis for in-memory storage?"]

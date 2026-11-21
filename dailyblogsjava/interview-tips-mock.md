@@ -5,7 +5,7 @@ slug: "interview-tips-mock"
 description: "Practice mock interviews to simulate real Java interview scenarios."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Mock Interview", "Interview", "Java", "Beginner"]
 ---

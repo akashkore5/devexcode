@@ -5,7 +5,7 @@ slug: "behavioral-failure"
 description: "Discuss past failures and lessons learned in a professional context."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Behavioral", "Interview", "Java", "Beginner"]
 ---

@@ -5,7 +5,7 @@ slug: "advanced-java-memory"
 description: "Understand memory management, garbage collection, and JVM optimization techniques."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["JVM", "Memory", "Java", "Advanced", "Interview"]
 ---

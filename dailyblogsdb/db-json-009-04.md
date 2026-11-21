@@ -5,7 +5,7 @@ slug: "querying-json-data"
 description: "Write queries to extract, filter, and manipulate JSON data in databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "json", "query"]
 related_questions: ["How do you query nested JSON fields?", "What is the JSON path language?", "How do you optimize JSON queries?"]

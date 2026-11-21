@@ -5,7 +5,7 @@ slug: "introduction-to-time-series-databases"
 description: "Understand the structure and use cases of time-series databases for sequential data."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "time-series", "beginner"]
 related_questions: ["What is time-series data?", "Why are time-series databases optimized for temporal data?", "What industries rely on time-series databases?"]

@@ -5,7 +5,7 @@ slug: "advanced-java-performance"
 description: "Optimize Java applications for speed and memory efficiency."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Performance", "Java", "Advanced"]
 ---

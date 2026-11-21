@@ -5,7 +5,7 @@ slug: "spring-integration"
 description: "Build messaging-driven integrations with Spring Integration."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Spring Integration", "Java", "Advanced"]
 ---

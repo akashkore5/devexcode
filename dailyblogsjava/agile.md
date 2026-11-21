@@ -5,7 +5,7 @@ slug: "agile-methodologies"
 description: "Work effectively in agile development teams using modern methodologies."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Agile", "Java", "Teamwork", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "messaging-jms"
 description: "Implement messaging using JMS with providers like ActiveMQ or IBM MQ."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["JMS", "Messaging", "Java", "Advanced"]
 ---

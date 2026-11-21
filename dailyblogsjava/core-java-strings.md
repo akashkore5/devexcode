@@ -5,7 +5,7 @@ slug: "core-java-strings"
 description: "Master String manipulation, StringBuilder, StringBuffer, and immutability concepts."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Strings", "Java", "Beginner", "Interview"]
 ---

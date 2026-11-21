@@ -5,7 +5,7 @@ slug: "introduction-to-databases"
 description: "Discover the fundamentals of databases, their role in applications, and how they efficiently store, manage, and retrieve data."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "fundamentals", "data-management"]
 related_questions: ["What is the primary purpose of a database in an application?", "How does a database differ from a spreadsheet?", "What are some common use cases for databases in modern software?", "Why is data organization important in databases?"]

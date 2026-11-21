@@ -5,7 +5,7 @@ slug: "logging-slf4j"
 description: "Use SLF4J as a logging facade to integrate with various logging frameworks."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["SLF4J", "Logging", "Java", "Intermediate", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "spring-data"
 description: "Simplify database access with Spring Data JPA, MongoDB, and Redis integrations."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Spring Data", "Java", "Intermediate", "Interview"]
 ---

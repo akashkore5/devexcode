@@ -5,7 +5,7 @@ slug: "testing-bdd"
 description: "Write tests using BDD frameworks like Cucumber for better collaboration."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["BDD", "Cucumber", "Testing", "Java", "Intermediate"]
 ---

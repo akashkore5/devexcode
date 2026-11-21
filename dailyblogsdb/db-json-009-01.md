@@ -5,7 +5,7 @@ slug: "introduction-to-json-in-databases"
 description: "Understand JSON as a flexible data format for structured and semi-structured data in databases."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "json", "beginner"]
 related_questions: ["What is JSON and how is it stored in databases?", "What are the benefits of using JSON in databases?", "How does JSON differ from traditional table data?"]

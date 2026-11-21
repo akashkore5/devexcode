@@ -5,7 +5,7 @@ slug: "build-tools-maven"
 description: "Manage dependencies and build Java projects with Maven's POM files."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Maven", "Build", "Java", "Beginner", "Interview"]
 ---

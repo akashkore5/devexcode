@@ -5,7 +5,7 @@ slug: "containerization-podman"
 description: "Use Podman as a Docker alternative for container management."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Podman", "Java", "Intermediate"]
 ---

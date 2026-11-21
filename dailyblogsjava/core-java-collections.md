@@ -5,7 +5,7 @@ slug: "core-java-collections"
 description: "Master Java's Collections Framework, including List, Set, Map, Queue, and their implementations like ArrayList, HashSet, HashMap, and LinkedList."
 difficulty: "Beginner"
 date: "2025-05-20"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Collections", "Java", "Beginner", "Interview", "Data Structures"]
 ---

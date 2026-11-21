@@ -5,7 +5,7 @@ slug: "azure-cosmos-db"
 description: "Learn about Azure Cosmos DB for globally distributed NoSQL databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "cloud", "azure", "cosmosdb"]
 related_questions: ["What is multi-model support in Cosmos DB?", "How does Cosmos DB ensure low latency?", "What are partitioning strategies in Cosmos DB?"]

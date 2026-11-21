@@ -5,7 +5,7 @@ slug: "build-tools-gradle"
 description: "Use Gradle for flexible and performant build automation with Groovy or Kotlin scripts."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Gradle", "Build", "Java", "Intermediate", "Interview"]
 ---

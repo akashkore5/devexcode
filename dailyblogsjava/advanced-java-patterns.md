@@ -5,7 +5,7 @@ slug: "advanced-java-patterns"
 description: "Apply creational, structural, and behavioral patterns like Singleton, Factory, and Observer."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Design Patterns", "Java", "Intermediate", "Interview"]
 ---

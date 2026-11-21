@@ -17,6 +17,7 @@ const BASE_URL = 'https://www.devexcode.com';
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': `${BASE_URL}/#organization`,
   name: 'DevExCode',
   alternateName: ['DevEx Code', 'DevEx', 'Dev Ex Code', 'Devex Code'],
   url: BASE_URL,
@@ -34,6 +35,8 @@ const organizationJsonLd = {
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
+  '@id': `${BASE_URL}/#website`,
+  publisher: { '@id': `${BASE_URL}/#organization` },
   name: 'DevExCode',
   alternateName: 'DevEx Code',
   url: BASE_URL,

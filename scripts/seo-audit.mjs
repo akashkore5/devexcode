@@ -50,7 +50,7 @@ if (fs.existsSync(robotsPath)) {
   assert(robotsContent.includes('Disallow: /api/'), 'robots.txt blocks private /api/ endpoints');
   assert(robotsContent.includes('Disallow: /profile'), 'robots.txt blocks user /profile routes');
   assert(robotsContent.includes('Disallow: /auth/'), 'robots.txt blocks /auth/ routes');
-  assert(robotsContent.includes('Disallow: /community/notes/my-notes'), 'robots.txt blocks private /community/notes/my-notes');
+  assert(robotsContent.includes('Allow: /api/generate-term-image'), 'robots.txt keeps the daily-term OG image endpoint crawlable');
   assert(!robotsContent.includes('sitemaps-0.xml'), 'robots.txt does not reference deleted stale sitemaps-0.xml');
   assert(!robotsContent.includes('sitemaps.xml'), 'robots.txt does not reference deleted stale sitemaps.xml');
 }
@@ -150,7 +150,9 @@ console.log('\nSECTION 6: Metadata & Self-Referencing Canonical Tags');
 const routeAuditCases = [
   { file: 'src/app/page.tsx', route: '/', pattern: /canonicalPath:\s*['"]{2}/ },
   { file: 'src/app/leetcode/page.tsx', route: '/leetcode', pattern: /canonicalPath:\s*['"]\/leetcode['"]/ },
-  { file: 'src/app/leetcode/[id]/page.js', route: '/leetcode/[id]', pattern: /canonicalPath:\s*`\/leetcode\/\$\{slug\}`/ },
+  // Canonical is derived from the problem record, never echoed from the request:
+  // /leetcode/1-anything used to 200 and self-canonicalise to itself.
+  { file: 'src/app/leetcode/[id]/page.js', route: '/leetcode/[id]', pattern: /canonicalPath:\s*`\/leetcode\/\$\{canonicalId \|\| slug\}`/ },
   { file: 'src/app/system-design/page.tsx', route: '/system-design', pattern: /canonicalPath:\s*['"]\/system-design['"]/ },
   { file: 'src/app/system-design/[id]/page.tsx', route: '/system-design/[id]', pattern: /canonicalPath:\s*`\/system-design\/\$\{id\}`/ },
   { file: 'src/app/system-design/flows/page.tsx', route: '/system-design/flows', pattern: /canonicalPath:\s*['"]\/system-design\/flows['"]/ },
@@ -196,9 +198,15 @@ assert(seoLibContent.includes("'@type': 'Organization'"), 'constructOrganization
 // Check Homepage JSON-LD rendering
 const homePagePath = path.join(ROOT_DIR, 'src', 'app', 'page.tsx');
 const homePageContent = fs.readFileSync(homePagePath, 'utf8');
-assert(homePageContent.includes('constructWebSiteSchema'), 'Homepage imports and calls constructWebSiteSchema');
-assert(homePageContent.includes('constructOrganizationSchema'), 'Homepage imports and calls constructOrganizationSchema');
-assert(homePageContent.includes('application/ld+json'), 'Homepage embeds application/ld+json script tags');
+// WebSite and Organization are emitted ONCE globally from app/layout.tsx.
+// The homepage used to emit them a second time with conflicting logo, sameAs
+// and SearchAction values, which gave Google two unrelated entities per domain.
+const rootLayoutForSchema = fs.readFileSync(path.join(ROOT_DIR, 'src/app/layout.tsx'), 'utf8');
+assert(!homePageContent.includes('constructWebSiteSchema'), 'Homepage does NOT duplicate the global WebSite schema');
+assert(!homePageContent.includes('constructOrganizationSchema'), 'Homepage does NOT duplicate the global Organization schema');
+assert(rootLayoutForSchema.includes("'@type': 'WebSite'"), 'Root layout emits the single WebSite schema');
+assert(rootLayoutForSchema.includes("'@type': 'Organization'"), 'Root layout emits the single Organization schema');
+assert(rootLayoutForSchema.includes("/#organization"), 'Global schema entities carry a stable @id');
 
 // 8. Framework Integrity & Anti-Patterns
 console.log('\nSECTION 8: Framework Integrity (No next/head in App Router)');

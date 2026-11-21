@@ -5,7 +5,7 @@ slug: "web-security-secure-coding"
 description: "Write secure Java code to prevent SQL injection and other vulnerabilities."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Secure Coding", "Security", "Java", "Intermediate"]
 ---

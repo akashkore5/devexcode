@@ -5,7 +5,7 @@ slug: "core-java-inner-classes"
 description: "Understand nested, static, and anonymous inner classes and their use cases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Inner Classes", "Java", "Intermediate"]
 ---

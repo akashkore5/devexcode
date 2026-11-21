@@ -23,3 +23,31 @@ export function extractLeadingH1(markdown) {
 
   return { title: null, content: body };
 }
+
+/**
+ * Some generated files kept the authoring prompt's scaffold in the body, so
+ * lines like `**Title:** …`, `**SEO Keywords:** …` and `**Main Blog Content:**`
+ * render as visible text on the live page. Only this explicit label set is
+ * removed — `**Note:**`, `**Benefits:**` and the like are real content.
+ *
+ * Returns the `**Title:**` value when present, plus the cleaned body.
+ */
+const SCAFFOLD_LABELS = /^\*\*(SEO Keywords|SEO keywords|Keywords|Intro|Main Blog Content|Blog Body|Optional ASCII Diagram)\*{0,2}:?\*{0,2}\s*(.*)$/i;
+
+export function stripGenerationScaffold(markdown) {
+  const lines = String(markdown ?? '').split(/\r?\n/);
+  const out = [];
+  let title = null;
+
+  for (const line of lines) {
+    const titleMatch = line.match(/^\*\*Title:\*\*\s*(.+?)\s*$/i);
+    if (titleMatch) {
+      if (!title) title = titleMatch[1].replace(/\*\*/g, '').trim();
+      continue;
+    }
+    if (SCAFFOLD_LABELS.test(line)) continue;
+    out.push(line);
+  }
+
+  return { title, content: out.join('\n').replace(/^\s+/, '').replace(/\n{3,}/g, '\n\n') };
+}

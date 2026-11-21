@@ -5,7 +5,7 @@ slug: "spring-batch"
 description: "Process large volumes of data with Spring Batch for ETL jobs."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Spring Batch", "Java", "Advanced"]
 ---

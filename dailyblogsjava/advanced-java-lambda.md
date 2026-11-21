@@ -5,7 +5,7 @@ slug: "advanced-java-lambda"
 description: "Leverage functional programming with lambda expressions and the Stream API."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Lambda", "Streams", "Java", "Intermediate", "Interview"]
 ---

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import gfgProblems from "@/data/gfgproblems.json";
 import { constructMetadata } from "@/lib/seo";
+import { hasGfgContent } from "@/lib/content-index";
 import { Breadcrumbs } from "@/components/Breadcrumb";
 import { Code2, ArrowRight } from 'lucide-react';
 
@@ -16,7 +17,11 @@ export const metadata = constructMetadata({
 });
 
 export default function GfgHubPage() {
-  const problems = (gfgProblems as Array<{ id: string; title: string; difficulty: string; url?: string }>).slice(0, 100);
+  // Only ids with a real body. The catalogue lists 3,466 but ~2,406 now 404,
+  // and the previous `.slice(0, 100)` both linked some of those and left the
+  // other ~960 real solutions with no inbound link anywhere on the site.
+  const problems = (gfgProblems as Array<{ id: string; title: string; difficulty: string; url?: string }>)
+    .filter((p) => hasGfgContent(p.id));
 
   const itemListJsonLd = {
     "@context": "https://schema.org",

@@ -5,7 +5,7 @@ slug: "interview-tips-resume"
 description: "Craft a Java-focused resume highlighting projects and skills."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Resume", "Interview", "Java", "Beginner"]
 ---

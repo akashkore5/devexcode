@@ -344,11 +344,11 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
     keywords: `React, ${frontmatter.title}, ${frontmatter.tags.join(", ")}, programming, web development, ${frontmatter.difficulty.toLowerCase()}`,
     author: {
       "@type": "Organization",
-      name: "DevCodeEx",
+      name: "DevExCode",
     },
     publisher: {
       "@type": "Organization",
-      name: "DevCodeEx",
+      name: "DevExCode",
       logo: {
         "@type": "ImageObject",
         url: "https://www.devexcode.com/logo.png",
@@ -407,7 +407,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
             className="mb-6"
           >
             <Link
-              href="/react"
+              href="/learning/react"
               className="flex items-center text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 text-sm font-medium transition-colors duration-200"
               aria-label="Back to React Learning Path"
             >
@@ -435,7 +435,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
               {frontmatter.tags.map((tag) => (
                 <Link
                   key={tag}
-                  href={`/react?tag=${encodeURIComponent(tag)}`}
+                  href={`/learning/react?tag=${encodeURIComponent(tag)}`}
                   className="px-4 py-2 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors duration-200 shadow-sm"
                   aria-label={`Filter by tag ${tag}`}
                 >
@@ -685,7 +685,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
                     relatedTopics.map((topic) => (
                       <li key={topic.id}>
                         <Link
-                          href={`/react/${topic.id}`}
+                          href={`/learning/react/${topic.id}`}
                           className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 text-base font-medium transition-colors duration-200 block hover:underline"
                           aria-label={`View ${topic.title}`}
                         >

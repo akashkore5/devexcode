@@ -5,7 +5,7 @@ slug: "database-administration"
 description: "Learn the responsibilities of a database administrator, including backup, recovery, security, and performance tuning."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "administration", "dba", "sql", "nosql"]
 related_questions: ["What are the core responsibilities of a DBA?", "How does a DBA ensure database availability?", "What tools do DBAs use for monitoring?", "Why is database security critical?"]

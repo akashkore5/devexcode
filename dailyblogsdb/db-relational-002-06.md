@@ -5,7 +5,7 @@ slug: "mysql-vs-postgresql"
 description: "Compare MySQL and PostgreSQL features, performance, and use cases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "sql", "mysql", "postgresql"]
 related_questions: ["What are the key differences between MySQL and PostgreSQL?", "When should you choose PostgreSQL over MySQL?", "How does MySQL\u2019s storage engine affect performance?"]

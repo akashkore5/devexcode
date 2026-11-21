@@ -5,7 +5,7 @@ slug: "ci-cd-github-actions"
 description: "Automate workflows with GitHub Actions for building and deploying Java apps."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["GitHub Actions", "CI/CD", "Java", "Intermediate"]
 ---

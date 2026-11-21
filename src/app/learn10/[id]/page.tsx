@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Script from "next/script";
 import { DataService } from "../../../lib/data-service";
 import Learn10DetailClient from "./Learn10DetailClient";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { constructMetadata } from "@/lib/seo";
-import { extractLeadingH1 } from "@/lib/markdown";
+import { extractLeadingH1, stripGenerationScaffold } from "@/lib/markdown";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -55,9 +54,13 @@ export default async function Learn10DetailPage({ params }: { params: Promise<{ 
         const fileContent = fs.readFileSync(filePath, "utf8");
         const matterResult = matter(fileContent);
         frontmatter = matterResult.data;
-        // The client renders its own <h1> from topic.title; drop the body's
-        // leading heading so the page emits a single <h1>.
-        content = extractLeadingH1(matterResult.content).content;
+        // The client renders its own <h1> from topic.title, so drop the body's
+        // leading heading (single <h1> per page), then remove the generation
+        // scaffold — 216 of these files still carry "**Title:** / **SEO
+        // Keywords:** / **Main Blog Content:**" labels that render as visible
+        // body text.
+        const heading = extractLeadingH1(matterResult.content);
+        content = stripGenerationScaffold(heading.content).content;
         found = true;
         break;
       }
@@ -90,6 +93,7 @@ This 10-minute engineering brief is currently being optimized for high-density l
     "@type": "Article",
     headline: `${topic.title} - 10-Minute Engineering Brief`,
     description: `Master ${topic.title} in 10 minutes. High-density engineering brief on DevExCode.`,
+    image: "https://www.devexcode.com/og-image.jpg",
     author: { "@type": "Organization", name: "DevExCode" },
     publisher: {
       "@type": "Organization",
@@ -101,10 +105,12 @@ This 10-minute engineering brief is currently being optimized for high-density l
 
   return (
     <>
-      <Script
-        id={`learn10-schema-${id}`}
+      {/* Plain <script>, not next/script: for inline JSON-LD next/script
+          returns null during SSR and injects the tag from an effect, so the
+          schema was absent from the server HTML entirely. */}
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
       />
       <Learn10DetailClient
         topic={topic}

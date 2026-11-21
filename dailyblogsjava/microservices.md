@@ -5,7 +5,7 @@ slug: "microservices"
 description: "Build scalable and modular microservices with Spring Boot."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Microservices", "Spring Boot", "Java", "Interview"]
 ---

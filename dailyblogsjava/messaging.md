@@ -5,7 +5,7 @@ slug: "messaging"
 description: "Enable asynchronous communication in Java applications."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Messaging", "Kafka", "RabbitMQ", "Java", "Interview"]
 ---

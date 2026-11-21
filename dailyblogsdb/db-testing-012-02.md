@@ -5,7 +5,7 @@ slug: "unit-testing-databases"
 description: "Write unit tests for database queries and stored procedures."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "testing", "unit-testing"]
 related_questions: ["How do you unit test a SQL query?", "What tools are used for database unit testing?", "How do you mock database data for tests?"]

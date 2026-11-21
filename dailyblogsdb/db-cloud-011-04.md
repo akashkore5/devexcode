@@ -5,7 +5,7 @@ slug: "google-cloud-spanner"
 description: "Explore Google Cloud Spanner for scalable, strongly consistent relational databases."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "cloud", "gcp", "spanner"]
 related_questions: ["What is Spanner\u2019s TrueTime architecture?", "How does Spanner achieve strong consistency?", "What are the use cases for Cloud Spanner?"]

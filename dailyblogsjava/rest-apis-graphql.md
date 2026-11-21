@@ -5,7 +5,7 @@ slug: "rest-apis-graphql"
 description: "Explore GraphQL as an alternative to REST for flexible API design."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["GraphQL", "APIs", "Java", "Advanced"]
 ---

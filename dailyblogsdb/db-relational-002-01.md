@@ -5,7 +5,7 @@ slug: "introduction-to-relational-databases"
 description: "Understand the relational model, tables, and how data is linked using keys."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "sql", "relational"]
 related_questions: ["What is the relational model?", "How do primary keys work in relational databases?", "What is a foreign key?"]

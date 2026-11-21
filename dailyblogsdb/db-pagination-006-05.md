@@ -5,7 +5,7 @@ slug: "pagination-in-rest-apis"
 description: "Design paginated JSON responses for REST APIs with links and metadata."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "pagination", "api", "json"]
 related_questions: ["How do you include pagination metadata in API responses?", "What are next and previous links in REST pagination?", "How do you handle pagination in NoSQL APIs?"]

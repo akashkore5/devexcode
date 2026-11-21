@@ -5,7 +5,7 @@ slug: "column-family-stores-cassandra"
 description: "Learn about Cassandra’s wide-column store for distributed, high-availability systems."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "nosql", "cassandra"]
 related_questions: ["How does Cassandra achieve high availability?", "What is a partition key in Cassandra?", "How does Cassandra handle data replication?"]

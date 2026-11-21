@@ -5,7 +5,7 @@ slug: "advanced-java-jni"
 description: "Integrate Java with native code (C/C++) using JNI."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["JNI", "Java", "Advanced"]
 ---

@@ -5,7 +5,7 @@ slug: "agile-kanban"
 description: "Use Kanban boards for workflow visualization and continuous delivery."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Kanban", "Agile", "Java", "Beginner"]
 ---

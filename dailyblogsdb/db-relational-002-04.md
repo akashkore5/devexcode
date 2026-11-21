@@ -5,7 +5,7 @@ slug: "joins-and-relationships"
 description: "Use SQL joins (INNER, LEFT, RIGHT) to combine data from multiple tables."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "sql", "joins"]
 related_questions: ["What is the difference between INNER JOIN and LEFT JOIN?", "How do you handle many-to-many relationships?", "When should you use a FULL OUTER JOIN?"]

@@ -5,7 +5,7 @@ slug: "ci-cd-gitlab"
 description: "Use GitLab pipelines for continuous integration and deployment."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["GitLab", "CI/CD", "Java", "Intermediate"]
 ---

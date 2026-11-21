@@ -5,7 +5,7 @@ slug: "database-vs-file-systems"
 description: "Compare databases with traditional file systems to understand their advantages in data management and querying."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "file-systems", "data-management"]
 related_questions: ["What are the limitations of file systems for data storage?", "How do databases improve data retrieval over file systems?", "When might a file system be preferred over a database?"]

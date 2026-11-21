@@ -5,7 +5,7 @@ slug: "containerization"
 description: "Deploy Java applications in containers for portability and scalability."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Docker", "Kubernetes", "Java", "Interview"]
 ---

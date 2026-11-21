@@ -5,7 +5,7 @@ slug: "big-data-integration"
 description: "Explore how databases integrate with big data platforms for large-scale data processing and analytics."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "big-data", "hadoop", "spark", "etl"]
 related_questions: ["How do databases integrate with big data platforms?", "What is ETL in big data processing?", "How does Apache Spark work with databases?", "What are the challenges of big data integration?"]

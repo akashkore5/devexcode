@@ -5,7 +5,7 @@ slug: "interview-coding-collections"
 description: "Solve problems using Java collections like HashMap and PriorityQueue."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Collections", "Java", "Interview", "Intermediate"]
 ---

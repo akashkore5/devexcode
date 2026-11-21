@@ -5,7 +5,7 @@ slug: "key-value-stores-redis"
 description: "Explore Redis for high-performance caching and simple key-value storage."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "nosql", "redis"]
 related_questions: ["What makes Redis suitable for caching?", "How does Redis handle data persistence?", "What are some common Redis commands?"]

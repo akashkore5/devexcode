@@ -5,7 +5,7 @@ slug: "graph-query-optimization"
 description: "Optimize Cypher queries and indexing for performance in graph databases."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "graph", "performance"]
 related_questions: ["How do you optimize a Cypher query?", "What is the role of indexes in graph databases?", "How does Neo4j handle large-scale graphs?"]

@@ -5,7 +5,7 @@ slug: "in-memory-data-persistence"
 description: "Implement persistence strategies to prevent data loss in in-memory databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "in-memory", "persistence"]
 related_questions: ["How does Redis implement persistence?", "What is snapshotting in in-memory databases?", "How do you balance persistence and performance?"]

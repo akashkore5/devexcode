@@ -5,7 +5,7 @@ slug: "core-java-serialization"
 description: "Persist and reconstruct objects using Java's serialization mechanism."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Serialization", "Java", "Intermediate"]
 ---

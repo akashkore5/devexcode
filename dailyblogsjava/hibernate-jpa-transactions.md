@@ -5,7 +5,7 @@ slug: "hibernate-jpa-transactions"
 description: "Manage transactions in Hibernate and JPA for data consistency."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Transactions", "Hibernate", "Java", "Intermediate"]
 ---

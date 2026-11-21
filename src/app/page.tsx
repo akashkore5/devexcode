@@ -3,7 +3,7 @@ import { HomePage } from "../components/HomePage";
 import problems from "../data/problems.json";
 import systemDesignQuestions from "../data/system_design_questions.json";
 
-import { constructMetadata, constructWebSiteSchema, constructOrganizationSchema } from "@/lib/seo";
+import { constructMetadata } from "@/lib/seo";
 
 export const dynamic = 'force-static';
 
@@ -19,19 +19,12 @@ export const metadata: Metadata = constructMetadata({
 });
 
 export default function Home() {
-  const websiteSchema = constructWebSiteSchema();
-  const organizationSchema = constructOrganizationSchema();
-  
+  // Organization and WebSite are emitted once, globally, from app/layout.tsx.
+  // Emitting them again here gave the homepage two of each, with conflicting
+  // logo, sameAs and SearchAction values, so Google saw two unrelated entities
+  // for one domain.
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
       <HomePage 
         initialLoggedIn={false}
         initialName=""

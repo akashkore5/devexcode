@@ -5,7 +5,7 @@ slug: "amazon-dynamodb"
 description: "Explore DynamoDB for serverless, scalable NoSQL storage in cloud applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "nosql", "dynamodb", "aws"]
 related_questions: ["What is DynamoDB\u2019s pricing model?", "How does DynamoDB support auto-scaling?", "What are partition keys and sort keys in DynamoDB?"]

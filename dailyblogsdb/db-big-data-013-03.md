@@ -5,7 +5,7 @@ slug: "apache-spark-with-databases"
 description: "Use Apache Spark for fast data processing with relational and NoSQL databases."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "big-data", "spark"]
 related_questions: ["How does Spark SQL interact with databases?", "What is a DataFrame in Spark?", "How do you optimize Spark queries?"]

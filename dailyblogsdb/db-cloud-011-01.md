@@ -5,7 +5,7 @@ slug: "introduction-to-cloud-databases"
 description: "Understand the basics of cloud databases and their advantages in modern applications."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "cloud", "beginner"]
 related_questions: ["What defines a cloud database?", "How do cloud databases differ from on-premises?", "What are managed database services?"]

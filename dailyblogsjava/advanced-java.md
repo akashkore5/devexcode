@@ -5,7 +5,7 @@ slug: "advanced-java"
 description: "Explore in-depth Java features for building scalable, performant, and complex systems."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Java", "Advanced", "Concurrency", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "testing-data-integrity"
 description: "Ensure data integrity during migrations and updates using validation techniques."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "testing", "integrity"]
 related_questions: ["How do you validate data after migration?", "What are checksums in data integrity testing?", "How do you handle data corruption during migration?"]

@@ -5,7 +5,7 @@ slug: "dsa-linkedlists"
 description: "Implement and manipulate singly and doubly linked lists."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Linked Lists", "Java", "Beginner", "Interview"]
 ---

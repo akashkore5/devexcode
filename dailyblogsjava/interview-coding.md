@@ -5,7 +5,7 @@ slug: "interview-coding"
 description: "Prepare for Java-specific coding questions commonly asked in interviews."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Coding", "Java", "Interview"]
 ---

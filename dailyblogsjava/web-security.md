@@ -5,7 +5,7 @@ slug: "web-security"
 description: "Secure Java applications against common vulnerabilities and threats."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Security", "Java", "Web", "Interview"]
 ---

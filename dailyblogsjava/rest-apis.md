@@ -5,7 +5,7 @@ slug: "rest-apis"
 description: "Design and build scalable RESTful services for web applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["REST", "APIs", "Java", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "json-in-relational-databases"
 description: "Use JSON data types in PostgreSQL and SQL Server for flexible storage."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "json", "sql", "postgresql"]
 related_questions: ["How does PostgreSQL\u2019s JSONB differ from JSON?", "What are JSON operators in SQL Server?", "How do you index JSON fields in relational databases?"]

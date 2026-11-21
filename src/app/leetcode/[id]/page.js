@@ -7,6 +7,11 @@ import { redirect } from "next/navigation";
 import ProblemPageClient from "./ProblemPageClient";
 import { DataService } from "../../../lib/data-service";
 
+// One definition of the slug shape, shared by generateStaticParams, the
+// canonical URL and the sitemap.
+const canonicalSlug = (title) =>
+  String(title).toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+
 export async function generateStaticParams() {
   const postsDir = path.join(process.cwd(), "src", "posts", "leetcode");
   let files;
@@ -29,13 +34,18 @@ export async function generateStaticParams() {
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const { data } = matter(fileContent);
       return {
-        id: `${data.id}-${data.title.toLowerCase().replace(/\s+/g, "-")}`,
+        // Must match the sitemap/canonical slug exactly. Without the
+        // [^a-z0-9-] strip, 38 problems prerendered under a second URL
+        // ("118-pascal's-triangle" vs "118-pascals-triangle"), and one
+        // ("1393-capital-gain/loss") contained a slash, which can never
+        // match a single dynamic segment.
+        id: `${data.id}-${canonicalSlug(data.title)}`,
       };
     });
 
   const problems = await DataService.getProblems();
   const jsonParams = problems.map(p => ({
-    id: `${p.id}-${p.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`
+    id: `${p.id}-${canonicalSlug(p.title)}`
   }));
 
   // Merge unique IDs
@@ -53,19 +63,22 @@ export async function generateMetadata({ params }) {
   const id = slug.split("-")[0];
   const filePath = path.join(process.cwd(), "src", "posts", "leetcode", `${id}.md`);
   
-  let title = `LeetCode ${id} Solution`;
+  let title = `LeetCode ${id} Solution | DevExCode`;
   let description = `Master LeetCode problem ${id} with optimized Java, C++, and Python solutions, complexity analysis, and interview takeaways on DevExCode.`;
   let tags = ['leetcode', 'algorithms', 'coding interview'];
+  let canonicalId = null;
 
   if (fs.existsSync(filePath)) {
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(fileContent);
+    canonicalId = `${data.id}-${canonicalSlug(data.title)}`;
     title = `LeetCode ${data.id}: ${data.title} Solution | DevExCode`;
     description = `Master LeetCode problem ${data.id} (${data.title}) with specialized Java, C++, and Python solutions, time & space complexity, and interview patterns.`;
     if (data.tags) tags = [...tags, ...data.tags];
   } else {
     const problem = await DataService.getProblemById(id);
     if (problem) {
+      canonicalId = `${problem.id}-${canonicalSlug(problem.title)}`;
       title = `LeetCode ${problem.id}: ${problem.title} Solution | DevExCode`;
       description = `Practice and solve LeetCode ${problem.id} (${problem.title}) in Java, Python, and C++. Optimized algorithm walkthrough and interview prep on DevExCode.`;
       if (problem.tags) tags = [...tags, ...problem.tags];
@@ -75,7 +88,10 @@ export async function generateMetadata({ params }) {
   return constructMetadata({
     title,
     description,
-    canonicalPath: `/leetcode/${slug}`,
+    // Canonical is derived from the problem record, never echoed back from the
+    // request: /leetcode/1-anything used to 200 and self-canonicalise, which
+    // opened an unbounded duplicate URL space.
+    canonicalPath: `/leetcode/${canonicalId || slug}`,
     keywords: tags,
     ogType: 'article',
   });
@@ -159,6 +175,7 @@ export default async function Page({ params }) {
     );
   } catch (error) {
     console.error("Error in Page:", error);
-    return <div>Error loading problem. Please try again later.</div>;
+    // Rethrow so notFound() still works and real failures return 500, not 200.
+    throw error;
   }
 }

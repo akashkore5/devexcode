@@ -5,7 +5,7 @@ slug: "scaling-time-series-databases"
 description: "Learn strategies for scaling time-series databases to handle large datasets."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "time-series", "scaling"]
 related_questions: ["How do you scale InfluxDB for high write loads?", "What is sharding in time-series databases?", "How does compression improve time-series storage?"]

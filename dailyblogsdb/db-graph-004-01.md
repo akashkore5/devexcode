@@ -5,7 +5,7 @@ slug: "introduction-to-graph-databases"
 description: "Learn how graph databases use nodes and edges to represent and query data relationships."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "graph", "beginner"]
 related_questions: ["What are nodes and edges in a graph database?", "How does a graph database store relationships?", "What is a traversal in graph databases?"]

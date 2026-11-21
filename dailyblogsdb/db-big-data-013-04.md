@@ -5,7 +5,7 @@ slug: "etl-processes"
 description: "Implement ETL (Extract, Transform, Load) pipelines for big data integration."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "big-data", "etl"]
 related_questions: ["What are the stages of an ETL pipeline?", "How do you handle data transformation in ETL?", "What tools are used for ETL processes?"]

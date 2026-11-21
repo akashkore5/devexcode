@@ -5,7 +5,7 @@ slug: "rest-apis-development"
 description: "Create REST APIs with Spring Boot, including versioning and documentation."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["REST", "Spring Boot", "Java", "Intermediate", "Interview"]
 ---

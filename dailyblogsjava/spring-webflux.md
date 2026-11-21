@@ -5,7 +5,7 @@ slug: "spring-webflux"
 description: "Develop reactive, non-blocking web applications using Spring WebFlux."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Reactive", "Spring", "Java", "Advanced"]
 ---

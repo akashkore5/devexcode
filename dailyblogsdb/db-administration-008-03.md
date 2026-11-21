@@ -5,7 +5,7 @@ slug: "performance-tuning"
 description: "Optimize database performance through query tuning and server configuration."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "administration", "performance"]
 related_questions: ["How do you identify slow queries?", "What is query execution plan analysis?", "How does caching improve performance?"]

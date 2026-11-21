@@ -5,7 +5,7 @@ slug: "microservices-testing"
 description: "Test microservices using contract testing and integration testing."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Microservices", "Testing", "Java", "Advanced"]
 ---

@@ -5,7 +5,7 @@ slug: "cloud-databases"
 description: "Learn about cloud-native databases for scalability, managed services, and global distribution in AWS, Azure, and GCP."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "cloud", "aws", "azure", "gcp", "dynamodb", "cosmosdb"]
 related_questions: ["What is a cloud-native database?", "How do cloud databases simplify management?", "What are the benefits of serverless databases?", "How do cloud databases handle global distribution?"]

@@ -5,7 +5,7 @@ slug: "rest-apis-testing"
 description: "Test REST APIs using tools like Postman, RestAssured, and Swagger."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["API Testing", "REST", "Java", "Intermediate"]
 ---

@@ -5,7 +5,7 @@ slug: "dsa-dynamic-programming"
 description: "Solve complex problems using memoization and tabulation."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Dynamic Programming", "Java", "Advanced", "Interview"]
 ---

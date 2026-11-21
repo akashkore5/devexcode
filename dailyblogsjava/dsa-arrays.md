@@ -5,7 +5,7 @@ slug: "dsa-arrays"
 description: "Solve problems using arrays and string manipulation techniques."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Arrays", "Strings", "Java", "Beginner", "Interview"]
 ---

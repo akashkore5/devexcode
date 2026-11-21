@@ -5,7 +5,7 @@ slug: "relational-databases"
 description: "Learn the structure and power of relational databases, using SQL to manage data in table-based systems like MySQL and PostgreSQL."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "sql", "relational", "mysql", "postgresql", "oracle"]
 related_questions: ["What makes a database relational?", "How does SQL interact with relational databases?", "What are the benefits of using relational databases for structured data?", "When should you avoid relational databases?"]

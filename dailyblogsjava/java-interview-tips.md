@@ -5,7 +5,7 @@ slug: "java-interview-tips"
 description: "Strategies and tips for excelling in Java technical interviews."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["Interview", "Java", "Preparation"]
 ---

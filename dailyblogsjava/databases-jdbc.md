@@ -5,7 +5,7 @@ slug: "databases-jdbc"
 description: "Connect and query databases using Java Database Connectivity (JDBC)."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["JDBC", "Databases", "Java", "Beginner", "Interview"]
 ---

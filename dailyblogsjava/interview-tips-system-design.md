@@ -5,7 +5,7 @@ slug: "interview-tips-system-design"
 description: "Prepare for system design interviews with a focus on Java-based systems."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["System Design", "Interview", "Java", "Advanced"]
 ---

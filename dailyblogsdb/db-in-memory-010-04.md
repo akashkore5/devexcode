@@ -5,7 +5,7 @@ slug: "in-memory-database-performance"
 description: "Optimize in-memory databases for low latency and high throughput."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "in-memory", "performance"]
 related_questions: ["How do you optimize Redis for performance?", "What is the impact of memory allocation in in-memory databases?", "How do you handle large datasets in in-memory databases?"]

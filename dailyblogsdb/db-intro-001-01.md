@@ -5,7 +5,7 @@ slug: "what-is-a-database"
 description: "Learn the definition of a database and its role in organizing structured and unstructured data for applications."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Beginner"
 tags: ["database", "beginner", "data-storage"]
 related_questions: ["What defines a database compared to other storage systems?", "What types of data can a database store?", "Why are databases essential for web applications?"]

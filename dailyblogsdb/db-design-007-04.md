@@ -5,7 +5,7 @@ slug: "denormalization-techniques"
 description: "Use denormalization to improve read performance in NoSQL and relational databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "design", "denormalization"]
 related_questions: ["What is denormalization?", "When should you denormalize a database?", "How does denormalization affect write performance?"]

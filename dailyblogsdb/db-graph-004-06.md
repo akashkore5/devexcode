@@ -5,7 +5,7 @@ slug: "graph-algorithms"
 description: "Apply graph algorithms like PageRank and shortest path for advanced analytics."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "graph", "algorithms"]
 related_questions: ["What is the PageRank algorithm in graph databases?", "How do you find the shortest path in Neo4j?", "What are community detection algorithms?"]

@@ -5,7 +5,7 @@ slug: "advanced-sql-queries"
 description: "Write complex queries using subqueries, CTEs, and window functions for analytics."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Advanced"
 tags: ["database", "sql", "advanced"]
 related_questions: ["What is a Common Table Expression (CTE)?", "How do window functions work in SQL?", "When should you use a subquery vs. a CTE?"]

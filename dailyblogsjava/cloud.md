@@ -5,7 +5,7 @@ slug: "cloud"
 description: "Deploy and manage Java applications in cloud environments."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Cloud", "AWS", "Azure", "Java", "Interview"]
 ---

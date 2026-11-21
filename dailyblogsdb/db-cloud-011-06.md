@@ -5,7 +5,7 @@ slug: "cloud-database-security"
 description: "Implement security measures like encryption and IAM in cloud databases."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "cloud", "security"]
 related_questions: ["How do you secure data in AWS RDS?", "What is IAM in cloud databases?", "How do you enable encryption in Cosmos DB?"]

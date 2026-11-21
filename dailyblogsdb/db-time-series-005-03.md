@@ -5,7 +5,7 @@ slug: "timescaledb-with-postgresql"
 description: "Explore TimescaleDB as a time-series extension for PostgreSQL."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "time-series", "timescaledb", "postgresql"]
 related_questions: ["How does TimescaleDB integrate with PostgreSQL?", "What are hypertables in TimescaleDB?", "How does TimescaleDB optimize time-series queries?"]

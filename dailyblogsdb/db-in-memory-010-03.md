@@ -5,7 +5,7 @@ slug: "sqlite-in-memory-mode"
 description: "Explore SQLite’s in-memory mode for lightweight, embedded applications."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "in-memory", "sqlite"]
 related_questions: ["How do you enable SQLite\u2019s in-memory mode?", "What are the use cases for SQLite in-memory?", "How does SQLite compare to Redis for in-memory storage?"]

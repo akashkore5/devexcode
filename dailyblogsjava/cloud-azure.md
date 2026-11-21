@@ -5,7 +5,7 @@ slug: "cloud-azure"
 description: "Leverage Azure for cloud-native Java applications and services."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["Azure", "Cloud", "Java", "Advanced"]
 ---

@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Script from "next/script";
 import MicroDevTipsDetailClient from "./MicroDevTipsDetailClient";
 import devTips from "../../../data/micro_dev_tips.json";
 
@@ -13,7 +12,7 @@ export async function generateMetadata({ params }) {
 
   // Prefer the markdown H1, fall back to the catalogue entry. Only reach the
   // generic "Micro Dev Tip" title when neither source knows this id.
-  const title = tip?.title || listed?.title;
+  const title = tip ? tip.title || listed?.title : null;
   if (!title) {
     return constructMetadata({
       title: "Micro Dev Tip | DevExCode",
@@ -45,7 +44,11 @@ export default async function MicroDevTipsDetailPage({ params }) {
   const tip = readTip(id);
   const listed = devTips.find((t) => String(t.id) === String(id));
 
-  if (!tip && !listed) {
+  // 9 catalogue ids (324, 326, 330, 339, 342, 355, 376, 392, 399) have no
+  // markdown. They used to render a "under construction" placeholder at HTTP
+  // 200 under a real title — thin content with a promising title is the worst
+  // combination. Without a body there is no page.
+  if (!tip) {
     notFound();
   }
 
@@ -55,14 +58,14 @@ export default async function MicroDevTipsDetailPage({ params }) {
       tip?.description || listed?.description || "Micro development tip for developers.",
     difficulty: tip?.data?.difficulty || listed?.difficulty || "Unknown",
     tags: tip?.data?.tags || listed?.tags || [],
-    date: tip?.data?.date || listed?.date || new Date().toISOString(),
+    // No build-time fallback: `new Date()` here re-dated every undated tip on
+    // each deploy, so datePublished churned without the content changing.
+    date: tip?.data?.date || listed?.date || null,
     author: tip?.data?.author || "DevExCode Team",
     category: tip?.data?.category || "DevTips",
   };
 
-  const content =
-    tip?.content ||
-    `## Placeholder Content\n\nThis development tip is under construction. Please check back later.`;
+  const content = tip.content;
 
   const relatedTips = devTips
     .filter((t) => String(t.id) !== String(id) && t.tags.some((tag) => frontmatter.tags.includes(tag)))
@@ -73,9 +76,11 @@ export default async function MicroDevTipsDetailPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: frontmatter.title,
+    image: "https://www.devexcode.com/og-image.jpg",
     description: frontmatter.description,
-    datePublished: frontmatter.date,
-    dateModified: frontmatter.date,
+    ...(frontmatter.date
+      ? { datePublished: frontmatter.date, dateModified: frontmatter.date }
+      : {}),
     keywords: Array.isArray(frontmatter.tags) ? frontmatter.tags.join(', ') : '',
     author: { "@type": "Organization", name: "DevExCode" },
     publisher: {
@@ -88,10 +93,12 @@ export default async function MicroDevTipsDetailPage({ params }) {
 
   return (
     <>
-      <Script
-        id={`blog-schema-${id}`}
+      {/* Plain <script>, not next/script: for inline JSON-LD next/script
+          returns null during SSR and injects the tag from an effect, so the
+          schema was absent from the server HTML entirely. */}
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd).replace(/</g, "\\u003c") }}
       />
       <MicroDevTipsDetailClient frontmatter={frontmatter} content={content} relatedTips={relatedTips} />
     </>

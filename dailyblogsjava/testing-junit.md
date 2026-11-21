@@ -5,7 +5,7 @@ slug: "testing-junit"
 description: "Write unit tests for Java applications using JUnit 5."
 difficulty: "Beginner"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Beginner"
 tags: ["JUnit", "Testing", "Java", "Beginner", "Interview"]
 ---

@@ -5,7 +5,7 @@ slug: "cursor-based-pagination"
 description: "Use cursor-based pagination for scalable and efficient data retrieval in large datasets."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Database Intermediate"
 tags: ["database", "pagination", "cursor"]
 related_questions: ["What is a cursor in database pagination?", "How does cursor pagination differ from offset?", "What are the benefits of cursor-based pagination?"]

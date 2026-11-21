@@ -5,7 +5,7 @@ slug: "system-design"
 description: "Design scalable and reliable systems for Java-based applications."
 difficulty: "Advanced"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Advanced"
 tags: ["System Design", "Java", "Architecture", "Interview"]
 ---

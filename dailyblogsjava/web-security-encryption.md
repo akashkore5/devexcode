@@ -5,7 +5,7 @@ slug: "web-security-encryption"
 description: "Use encryption (AES) and hashing (SHA, bcrypt) for data security."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Encryption", "Security", "Java", "Intermediate"]
 ---

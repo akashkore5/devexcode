@@ -5,7 +5,7 @@ slug: "spring-core"
 description: "Understand dependency injection, IoC container, and bean lifecycle in Spring."
 difficulty: "Intermediate"
 date: "2025-05-09"
-author: "DevCodeEx Team"
+author: "DevExCode Team"
 category: "Java Intermediate"
 tags: ["Spring", "Core", "Java", "Intermediate", "Interview"]
 ---
