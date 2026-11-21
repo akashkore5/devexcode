@@ -55,7 +55,7 @@ export default async function InterviewDetailPage({ params }) {
   const techArticleJsonLd = constructTechArticleSchema({
     title: `${frontmatter.title} - Java Interview Guide`,
     description: `Master Java interview preparation for ${frontmatter.title} on DevExCode.`,
-    url: `https://devexcode.com/interview/ready/java/${category}/${slug}`,
+    url: `https://www.devexcode.com/interview/ready/java/${category}/${slug}`,
   });
 
   return (

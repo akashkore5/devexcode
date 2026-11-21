@@ -42,11 +42,11 @@ export async function generateMetadata({ params }) {
       'coding vocabulary', 'software development', 'programming concepts',
       term.category || 'tech education',
     ].filter(Boolean).join(', '),
-    alternates: { canonical: `https://devexcode.com/daily-term/${date}` },
+    alternates: { canonical: `https://www.devexcode.com/daily-term/${date}` },
     openGraph: {
       title: `${term.term} - Daily Tech Term | DevExCode`,
       description,
-      url: `https://devexcode.com/daily-term/${date}`,
+      url: `https://www.devexcode.com/daily-term/${date}`,
       type: 'article',
       images: [`/api/generate-term-image?date=${date}`],
     },
@@ -122,9 +122,9 @@ export default async function DailyTermPage({ params }) {
     publisher: {
       "@type": "Organization",
       name: "DevExCode",
-      logo: { "@type": "ImageObject", url: "https://devexcode.com/favicon.png" },
+      logo: { "@type": "ImageObject", url: "https://www.devexcode.com/favicon.png" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://devexcode.com/daily-term/${date}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.devexcode.com/daily-term/${date}` },
   };
 
   return (

@@ -181,7 +181,7 @@ export default function ReactTopicsDashboard() {
     publisher: {
       "@type": "Organization",
       name: "DevCodeEx",
-      logo: { "@type": "ImageObject", url: "https://devexcode.com/logo.png" },
+      logo: { "@type": "ImageObject", url: "https://www.devexcode.com/logo.png" },
     },
     mainEntity: reactTopics.topics.map((topic) => ({
       "@type": "Course",

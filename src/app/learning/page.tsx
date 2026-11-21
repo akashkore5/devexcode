@@ -233,7 +233,7 @@ export default function LearningCenterPage() {
       '@type': 'ListItem',
       position: index + 1,
       name: track.title,
-      url: `https://devexcode.com${track.href}`,
+      url: `https://www.devexcode.com${track.href}`,
     })),
   };
 

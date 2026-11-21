@@ -342,7 +342,7 @@ export default function DevTips({ initialViewMode = "table" }) {
     tap: { scale: 0.9 },
   };
 
-  const canonicalUrl = `https://devexcode.com/micro-dev-tips${tag ? `?tag=${encodeURIComponent(tag)}` : ""}`;
+  const canonicalUrl = `https://www.devexcode.com/micro-dev-tips${tag ? `?tag=${encodeURIComponent(tag)}` : ""}`;
 
   return (
     <div className="pt-24 min-h-screen bg-slate-50 dark:bg-slate-900">

@@ -26,7 +26,7 @@ export default function GfgHubPage() {
       "@type": "ListItem",
       "position": idx + 1,
       "name": p.title,
-      "url": `https://devexcode.com/gfg/${p.id}`
+      "url": `https://www.devexcode.com/gfg/${p.id}`
     }))
   };
 

@@ -197,7 +197,7 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
             name: "DevExCode",
             logo: {
                 "@type": "ImageObject",
-                url: "https://devexcode.com/logo.png",
+                url: "https://www.devexcode.com/logo.png",
                 width: 150,
                 height: 50,
             },
@@ -206,11 +206,11 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
         dateModified: new Date().toISOString(),
         mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": "https://devexcode.com/potd",
+            "@id": "https://www.devexcode.com/potd",
         },
         image: [
-            gfgPotd ? `https://devexcode.com/potd-gfg-${gfgPotd.problem_id}.png` : "https://devexcode.com/potd-og-image.jpg",
-            leetcodePotd ? `https://devexcode.com/potd-leetcode-${leetcodePotd.problem_id}.png` : "https://devexcode.com/potd-og-image.jpg",
+            gfgPotd ? `https://www.devexcode.com/potd-gfg-${gfgPotd.problem_id}.png` : "https://www.devexcode.com/potd-og-image.jpg",
+            leetcodePotd ? `https://www.devexcode.com/potd-leetcode-${leetcodePotd.problem_id}.png` : "https://www.devexcode.com/potd-og-image.jpg",
         ],
         breadcrumb: {
             "@type": "BreadcrumbList",
@@ -219,13 +219,13 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
                     "@type": "ListItem",
                     position: 1,
                     name: "Home",
-                    item: "https://devexcode.com/",
+                    item: "https://www.devexcode.com/",
                 },
                 {
                     "@type": "ListItem",
                     position: 2,
                     name: "Problem of the Day",
-                    item: "https://devexcode.com/potd",
+                    item: "https://www.devexcode.com/potd",
                 },
             ],
         },
@@ -236,7 +236,7 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
                         "@type": "CreativeWork",
                         name: `GFG POTD: ${gfgPotd.title}`,
                         description: `GeeksforGeeks Problem of the Day: ${gfgPotd.title} (ID: ${gfgPotd.problem_id}) on ${gfgPotd.date}. Difficulty: ${gfgPotd.difficulty}, Acceptance Rate: ${gfgPotd.acceptance_rate}.`,
-                        url: `https://devexcode.com/gfg/${gfgPotd.problem_id}`,
+                        url: `https://www.devexcode.com/gfg/${gfgPotd.problem_id}`,
                         keywords: `GFG POTD, GeeksforGeeks, ${gfgPotd.title}, ${gfgPotd.problem_id}, ${gfgPotd.difficulty}${gfgPotd.companies ? `, ${gfgPotd.companies.join(", ")}` : ""}`,
                     },
                 ]
@@ -247,7 +247,7 @@ export default function PotdIndex({ initialGfgPotd, initialLeetcodePotd, error }
                         "@type": "CreativeWork",
                         name: `LeetCode POTD: ${leetcodePotd.title}`,
                         description: `LeetCode Problem of the Day: ${leetcodePotd.title} (ID: ${leetcodePotd.problem_id}) on ${leetcodePotd.date}. Difficulty: ${leetcodePotd.difficulty}, Acceptance Rate: ${leetcodePotd.acceptance_rate}.`,
-                        url: `https://devexcode.com/leetcode/${leetcodePotd.problem_id}-${generateSlug(leetcodePotd.title)}`,
+                        url: `https://www.devexcode.com/leetcode/${leetcodePotd.problem_id}-${generateSlug(leetcodePotd.title)}`,
                         keywords: `LeetCode POTD, LeetCode, ${leetcodePotd.title}, ${leetcodePotd.problem_id}, ${leetcodePotd.difficulty}${leetcodePotd.companies ? `, ${leetcodePotd.companies.join(", ")}` : ""}`,
                     },
                 ]

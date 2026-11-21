@@ -238,7 +238,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
     try {
       console.log("[ReactArticle] Submitting contribution with payload:", {
         articleId: id,
-        url: `https://devexcode.com/react/${id}`,
+        url: `https://www.devexcode.com/react/${id}`,
         title: frontmatter.title,
         contentLength: contributionContent.length,
         userEmail: session?.user?.email || "anonymous",
@@ -249,7 +249,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           articleId: id,
-          url: `https://devexcode.com/react/${id}`,
+          url: `https://www.devexcode.com/react/${id}`,
           title: frontmatter.title,
           content: contributionContent,
           userEmail: session?.user?.email || "anonymous",
@@ -273,7 +273,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               articleId: id,
-              url: `https://devexcode.com/react/${id}`,
+              url: `https://www.devexcode.com/react/${id}`,
               title: frontmatter.title,
               content: contributionContent,
               userEmail: session?.user?.email || "anonymous",
@@ -351,7 +351,7 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
       name: "DevCodeEx",
       logo: {
         "@type": "ImageObject",
-        url: "https://devexcode.com/logo.png",
+        url: "https://www.devexcode.com/logo.png",
         width: 150,
         height: 50,
       },
@@ -360,11 +360,11 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
     dateModified: new Date().toISOString(),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://devexcode.com/react/${id}`,
+      "@id": `https://www.devexcode.com/react/${id}`,
     },
     image: [
-      `https://devexcode.com/react-${id}-guide.png`,
-      "https://devexcode.com/react-guide.png",
+      `https://www.devexcode.com/react-${id}-guide.png`,
+      "https://www.devexcode.com/react-guide.png",
     ],
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -373,19 +373,19 @@ export default function ReactArticle({ frontmatter, content, relatedTopics }) {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://devexcode.com/",
+          item: "https://www.devexcode.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "React Learning Path",
-          item: "https://devexcode.com/react",
+          item: "https://www.devexcode.com/react",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: frontmatter.title,
-          item: `https://devexcode.com/react/${id}`,
+          item: `https://www.devexcode.com/react/${id}`,
         },
       ],
     },

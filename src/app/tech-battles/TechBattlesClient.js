@@ -345,7 +345,7 @@ export default function TechBattles({ initialViewMode = "table" }) {
     tap: { scale: 0.9 },
   };
 
-  const canonicalUrl = `https://devexcode.com/tech-battles${tag ? `?tag=${encodeURIComponent(tag)}` : ""}`;
+  const canonicalUrl = `https://www.devexcode.com/tech-battles${tag ? `?tag=${encodeURIComponent(tag)}` : ""}`;
 
   return (
     <Layout

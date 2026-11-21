@@ -372,7 +372,7 @@ const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, content
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           articleId: currentId.toString(),
-          url: `https://devexcode.com/leetcode/${frontMatter.id}-${frontMatter.title.toLowerCase().replace(/\s+/g, "-")}`,
+          url: `https://www.devexcode.com/leetcode/${frontMatter.id}-${frontMatter.title.toLowerCase().replace(/\s+/g, "-")}`,
           title: `LeetCode ${frontMatter.id}: ${frontMatter.title}`,
           content: contributionContent,
           userEmail: session?.user?.email || "anonymous",
@@ -394,7 +394,7 @@ const ProblemPageClient = memo(function ProblemPageClient({ frontMatter, content
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               articleId: currentId.toString(),
-              url: `https://devexcode.com/leetcode/${frontMatter.id}-${frontMatter.title.toLowerCase().replace(/\s+/g, "-")}`,
+              url: `https://www.devexcode.com/leetcode/${frontMatter.id}-${frontMatter.title.toLowerCase().replace(/\s+/g, "-")}`,
               title: `LeetCode ${frontMatter.id}: ${frontMatter.title}`,
               content: contributionContent,
               userEmail: session?.user?.email || "anonymous",

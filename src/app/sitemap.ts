@@ -13,7 +13,7 @@ import javaTopics from '@/data/java_topics.json';
 import reactTopics from '@/data/react_topics.json';
 import { getAllTopicIds } from './interview/frontend/data';
 
-const BASE_URL = 'https://devexcode.com';
+const BASE_URL = 'https://www.devexcode.com';
 
 const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: BASE_URL, lastModified: new Date('2024-10-01'), changeFrequency: 'daily', priority: 1.0 },
@@ -53,18 +53,6 @@ const STATIC_PAGES: MetadataRoute.Sitemap = [
   { url: `${BASE_URL}/terms`, lastModified: new Date('2024-10-01'), changeFrequency: 'yearly', priority: 0.3 },
   { url: `${BASE_URL}/privacy`, lastModified: new Date('2024-10-01'), changeFrequency: 'yearly', priority: 0.3 },
 ];
-
-function getBlogSlugs(): string[] {
-  try {
-    const dir = path.join(process.cwd(), 'dailyblogtips');
-    if (!fs.existsSync(dir)) return [];
-    return fs.readdirSync(dir)
-      .filter((f) => f.endsWith('.md'))
-      .map((f) => f.replace('.md', ''));
-  } catch {
-    return [];
-  }
-}
 
 function getJavaInterviewSlugs(): Array<{ category: string; slug: string }> {
   try {
@@ -185,17 +173,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     }));
 
-  // Micro Dev Tips
+  // Micro Dev Tips. The `dev_<n>` markdown filenames are deliberately NOT listed:
+  // they serve the same tips under a second URL and now 301 onto the numeric form.
   const microDevTipUrls: MetadataRoute.Sitemap = (microDevTips as Array<{ id: number | string }>).map((t) => ({
     url: `${BASE_URL}/micro-dev-tips/${t.id}`,
-    lastModified: defaultDate,
-    changeFrequency: 'monthly',
-    priority: 0.65,
-  }));
-
-  const blogSlugs = getBlogSlugs();
-  const blogUrls: MetadataRoute.Sitemap = blogSlugs.map((slug) => ({
-    url: `${BASE_URL}/micro-dev-tips/${slug}`,
     lastModified: defaultDate,
     changeFrequency: 'monthly',
     priority: 0.65,
@@ -261,7 +242,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...learn10Urls,
     ...dailyTermUrls,
     ...microDevTipUrls,
-    ...blogUrls,
     ...javaInterviewUrls,
     ...javaLearningUrls,
     ...reactLearningUrls,

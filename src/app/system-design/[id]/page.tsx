@@ -80,7 +80,7 @@ export default async function SystemDesignDetailPage({ params }: { params: Promi
   const techArticleJsonLd = constructTechArticleSchema({
     title: `${question.title} System Design: Architecture & Trade-offs`,
     description: question.description || `In-depth architecture and design for ${question.title}.`,
-    url: `https://devexcode.com/system-design/${id}`,
+    url: `https://www.devexcode.com/system-design/${id}`,
     proficiencyLevel: question.difficulty === 'Easy' ? 'Beginner' : question.difficulty === 'Medium' ? 'Intermediate' : 'Advanced',
   });
 

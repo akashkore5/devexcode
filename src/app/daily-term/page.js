@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Daily Tech Term - Learn One Concept Every Day | DevExCode',
   description: 'Expand your developer vocabulary daily on DevExCode (DevEx Code). One technical term explained in-depth every day — from algorithms and data structures to system design and cloud computing.',
   keywords: 'daily tech term, devexcode, devex code, technical term of the day, coding vocabulary, programming concepts, software development terms, tech education, daily learning',
-  alternates: { canonical: 'https://devexcode.com/daily-term' },
+  alternates: { canonical: 'https://www.devexcode.com/daily-term' },
   openGraph: {
     title: 'Daily Tech Term | DevExCode',
     description: 'One technical term, explained in-depth, every day. Boost your coding vocabulary on DevExCode.',
-    url: 'https://devexcode.com/daily-term',
+    url: 'https://www.devexcode.com/daily-term',
     type: 'website',
   },
 };

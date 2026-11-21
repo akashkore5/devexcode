@@ -101,7 +101,7 @@ export default withDb(async function handler(req, res) {
             </div>
             <div class="footer">
               <p>© 2025 DevExCode. All rights reserved.</p>
-              <p><a href="https://devexcode.com">Visit our website</a> | <a href="https://devexcode.com/contact">Contact Us</a></p>
+              <p><a href="https://www.devexcode.com">Visit our website</a> | <a href="https://www.devexcode.com/contact">Contact Us</a></p>
             </div>
           </div>
         </body>

@@ -10,11 +10,11 @@ export const metadata = {
     "css interview", "typescript interview", "frontend engineering handbook",
     "web performance", "frontend system design", "devexcode frontend",
   ],
-  alternates: { canonical: "https://devexcode.com/interview/frontend" },
+  alternates: { canonical: "https://www.devexcode.com/interview/frontend" },
   openGraph: {
     title: "Frontend Engineering Handbook | DevExCode",
     description: "59 topics, worked code, live runners, and interview-ready answers — learn frontend perfectly.",
-    url: "https://devexcode.com/interview/frontend",
+    url: "https://www.devexcode.com/interview/frontend",
     type: "website",
   },
 };

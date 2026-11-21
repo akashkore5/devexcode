@@ -14,11 +14,11 @@ export async function generateMetadata({ params }: { params: Promise<{ topicId: 
     title: `${topic.title} — Frontend Handbook | DevExCode`,
     description: topic.summary,
     keywords: topic.tags,
-    alternates: { canonical: `https://devexcode.com/interview/frontend/${topic.id}` },
+    alternates: { canonical: `https://www.devexcode.com/interview/frontend/${topic.id}` },
     openGraph: {
       title: `${topic.title} | DevExCode Frontend Handbook`,
       description: topic.summary,
-      url: `https://devexcode.com/interview/frontend/${topic.id}`,
+      url: `https://www.devexcode.com/interview/frontend/${topic.id}`,
       type: "article",
     },
   };

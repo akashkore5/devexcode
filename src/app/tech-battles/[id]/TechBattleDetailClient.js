@@ -245,7 +245,7 @@ export default function TechBattleDetailClient({ id, frontmatter, content, relat
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           articleId: id,
-          url: `https://devexcode.com/tech-battles/${id}`,
+          url: `https://www.devexcode.com/tech-battles/${id}`,
           title: frontmatter.title,
           content: contributionContent,
           userEmail: session?.user?.email || "anonymous",

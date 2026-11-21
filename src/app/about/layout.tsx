@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     'developer education platform', 'coding interview prep', 'tech education',
     'software engineering', 'FAANG interview preparation',
   ],
-  alternates: { canonical: 'https://devexcode.com/about' },
+  alternates: { canonical: 'https://www.devexcode.com/about' },
   openGraph: {
     title: 'About DevExCode - Our Story & Mission',
     description: 'DevExCode — built by engineers, for engineers. Learn about our mission to make world-class tech interview prep accessible to every developer.',
-    url: 'https://devexcode.com/about',
+    url: 'https://www.devexcode.com/about',
     type: 'website',
   },
 };

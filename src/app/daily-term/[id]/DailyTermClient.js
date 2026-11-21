@@ -130,7 +130,7 @@ export default function DailyTermDetail({ initialTerm, previousTerms }) {
       document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
 
-      const pageUrl = `https://devexcode.com/daily-term/${term.date}`;
+      const pageUrl = `https://www.devexcode.com/daily-term/${term.date}`;
       const text = `Check out today's Daily Term: ${term.term} - ${term.shortExplanation} on DevExCode!`;
       let shareUrl = "";
       let toastMessage = "";
@@ -246,12 +246,12 @@ export default function DailyTermDetail({ initialTerm, previousTerms }) {
           name: "DevExCode",
           logo: {
             "@type": "ImageObject",
-            url: "https://devexcode.com/logo.png",
+            url: "https://www.devexcode.com/logo.png",
           },
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": `https://devexcode.com/daily-term/${term.date}`,
+          "@id": `https://www.devexcode.com/daily-term/${term.date}`,
         },
         image: {
           "@type": "ImageObject",

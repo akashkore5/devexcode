@@ -257,7 +257,7 @@ export default function MicroDevTipsDetailClient({ frontmatter, content, related
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           articleId: id,
-          url: `https://devexcode.com/micro-dev-tips/${id}`,
+          url: `https://www.devexcode.com/micro-dev-tips/${id}`,
           title: frontmatter.title,
           content: contributionContent,
           userEmail: session?.user?.email || "anonymous",

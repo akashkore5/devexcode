@@ -29,6 +29,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // Every micro dev tip was reachable at two URLs: the numeric id used by the
+      // UI/sitemap and the `dev_<n>` markdown filename, which the sitemap also
+      // emitted. Collapse the filename form onto the numeric one.
+      {
+        source: '/micro-dev-tips/dev_:id(\\d+)',
+        destination: '/micro-dev-tips/:id',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

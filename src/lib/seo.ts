@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const BASE_URL = 'https://devexcode.com';
+export const BASE_URL = 'https://www.devexcode.com';
 export const SITE_NAME = 'DevExCode';
 export const TWITTER_HANDLE = '@devexcode';
 export const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
@@ -32,6 +32,12 @@ export function constructMetadata({
   authors = ['DevExCode Team'],
   section,
 }: SEOProps): Metadata {
+  // The root layout no longer applies a `%s | DevExCode` template (it double-branded
+  // every title). Guarantee the brand here instead, exactly once.
+  const brandedTitle = /devexcode/i.test(title)
+    ? title.replace(/(\s*\|\s*DevExCode)+\s*$/i, ' | DevExCode')
+    : `${title} | ${SITE_NAME}`;
+
   const cleanPath = canonicalPath.startsWith('/') ? canonicalPath : `/${canonicalPath}`;
   const canonicalUrl = canonicalPath === '' ? BASE_URL : `${BASE_URL}${cleanPath.replace(/\/$/, '')}`;
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage.startsWith('/') ? '' : '/'}${ogImage}`;
@@ -51,7 +57,7 @@ export function constructMetadata({
       ];
 
   const meta: Metadata = {
-    title,
+    title: brandedTitle,
     description,
     keywords: normalizedKeywords,
     alternates: {
@@ -69,7 +75,7 @@ export function constructMetadata({
       },
     },
     openGraph: {
-      title,
+      title: brandedTitle,
       description,
       url: canonicalUrl,
       siteName: SITE_NAME,
@@ -80,7 +86,7 @@ export function constructMetadata({
           url: absoluteOgImage,
           width: 1200,
           height: 630,
-          alt: `${title} | DevExCode`,
+          alt: brandedTitle,
         },
       ],
       ...(ogType === 'article' && {
@@ -92,7 +98,7 @@ export function constructMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: brandedTitle,
       description,
       site: TWITTER_HANDLE,
       creator: TWITTER_HANDLE,

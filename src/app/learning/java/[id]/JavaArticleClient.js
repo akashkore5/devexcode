@@ -217,7 +217,7 @@ export default function JavaArticle({ frontmatter, content, relatedTopics }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           articleId: id,
-          url: `https://devexcode.com/java/${id}`,
+          url: `https://www.devexcode.com/java/${id}`,
           title: frontmatter.title,
           content: contributionContent,
           userEmail: session?.user?.email || "anonymous",
@@ -239,7 +239,7 @@ export default function JavaArticle({ frontmatter, content, relatedTopics }) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               articleId: id,
-              url: `https://devexcode.com/java/${id}`,
+              url: `https://www.devexcode.com/java/${id}`,
               title: frontmatter.title,
               content: contributionContent,
               userEmail: session?.user?.email || "anonymous",
@@ -326,7 +326,7 @@ export default function JavaArticle({ frontmatter, content, relatedTopics }) {
       name: "DevCodeEx",
       logo: {
         "@type": "ImageObject",
-        url: "https://devexcode.com/logo.png",
+        url: "https://www.devexcode.com/logo.png",
         width: 150,
         height: 50,
       },
@@ -335,11 +335,11 @@ export default function JavaArticle({ frontmatter, content, relatedTopics }) {
     dateModified: new Date().toISOString(),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://devexcode.com/java/${id}`,
+      "@id": `https://www.devexcode.com/java/${id}`,
     },
     image: [
-      `https://devexcode.com/java-${id}-guide.png`,
-      "https://devexcode.com/java-guide.png",
+      `https://www.devexcode.com/java-${id}-guide.png`,
+      "https://www.devexcode.com/java-guide.png",
     ],
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -348,19 +348,19 @@ export default function JavaArticle({ frontmatter, content, relatedTopics }) {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://devexcode.com/",
+          item: "https://www.devexcode.com/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Java Learning Path",
-          item: "https://devexcode.com/java",
+          item: "https://www.devexcode.com/java",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: frontmatter.title,
-          item: `https://devexcode.com/java/${id}`,
+          item: `https://www.devexcode.com/java/${id}`,
         },
       ],
     },

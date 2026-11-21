@@ -645,7 +645,7 @@ export default function Profile({ totalLeetcodeQuestions, totalSystemDesignQuest
     );
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://devexcode.com";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.devexcode.com";
 
   const scrollToCard = (index) => {
     const container = document.querySelector(".progress-container");

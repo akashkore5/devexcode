@@ -98,9 +98,9 @@ export async function sendWelcomeEmail(email, name) {
                   <td align="center">
                     <p>&copy; 2025 DevExCode. All rights reserved.</p>
                     <p>
-                      <a href="https://devexcode.com">Visit our website</a> | 
-                      <a href="https://devexcode.com/contact">Contact Us</a> | 
-                      <a href="https://devexcode.com/privacy">Privacy Policy</a>
+                      <a href="https://www.devexcode.com">Visit our website</a> | 
+                      <a href="https://www.devexcode.com/contact">Contact Us</a> | 
+                      <a href="https://www.devexcode.com/privacy">Privacy Policy</a>
                     </p>
                   </td>
                 </tr>

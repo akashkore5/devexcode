@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 import { constructMetadata } from "@/lib/seo";
+import { extractLeadingH1 } from "@/lib/markdown";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -54,7 +55,9 @@ export default async function Learn10DetailPage({ params }: { params: Promise<{ 
         const fileContent = fs.readFileSync(filePath, "utf8");
         const matterResult = matter(fileContent);
         frontmatter = matterResult.data;
-        content = matterResult.content;
+        // The client renders its own <h1> from topic.title; drop the body's
+        // leading heading so the page emits a single <h1>.
+        content = extractLeadingH1(matterResult.content).content;
         found = true;
         break;
       }
@@ -91,9 +94,9 @@ This 10-minute engineering brief is currently being optimized for high-density l
     publisher: {
       "@type": "Organization",
       name: "DevExCode",
-      logo: { "@type": "ImageObject", url: "https://devexcode.com/favicon.png" },
+      logo: { "@type": "ImageObject", url: "https://www.devexcode.com/favicon.png" },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `https://devexcode.com/learn10/${id}` },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.devexcode.com/learn10/${id}` },
   };
 
   return (

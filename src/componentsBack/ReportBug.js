@@ -19,7 +19,7 @@ export default function ReportBug({
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const currentUrl = `https://devexcode.com${router.asPath}`;
+  const currentUrl = `https://www.devexcode.com${router.asPath}`;
 
   const validateForm = () => {
     const newErrors = {};

@@ -139,7 +139,7 @@ export default async function Page({ params }) {
     const techArticleJsonLd = constructTechArticleSchema({
       title: `LeetCode ${data.id}: ${data.title} Solution`,
       description: `Master LeetCode problem ${data.id} (${data.title}) with optimized Java, C++, and Python solutions.`,
-      url: `https://devexcode.com/leetcode/${slug}`,
+      url: `https://www.devexcode.com/leetcode/${slug}`,
       proficiencyLevel: data.difficulty === 'Easy' ? 'Beginner' : data.difficulty === 'Medium' ? 'Intermediate' : 'Advanced',
     });
 

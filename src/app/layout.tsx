@@ -12,7 +12,7 @@ const outfit = Outfit({
   preload: true,
 });
 
-const BASE_URL = 'https://devexcode.com';
+const BASE_URL = 'https://www.devexcode.com';
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
@@ -56,8 +56,9 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
+  // No `template` here: page-level titles already end in "| DevExCode".
+  // Adding a template appended the brand a second time ("... | DevExCode | DevExCode").
   title: {
-    template: '%s | DevExCode',
     default: 'DevExCode - Developer Experience & Coding Interview Prep Platform',
   },
   description: 'DevExCode (DevEx Code) — master coding interviews with expertly crafted Leetcode solutions, system design guides, daily tech challenges, micro dev tips, and a vibrant developer community. The #1 DevEx platform.',

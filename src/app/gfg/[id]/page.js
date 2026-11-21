@@ -65,7 +65,7 @@ export default async function Page({ params }) {
     const techArticleJsonLd = constructTechArticleSchema({
       title: `${id}. ${problem?.title || "Problem Solution"} - GeeksforGeeks Solution`,
       description: `Optimized solution and explanation for GeeksforGeeks problem ${id} on DevExCode.`,
-      url: `https://devexcode.com/gfg/${id}`,
+      url: `https://www.devexcode.com/gfg/${id}`,
     });
 
     return (

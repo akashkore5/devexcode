@@ -26,7 +26,7 @@ export default function DatabasesHubPage() {
       "@type": "ListItem",
       "position": idx + 1,
       "name": t.title,
-      "url": `https://devexcode.com/databases/${t.id}`
+      "url": `https://www.devexcode.com/databases/${t.id}`
     }))
   };
 

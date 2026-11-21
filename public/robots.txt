@@ -8,7 +8,7 @@ Disallow: /auth/
 Disallow: /community/notes/my-notes
 
 # Host
-Host: https://devexcode.com
+Host: https://www.devexcode.com
 
 # Sitemaps
-Sitemap: https://devexcode.com/sitemap.xml
+Sitemap: https://www.devexcode.com/sitemap.xml

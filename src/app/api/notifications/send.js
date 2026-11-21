@@ -10,7 +10,7 @@ import microDevTips from "../../../data/micro_dev_tips.json";
 import techBattles from "../../../data/tech_battles.json";
 
 const uri = process.env.MONGODB_URI;
-const baseUrl = process.env.BASE_URL || "https://devexcode.com";
+const baseUrl = process.env.BASE_URL || "https://www.devexcode.com";
 let client;
 let clientPromise;
 

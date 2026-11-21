@@ -46,7 +46,7 @@ const robotsPath = path.join(ROOT_DIR, 'public', 'robots.txt');
 assert(fs.existsSync(robotsPath), 'robots.txt exists in public directory');
 if (fs.existsSync(robotsPath)) {
   const robotsContent = fs.readFileSync(robotsPath, 'utf8');
-  assert(robotsContent.includes('Sitemap: https://devexcode.com/sitemap.xml'), 'robots.txt points to canonical sitemap.xml');
+  assert(robotsContent.includes('Sitemap: https://www.devexcode.com/sitemap.xml'), 'robots.txt points to canonical sitemap.xml');
   assert(robotsContent.includes('Disallow: /api/'), 'robots.txt blocks private /api/ endpoints');
   assert(robotsContent.includes('Disallow: /profile'), 'robots.txt blocks user /profile routes');
   assert(robotsContent.includes('Disallow: /auth/'), 'robots.txt blocks /auth/ routes');
@@ -74,7 +74,7 @@ console.log('\nSECTION 3: Centralized SEO Architecture (src/lib/seo.ts)');
 const seoLibPath = path.join(ROOT_DIR, 'src', 'lib', 'seo.ts');
 assert(fs.existsSync(seoLibPath), 'src/lib/seo.ts utility exists');
 const seoLibContent = fs.readFileSync(seoLibPath, 'utf8');
-assert(seoLibContent.includes("BASE_URL = 'https://devexcode.com'"), 'Base URL is canonical https://devexcode.com');
+assert(seoLibContent.includes("BASE_URL = 'https://www.devexcode.com'"), 'Base URL is canonical https://www.devexcode.com');
 assert(seoLibContent.includes('constructMetadata'), 'constructMetadata helper is exported');
 assert(seoLibContent.includes('constructBreadcrumbSchema'), 'constructBreadcrumbSchema helper is exported');
 assert(seoLibContent.includes('constructTechArticleSchema'), 'constructTechArticleSchema helper is exported');
@@ -85,7 +85,7 @@ assert(seoLibContent.includes('constructOrganizationSchema'), 'constructOrganiza
 console.log('\nSECTION 4: Root Layout Canonical Inheritance');
 const layoutPath = path.join(ROOT_DIR, 'src', 'app', 'layout.tsx');
 const layoutContent = fs.readFileSync(layoutPath, 'utf8');
-assert(!layoutContent.includes('canonical: BASE_URL') && !layoutContent.includes('canonical: "https://devexcode.com"'), 
+assert(!layoutContent.includes('canonical: BASE_URL') && !layoutContent.includes('canonical: "https://www.devexcode.com"'), 
   'src/app/layout.tsx does not impose a sitewide homepage canonical on child routes');
 assert(layoutContent.includes('metadataBase: new URL(BASE_URL)'), 'src/app/layout.tsx defines metadataBase correctly');
 
