@@ -1,0 +1,130 @@
+name: Deploy
+
+# Builds on a GitHub runner, never on the VPS. The build peaks well above 2GB
+# across ~5,200 prerendered pages, which a small Contabo instance would struggle
+# with, and building here keeps the server serving traffic while it happens.
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Technical SEO regression suite
+        run: npm run test:seo
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+          # Build-time reads of these are tolerated by the app, but the real
+          # values live on the server in /srv/devexcode/shared/.env.
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+
+      - name: Assemble release
+        run: ./deploy/release.sh . release
+
+      - name: Configure SSH
+        run: |
+          install -d -m 700 ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # Pinned host key: prevents a MITM silently receiving the deploy.
+          echo "${{ secrets.DEPLOY_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Ship release
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          STAMP="$(date -u +%Y%m%d%H%M%S)-${GITHUB_SHA::7}"
+          echo "RELEASE_STAMP=$STAMP" >> "$GITHUB_ENV"
+
+          # Seed from the live release so rsync only transfers what changed:
+          # most of a release is identical between deploys.
+          ssh "$USER@$HOST" "
+            set -e
+            mkdir -p /srv/devexcode/releases/$STAMP
+            if [ -d /srv/devexcode/current ]; then
+              cp -al /srv/devexcode/current/. /srv/devexcode/releases/$STAMP/ 2>/dev/null \
+                || cp -a /srv/devexcode/current/. /srv/devexcode/releases/$STAMP/
+            fi
+          "
+
+          rsync -az --delete --human-readable \
+            -e "ssh -o BatchMode=yes" \
+            release/ "$USER@$HOST:/srv/devexcode/releases/$STAMP/"
+
+      - name: Activate and verify
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          ssh "$USER@$HOST" "bash -s" <<EOF
+          set -euo pipefail
+          STAMP="$RELEASE_STAMP"
+          PREV="\$(readlink -f /srv/devexcode/current 2>/dev/null || true)"
+
+          # Atomic swap: ln -sfn + mv replaces the symlink in one operation, so
+          # no request ever sees a half-written directory.
+          ln -sfn "/srv/devexcode/releases/\$STAMP" /srv/devexcode/current.tmp
+          mv -Tf /srv/devexcode/current.tmp /srv/devexcode/current
+          sudo systemctl restart devexcode
+
+          # Health gate. If the new release does not serve a 200 within 60s,
+          # put the previous one back rather than leaving the site down.
+          ok=0
+          for i in \$(seq 1 30); do
+            code=\$(curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://127.0.0.1:3000/ || true)
+            if [ "\$code" = "200" ]; then ok=1; break; fi
+            sleep 2
+          done
+
+          if [ "\$ok" != "1" ]; then
+            echo "health check failed (last status: \${code:-none})" >&2
+            if [ -n "\$PREV" ] && [ -d "\$PREV" ]; then
+              echo "rolling back to \$PREV" >&2
+              ln -sfn "\$PREV" /srv/devexcode/current.tmp
+              mv -Tf /srv/devexcode/current.tmp /srv/devexcode/current
+              sudo systemctl restart devexcode
+            fi
+            exit 1
+          fi
+
+          echo "live: \$(cat /srv/devexcode/current/RELEASE_SHA 2>/dev/null || echo unknown)"
+
+          # Keep the last 5 releases for rollback; hardlinks make them cheap.
+          ls -1dt /srv/devexcode/releases/*/ | tail -n +6 | xargs -r rm -rf
+          EOF
+
+      - name: Verify the deployed site answers publicly
+        run: |
+          set -euo pipefail
+          for path in / /system-design /micro-dev-tips/441 /sitemap.xml; do
+            code=$(curl -sL -o /dev/null -w '%{http_code}' --max-time 30 "https://www.devexcode.com$path" || true)
+            echo "  [$code] $path"
+            [ "$code" = "200" ] || { echo "public check failed for $path" >&2; exit 1; }
+          done

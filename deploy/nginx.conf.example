@@ -1,0 +1,50 @@
+# /etc/nginx/sites-available/devexcode
+#
+# Reverse proxy in front of the standalone Next.js server on 127.0.0.1:3000.
+#
+# NOTE: next.config.ts already sets X-Content-Type-Options, X-Frame-Options and
+# Referrer-Policy. The live site currently returns each of those TWICE, which
+# means the existing nginx config adds them again — drop them here and let the
+# app own them, or vice versa, but not both.
+
+upstream devexcode_app {
+    server 127.0.0.1:3000;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.devexcode.com devexcode.com;
+
+    # Apex -> www is also enforced in next.config.ts, so this is belt-and-braces
+    # and keeps the redirect working even if the app is down.
+    if ($host = devexcode.com) {
+        return 301 https://www.devexcode.com$request_uri;
+    }
+
+    location / {
+        proxy_pass http://devexcode_app;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host              $host;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Cloudflare sits in front; trust its client IP header.
+        real_ip_header CF-Connecting-IP;
+
+        proxy_read_timeout 60s;
+    }
+
+    # Immutable build assets: hashed filenames, safe to cache hard.
+    location /_next/static/ {
+        proxy_pass http://devexcode_app;
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    client_max_body_size 10m;
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript application/xml image/svg+xml;
+}

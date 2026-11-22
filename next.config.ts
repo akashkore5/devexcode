@@ -1,7 +1,14 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Self-hosted on a VPS behind nginx + Cloudflare, so build a standalone
+  // server: .next/standalone carries its own traced node_modules and server.js.
+  // That ships ~150MB per release instead of the 2.3GB a full .next +
+  // node_modules copy would need, and removes any npm install from the server.
+  // NOTE: standalone does NOT trace data read at runtime. Several routes read
+  // markdown via process.cwd() (dailyblogtips, learn10, gfgblogs, src/posts,
+  // src/content, ...), so deploy/release.sh copies those in explicitly.
+  output: 'standalone',
   typescript: {
     ignoreBuildErrors: true,
   },
