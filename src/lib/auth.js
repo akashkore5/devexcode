@@ -5,8 +5,17 @@ import bcrypt from 'bcrypt';
 import { sendWelcomeEmail } from './email';
 import { getDb, getMongoClient } from './mongodb';
 
+// MongoDBAdapter wants a Promise<MongoClient>, but calling getMongoClient()
+// here would open a connection as soon as this module is imported — and Next
+// imports it while collecting page data, which made a build require a live
+// database. This thenable defers the call until the adapter actually awaits it,
+// so building never touches Mongo while runtime behaviour is unchanged.
+const lazyMongoClient = {
+  then: (onFulfilled, onRejected) => getMongoClient().then(onFulfilled, onRejected),
+};
+
 const authOptions = {
-  adapter: MongoDBAdapter(getMongoClient()),
+  adapter: MongoDBAdapter(lazyMongoClient),
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,

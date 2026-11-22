@@ -79,9 +79,36 @@ Then:
 | `DEPLOY_USER` | `deploy` |
 | `DEPLOY_SSH_KEY` | Private half of the deploy key (the whole file) |
 | `DEPLOY_KNOWN_HOSTS` | Output of `ssh-keyscan -t ed25519 <host>` |
-| `MONGODB_URI` | Build-time connection string |
-| `NEXTAUTH_SECRET` | Build-time value |
-| `NEXTAUTH_URL` | `https://www.devexcode.com` |
+| `APP_ENV` | The whole application env, one `KEY=value` per line |
+
+Five secrets. `APP_ENV` is used twice: written to `.env.production` before the
+build (because `NEXT_PUBLIC_*` values are inlined into the client bundle at
+build time) and piped over ssh to `/srv/devexcode/shared/.env` on every deploy,
+so the server's environment is never edited by hand and never drifts.
+
+The build itself does **not** need the database. `src/lib/mongodb.js` and the
+NextAuth adapter connect lazily, verified by building with no env at all. Before
+that fix a build could not complete without a reachable Mongo instance, which is
+exactly how the first CI run failed.
+
+`APP_ENV` should contain at least:
+
+```
+MONGODB_URI=            NEXTAUTH_SECRET=        NEXTAUTH_URL=
+GOOGLE_CLIENT_ID=       GOOGLE_CLIENT_SECRET=   JWT_SECRET=
+EMAIL_USER=             EMAIL_PASS=             NOTIFICATION_SECRET=
+VAPID_PUBLIC_KEY=       VAPID_PRIVATE_KEY=      NEXT_PUBLIC_VAPID_PUBLIC_KEY=
+INDEXNOW_KEY=           JUDGE0_API_KEY=         BLOB_READ_WRITE_TOKEN=
+BASE_URL=https://www.devexcode.com
+NEXT_PUBLIC_BASE_URL=https://www.devexcode.com
+NEXT_PUBLIC_API_BASE_URL=https://www.devexcode.com
+```
+
+Set it from a local file rather than pasting:
+
+```bash
+gh secret set APP_ENV --repo akashkore5/devexcode < production.env
+```
 
 ## The thing most likely to break a deploy
 

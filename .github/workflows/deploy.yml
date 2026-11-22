@@ -31,15 +31,20 @@ jobs:
       - name: Technical SEO regression suite
         run: npm run test:seo
 
+      # One env source serves both phases. The build does NOT need the database
+      # (mongodb.js and the NextAuth adapter connect lazily — verified by
+      # building with no env at all), but NEXT_PUBLIC_* values are inlined into
+      # the client bundle at build time, so they must be present here.
+      - name: Materialise environment
+        run: |
+          umask 077
+          printf '%s\n' "${{ secrets.APP_ENV }}" > .env.production
+          echo "keys provided:"; cut -d= -f1 .env.production | sort | sed 's/^/  /'
+
       - name: Build
         run: npm run build
         env:
           NODE_OPTIONS: --max-old-space-size=6144
-          # Build-time reads of these are tolerated by the app, but the real
-          # values live on the server in /srv/devexcode/shared/.env.
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
-          NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
-          NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
 
       - name: Assemble release
         run: ./deploy/release.sh . release
@@ -76,6 +81,18 @@ jobs:
           rsync -az --delete --human-readable \
             -e "ssh -o BatchMode=yes" \
             release/ "$USER@$HOST:/srv/devexcode/releases/$STAMP/"
+
+      - name: Sync runtime environment to server
+        env:
+          HOST: ${{ secrets.DEPLOY_HOST }}
+          USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          set -euo pipefail
+          # Written over ssh stdin so the value never lands in a file on the
+          # runner's disk beyond .env.production, nor in the process list.
+          printf '%s\n' "${{ secrets.APP_ENV }}" | \
+            ssh "$USER@$HOST" 'umask 077 && cat > /srv/devexcode/shared/.env.new && mv -f /srv/devexcode/shared/.env.new /srv/devexcode/shared/.env'
+          echo "runtime env synced"
 
       - name: Activate and verify
         env:
